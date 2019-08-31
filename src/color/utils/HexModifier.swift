@@ -3,13 +3,13 @@ import Foundation
 class HexModifier {
     /**
      * Blend two colors with a scalar ratio.
-     * PARAM: first: The first color
-     * PARAM: second: The second color
-     * PARAM: ratio: The ratio of the second color to blend, .5 = equal ratio, .9 = 1:9, .2 = 8:2
+     * - Parameter: first: The first color
+     * - Parameter: second: The second color
+     * - Parameter: ratio: The ratio of the second color to blend, .5 = equal ratio, .9 = 1:9, .2 = 8:2
      * RETURN: The color value as a uint
-     * NOTE: you can also use the Native NSColor.blended(withFraction fraction: CGFloat, of color: NSColor) -> NSColor?
+     * - Note: you can also use the Native NSColor.blended(withFraction fraction: CGFloat, of color: NSColor) -> NSColor?
      */
-    static func blend(_ first:UInt, _ second:UInt, _ ratio: CGFloat) -> UInt {// :TODO: rename?
+    static func blend(_ first:UInt, _ second:UInt, _ ratio: CGFloat) -> UInt {// :- Fixme: ⚠️️ rename?
         var a: CGFloat; var b: CGFloat; var c: CGFloat;
         a = (CGFloat(first & 0xff) * (1 - ratio) + CGFloat(second & 0xff) * ratio)
         b = {
@@ -26,8 +26,8 @@ class HexModifier {
     }
     /**
      * Brighten (or darken) a color by a scalar amount
-     * PARAM: color: The color to brighten/darken
-     * PARAM: modifier: The scalar to modify the brightness, 0 = no change, ie. 0.9, 1.1
+     * - Parameter: color: The color to brighten/darken
+     * - Parameter: modifier: The scalar to modify the brightness, 0 = no change, ie. 0.9, 1.1
      * RETURNS:	The modified color
      */
     static func brighten(_ color:UInt, _ modifier:UInt) -> UInt {
@@ -44,8 +44,8 @@ class HexModifier {
     /**
      * Desaturate a color by a scalar amount. (0-1)
      * This isn't a real desaturation, but blends the color with a neutral grey.
-     * PARAM: color: The color to desaturate
-     * PARAM: percent: The percentage of desaturation
+     * - Parameter: color: The color to desaturate
+     * - Parameter: percent: The percentage of desaturation
      * RETURN: The desaturated color
      */
     static func desaturate(_ color:UInt, _ modifier:UInt)->UInt {
@@ -54,8 +54,8 @@ class HexModifier {
     /**
      * Fades a color by a scalar amount. (0-1)
      * Basically just blends the color with white.
-     * PARAM: color: The color to fade
-     * PARAM: percent: The percentage of fade
+     * - Parameter: color: The color to fade
+     * - Parameter: percent: The percentage of fade
      * RETURN: The faded color
      */
     static func fade(_ color:UInt, _ modifier:UInt) -> UInt {

@@ -3,10 +3,10 @@ import Foundation
 class DisplayArcUtils {
     /**
      * Draws an Arc in the path (startAngle and endAngle)
-     * TODO: ⚠️️ To support rotation you need to work that in to the transformation probaby
-     * NOTE: The CGPathAddArc method doesnt seem to support drawing from negative area to positive area. The CGPathAddRelativeArc method supports this
+     * - Fixme: ⚠️️ ⚠️️ To support rotation you need to work that in to the transformation probaby
+     * - Note: The CGPathAddArc method doesnt seem to support drawing from negative area to positive area. The CGPathAddRelativeArc method supports this
      */
-    static func arcTo(_ path:CGMutablePath,_ arc:IArc) {
+    static func arcTo(_ path:CGMutablePath, _ arc:IArc) {
         let angleArc:AngleArc = DisplayArcUtils.arc(arc.start, CGPoint(arc.xRadii,arc.yRadii),arc.rotation,arc.largeArcFlag,arc.sweepFlag,arc.end,arc.center!)
         /*
         Swift.print("describe: angleArc")
@@ -19,36 +19,36 @@ class DisplayArcUtils {
         path.addRelativeArc(angleArc.center, angleArc.xRadii, angleArc.start, angleArc.delta, transform/*nil*/)//swift 3 update
     }
     /**
-     * NOTE: (rx, ry, x-axis-rotation, large-arc-flag, sweep-flag, x, y)
+     * - Note: (rx, ry, x-axis-rotation, large-arc-flag, sweep-flag, x, y)
      */
-    static func arcTo(_ startX: CGFloat,_ startY: CGFloat,_ centerX: CGFloat,_ centerY: CGFloat,_ xAxisRot: CGFloat,_ largeArcFlag:Bool,_ sweepFlag:Bool, _ endX: CGFloat, _ endY: CGFloat){
+    static func arcTo(_ startX: CGFloat, _ startY: CGFloat, _ centerX: CGFloat, _ centerY: CGFloat, _ xAxisRot: CGFloat, _ largeArcFlag: Bool, _ sweepFlag: Bool, _ endX: CGFloat, _ endY: CGFloat){
         //You need to derive the xRadii and yRadii from start and end points (there is a formula that can create an ellipse from 2 points and a center and a rotation etc)
         //then you can convert to an angled arc
         //then you use the angledArc to draw the arc with the native CGPath arc method that supports this
     }
     /**
      * Draws an arc on PARAM graphics
-     * NOTE: SEGMENT_COUNT:uint = 32//32;//a fixed Arc interpolation number (Higher number means higher arc resolution, Lower means higher performance)
-     * NOTE: var points:Vector.<CurvePoint> = ArcParser.curvePoints(this, SEGMENT_COUNT);Computes and returns curve points needed to draw the curve
+     * - Note: SEGMENT_COUNT:uint = 32//32;//a fixed Arc interpolation number (Higher number means higher arc resolution, Lower means higher performance)
+     * - Note: var points:Vector.<CurvePoint> = ArcParser.curvePoints(this, SEGMENT_COUNT);Computes and returns curve points needed to draw the curve
      */
      /*
-     static func angleArcTo(graphics:Any, _ xRadii: CGFloat, _ yRadii: CGFloat, _ start: CGFloat,_ end: CGFloat,_ centerX: CGFloat,_ centerY: CGFloat,_ rotation: CGFloat) {
+     static func angleArcTo(graphics:Any, _ xRadii: CGFloat, _ yRadii: CGFloat, _ start: CGFloat, _ end: CGFloat, _ centerX: CGFloat, _ centerY: CGFloat, _ rotation: CGFloat) {
         var points:Array<CurvePoint> = Utils.curvePoints(new Point(centerX,centerY),start,end,new Point(xRadii,yRadii),rotation,16);//Computes and returns curve points needed to draw the curve
-        if (points.length > 0) graphics["moveTo"](points[0].anchor1.x, points[0].anchor1.y);/*sets the initial point to be drawn from*/// :TODO: is this correct? move to ?? this efectivly creates a gap no?
+        if (points.length > 0) graphics["moveTo"](points[0].anchor1.x, points[0].anchor1.y);/*sets the initial point to be drawn from*/// :- Fixme: ⚠️️ is this correct? move to ?? this efectivly creates a gap no?
         for(var i:uint = 0; i<points.length; ++i) graphics["curveTo"](points[i].control.x, points[i].control.y, points[i].anchor2.x, points[i].anchor2.y);/*Curves to the spessific anchor and control points*/
      }
      */
      /**
       * Returns an object containing the start angle, end angle and center point
-      * PARAM: r radii in the xAxis,yAxis (half of the ellipse xAxis,yAxis)
-      * PARAM: rot rotation of the ellipse (in radians)
-      * PARAM: largeArcFlag if the the angle span between PARAM: start and PARAM: end is more than 180 degrees then this is false else its true
-      * PARAM: sweepFlag cw vs ccw
-      * PARAM: start is the start point of the arc
-      * PARAM: end is the end point of the arc
-      * NOTE: to decipher this code you can add many debugcrosshairs
+      * - Parameter: r radii in the xAxis,yAxis (half of the ellipse xAxis,yAxis)
+      * - Parameter: rot rotation of the ellipse (in radians)
+      * - Parameter: largeArcFlag if the the angle span between - Parameter: start and - Parameter: end is more than 180 degrees then this is false else its true
+      * - Parameter: sweepFlag cw vs ccw
+      * - Parameter: start is the start point of the arc
+      * - Parameter: end is the end point of the arc
+      * - Note: to decipher this code you can add many debugcrosshairs
       */
-    static func arc(_ start: CGPoint, _ r: CGPoint,_ rot: CGFloat,_ largeArcFlag:Bool,_ sweepFlag:Bool,_ end: CGPoint,_ center: CGPoint) -> AngleArc {// :TODO: move to AdvanceArc5Parser?!?
+    static func arc(_ start: CGPoint, _ r: CGPoint, _ rot: CGFloat, _ largeArcFlag: Bool, _ sweepFlag: Bool, _ end: CGPoint, _ center: CGPoint) -> AngleArc {// :- Fixme: ⚠️️ move to AdvanceArc5Parser?!?
         var r = r
         if(r.y == 0){/*if the arc is flat*/
             //Swift.print("Angle.angle(center, start): " + Angle.angle(center, start))
@@ -74,7 +74,7 @@ class DisplayArcUtils {
         let sinRot: CGFloat = sin(rot)
         var m: CGPoint = CGPoint((end.x-start.x)/2,(end.y-start.y)/2);/*find the midPoint between start and end points , offset from the end point (m = midPoint)*///PointParser.divide(end.subtract(start), new Point(2,2));
         //Swift.print("m: " + m);
-        m = CGPoint(cosRot * m.x + sinRot * m.y, -sinRot * m.x + cosRot * m.y)/*apply the rotation to the midPoint*/// :TODO: is the same as rotate around external point?
+        m = CGPoint(cosRot * m.x + sinRot * m.y, -sinRot * m.x + cosRot * m.y)/*apply the rotation to the midPoint*/// :- Fixme: ⚠️️ is the same as rotate around external point?
         //Swift.print("m: " + m);
         r = CGPoint(abs(r.x),abs(r.y))/*Ensure radii are large enough ,Forces the r.x and r.y to be positive - SVG implimentation notes: F.6.6 Correction of out-of-range radii*/
         //Swift.print("r: " + r);
@@ -110,7 +110,7 @@ class DisplayArcUtils {
         //Swift.print("Angle.normalize2(Angle.angle(c, start): " + Angle.normalize2(Angle.angle(c, start)));
         let startAngle: CGFloat = BasicEllipseMath.advanceEllipticalAngle(axis.x, axis.y, Trig.normalize(Trig.angle(c, start)-rot))/*<- new code (used to use normalize2)*/
         let endAngle: CGFloat = BasicEllipseMath.advanceEllipticalAngle(axis.x, axis.y, Trig.normalize(Trig.angle(c, end)-rot))/*<- new code (used to use normalize2)*/
-        //return ["start":,"end":,"center":,"xRadii":,"yRadii":r.y]//return Arc4(r.x, r.y, Angle.flip(startAngle, multiplier), Angle.flip(endAngle, multiplier), c,); // :TODO: why do we have to flip the angles?
+        //return ["start":,"end":,"center":,"xRadii":,"yRadii":r.y]//return Arc4(r.x, r.y, Angle.flip(startAngle, multiplier), Angle.flip(endAngle, multiplier), c,); // :- Fixme: ⚠️️ why do we have to flip the angles?
         r = CGPoint(abs(r.x),abs(r.y))/*<--BETA: This is new, we need to clamp the radii values to be positive, since CGPath can only use posetive radii values*/
         return AngleArc(/*startAngle*/Trig.flip(startAngle, multiplier),/*endAngle*/Trig.flip(endAngle, multiplier),r.x,r.y,c,rot)
     }
@@ -121,21 +121,21 @@ class DisplayArcUtils {
 private class BasicEllipseMath {
     /**
      * Returns a eliptical angle ( which is the angle of the elliptical arc prior to the stretch and rotate operations.)
-     * PARAM: angle: an circular angle
-     * IMPORTANT: ⚠️️ atan2 is when measured counterclockwise from a circle's x axis
-     * NOTE: can also use atan(y/x); (atan returns funky rotatioin values, i guess clockwise from x axis, test this though)
-     * NOTE: this is the same but just as a refrence: Angle.angle(new Point(0,0), new Point(Math.cos(angle) / xAxis,Math.sin(angle) / yAxis))
+     * - Parameter: angle: an circular angle
+     * - Important: ⚠️️ atan2 is when measured counterclockwise from a circle's x axis
+     * - Note: can also use atan(y/x); (atan returns funky rotatioin values, i guess clockwise from x axis, test this though)
+     * - Note: this is the same but just as a refrence: Angle.angle(new Point(0,0), new Point(Math.cos(angle) / xAxis,Math.sin(angle) / yAxis))
      */
-    static func ellipticalAngle(_ xAxis: CGFloat, _ yAxis: CGFloat, _ angle: CGFloat)->CGFloat {// :TODO: rename to : something like counterClockwiseEllipticalAngle?
+    static func ellipticalAngle(_ xAxis: CGFloat, _ yAxis: CGFloat, _ angle: CGFloat)->CGFloat {// :- Fixme: ⚠️️ rename to : something like counterClockwiseEllipticalAngle?
         let x: CGFloat = cos(angle) / xAxis
         let y: CGFloat = sin(angle) / yAxis
         return atan2(y,x)
     }
     /**
-     * NOTE: use this if you only know the circular angle of a point on a rotated ellipse
-     * TODO: ⚠️️ the angle should be the last argument
+     * - Note: use this if you only know the circular angle of a point on a rotated ellipse
+     * - Fixme: ⚠️️ ⚠️️ the angle should be the last argument
      */
-    static func advanceEllipticalAngle(_ xAxis: CGFloat, _ yAxis: CGFloat, _ angle: CGFloat,_ rotation: CGFloat = 0) -> CGFloat {
+    static func advanceEllipticalAngle(_ xAxis: CGFloat, _ yAxis: CGFloat, _ angle: CGFloat, _ rotation: CGFloat = 0) -> CGFloat {
         return ellipticalAngle(xAxis,yAxis,angle-rotation)
     }
 }

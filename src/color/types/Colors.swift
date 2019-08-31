@@ -1,15 +1,15 @@
 import Cocoa
 /**
- * // :TODO: WHITE1,WHITE2, BLACK2, BLACK3 etc
- * // :TODO: add CYAN,MAGENTA,KEY,YELLOW CMYK
- * TODO: ⚠️️ make these consts lowercase, use static let, 
+ * // :- Fixme: ⚠️️ WHITE1,WHITE2, BLACK2, BLACK3 etc
+ * // :- Fixme: ⚠️️ add CYAN,MAGENTA,KEY,YELLOW CMYK
+ * - Fixme: ⚠️️ ⚠️️ make these consts lowercase, use static let, 
  */
 class Colors {
     static var GREY_1:UInt = 0x111111/*near black*/
     static var GREY_2:UInt = 0x222222
     static var GREY_3:UInt = 0x333333
     static var GREY_4:UInt = 0x444444
-    static var GREY_5:UInt = 0x555555// :TODO: rename to GREY5
+    static var GREY_5:UInt = 0x555555// :- Fixme: ⚠️️ rename to GREY5
     static var GREY_6:UInt = 0x666666
     static var GREY_7:UInt = 0x777777
     static var GREY_8:UInt = 0x888888

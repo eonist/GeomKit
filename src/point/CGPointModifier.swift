@@ -10,7 +10,7 @@ class CGPointModifier {
      * - Note: this function is keept around to illustrate how to rotate a point around a pivot in regular trig math (Also may be faster than the equvilant function that uses matrix math)
      * - Fixme: ⚠️️ rename to trigRot?!?
      */
-    static func rot(_ point: CGPoint,_ pivot: CGPoint,_ rot: CGFloat)->CGPoint {
+    static func rot(_ point: CGPoint, _ pivot: CGPoint, _ rot: CGFloat)->CGPoint {
         let x: CGFloat = pivot.x + ( cos(rot) * (point.x - pivot.x) - sin(rot) * (point.y - pivot.y))
         let y: CGFloat = pivot.y + ( sin(rot) * (point.x - pivot.x) + cos(rot) * (point.y - pivot.y))
         return CGPoint(x,y)
@@ -52,7 +52,7 @@ class CGPointModifier {
     static func rotatePoints(_ points: [CGPoint], _ pivot: CGPoint, _ rotation: CGFloat) -> [CGPoint] {
         var rotatedPoints: [CGPoint] = []
         var transform = CGAffineTransform.identity
-        transform.rotateAroundPoint(rotation, pivot)//was MatrixModifier.rotateAroundExternalPoint(matrix, pivot, rotation)
+        transform.rotateAroundPoint(rotation, pivot) // was MatrixModifier.rotateAroundExternalPoint(matrix, pivot, rotation)
         for point: CGPoint in points { rotatedPoints.append(point.applying(transform))}
         return rotatedPoints
     }
@@ -61,7 +61,7 @@ class CGPointModifier {
      * ## Examples: PointModifier.scale(CGPoint(0, 0), CGPoint(40,40), CGPoint(2, 2)) // Output: (-40.0, -40.0)
      * - Parameter: scale: 0-1
      */
-    static func scale(_ p: CGPoint,_ pivot: CGPoint,_ scale: CGPoint)->CGPoint{
+    static func scale(_ p: CGPoint, _ pivot: CGPoint, _ scale: CGPoint)->CGPoint{
         var transform:CGAffineTransform = CGAffineTransform.identity
         transform.scaleFromPoint(scale.x, scale.y, pivot)
         return p.applying(transform)
@@ -78,7 +78,7 @@ class CGPointModifier {
      * var scaledPoints:Array = PointModifier.scalePoints([new Point(circle.x,circle.y)], pivotPoint,1, 1.5)
      * circle.setPosition(scaledPoints[0]);//Output: the circle is now at 100,125
      */
-    static func scalePoints(_ points:[CGPoint],_ pivot: CGPoint,_ scale: CGPoint)->[CGPoint]{
+    static func scalePoints(_ points: [CGPoint], _ pivot: CGPoint, _ scale: CGPoint)->[CGPoint]{
         return points.map { p in
             CGPointModifier.scale(p, pivot, scale)
         }
@@ -86,7 +86,7 @@ class CGPointModifier {
     /**
      * Use this when you want to scale the points directly
      */
-    static func scalePoints(_ points:inout [CGPoint],_ pivot: CGPoint,_ scale: CGPoint) {
+    static func scalePoints(_ points:inout [CGPoint], _ pivot: CGPoint, _ scale: CGPoint) {
         points.indices.forEach { i in
             points[i] = CGPointModifier.scale(points[i], pivot, scale)
         }

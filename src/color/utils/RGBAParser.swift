@@ -2,8 +2,8 @@ import Cocoa
 
 class RGBAParser {
     /**
-     * EXAMPLE: rgba(NSColor.redColor()).r//Outputs //1.0
-     * IMPORTANT: this return 0-1.0 values
+     * ## Examples: rgba(NSColor.redColor()).r//Outputs //1.0
+     * - Important: this return 0-1.0 values
      */
     static func rgba(_ nsColor:NSColor)->RGBA{/*<--was: (r: CGFloat,g: CGFloat,b: CGFloat,a: CGFloat)*/
         if let ciColor:CIColor = CIColor(color: nsColor){
@@ -25,9 +25,9 @@ class RGBAParser {
     }
     /**
      * Converts a 32-bit ARGB color value into an ARGB object.
-     * PARAM: color: The 32-bit ARGB color value.
+     * - Parameter: color: The 32-bit ARGB color value.
      * RETURN: an object with the properties a, r, g, and b defined.
-     * EXAMPLE:
+     * ## Examples:
      * var rgb:RGB = rgba(0xFF00FFCC)
      * print("Alpha = " + myRGB.a)
      * print("Red = " + myRGB.r)

@@ -8,7 +8,7 @@ class PositionalGraphic:GraphicDecoratable,Positional {
         super.init(decoratable)
     }
     /**
-     * NOTE: This method must remain an instance method so that other decorators can override it (Circle, Line, Path, etc)
+     * - Note: This method must remain an instance method so that other decorators can override it (Circle, Line, Path, etc)
      */
     func getPosition() -> CGPoint {
         if pos.x.isNaN {fatalError("x can't be NaN") }

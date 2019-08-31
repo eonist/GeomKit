@@ -1,7 +1,7 @@
 import Foundation
 /**
  * Data container class
- * TODO: ⚠️️ Use struct instead?, does anythingextend this class?
+ * - Fixme: ⚠️️ ⚠️️ Use struct instead?, does anythingextend this class?
  */
 class AngleArc {
     var start: CGFloat
@@ -10,7 +10,7 @@ class AngleArc {
     var yRadii: CGFloat
     var rotation: CGFloat
     var center: CGPoint
-    init(_ start: CGFloat,_ end: CGFloat,_ xRadii: CGFloat,_ yRadii: CGFloat, _ center: CGPoint,_ rotation: CGFloat = 0) {
+    init(_ start: CGFloat, _ end: CGFloat, _ xRadii: CGFloat, _ yRadii: CGFloat, _ center: CGPoint, _ rotation: CGFloat = 0) {
         self.start = start
         self.end = end
         self.xRadii = xRadii
@@ -24,7 +24,7 @@ extension AngleArc{
     var y: CGFloat {get {return center.y} set {center.y = newValue}}/*convenience*/
     var transform:CGAffineTransform {get {return CGAffineTransform(scaleX: xRadii/yRadii, y: yRadii/xRadii)} /*set{} */}
     var delta: CGFloat {
-        let isClockWise:Bool = Trig.isClockWiseByAngle(start, end)
+        let isClockWise: Bool = Trig.isClockWiseByAngle(start, end)
         //Swift.print("isClockWise: " + "\(isClockWise)")
         //you need a directional anglespan, that can return negative values!?!?
         var angleSpan: CGFloat = TrigParser.angleSpan2(start, end, isClockWise)

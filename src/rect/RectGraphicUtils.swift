@@ -2,10 +2,10 @@ import Foundation
 
 class RectGraphicUtils {
     /**
-     * NOTE: Only outside is different, Center and Inside are the same
+     * - Note: Only outside is different, Center and Inside are the same
      */
-    static func fillFrame(_ rect:CGRect, _ lineThickness: CGFloat, _ offsetType:OffsetType)->CGRect{
-        var fillFrameRect:CGRect = rect.copy()
+    static func fillFrame(_ rect: CGRect, _ lineThickness: CGFloat, _ offsetType:OffsetType)->CGRect{
+        var fillFrameRect: CGRect = rect.copy()
         if(!lineThickness.isNaN && offsetType.left == OffsetType.outside){/*Left*/
             fillFrameRect = fillFrameRect.offset(lineThickness, 0)
         }
@@ -14,13 +14,13 @@ class RectGraphicUtils {
         }
         return fillFrameRect
     }
-    typealias LineOffset = (lineFrameRect:CGRect,lineRect:CGRect)
+    typealias LineOffset = (lineFrameRect: CGRect,lineRect: CGRect)
     /**
-     * TODO: ⚠️️ move l,r,t,b into dedicated methods ? 
+     * - Fixme: ⚠️️ ⚠️️ move l,r,t,b into dedicated methods ? 
      */
-    static func lineOffsetRect(_ rect:CGRect, _ lineThickness: CGFloat, _ offsetType:OffsetType)->LineOffset{
-        var lineFrameRect:CGRect = rect.copy()
-        var lineRect:CGRect = CGRect(0,0,rect.width,rect.height)
+    static func lineOffsetRect(_ rect: CGRect, _ lineThickness: CGFloat, _ offsetType:OffsetType)->LineOffset{
+        var lineFrameRect: CGRect = rect.copy()
+        var lineRect: CGRect = CGRect(0,0,rect.width,rect.height)
         /*Left*/
         if offsetType.left == OffsetType.outside {
             lineFrameRect = lineFrameRect.expand(lineThickness, 0)

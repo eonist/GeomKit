@@ -2,14 +2,14 @@ import Cocoa
 
 class HexParser {
     /**
-     * EXAMPLE: hexNumber(FF0000)//Output:16711680
+     * ## Examples: hexNumber(FF0000)//Output:16711680
      */
     static func hexValue(_ hex:String) -> UInt{
         return UInt(Float(hex)!)
     }
     /**
      * Convenience method (since extensions can only return one type of each var)
-     * EXAMPLE: rgb(NSColor.redColor())//16711680
+     * ## Examples: rgb(NSColor.redColor())//16711680
      */
     static func hexValue(_ color:NSColor) -> UInt{
         return color.hexVal!.cgFloat.uint
@@ -27,12 +27,12 @@ class HexParser {
     }
     /**
      * Converts a series of individual RGB(A) values to a 32-bit RGBA color value.
-     * PARAM: r: A uint from 0 to 255 representing the red color value.
-     * PARAM: g: A uint from 0 to 255 representing the green color value.
-     * PARAM: b: A uint from 0 to 255 representing the blue color value.
-     * PARAM: a: A uint from 0 to 255 representing the alpha value. Default is <code>255</code>.
+     * - Parameter: r: A uint from 0 to 255 representing the red color value.
+     * - Parameter: g: A uint from 0 to 255 representing the green color value.
+     * - Parameter: b: A uint from 0 to 255 representing the blue color value.
+     * - Parameter: a: A uint from 0 to 255 representing the alpha value. Default is <code>255</code>.
      * RETURN: a hexidecimal color as a String.
-     * EXAMPLE:
+     * ## Examples:
      * var hexColor : String = ColorUtil.getHexStringFromARGB(128, 255, 0, 255);
      * print(hexColor); // prints 80FF00FF
      */
@@ -41,19 +41,19 @@ class HexParser {
     }
     
     /**
-     * EXAMPLE: hexString(16711680)//Output: FF0000
+     * ## Examples: hexString(16711680)//Output: FF0000
      */
     static func hexString(_ hex:UInt) -> String{
         return NSString(format: "%2X", hex) as String
     }
     /**
      * Converts a 32-bit ARGB color value into a hexidecimal String representation.
-     * PARAM: a: A uint from 0 to 255 representing the alpha value.
-     * PARAM: r: A uint from 0 to 255 representing the red color value.
-     * PARAM: g: A uint from 0 to 255 representing the green color value.
-     * PARAM: b: A uint from 0 to 255 representing the blue color value.
+     * - Parameter: a: A uint from 0 to 255 representing the alpha value.
+     * - Parameter: r: A uint from 0 to 255 representing the red color value.
+     * - Parameter: g: A uint from 0 to 255 representing the green color value.
+     * - Parameter: b: A uint from 0 to 255 representing the blue color value.
      * RETURN: a hexidecimal color as a String.
-     * EXAMPLE:
+     * ## Examples:
      * <code>
      * var hexColor : String = hexString(128, 255, 0, 255);
      * print(hexColor) // Prints 80FF00FF
@@ -72,8 +72,8 @@ class HexParser {
     }
     /**
      * Support for NSColor
-     * EXAMPLE: NSColor.redColor().hex//FF0000
-     * EXAMPLE: Double("0x" + NSColor.red.hex)//255.0  this is great if you need the hex as a Double
+     * ## Examples: NSColor.redColor().hex//FF0000
+     * ## Examples: Double("0x" + NSColor.red.hex)//255.0  this is great if you need the hex as a Double
      */
     static func hexString(_ nsColor:NSColor)->String {
         let rgb:RGB = nsColor.rgb
@@ -81,14 +81,14 @@ class HexParser {
     }
     /**
      * Converts an RGB color value into a hexidecimal String representation
-     * PARAM: r: A CGFloat from 0 to 1 representing the red color value
-     * PARAM: g: A CGFloat from 0 to 1 representing the green color value
-     * PARAM: b: A CGFloat from 0 to 1 representing the blue color value
+     * - Parameter: r: A CGFloat from 0 to 1 representing the red color value
+     * - Parameter: g: A CGFloat from 0 to 1 representing the green color value
+     * - Parameter: b: A CGFloat from 0 to 1 representing the blue color value
      * RETURN: a hexidecimal color as a String
-     * EXAMPLE: print(ColorParser.hexByRgb(1, 0, 1)) // prints FF00FF
-     * TODO: ⚠️️ maybe make another method that takes int from 0-255?
+     * ## Examples: print(ColorParser.hexByRgb(1, 0, 1)) // prints FF00FF
+     * - Fixme: ⚠️️ ⚠️️ maybe make another method that takes int from 0-255?
      */
-    static func hexString(_ r: CGFloat,_ g: CGFloat,_ b: CGFloat)->String{
+    static func hexString(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat)->String{
         var rr:String = String(format:"%X", Int(r))
         var gg:String = String(format:"%X", Int(g))
         var bb:String = String(format:"%X", Int(b))

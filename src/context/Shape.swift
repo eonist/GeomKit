@@ -1,13 +1,13 @@
 import Cocoa
 /**
- * NOTE: Shape is a convenient way to seperate drawing the stroke and the fill. ("Composite drawing") 
- * NOTE: Ultimatly you should have both stroke and fill in the same layer, as I suspect both contexts are redrawn if either change anyway. 
+ * - Note: Shape is a convenient way to seperate drawing the stroke and the fill. ("Composite drawing") 
+ * - Note: Ultimatly you should have both stroke and fill in the same layer, as I suspect both contexts are redrawn if either change anyway. 
  */
 class Shape:CALayer{
     lazy var graphics:Graphics = Graphics()//Delays the creation of graphics until it is needed, keep in mind that you can't create this instance before drawRect is called
     var path:CGMutablePath = CGMutablePath()
     /**
-     * NOTE: If you zoom this class in. you need to change the contentScale appropriatly. Zoom 2x on a retina screen: (2x2=4) Zoom 4x on a retina screen: (2x2=4) etc
+     * - Note: If you zoom this class in. you need to change the contentScale appropriatly. Zoom 2x on a retina screen: (2x2=4) Zoom 4x on a retina screen: (2x2=4) etc
      */
     override init(){
         super.init()

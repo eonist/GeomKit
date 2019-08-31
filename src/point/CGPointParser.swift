@@ -164,7 +164,7 @@ class CGPointParser{
     }
     /**
      * Returns the distance (can be positive or negative) in x and y axis
-     * IMPORTANT: use the x value and the Point.polar(x,axisangle) to find the p
+     * - Important: use the x value and the Point.polar(x,axisangle) to find the p
      * - Note: remember to rotate the axix after its been returned from this method
      * - Parameter: rotation: the angle you want to levle with
      * - Fixme: ⚠️️shouldnt the axis be found by Angle.angle(p1,p2) ?!?
@@ -178,14 +178,14 @@ class CGPointParser{
     /**
      * - Note: same as directionalAxisDifference, but uses the NumerParser.relativeDifference() method
      */
-    static func relativeDirectionalAxisDifference(_ pivot: CGPoint,_ point: CGPoint, _ rotation: CGFloat) -> CGPoint {
+    static func relativeDirectionalAxisDifference(_ pivot: CGPoint, _ point: CGPoint, _ rotation: CGFloat) -> CGPoint {
         let leveledPoint: CGPoint = CGPointModifier.safeRotatePoint(pivot, point, -rotation)/*find the x and y in a correctly angled axis point system by using -angleAxis*/
         return CGPointParser.relativeDifference(pivot, leveledPoint)/*use the x value and the Point.polar(x,axisangle) to find the p*/
     }
     /**
      * Returns a CGRect that makes derived from - Parameter: points (think bounding box of points)
      */
-    static func rectangle(_ points:[CGPoint]) -> CGRect{
+    static func rectangle(_ points: [CGPoint]) -> CGRect{
         var max: CGPoint = points.count > 0 ? (points[0] as CGPoint).copy(): CGPoint()
         var min: CGPoint = points.count > 0 ? (points[0] as CGPoint).copy(): CGPoint()
         points.forEach { point in
@@ -238,7 +238,7 @@ class CGPointParser{
      * ## Examples:  midPoint(CGPoint(0,0),CGPoint(100,100))//CGPoint(50,50)
      * Caution: this only works if p1 is .zero
      */
-    static func midPoint(_ p1: CGPoint,_ p2: CGPoint) -> CGPoint {
+    static func midPoint(_ p1: CGPoint, _ p2: CGPoint) -> CGPoint {
         return CGPoint((p1.x + p2.x) / 2,(p1.y + p2.y) / 2)
     }
     /**

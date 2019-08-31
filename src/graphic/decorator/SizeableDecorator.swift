@@ -1,10 +1,10 @@
 import Foundation
 /**
  * The responsibility of this class is to provide access to the position of the SizeableGraphic
- * TODO: ⚠️️ Probably use if let in this class
+ * - Fixme: ⚠️️ ⚠️️ Probably use if let in this class
  */
 class SizeableDecorator:PositionalDecorator,Sizable {
-    var size:CGSize{
+    var size: CGSize{
         get{
             //Swift.print("decoratable: " + "\(decoratable)")
             if let decoratable = decoratable as? Sizable{return decoratable.size}
@@ -23,7 +23,7 @@ class SizeableDecorator:PositionalDecorator,Sizable {
     }
     */
     /**
-     * NOTE: This method must remain an instance method so that other decorators can override it (Circle, Line, Path, etc)
+     * - Note: This method must remain an instance method so that other decorators can override it (Circle, Line, Path, etc)
      */
     func getSize() -> CGSize {
         return size

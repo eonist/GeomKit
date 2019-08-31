@@ -3,9 +3,9 @@ import Cocoa
 class HLSParser {
     /**
      * This was created with references to a few anonymous calculations written in other languages, None of which were very accurate
-     * NOTE: You can compare these values to those produced in the Windows Color Picker (MS Paint, etc)
-     * NOTE: We can't use UInt here because UInt doesnt support NaN
-     * EXAMPLE:
+     * - Note: You can compare these values to those produced in the Windows Color Picker (MS Paint, etc)
+     * - Note: We can't use UInt here because UInt doesnt support NaN
+     * ## Examples:
      * var r:uint = 145
      * var g:uint = 100
      * var b:uint = 120

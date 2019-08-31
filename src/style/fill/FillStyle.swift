@@ -1,6 +1,6 @@
 import Cocoa
 /**
- * TODO: Candidate for struct. Use IFillStyle as a base protocol
+ * - Fixme: ⚠️️ Candidate for struct. Use IFillStyle as a base protocol
  */
 class FillStyle:FillStyleKind {
     var color:NSColor

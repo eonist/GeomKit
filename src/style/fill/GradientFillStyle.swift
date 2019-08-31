@@ -1,6 +1,6 @@
 import Cocoa
 /**
- * TODO: ⚠️️ Convert to struct
+ * - Fixme: ⚠️️ ⚠️️ Convert to struct
  */
 class GradientFillStyle:FillStyle,GradientFillStyleKind{
     var gradient:GradientKind

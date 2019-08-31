@@ -2,7 +2,7 @@ import Cocoa
 
 class HSVParser {
     /**
-     * NOTE: flacky at some values like magenta
+     * - Note: flacky at some values like magenta
      * RETURN: h: 0-240, s: 0-1, v 0-1
      */
     static func hsv(_ rgb:RGB)->HSV{

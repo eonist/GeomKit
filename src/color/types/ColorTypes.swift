@@ -3,8 +3,8 @@ import Foundation
 class ColorTypes{
     /**
      * Returns a color in hex
-     * TODO: ⚠️️ Sort alphabetically
-     * TODO: ⚠️️ you dont need the break in swift only on the default, should return optional
+     * - Fixme: ⚠️️ ⚠️️ Sort alphabetically
+     * - Fixme: ⚠️️ ⚠️️ you dont need the break in swift only on the default, should return optional
      */
     class func color(_ colorType:String) -> UInt {
         let color:UInt = {

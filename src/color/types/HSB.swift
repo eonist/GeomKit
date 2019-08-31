@@ -4,7 +4,7 @@ class HSB {
      * The hue value for the HSB color. This represents an angle, in
      * degrees, around the HSB cone. The supplied value will be modulated
      * by 360 so that the stored value of hue will be in the range [0,360).
-     * NOTE: If you set the h value: you should maybe use (newValue % 360)
+     * - Note: If you set the h value: you should maybe use (newValue % 360)
      */
     var h: CGFloat/*0-1 in reality its: 0-360*/
     /**
@@ -21,11 +21,11 @@ class HSB {
     var b: CGFloat/*0-1 in reality its: 0-100*/
     /**
      *  Constructs an HSBColor with optional parameters.
-     *  PARAM: hue: The hue.
-     *  PARAM: saturation: The saturation.
-     *  PARAM: brightness: The brightness.
+     *  - Parameter: hue: The hue.
+     *  - Parameter: saturation: The saturation.
+     *  - Parameter: brightness: The brightness.
      */
-    init(_ h: CGFloat = 0,_ s: CGFloat = 0,_ b: CGFloat = 0) {
+    init(_ h: CGFloat = 0, _ s: CGFloat = 0, _ b: CGFloat = 0) {
         self.h = h
         self.s = s
         self.b = b

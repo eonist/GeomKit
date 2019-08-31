@@ -13,12 +13,12 @@ import Foundation
 class RadialGradientUtils{
     typealias RadialGrad = (startCenter: CGPoint,endCenter: CGPoint,startRadius: CGFloat,endRadius: CGFloat,transform:CGAffineTransform)
     /**
-     * NOTE: Needs better explinations
-     * NOTE: In order to get a squashed radial gradient we need to use the transform.
-     * NOTE: The matrix that is provided needs to be applied inorder to keep the init ratio (this matrix should be calulated when from the graphic point of view not here)
-     * NOTE: A custom matrix is the only way to squeez the gradient.
+     * - Note: Needs better explinations
+     * - Note: In order to get a squashed radial gradient we need to use the transform.
+     * - Note: The matrix that is provided needs to be applied inorder to keep the init ratio (this matrix should be calulated when from the graphic point of view not here)
+     * - Note: A custom matrix is the only way to squeez the gradient.
      */
-    static func radialGradient(_ boundingBox:CGRect,_ gradient:RadialGradient)->RadialGrad{
+    static func radialGradient(_ boundingBox: CGRect, _ gradient:RadialGradient)->RadialGrad{
         let endCenter = CGPoint(boundingBox.width/2 ,boundingBox.height/2)/*Find the center of the boundingbox, the pivot*/
         let minAxis: CGFloat = min(boundingBox.width,boundingBox.height)/*We need the smallest axis length, either width or height*/
         let minRadius: CGFloat = minAxis/2/*Radius is half the axis length*/

@@ -3,17 +3,17 @@ import Foundation
 class CGPathUtils {
     /**
      * Compiles a CGPath from a Path
-     * TODO: ⚠️️ should the cgPath be inout? test this theory
-     * TODO: ⚠️️ Create an extension for CGPath so you can do cgPath.lineTo(0,0) etc, much cleaner
-     * NOTE: the CGPathAddArc method doesnt seem to support drawing from negative area to positive area. The CGPathAddRelativeArc method supports this
+     * - Fixme: ⚠️️ ⚠️️ should the cgPath be inout? test this theory
+     * - Fixme: ⚠️️ ⚠️️ Create an extension for CGPath so you can do cgPath.lineTo(0,0) etc, much cleaner
+     * - Note: the CGPathAddArc method doesnt seem to support drawing from negative area to positive area. The CGPathAddRelativeArc method supports this
      */
-    static func compile(_ cgPath:CGMutablePath, _ path:PathKind) -> CGMutablePath{
-        var idx:Int = 0/*pathDataIndex*/
+    static func compile(_ cgPath: CGMutablePath, _ path: PathKind) -> CGMutablePath{
+        var idx: Int = 0/*pathDataIndex*/
         var prevMT: CGPoint = CGPoint()/*for the closed path support*/
         var prevEnd: CGPoint = CGPoint()
-        let cmdLen:Int = path.commands.count
+        let cmdLen: Int = path.commands.count
         for i in 0..<cmdLen{
-            let command:Int = path.commands[i]
+            let command: Int = path.commands[i]
             switch PathCommand(rawValue:command) {
                 case .moveTo?:
                     prevMT = CGPoint(path.pathData[idx], path.pathData[idx + 1])
@@ -36,8 +36,8 @@ class CGPathUtils {
                     cgPath.addCurve(to: CGPoint(path.pathData[idx],path.pathData[idx + 1]), control1: CGPoint(path.pathData[idx + 2],path.pathData[idx + 3]), control2: CGPoint(path.pathData[idx + 4],path.pathData[idx + 5]))//CGPathAddCurveToPoint
                     idx += 6
                     /**
-                     * NOTE: At the moment i dont think this takes largeFlag into account
-                     * NOTE: Arc-path-data-structure: xRadii,yRadii,rotation,largeArcFlag,sweepFlag,end.x,end.y,center.x,center.y
+                     * - Note: At the moment i dont think this takes largeFlag into account
+                     * - Note: Arc-path-data-structure: xRadii,yRadii,rotation,largeArcFlag,sweepFlag,end.x,end.y,center.x,center.y
                      */
                 case .arcTo?:
                     //Swift.print("prevEnd: " + "\(prevEnd)")
@@ -68,37 +68,37 @@ class CGPathUtils {
 }
 
 private class BasicPathParser{
-    static func arcAt(_ path:PathKind,_ commandIndex:Int) -> IArc{
-        let pathDataIndex:Int = BasicPathDataParser.index(path.commands, commandIndex)
+    static func arcAt(_ path:PathKind,_ commandIndex: Int) -> IArc{
+        let pathDataIndex: Int = BasicPathDataParser.index(path.commands, commandIndex)
         let start: CGPoint = commandIndex > 0 ? BasicPathDataParser.end(path, commandIndex-1) : CGPoint()
         return BasicPathDataParser.arcAt(path.pathData, pathDataIndex, start)
     }
 }
 private class BasicPathDataParser{
     /**
-     * Returns the pathDataIndex based on the PARAM: commandIndex
+     * Returns the pathDataIndex based on the - Parameter: commandIndex
      */
-    static func index(_ commands:[Int],_ commandIndex:Int) -> Int {
+    static func index(_ commands:[Int],_ commandIndex: Int) -> Int {
         return (0..<commandIndex).indices.reduce(0){ pathDataIndex,i in
             return pathDataIndex + BasicCommandParser.commandLength(commands[i])
         }
     }
     /**
-     * Returns the destination end position of a given command at PARAM: commandIndex in PARAM: commands
-     * PARAM: index the index of the command
-     * NOTE: this is cpu intensive to call if you are iterating over an array
-     * TODO: ⚠️️ START USING END2 which supports CLOSE
+     * Returns the destination end position of a given command at - Parameter: commandIndex in - Parameter: commands
+     * - Parameter: index the index of the command
+     * - Note: this is cpu intensive to call if you are iterating over an array
+     * - Fixme: ⚠️️ ⚠️️ START USING END2 which supports CLOSE
      */
-    static func end(_ path:PathKind, _ commandIndex:Int) -> CGPoint {// :TODO: rename to position?!? or maybe point?
-        let command:Int = path.commands[commandIndex]
-        let pathDataIndex:Int = BasicPathDataParser.index(path.commands, commandIndex)
+    static func end(_ path:PathKind, _ commandIndex: Int) -> CGPoint {// :- Fixme: ⚠️️ rename to position?!? or maybe point?
+        let command: Int = path.commands[commandIndex]
+        let pathDataIndex: Int = BasicPathDataParser.index(path.commands, commandIndex)
         return endAt(path.pathData, pathDataIndex, command)
     }
     /**
-     * NOTE: the CLOSE case should probably be dealt with by the caller
-     * TODO: for the close case we could also iterate backward to find the last MT???
+     * - Note: the CLOSE case should probably be dealt with by the caller
+     * - Fixme: ⚠️️ for the close case we could also iterate backward to find the last MT???
      */
-    static func endAt(_ pathData:[CGFloat], _ pathDataIndex:Int, _ commandType:Int) -> CGPoint{// :TODO: move somewhere else? and rename?
+    static func endAt(_ pathData:[CGFloat], _ pathDataIndex: Int, _ commandType: Int) -> CGPoint{// :- Fixme: ⚠️️ move somewhere else? and rename?
         switch PathCommand(rawValue:commandType){
             case .moveTo?,.lineTo?,.wideMoveTo?,.wideLineTo?:
                 return CGPoint(pathData[pathDataIndex],pathData[pathDataIndex+1])
@@ -109,28 +109,28 @@ private class BasicPathDataParser{
             case .close?:
                 return CGPoint(NaN,NaN)/*used to be nil*/
             default:
-                fatalError("PathCommand not yet supported")//PathCommand.CUBIC_CURVE_TO// :TODO: not supported yet
+                fatalError("PathCommand not yet supported")//PathCommand.CUBIC_CURVE_TO// :- Fixme: ⚠️️ not supported yet
         }
     }
     /**
-     * Returns a IArc5 instance derived from PARAM: pathData at PARAM: index
-     * PARAM: i: is the pathDataIndex is the index in the pathData not the commandIndex
-     * PARAM: start is the start position of the prev command
-     * NOTE: this function is used in the SelectPath4 draw functions
-     * NOTE: the Function PathParser.arcAt does the same thing but by looking at the commandIndex instead
-     * TODO: the start is the end of prev command
+     * Returns a IArc5 instance derived from - Parameter: pathData at - Parameter: index
+     * - Parameter: i: is the pathDataIndex is the index in the pathData not the commandIndex
+     * - Parameter: start is the start position of the prev command
+     * - Note: this function is used in the SelectPath4 draw functions
+     * - Note: the Function PathParser.arcAt does the same thing but by looking at the commandIndex instead
+     * - Fixme: ⚠️️ the start is the end of prev command
      */
-    static func arcAt(_ pathData:[CGFloat],_ i:Int,_ start: CGPoint)->IArc {
+    static func arcAt(_ pathData:[CGFloat],_ i: Int,_ start: CGPoint)->IArc {
         return Arc(start, pathData[i], pathData[i+1], pathData[i+2], Bool(pathData[i+3]), Bool(pathData[i+4]), CGPoint(pathData[i+5],pathData[i+6]), CGPoint(pathData[i+7],pathData[i+8]))
     }
 }
 private class BasicCommandParser{
     /**
      * Returns the number of parameters for a specific command type
-     * TODO: ⚠️️ Include GraphicsPathCommand.CUBIC_CURVE_TO when that is due for implimentation
-     * TODO: ⚠️️ Isn't this function superflousouse since you can just trace the actual command and get the same value?
+     * - Fixme: ⚠️️ ⚠️️ Include GraphicsPathCommand.CUBIC_CURVE_TO when that is due for implimentation
+     * - Fixme: ⚠️️ ⚠️️ Isn't this function superflousouse since you can just trace the actual command and get the same value?
      */
-    static func commandLength(_ command:Int)->Int {
+    static func commandLength(_ command: Int)->Int {
         switch PathCommand(rawValue:command){
             case .close?,.noOp?:
                 return 0

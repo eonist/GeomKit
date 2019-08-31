@@ -1,7 +1,7 @@
 import Foundation
 /**
- * NOTE: There is no TopLeft or BottomRight etc in the CSS sepcs so no need to have more complex relative positioning in this class
- * TODO: ⚠️️ Why do we have this class when its basically the same as Gradient? Because the alternative is to ad another value to to Gradient to represent Gradient Type.
+ * - Note: There is no TopLeft or BottomRight etc in the CSS sepcs so no need to have more complex relative positioning in this class
+ * - Fixme: ⚠️️ ⚠️️ Why do we have this class when its basically the same as Gradient? Because the alternative is to ad another value to to Gradient to represent Gradient Type.
  */
 typealias LinearGradient = Gradient
 

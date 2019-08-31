@@ -11,7 +11,7 @@ extension GradientFillStyleKind{
         return .init(self.gradient.copy(),self.color)
     }
     /**
-     * Creates a copy of self, sets the PARAM: colors, returns the new instance
+     * Creates a copy of self, sets the - Parameter: colors, returns the new instance
      */
     func mix(_ colors:[CGColor])->GradientFillStyle{
         let c = copy()

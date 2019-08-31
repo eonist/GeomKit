@@ -1,18 +1,18 @@
 import Foundation
 
 extension RoundRectGraphic{
-    convenience init(_ x: CGFloat,_ y: CGFloat,_ width: CGFloat, _ height: CGFloat,_ fillet:Fillet, _ gradientFillStyle:GradientFillStyle, _ gradientLineStyle:GradientLineStyle, _ lineOffset:OffsetType = OffsetType(OffsetType.center)){/*Gradient fill and stroke*/
+    convenience init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat, _ fillet:Fillet, _ gradientFillStyle:GradientFillStyle, _ gradientLineStyle:GradientLineStyle, _ lineOffset:OffsetType = OffsetType(OffsetType.center)){/*Gradient fill and stroke*/
         self.init(RectGraphic(CGPoint(x,y),CGSize(width,height),GradientGraphic(BaseGraphic(gradientFillStyle,gradientLineStyle,lineOffset))),fillet: fillet)
     }
-    convenience init(_ x: CGFloat,_ y: CGFloat,_ width: CGFloat,_ height: CGFloat,_ fillet:Fillet,_ fillStyle:FillStyleKind?, _ lineStyle:LineStylable?, _ lineOffset:OffsetType = OffsetType(OffsetType.center)){
+    convenience init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat, _ fillet:Fillet, _ fillStyle:FillStyleKind?, _ lineStyle:LineStylable?, _ lineOffset:OffsetType = OffsetType(OffsetType.center)){
         self.init(RectGraphic(x,y,width,height,fillStyle,lineStyle,lineOffset),fillet: fillet)
     }
 }
 extension PolyLineGraphic{
-    convenience init(_ points:[CGPoint], _ fillStyle:FillStyleKind?, _ lineStyle:LineStylable?) {
+    convenience init(_ points: [CGPoint], _ fillStyle:FillStyleKind?, _ lineStyle:LineStylable?) {
         self.init(points, decoratable: BaseGraphic(fillStyle,lineStyle))
     }
-    convenience init(_ points:[CGPoint], _ gradientFillStyle:GradientFillStyleKind?, _ gradientlineStyle:GradientLineStylable?) {
+    convenience init(_ points: [CGPoint], _ gradientFillStyle:GradientFillStyleKind?, _ gradientlineStyle:GradientLineStylable?) {
         self.init(points, decoratable: GradientGraphic(BaseGraphic(gradientFillStyle,gradientlineStyle)))
     }
 }

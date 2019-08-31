@@ -33,34 +33,34 @@ class CGPathModifier {
     }
   /**
    * Rotates a path around it's center axis
-   * EXAMPLE: -CGFloat.pi/2.0
+   * ## Examples: -CGFloat.pi/2.0
    */
   @discardableResult
   static func centerRotate(path:inout CGMutablePath, angle: CGFloat) -> CGPath{
      let rect = path.boundingBox
-     let offset: CGPoint = .init(x:-rect.width/2,y:-(rect.height)/2)
+     let offset: CGPoint = .init(x: - rect.width / 2,y: - (rect.height) / 2)
      CGPathModifier.translate(path: &path, p: offset)
-     CGPathModifier.rotate(path:&path,angle:angle)//45deg
-     let reOffset: CGPoint = .init(x:rect.width/2,y:(rect.height)/2)
+     CGPathModifier.rotate(path: &path, angle: angle)//45deg
+     let reOffset: CGPoint = .init(x: rect.width / 2, y: (rect.height) / 2)
      CGPathModifier.translate(path: &path, p: reOffset)
      return path
   }
     /**
-     * Scales PARAM: path
-     * EXAMPLE: scale(path,2,2)//doubles the size of the path
+     * Scales - Parameter: path
+     * ## Examples: scale(path,2,2)//doubles the size of the path
      * CAUTION: When using this method remeber to use the CGPathCreateMutableCopy(somePath) if you dont want to edit the original path (THe return statment is jsut for convenince)
      */
-    static func scale(_ path:inout CGPath, _ x: CGFloat = 1,_ y: CGFloat = 1) -> CGPath{
-        var transformation:CGAffineTransform  = CGAffineTransform(scaleX: x,y: y)//swift 3 upgrade
+    static func scale(_ path:inout CGPath, _ x: CGFloat = 1, _ y: CGFloat = 1) -> CGPath{
+        var transformation: CGAffineTransform  = CGAffineTransform(scaleX: x, y: y)//swift 3 upgrade
         path = path.mutableCopy(using: &transformation)!//swift 3 upgrade
         return path
     }
     /**
-     * Skews PARAM: path
+     * Skews - Parameter: path
      * skew(path,M_PI/8,M_PI/12)//alpha is 22.5 degrees and beta is 15 degrees.
      * CAUTION: When using this method remeber to use the CGPathCreateMutableCopy(somePath) if you dont want to edit the original path (THe return statment is jsut for convenince)
      */
-    static func skew(_ path:inout CGPath,_ alpha:Double,_ beta:Double)-> CGPath{
+    static func skew(_ path:inout CGPath, _ alpha: Double, _ beta: Double) -> CGPath{
         var transformation = CGAffineTransform.identity
         /*Create an affine transform that skews the coordinate system, by skewing the x axis by alpha radians and the y axis by beta radians.*/
         let alp: CGFloat = CGFloat(tan(alpha))
@@ -69,8 +69,8 @@ class CGPathModifier {
         path = path.mutableCopy(using: &transformation)!/*Apply that transform to the path*/
         return path
     }
-    static func transform(_ path:CGMutablePath,_ transformation:CGAffineTransform)->CGMutablePath{
-        var transformation:CGAffineTransform = transformation.copy()
+    static func transform(_ path: CGMutablePath, _ transformation: CGAffineTransform) -> CGMutablePath{
+        var transformation: CGAffineTransform = transformation.copy()
         return path.mutableCopy(using: &transformation)!//Swift 3 upgrade
     }
 

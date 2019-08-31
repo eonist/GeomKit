@@ -1,7 +1,7 @@
 import Cocoa
 /**
  * FANCY Gradients
- * TODO: ⚠️️ Make into enums
+ * - Fixme: ⚠️️ ⚠️️ Make into enums
  */
 class Gradients{
     /*red*/
@@ -60,7 +60,7 @@ class Gradients{
     static var purplePinkEnd:UInt = 0xC643FC
 }
 /**
- * NOTE: we use methods, since methods can be method overloaded. (var's can't method overload aka return dirfferent types with the same call) its also nice to be able to add an alpha value, although this could be done via array exension 
+ * - Note: we use methods, since methods can be method overloaded. (var's can't method overload aka return dirfferent types with the same call) its also nice to be able to add an alpha value, although this could be done via array exension 
  */
 extension Gradients{/*Color ranges*/
     //static func red()->(start:NSColor,end:NSColor){return (NSColorParser.nsColor(redStart),NSColorParser.nsColor(redEnd))}

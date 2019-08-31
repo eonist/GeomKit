@@ -1,22 +1,22 @@
 import Cocoa
 class NSColorParser {
     /**
-     * Note: NSColorParser.nsColor(255, 0.0,  0.0) is the same thing as: NSColor.redColor()
-     * EXAMPLE: nsColor(250.0, 0, 255)//output: red NSColor
+     * - Note: NSColorParser.nsColor(255, 0.0,  0.0) is the same thing as: NSColor.redColor()
+     * ## Examples: nsColor(250.0, 0, 255)//output: red NSColor
      */
-    static func nsColor(_ r: CGFloat,_ g: CGFloat,_ b: CGFloat,_ a: CGFloat = 255) -> NSColor{//alpha was 0-100 but is now 0-255 this works better with hex values
+    static func nsColor(_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat = 255) -> NSColor{//alpha was 0-100 but is now 0-255 this works better with hex values
         return NSColor.init(calibratedRed: r/255, green: g/255, blue: b/255, alpha: a/255)
     }
     /**
-     * NOTE: Supports 5 hex color formats: #FF0000,0xFF0000, FF0000, F00,red
-     * NOTE: hex to cg color: https://github.com/pketh/NSColor-fromHex-Swift/blob/master/NSColor%2BfromHex.swift
+     * - Note: Supports 5 hex color formats: #FF0000,0xFF0000, FF0000, F00,red
+     * - Note: hex to cg color: https://github.com/pketh/NSColor-fromHex-Swift/blob/master/NSColor%2BfromHex.swift
      */
     static func nsColor(_ hexColor:String, _ alpha: CGFloat = 1.0) -> NSColor{
         let uintColor:UInt = StringParser.color(hexColor)
         return nsColor(uintColor,alpha)
     }
     /**
-     * EXAMPLE: color("FF0000FF")//outputs blue with 100% opacity
+     * ## Examples: color("FF0000FF")//outputs blue with 100% opacity
      */
     static func color(_ hexColor:String)->NSColor{
         let rgba:RGBA = RGBAParser.rgba32(hexColor)
@@ -24,8 +24,8 @@ class NSColorParser {
     }
     /**
      * Returns NSColor for hex int
-     * NOTE: Convenience method
-     * EXAMPLE: nsColor(UInt(0x39D149))
+     * - Note: Convenience method
+     * ## Examples: nsColor(UInt(0x39D149))
      */
     static func nsColor(_ hexColor:UInt, _ alpha: CGFloat = 1.0)->NSColor{
         let rgb:UInt = hexColor
@@ -35,13 +35,13 @@ class NSColorParser {
         return NSColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(alpha))
     }
     /**
-     * EXAMPLE: :NSColorParser.nsColor(NSColor.blackColor(),0.5)//outputs a black color with 50% transperancy
+     * ## Examples: :NSColorParser.nsColor(NSColor.blackColor(),0.5)//outputs a black color with 50% transperancy
      */
-    static func nsColor(_ color:NSColor,_ alpha: CGFloat/*from 0 to 1*/)->NSColor{
+    static func nsColor(_ color:NSColor, _ alpha: CGFloat/*from 0 to 1*/)->NSColor{
         return color.withAlphaComponent(alpha)
     }
     /**
-     * Returns an nsColor for PARAM: cgColor
+     * Returns an nsColor for - Parameter: cgColor
      */
     static func nsColor(_ cgColor:CGColor)->NSColor{
         let ciColor = CIColor(cgColor:cgColor)//convert the cg to ci
@@ -52,16 +52,16 @@ class NSColorParser {
 extension NSColorParser{
     /**
      * Convenince implementation of nsColor with Int values
-     * NOTE: there is no need to make a convenince method for Double values, since Double values does well with thte CGFLoat implementation of the same method
+     * - Note: there is no need to make a convenince method for Double values, since Double values does well with thte CGFLoat implementation of the same method
      * r: 0 - 255
      */
-    static func nsColor(_ r:Int,_ g:Int,_ b:Int,_ a:Int = 100) -> NSColor{
+    static func nsColor(_ r: Int, _ g: Int, _ b: Int, _ a: Int = 100) -> NSColor{
         return NSColorParser.nsColor(CGFloat(r) /*/ 255.0*/, CGFloat(b) /*/ 255.0*/, CGFloat(g)/* / 255.0*/, CGFloat(a)/100 /*/ 100.0*/)
     }
     /**
      * Convenince
      */
-    static func nsColor(_ r:UInt,_ g:UInt,_ b:UInt) -> NSColor {
+    static func nsColor(_ r:UInt, _ g:UInt, _ b:UInt) -> NSColor {
         return NSColorParser.nsColor(r.cgFloat, g.cgFloat, b.cgFloat)
     }
     /**
@@ -73,9 +73,9 @@ extension NSColorParser{
     }
     /**
      * Convenince
-     * PARAM: h 0 - 240
-     * PARAM: s 0 - 1
-     * PARAM: v 0 - 1
+     * - Parameter: h 0 - 240
+     * - Parameter: s 0 - 1
+     * - Parameter: v 0 - 1
      */
     static func nsColor(_ hsv:HSV)->NSColor {
         //let rgb:RGB = RGBParser.rgbByHsv(color.h,color.s,color.v)
@@ -106,11 +106,11 @@ extension NSColorParser{
     }
     /**
      * Interpolates between two NSColors 
-     * TODO: ⚠️️ interpolating between gray and black at scalar 0 yields a darker tone than gray. Try fixing this by looking at the components, or maybe even using the CIColor trick
-     * NOTE: there is also Native: NSColor.green.blended(withFraction: 0.5, of: .blue)
+     * - Fixme: ⚠️️ ⚠️️ interpolating between gray and black at scalar 0 yields a darker tone than gray. Try fixing this by looking at the components, or maybe even using the CIColor trick
+     * - Note: there is also Native: NSColor.green.blended(withFraction: 0.5, of: .blue)
      */
-    static func interpolate(_ from:NSColor,_ to:NSColor,_ scalar: CGFloat) ->NSColor{
-        func interpolate(_ start: CGFloat,_ end: CGFloat,_ scalar: CGFloat)->CGFloat{
+    static func interpolate(_ from:NSColor, _ to:NSColor, _ scalar: CGFloat) ->NSColor{
+        func interpolate(_ start: CGFloat, _ end: CGFloat, _ scalar: CGFloat)->CGFloat{
             return start + (end - start) * scalar
         }
         let fromRGBColor:NSColor = from.usingColorSpace(.genericRGB)!

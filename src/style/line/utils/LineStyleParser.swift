@@ -2,7 +2,7 @@ import Foundation
 
 class LineStyleParser {
     /**
-     * NOTE: You could also add this as a Descrieable extension on the ILineStyle protocol but, its convenient enough to have it here. 
+     * - Note: You could also add this as a Descrieable extension on the ILineStyle protocol but, its convenient enough to have it here. 
      */
     static func describe(_ lineStyle:LineStylable){
         Swift.print("LineStyleParser.describe()")
@@ -33,7 +33,7 @@ class LineStyleParser {
         else{return "bevel"}/*Bevel*/
     }
     /**
-     * Clones PARAM: lineStyle
+     * Clones - Parameter: lineStyle
      */
     static func clone(_ lineStyle:LineStylable) -> LineStyle {
         return LineStyle(lineStyle.thickness,lineStyle.color,lineStyle.lineCap,lineStyle.lineJoin,lineStyle.miterLimit,lineStyle.phase,lineStyle.lengths)

@@ -15,9 +15,9 @@ class CMYKParser {
      * K - number between 0 to 255 representing black
      *
      * Can not compute, including alpha.
-     * PARAM: r the red (R) indicating the number (0x00 to 0xFF to)
-     * PARAM: g green (G) indicates the number (0x00 to 0xFF to)
-     * PARAM: b blue (B) shows the number (0x00 to 0xFF to)
+     * - Parameter: r the red (R) indicating the number (0x00 to 0xFF to)
+     * - Parameter: g green (G) indicates the number (0x00 to 0xFF to)
+     * - Parameter: b blue (B) shows the number (0x00 to 0xFF to)
      * RETURN: CMYK values into an array of [H, S, V] 
      */
     static func cmyk(_ rgb:RGB)->CMYK {
