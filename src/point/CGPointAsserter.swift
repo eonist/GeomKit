@@ -23,14 +23,14 @@ class CGPointAsserter {
      * Asserts if p1 is less than p2
      * - Note: think - Parameter: p1 is eigther to the left of - Parameter: p2 AND above - Parameter: p2
      */
-    static func absolutLess(_ p1: CGPoint, _ p2: CGPoint)->Bool {//- Fixme: ⚠️️ absolutleyLess?!?
+    static func absolutLess(_ p1: CGPoint, _ p2: CGPoint) -> Bool {//- Fixme: ⚠️️ absolutleyLess?!?
         return p1.x < p2.x && p1.y < p2.y
     }
     /**
      * Asserts if p1 is more than p2
      * - Note: think - Parameter: p1 is to the right of - Parameter: p2 AND bellow - Parameter: p2
      */
-    static func absolutMore(_ p1: CGPoint, _ p2: CGPoint)->Bool {//- Fixme: ⚠️️ rename to absolutleyMore?!?
+    static func absolutMore(_ p1: CGPoint, _ p2: CGPoint) -> Bool {//- Fixme: ⚠️️ rename to absolutleyMore?!?
         return p1.x > p2.x && p1.y > p2.y
     }
     /**
@@ -38,7 +38,7 @@ class CGPointAsserter {
      * - Note: think - Parameter: p1 is eaual or above - Parameter: p2
      * - Note: both x and y can be the same in both points
      */
-    static func lessOrEqual(_ p1: CGPoint, _ p2: CGPoint)->Bool {
+    static func lessOrEqual(_ p1: CGPoint, _ p2: CGPoint) -> Bool {
         return p1.x <= p2.x && p1.y <= p2.y
     }
     /**
@@ -46,7 +46,7 @@ class CGPointAsserter {
      * - Note: think - Parameter: p1 is eaual or bellow - Parameter: p2
      * - Note: both x and y can be the same in both points
      */
-    static func moreOrEqual(_ p1: CGPoint, _ p2: CGPoint)->Bool {
+    static func moreOrEqual(_ p1: CGPoint, _ p2: CGPoint) -> Bool {
         return p1.x >= p2.x && p1.y >= p2.y
     }
     /**
@@ -65,9 +65,9 @@ class CGPointAsserter {
      */
     static func converging(_ p1: CGPoint, _ p2: CGPoint, _ angle1: CGFloat, _ angle2: CGFloat) -> Bool {
         let p1A: CGPoint = CGPoint.polarPoint(100, angle1).add(p1)
-        let p1B: CGPoint = CGPoint.polarPoint(100, angle1-π).add(p1)
+        let p1B: CGPoint = CGPoint.polarPoint(100, angle1 - π).add(p1)
         let p2A: CGPoint = CGPoint.polarPoint(100, angle2).add(p2)
-        let p2B: CGPoint = CGPoint.polarPoint(100, angle2-π).add(p2)
+        let p2B: CGPoint = CGPoint.polarPoint(100, angle2 - π).add(p2)
         let len: CGFloat = CGPoint.distance(p1A, p2A)
         return len < CGPoint.distance(p1B, p2A) && len < CGPoint.distance(p2A, p2B)
     }
@@ -80,21 +80,21 @@ class CGPointAsserter {
      */
     static func diverging(_ p1: CGPoint, _ p2: CGPoint, _ angle1: CGFloat, _ angle2: CGFloat) -> Bool {
         let p1A: CGPoint = CGPoint.polarPoint(100, angle1).add(p1)
-        let p1B: CGPoint = CGPoint.polarPoint(100, angle1-π).add(p1)
+        let p1B: CGPoint = CGPoint.polarPoint(100, angle1 - π).add(p1)
         let p2A: CGPoint = CGPoint.polarPoint(100, angle2).add(p2)
-        let p2B: CGPoint = CGPoint.polarPoint(100, angle2-π).add(p2)
+        let p2B: CGPoint = CGPoint.polarPoint(100, angle2 - π).add(p2)
         let len: CGFloat = CGPoint.distance(p1A, p2A)
         return len > CGPoint.distance(p1B, p2A) && len > CGPoint.distance(p2A, p2B)
     }
     /**
-     * rayPoint:Point,pivot:Point,p1:Point,p2:Point
+     * rayPoint: Point, pivot: Point,p1: Point,p2: Point
      * - Fixme: ⚠️️ we could use slope() here too?, just consider infinity and -infinity and NaN as results of slope
      * - Important: carefull when you add points, as you need to think from bisector points and outward. (outgoing angles)
      */
     static func oppositeDirectional(_ bisectorP1: CGPoint, _ bisectorP2: CGPoint, _ aP1: CGPoint, _ aP2: CGPoint, _ bP1: CGPoint, _ bP2: CGPoint) -> Bool {
         let bisectorAngle: CGFloat = Trig.angle(bisectorP1, bisectorP2)
-        let angleA: CGFloat = Trig.angle(aP1,aP2)
-        let angleB: CGFloat = Trig.angle(bP1,bP2)
+        let angleA: CGFloat = Trig.angle(aP1, aP2)
+        let angleB: CGFloat = Trig.angle(bP1, bP2)
         return Trig.isOppositeDirectional(bisectorAngle, angleA, angleB)//- Fixme: ⚠️️ we could do the asserting with slope instead of trig, just consider infinity and -infinity and NaN as results of slope
     }
     /**
@@ -106,11 +106,11 @@ class CGPointAsserter {
     static func intersects(_ a1: CGPoint ,  _ a2: CGPoint,  _ b1: CGPoint,  _ b2: CGPoint) -> Bool {
         var q: CGFloat = (a1.y - b1.y) * (b2.x - b1.x) - (a1.x - b1.x) * (b2.y - b1.y)
         let d: CGFloat = (a2.x - a1.x) * (b2.y - b1.y) - (a2.y - a1.y) * (b2.x - b1.x)
-        if d == 0   {return false}
+        if d == 0   { return false }
         let r: CGFloat = q / d
         q = (a1.y - b1.y) * (a2.x - a1.x) - (a1.x - b1.x) * (a2.y - a1.y)
         let s: CGFloat = q / d
-        if  r < 0 || r > 1 || s < 0 || s > 1 {return false}
+        if  r < 0 || r > 1 || s < 0 || s > 1 { return false }
         return true
     }
     /**
@@ -138,8 +138,8 @@ class CGPointAsserter {
      * - Note: isContraDirectional is like parallel but vectors must go in opposite directions
      */
     static func isContraDirectional(_ aP1: CGPoint, _ aP2: CGPoint, _ bP1: CGPoint, _ bP2: CGPoint) -> Bool {
-        let a: CGFloat = Trig.angle(aP1,aP2)
-        let b: CGFloat = Trig.angle(bP1,bP2)
+        let a: CGFloat = Trig.angle(aP1, aP2)
+        let b: CGFloat = Trig.angle(bP1, bP2)
         return Trig.isContraDirectional(a, b)
     }
     /**

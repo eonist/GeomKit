@@ -6,7 +6,7 @@ class CGPointParser{
      * - Parameter: scalar: the scalar is between 0 and 1
      * - Note: PointParser.interpolate() is different form the Adobe flash native Point.interpolate, the later multiplies from p2 to p1,
      * the former multiplies form p1 tp p2 which i think is more logical
-     * - Fixme: ⚠️️using Math.abs could be more optimized? this optimization needs research. check the proto site
+     * - Fixme: ⚠️️ Using Math.abs could be more optimized? this optimization needs research. check the proto site
      */
     static func interpolate(_ a: CGPoint, _ b: CGPoint, _ scalar: CGFloat)->CGPoint {
         return CGPoint(a.x.interpolate(b.x, scalar), a.y.interpolate(b.y, scalar))
@@ -27,10 +27,10 @@ class CGPointParser{
         } else if angle == π || angle == -π {
             x = -len
             y = 0
-        } else if angle == -π/2 {
+        } else if angle == -π / 2 {
             x = 0
             y = -len
-        } else if angle == π/2 {
+        } else if angle == π / 2 {
             x = 0
             y = len
         } else {
@@ -239,7 +239,7 @@ class CGPointParser{
      * Caution: this only works if p1 is .zero
      */
     static func midPoint(_ p1: CGPoint, _ p2: CGPoint) -> CGPoint {
-        return CGPoint((p1.x + p2.x) / 2,(p1.y + p2.y) / 2)
+        return CGPoint((p1.x + p2.x) / 2, (p1.y + p2.y) / 2)
     }
     /**
      * Returns a Point half way between a and b
@@ -337,7 +337,7 @@ class CGPointParser{
       let v: CGFloat = ((b.p1.x - a.p1.x) * (a.p2.y - a.p1.y) - (b.p1.y - a.p1.y) * (a.p2.x - a.p1.x)) / distance
       if (u < 0.0 || u > 1.0) { return nil }/*error, intersection not inside a*/
       if (v < 0.0 || v > 1.0) { return nil }/*error, intersection not inside b*/
-      return .init(x:a.p1.x + u * (a.p2.x - a.p1.x), y:a.p1.y + u * (a.p2.y - a.p1.y))
+      return .init(x: a.p1.x + u * (a.p2.x - a.p1.x), y: a.p1.y + u * (a.p2.y - a.p1.y))
    }
     /**
      * beta
@@ -347,11 +347,11 @@ class CGPointParser{
      */
     static func normalizedIntersection(_ aP1: CGPoint, _ aP2: CGPoint, _ bP1: CGPoint, _ bP2: CGPoint) -> CGPoint {
         if aP1.equals(bP1) || aP1.equals(bP2){ return aP1}
-        else if aP2.equals(bP1) || aP2.equals(bP2){ return aP2}
-        else if CGPointAsserter.collinear(aP1, aP2, bP1){ return bP1}
-        else if CGPointAsserter.collinear(aP1, aP2, bP2){ return bP2}
-        else if CGPointAsserter.collinear(bP1, bP2, aP1){ return aP1}
-        else if CGPointAsserter.collinear(bP1, bP2, aP2){ return aP2}
-        else {return CGPointParser.intersection(aP1, aP2, bP1, bP2)}
+        else if aP2.equals(bP1) || aP2.equals(bP2) { return aP2 }
+        else if CGPointAsserter.collinear(aP1, aP2, bP1) { return bP1 }
+        else if CGPointAsserter.collinear(aP1, aP2, bP2) { return bP2 }
+        else if CGPointAsserter.collinear(bP1, bP2, aP1) { return aP1 }
+        else if CGPointAsserter.collinear(bP1, bP2, aP2) { return aP2 }
+        else { return CGPointParser.intersection(aP1, aP2, bP1, bP2) }
     }
 }

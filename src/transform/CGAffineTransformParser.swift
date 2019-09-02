@@ -14,11 +14,11 @@ class CGAffineTransformParser {
      * - Fixme: ⚠️️ ⚠️️ we could return the matrix for method chaining
      * - Fixme: ⚠️️ ⚠️️ rename to just rotate? for simplicity?
      */
-    static func rotateAroundPoint(_ transform:CGTransform, _ rotation: CGFloat, _ pivot: CGPoint)->CGTransform{
+    static func rotateAroundPoint(_ transform: CGTransform, _ rotation: CGFloat, _ pivot: CGPoint) -> CGTransform {
         var transform = transform
         transform.translate(pivot.x, pivot.y)/*<-this looks strage, but you sort of set the point here*/
         transform.rotate(rotation)// = CGAffineTransformRotate(transform, rotation);
-        transform.translate(-pivot.x,-pivot.y)/*then you reset the offset to the original position*/
+        transform.translate(-pivot.x, -pivot.y)/*then you reset the offset to the original position*/
         return transform
     }
     /**
@@ -30,7 +30,7 @@ class CGAffineTransformParser {
      * - parameter scale: CGPoint values from 0-1
      * - parameter pivot: The CGPoint to scale from
      */
-    static func scaleFromPoint(transform:CGAffineTransform, scale: CGPoint, pivot: CGPoint) -> CGAffineTransform {
+    static func scaleFromPoint(transform: CGAffineTransform, scale: CGPoint, pivot: CGPoint) -> CGAffineTransform {
         var transform = transform
         transform = transform.translatedBy(x: pivot.x, y: pivot.y)/*<-- this looks strange, but you sort of set the point here*/
         transform = transform.scaledBy(x: scale.x, y: scale.y)// = CGAffineTransformRotate(transform, rotation);
@@ -40,7 +40,7 @@ class CGAffineTransformParser {
     /**
      *
      */
-    static func translate(_ transform:CGTransform, _ x: CGFloat, _ y: CGFloat)->CGTransform{
+    static func translate(_ transform: CGTransform, _ x: CGFloat, _ y: CGFloat) -> CGTransform{
         var transform = transform
         transform.translate(x, y)
         return transform
@@ -49,20 +49,20 @@ class CGAffineTransformParser {
      * - Note: this method is used in conjunction with the radial gradient matrix transformation of context
      * - Note: the special thing about it is that the scale value follows the axis of the rotation. defualt rotation is 0 and thus scale.y becomes the width sort of
      */
-    static func transformAroundPoint(_ transform:CGTransform, _ scale: CGPoint, _ rotation: CGFloat, _ offset: CGPoint, _ pivot: CGPoint)->CGTransform{
+    static func transformAroundPoint(_ transform: CGTransform, _ scale: CGPoint, _ rotation: CGFloat, _ offset: CGPoint, _ pivot: CGPoint) -> CGTransform {
         var transform = transform
-        transform = CGTransform.translate(transform,offset.x,offset.y)//transform,minRadius*gradient.relativeStartCenter!.x,minRadius*gradient.relativeStartCenter!.y
+        transform = CGTransform.translate(transform, offset.x, offset.y)//transform,minRadius*gradient.relativeStartCenter!.x,minRadius*gradient.relativeStartCenter!.y
         transform = CGTransform.rotateAroundPoint(transform, rotation, pivot)
         transform = CGTransform.scaleFromPoint(transform, scale.y, scale.x, pivot)
         return transform
     }
-    static func copy(_ transform:CGTransform)->CGTransform{
+    static func copy(_ transform: CGTransform) -> CGTransform{
         return CGAffineTransform(transform.a, transform.b, transform.c, transform.d, transform.tx, transform.ty)//radialGradient.gradientTransform
     }
    /**
     * Updated in swift 4.2
     */
-    static func concat(_ a:CGTransform, _ b:CGTransform)->CGTransform{
+    static func concat(_ a: CGTransform, _ b: CGTransform) -> CGTransform{
         //return CGAffineTransformParser.concat(a, b)
          return a.concatenating(b)
     }

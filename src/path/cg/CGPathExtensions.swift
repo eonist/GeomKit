@@ -14,10 +14,10 @@ extension CGMutablePath{
     func clone()->CGMutablePath {
         return self.mutableCopy()!
     }
-    func moveTo(_ x: CGFloat, _ y: CGFloat){/*Convenince*/
+    func moveTo(_ x: CGFloat, _ y: CGFloat) {/*Convenince*/
         self.move(to: CGPoint(x,y))
     }
-    func moveTo(_ point: CGPoint){/*Convenince*/
+    func moveTo(_ point: CGPoint) {/*Convenince*/
         self.move(to: point)
     }
     /**
@@ -31,7 +31,7 @@ extension CGMutablePath{
 extension CGPath {
     /**
      * - Note: this method is used in DrawLab when Converting CGPath to Path
-     * - Note: Great method for parsing through CGPath instances 
+     * - Note: Great method for parsing through CGPath instances
      * - Fixme: ⚠️️ swift 3 update, this method changed drastically, I think Oleb from obj-c.io has a swift 3 version of this that is better.
      */
     func forEach( body: @convention(block) (CGPathElement) -> Void) {
@@ -46,4 +46,3 @@ extension CGPath {
         //self.apply(info: unsafeBody, function: callback as! CGPathApplierFunction)
     }
 }
-

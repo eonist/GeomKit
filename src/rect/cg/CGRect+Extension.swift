@@ -10,7 +10,7 @@ extension CGRect {
      * Clones CGRect
      * ## Examples:  CGRect(0,0,100,100).clone()
      */
-    func clone() -> CGRect{//remove this, use copy instead
+    func clone() -> CGRect {//remove this, use copy instead
         return CGRect(self.origin.x, self.origin.y, self.width, self.height)
     }
     /**
@@ -23,58 +23,58 @@ extension CGRect {
      * Create a path using the coordinates of the rect passed in
      * ## Examples:  CGRect(0,0,100,100).path
      */
-    var path: CGMutablePath{ return CGRectParser.path(self) }
+    var path: CGMutablePath { return CGRectParser.path(self) }
     /*Initialization*/
     init(_ pos: CGPoint, _ size: CGSize){ self.init(origin: pos, size: size)}
     init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}//- Fixme: ⚠️️add initializer to CGSize
-    init(_ x:Double, _ y:Double, _ width:Double, _ height:Double){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}//- Fixme: ⚠️️add initializer to CGSize
-    init(_ x: CGFloat, _ y: CGFloat, _ width:Double, _ height:Double){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}
-    init(_ x: Int, _ y: Int, _ width:Double, _ height:Double){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}
+    init(_ x: Double, _ y: Double, _ width: Double, _ height: Double){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}//- Fixme: ⚠️️add initializer to CGSize
+    init(_ x: CGFloat, _ y: CGFloat, _ width: Double, _ height: Double){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}
+    init(_ x: Int, _ y: Int, _ width: Double, _ height:Double){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}
     /*Position*/
-    var x: CGFloat {set {origin.x = newValue} get {return origin.x} }
-    var y: CGFloat {set {origin.y = newValue} get {return origin.y} }
+    var x: CGFloat { set { origin.x = newValue} get { return origin.x } }
+    var y: CGFloat { set { origin.y = newValue} get { return origin.y } }
     /*Size*/
     /*var width: CGFloat {set {size.width = newValue} get {return size.width} }
      var height: CGFloat {set {size.height = newValue} get {return size.height} }*/
     /*⚠️️ - Note:  Siwft3 seems to have problems with width get and height get as extensions so use w and h instead. set worked for some reason but still*/
-    var w: CGFloat {set {size.width = newValue} get {return size.width} }
-    var h: CGFloat {set {size.height = newValue} get {return size.height} }
+    var w: CGFloat { set { size.width = newValue} get { return size.width } }
+    var h: CGFloat { set { size.height = newValue} get { return size.height } }
     /*Corners*/
-    var topLeft: CGPoint {get {return self.origin} }
-    var point: CGPoint {get {return self.origin} }
-    var bottomLeft: CGPoint {get {return CGPoint(self.minX, self.maxY)}}
-    var bottomRight: CGPoint {get {return CGPoint(self.maxX, self.maxY)}}
-    var topRight: CGPoint {get {return CGPoint(self.maxX, self.minY)}}
-    var center: CGPoint {get {return CGPoint(self.midX, self.midY)}}
-    var top: CGPoint {get {return CGPoint(self.midX, self.minY)}}
-    var bottom: CGPoint {get {return CGPoint(self.midX, self.maxY)}}
-    var left: CGPoint {get {return CGPoint(self.maxX, self.midY)}}
-    var right: CGPoint {get {return CGPoint(self.minX, self.midY)}}
-    var corners:Array<CGPoint> {return CGRectParser.corners(self)}
-    var sides:Array<CGPoint>{return CGRectParser.sides(self)}
-    var nsRect:NSRect {return NSRectFromCGRect(self)}
+    var topLeft: CGPoint { get { return self.origin } }
+    var point: CGPoint { get { return self.origin } }
+    var bottomLeft: CGPoint { get { return CGPoint(self.minX, self.maxY) } }
+    var bottomRight: CGPoint { get { return CGPoint(self.maxX, self.maxY) } }
+    var topRight: CGPoint { get { return CGPoint(self.maxX, self.minY) } }
+    var center: CGPoint { get { return CGPoint(self.midX, self.midY) } }
+    var top: CGPoint { get { return CGPoint(self.midX, self.minY) } }
+    var bottom: CGPoint { get { return CGPoint(self.midX, self.maxY) } }
+    var left: CGPoint { get { return CGPoint(self.maxX, self.midY) } }
+    var right: CGPoint { get { return CGPoint(self.minX, self.midY) } }
+    var corners: Array<CGPoint> { return CGRectParser.corners(self) }
+    var sides: Array<CGPoint> { return CGRectParser.sides(self) }
+    var nsRect: NSRect { return NSRectFromCGRect(self) }
     /**
      * - Fixme: ⚠️️ Maybe for x,y,width,height aswell?
      * - Fixme: ⚠️️ Make it enum! it's faster
      */
-    subscript(key:Alignment) -> CGPoint {/*Easy Access to corners*/
-        get {
-            switch key{
-            case .topLeft:return topLeft
-            case .topRight:return topRight
-            case .bottomRight:return bottomRight
-            case .bottomLeft:return bottomLeft
-            case .topCenter:return top
-            case .bottomCenter:return bottom
-            case .centerLeft:return left
-            case .centerRight:return right
-            case .centerCenter:return center
-            }
-        }
-        set {
-            fatalError("UNSUPORTED CORNER TYPE: " + key.rawValue + " WITH VALUE: " + String(describing: newValue))
-        }
-    }
+//    subscript(key: Alignment) -> CGPoint {/*Easy Access to corners*/
+//        get {
+//            switch key{
+//            case .topLeft: return topLeft
+//            case .topRight: return topRight
+//            case .bottomRight: return bottomRight
+//            case .bottomLeft: return bottomLeft
+//            case .topCenter: return top
+//            case .bottomCenter: return bottom
+//            case .centerLeft: return left
+//            case .centerRight: return right
+//            case .centerCenter: return center
+//            }
+//        }
+//        set {
+//            fatalError("UNSUPORTED CORNER TYPE: " + key.rawValue + " WITH VALUE: " + String(describing: newValue))
+//        }
+//    }
     /**
      * negative inset equals outset
      */
@@ -84,13 +84,13 @@ extension CGRect {
     /**
      * - Note:  Same as insetBy, but this method is simpler to call, similar to Outset (Convenience)
      */
-    func inset(_ dx: CGFloat, _ dy: CGFloat)->CGRect{
+    func inset(_ dx: CGFloat, _ dy: CGFloat) -> CGRect{
         return insetBy(dx: dx, dy: dy)
     }
-    func offset(_ dx: CGFloat, _ dy: CGFloat)->CGRect{/*Convenience*/
+    func offset(_ dx: CGFloat, _ dy: CGFloat) -> CGRect{/*Convenience*/
         return self.offsetBy(dx: dx, dy: dy)
     }
-    func offset(_ point: CGPoint)->CGRect{/*Convenience*/
+    func offset(_ point: CGPoint) -> CGRect{/*Convenience*/
         return self.offsetBy(dx: point.x,dy: point.y)
     }
     /**
@@ -106,7 +106,7 @@ extension CGRect {
     /**
      * Expands the size of the rect from its pivot
      */
-    func expand(_ dx: CGFloat, _ dy: CGFloat)->CGRect{
+    func expand(_ dx: CGFloat, _ dy: CGFloat) -> CGRect{
         return CGRect(self.x, self.y, self.width + dx, self.height + dy)
     }
 }

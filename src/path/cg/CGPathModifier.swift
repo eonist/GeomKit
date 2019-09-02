@@ -38,7 +38,7 @@ class CGPathModifier {
   @discardableResult
   static func centerRotate(path:inout CGMutablePath, angle: CGFloat) -> CGPath{
      let rect = path.boundingBox
-     let offset: CGPoint = .init(x: - rect.width / 2,y: - (rect.height) / 2)
+     let offset: CGPoint = .init(x: -rect.width / 2,y: -(rect.height) / 2)
      CGPathModifier.translate(path: &path, p: offset)
      CGPathModifier.rotate(path: &path, angle: angle)//45deg
      let reOffset: CGPoint = .init(x: rect.width / 2, y: (rect.height) / 2)

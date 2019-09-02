@@ -1,8 +1,9 @@
-import Cocoa
+import Foundation
+import NumberSugarMacOS
 /**
  * - Note:  CGRectExtension also has alot of methods for parsing the CGRect
  */
-class CGRectParser{
+class CGRectParser {
     /**
      * Returns a Rectangle instance from any two points (does not have to be topLeft and bottomRight)
      */
@@ -29,7 +30,7 @@ class CGRectParser{
      * CGPathModifier.fill(shape: shapeLayer, cgPath: cgPath, fillColor: .green)
      * self.view.layer.addSublayer(shapeLayer)
      */
-    static func roundRect(rect: CGRect, radius: CGFloat) -> CGMutablePath{
+    static func roundRect(rect: CGRect, radius: CGFloat) -> CGMutablePath {
         let path:CGMutablePath = CGMutablePath()
         path.move(to: CGPoint(rect.midX, rect.minY))//was-> CGPathMoveToPoint
         path.addArc(tangent1End: CGPoint(rect.maxX, rect.minY), tangent2End: CGPoint(rect.maxX, rect.maxY), radius: radius)//Swift 3 upgrade, was-> CGPathAddArcToPoint(path, nil, CGRectGetMaxX(rect), CGRectGetMaxY(rect), CGRectGetMinX(rect), CGRectGetMaxY(rect), radius)
@@ -42,8 +43,8 @@ class CGRectParser{
     /**
      * Create a path using the coordinates of the rect passed in
      */
-    static func path(_ rect: CGRect)->CGMutablePath{
-        let path:CGMutablePath = CGMutablePath()
+    static func path(_ rect: CGRect) -> CGMutablePath{
+        let path: CGMutablePath = CGMutablePath()
         path.move(to: CGPoint(rect.origin.x, rect.origin.y))//was-> CGPathMoveToPoint
         path.addLine(to: CGPoint(rect.origin.x + rect.size.width, rect.origin.y))// ***** Segment 1 *****
         path.addLine(to: CGPoint(rect.origin.x + rect.size.width,rect.origin.y + rect.size.height))// ***** Segment 2 *****
@@ -55,31 +56,31 @@ class CGRectParser{
      * Returns the midPoint of each side in - Parameter: rect
      */
     static func sides(_ rect: CGRect) -> [CGPoint] {/*<--Was previously named sidePoints*/
-        return [rect.left,rect.right,rect.top,rect.bottom]
+        return [rect.left, rect.right, rect.top, rect.bottom]
     }
     /**
      * Returns an array with Line instances of all sides of a rectangle
      */
-    static func sides(_ rectangle: CGRect) -> [Line] {
-        return [topSide(rectangle),rightSide(rectangle),bottomSide(rectangle),leftSide(rectangle)]
+    static func sides(_ rectangle: CGRect) -> [CGLine] {
+        return [topSide(rectangle), rightSide(rectangle), bottomSide(rectangle), leftSide(rectangle)]
     }
-    static func topSide(_ rectangle: CGRect) -> Line {
-        return Line(rectangle.topLeft, CGPoint(rectangle.right.x,rectangle.top.y))
+    static func topSide(_ rectangle: CGRect) -> CGLine {
+        return CGLine(rectangle.topLeft, CGPoint(rectangle.right.x, rectangle.top.y))
     }
-    static func rightSide(_ rectangle: CGRect) -> Line {
-        return Line(CGPoint(rectangle.right.x,rectangle.top.y),rectangle.bottomRight)
+    static func rightSide(_ rectangle: CGRect) -> CGLine {
+        return CGLine(CGPoint(rectangle.right.x, rectangle.top.y), rectangle.bottomRight)
     }
-    static func bottomSide(_ rectangle: CGRect) -> Line {
-        return Line(rectangle.bottomRight,CGPoint(rectangle.left.x,rectangle.bottom.y))
+    static func bottomSide(_ rectangle: CGRect) -> CGLine {
+        return CGLine(rectangle.bottomRight, CGPoint(rectangle.left.x, rectangle.bottom.y))
     }
-    static func leftSide(_ rectangle: CGRect) -> Line {
-        return Line(CGPoint(rectangle.left.x,rectangle.bottom.y),rectangle.topLeft)
+    static func leftSide(_ rectangle: CGRect) -> CGLine {
+        return CGLine(CGPoint(rectangle.left.x, rectangle.bottom.y), rectangle.topLeft)
     }
     /**
      * Returns all the corners in - Parameter: rect
      */
     static func corners(_ rect: CGRect) -> [CGPoint] {
-        return [rect.topLeft,rect.topRight,rect.bottomLeft,rect.bottomRight]
+        return [rect.topLeft, rect.topRight, rect.bottomLeft, rect.bottomRight]
     }
     /**
      * - Fixme: ⚠️️ maybe get the local rect with the pivot as center?? how does it work, hmmm
@@ -89,7 +90,7 @@ class CGRectParser{
         var rotatedPoints: [CGPoint] = CGPointModifier.rotatePoints(points, CGPoint(), -rotation)
         return rectangle(topLeft: rotatedPoints[0], bottomRight: rotatedPoints[1])
     }
-    static func rectangle( topLeft: CGPoint,  bottomRight: CGPoint) -> CGRect{
+    static func rectangle(topLeft: CGPoint, bottomRight: CGPoint) -> CGRect{
         let width: CGFloat = CGFloatParser.difference(topLeft.x, bottomRight.x)
         let height: CGFloat = CGFloatParser.difference(topLeft.y, bottomRight.y)
         return CGRect(topLeft.x, topLeft.y, width, height)
@@ -99,15 +100,15 @@ class CGRectParser{
      * - Note:  This method used to be a modifying method but was remade as a parser, as its easier to use this way (make a duplocate method if mutating is need in the future)
      * ## Examples: var localRectangle: CGRect = CGRectParaser.globalToLocal(rectangle1.clone(), view)
      */
-    static func globalToLocal(_ globalRectangle: CGRect, localView:NSView) -> CGRect {
-        var globalRectangle = globalRectangle
-        var localRectangle: CGRect = CGRect(0,0,globalRectangle.width,globalRectangle.height)
-        let globalToLocalPoint: CGPoint = localView.globalToLocal(globalRectangle.topLeft)
-        _ = localRectangle.offsetInPlace(globalToLocalPoint)
-        globalRectangle.x = localRectangle.x
-        globalRectangle.y = localRectangle.y
-        return globalRectangle
-    }
+//    static func globalToLocal(_ globalRectangle: CGRect, localView: NSView) -> CGRect {
+//        var globalRectangle = globalRectangle
+//        var localRectangle: CGRect = CGRect(0, 0, globalRectangle.width, globalRectangle.height)
+//        let globalToLocalPoint: CGPoint = localView.globalToLocal(globalRectangle.topLeft)
+//        _ = localRectangle.offsetInPlace(globalToLocalPoint)
+//        globalRectangle.x = localRectangle.x
+//        globalRectangle.y = localRectangle.y
+//        return globalRectangle
+//    }
    /**
     * Returns a square that fits inside a circle
     * - Parameter: circleCenter - center of circle

@@ -1,4 +1,4 @@
-import Cocoa
+import Foundation
 
 class CGRectModifier {
     /**
@@ -6,7 +6,7 @@ class CGRectModifier {
      * - Note:  positions from the top left of the rectangle
      */
     static func position(_ rectangle:inout CGRect, position: CGPoint) -> CGRect {
-        let difference: CGPoint = CGPointParser.difference(rectangle.topLeft,position)
+        let difference: CGPoint = CGPointParser.difference(rectangle.topLeft, position)
         _ = rectangle.offsetInPlace(difference)
         return rectangle
     }

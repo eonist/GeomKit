@@ -1,5 +1,7 @@
 import Foundation
 /*Class methods:*/
+let π = CGFloat(Double.pi)/*Global variable*/
+
 extension CGPoint {
     static func polarPoint(_ radius: CGFloat, _ angle: CGFloat) -> CGPoint {/*Convenience*/
         return CGPointParser.polar(radius, angle)
@@ -22,8 +24,8 @@ extension CGPoint{
     func polarPoint(_ radius: CGFloat, _ angle: CGFloat) -> CGPoint { return self + CGPoint.polarPoint(radius, angle) }//polarPoint from self
     //func polar(radius: CGFloat, _ angle: CGFloat) -> CGPoint { return polarPoint(radius, angle) }//convenience and legacy support
     func interpolate(_ to: CGPoint, _ scalar: CGFloat) -> CGPoint { return CGPoint.interpolate(self, to, scalar) }//interpolate from self to b by scalar
-    func copy() -> CGPoint{ return CGPoint(self.x, self.y) }
-    func clone() -> CGPoint{ return CGPoint(self.x, self.y) }
+    func copy() -> CGPoint { return CGPoint(self.x, self.y) }
+    func clone() -> CGPoint { return CGPoint(self.x, self.y) }
     func add(_ p: CGPoint) -> CGPoint { return CGPointParser.add(self, p) }
     func subtract(_ p: CGPoint) -> CGPoint { return CGPointParser.substract(self, p) }
     func multiply(_ p: CGPoint) -> CGPoint { return CGPointParser.multiply(self, p) }
@@ -34,27 +36,27 @@ extension CGPoint{
     /**
      * ## Examples: CGPoint(x:20,y:30)[.hor]//20
      */
-    subscript(dir: Dir) -> CGFloat {/*Convenience*/
-        get {
-            switch dir {
-                case .hor:
-                    return self.x
-                case .ver:
-                    return self.y
-            }
-        } set {
-            switch dir {
-                case .hor:
-                    self.x = newValue
-                case .ver:
-                    self.y = newValue
-            }
-        }
-    }
+//    subscript(dir: Dir) -> CGFloat {/*Convenience*/
+//        get {
+//            switch dir {
+//                case .hor:
+//                    return self.x
+//                case .ver:
+//                    return self.y
+//            }
+//        } set {
+//            switch dir {
+//                case .hor:
+//                    self.x = newValue
+//                case .ver:
+//                    self.y = newValue
+//            }
+//        }
+//    }
 }
 /*Convenient operators*/
 public func +(a: CGPoint, b: CGPoint) -> CGPoint { return CGPointParser.add(a, b) }//Adds the coordinates of point p to the coordinates of this point to create a new point
-public func -(a: CGPoint, b: CGPoint) -> CGPoint { return CGPointParser.subtract(a, b) }//Subtracts the coordinates of point p from the coordinates of this point to create a new point.
+public func -(a: CGPoint, b: CGPoint) -> CGPoint { return CGPointParser.substract(a, b) }//Subtracts the coordinates of point p from the coordinates of this point to create a new point.
 public func +=( a: inout CGPoint, b: CGPoint) { a.x += b.x; a.y += b.y; }//modifies a by adding b
 public func -=( a: inout CGPoint, b: CGPoint) { a.x -= b.x; a.y -= b.y; }//modifies a by substracting b
 public func * (left: CGPoint, right: CGPoint) -> CGPoint {return CGPointParser.multiply(left, right)}//Multiplies two CGPoint values and returns the result as a new CGPoint.
