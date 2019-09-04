@@ -16,15 +16,6 @@ class CGPointModifier {
         return CGPoint(x,y)
     }
     /**
-     * - Parameter: rotation must be between -PI and +PI
-     */
-    static func safeRotatePoint(_ pivot: CGPoint, _ point: CGPoint, _ rotation: CGFloat) -> CGPoint {
-        let pointAngle: CGFloat = Trig.angle(pivot, point)/*find the angle of point*/
-        let distance: CGFloat = CGPointParser.distance(pivot, point)/*length of point and pivotPoint*/
-        let rot: CGFloat = Trig.normalize2(pointAngle + rotation)/*sum of pointAngle and rotation, normalize this aka clamp between (-π and π)*/
-        return pivot + CGPointParser.safePolar(distance, rot)/*use Point.polar*/
-    }
-    /**
      * UNTESTED, but should work
      * Returns a point rotated around a pivot point
      * - Note: does not modifify the - Parameter: point
@@ -63,7 +54,7 @@ class CGPointModifier {
      */
     static func scale(_ p: CGPoint, _ pivot: CGPoint, _ scale: CGPoint) -> CGPoint{
         var transform:CGAffineTransform = CGAffineTransform.identity
-        transform.scaleFromPoint(scale.x, scale.y, pivot)
+        transform.scaleFromPoint(scale: scale, pivot: pivot)
         return p.applying(transform)
     }
     /**

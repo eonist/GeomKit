@@ -1,4 +1,9 @@
 import Foundation
+#if os(iOS)
+import NumberSugariOS
+#elseif os(macOS)
+import NumberSugarMacOS
+#endif
 
 class CGPointParser{
     /**
@@ -147,13 +152,7 @@ class CGPointParser{
         let y: CGFloat = CGFloatParser.relativeDifference(a.y, b.y)
         return CGPoint(x,y)
     }
-    /**
-     * - Note: works similar to directionalAxisDifference, but returns only positive values (distance can only be positive)
-     */
-    static func directionalAxisDistance(_ pivot: CGPoint, _ point: CGPoint, _ rotation: CGFloat) -> CGPoint {
-        let leveledPoint: CGPoint = CGPointModifier.safeRotatePoint(pivot, point, -rotation)/*find the x and y in a correctly angled axis point system by using -angleAxis*/
-        return axisDistance(pivot, leveledPoint)
-    }
+
     /**
      * Returns the distance between points in both the x and y axis. (unlike Point.distance which returns the diagonal distance between two points)
      * - Note: think of this method as a way of finding the horizontal and vertical distance between two points
@@ -161,26 +160,6 @@ class CGPointParser{
      */
     static func axisDistance(_ p1: CGPoint, _ p2: CGPoint) -> CGPoint {
         return CGPoint(CGFloatParser.distance(p1.x, p2.x), CGFloatParser.distance(p1.y, p2.y))
-    }
-    /**
-     * Returns the distance (can be positive or negative) in x and y axis
-     * - Important: use the x value and the Point.polar(x,axisangle) to find the p
-     * - Note: remember to rotate the axix after its been returned from this method
-     * - Parameter: rotation: the angle you want to levle with
-     * - Fixme: ⚠️️shouldnt the axis be found by Angle.angle(p1,p2) ?!?
-     * - Fixme: ⚠️️you may not need to use rotation with pivot, the pivot may not be needed
-     * - Fixme: ⚠️️rename to localDifference, another sugestion would be axisDifference or leveledDifference
-     */
-    static func directionalAxisDifference(_ pivot: CGPoint, _ point: CGPoint, _ rotation: CGFloat) -> CGPoint {
-        let leveledPoint: CGPoint = CGPointModifier.safeRotatePoint(pivot,point, -rotation)/*find the x and y in a correctly angled axis point system by using -angleAxis*/
-        return CGPointParser.difference(pivot, leveledPoint)/*use the x value and the Point.polar(x,axisangle) to find the p*/
-    }
-    /**
-     * - Note: same as directionalAxisDifference, but uses the NumerParser.relativeDifference() method
-     */
-    static func relativeDirectionalAxisDifference(_ pivot: CGPoint, _ point: CGPoint, _ rotation: CGFloat) -> CGPoint {
-        let leveledPoint: CGPoint = CGPointModifier.safeRotatePoint(pivot, point, -rotation)/*find the x and y in a correctly angled axis point system by using -angleAxis*/
-        return CGPointParser.relativeDifference(pivot, leveledPoint)/*use the x value and the Point.polar(x,axisangle) to find the p*/
     }
     /**
      * Returns a CGRect that makes derived from - Parameter: points (think bounding box of points)

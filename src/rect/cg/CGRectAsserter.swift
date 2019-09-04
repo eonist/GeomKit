@@ -17,6 +17,6 @@ class CGRectAsserter {
      * ## Examples: RectangleAsserter.intersectsLine(CGRect(200,200,500,500),PrimitiveLine(CGPoint(0,0), CGPoint(60,60)));//false
      */
     static func intersectsLine(_ rectangle: CGRect, line: CGLine) -> Bool {
-        return CGRectParser.sides(rectangle).index(where: { LineAsserter.intersects($0, line) }) != nil
+      return CGRectParser.sides(rectangle).firstIndex(where: { CGLineAsserter.intersects($0, line) }) != nil
     }
 }

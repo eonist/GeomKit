@@ -1,4 +1,9 @@
 import Foundation
+#if os(iOS)
+import NumberSugariOS
+#elseif os(macOS)
+import NumberSugarMacOS
+#endif
 /**
  * CGPoint assertion
  */
@@ -87,17 +92,6 @@ class CGPointAsserter {
         return len > CGPoint.distance(p1B, p2A) && len > CGPoint.distance(p2A, p2B)
     }
     /**
-     * rayPoint: Point, pivot: Point,p1: Point,p2: Point
-     * - Fixme: ⚠️️ we could use slope() here too?, just consider infinity and -infinity and NaN as results of slope
-     * - Important: carefull when you add points, as you need to think from bisector points and outward. (outgoing angles)
-     */
-    static func oppositeDirectional(_ bisectorP1: CGPoint, _ bisectorP2: CGPoint, _ aP1: CGPoint, _ aP2: CGPoint, _ bP1: CGPoint, _ bP2: CGPoint) -> Bool {
-        let bisectorAngle: CGFloat = Trig.angle(bisectorP1, bisectorP2)
-        let angleA: CGFloat = Trig.angle(aP1, aP2)
-        let angleB: CGFloat = Trig.angle(bP1, bP2)
-        return Trig.isOppositeDirectional(bisectorAngle, angleA, angleB)//- Fixme: ⚠️️ we could do the asserting with slope instead of trig, just consider infinity and -infinity and NaN as results of slope
-    }
-    /**
      * Asserts if two lines intersects (p1 and p2 is line1, p3 and p4 is line2)
      * - Note: if eigther a1 or a2 is "CoLinear" and within with b1 and b2 then it intersects, does it, yes?
      * - Note: if line a touches the start or end of line b then it intersects
@@ -133,25 +127,7 @@ class CGPointAsserter {
     static func nearEquals(_ a: CGPoint, _ b: CGPoint, _ epsilon: CGFloat) -> Bool{
         return CGFloatAsserter.isNear(a.x, b.x, epsilon) && CGFloatAsserter.isNear(a.y, b.y, epsilon)
     }
-    /**
-     * - Fixme: ⚠️️ what is the difference between contraDirectional and oppositeDirectional
-     * - Note: isContraDirectional is like parallel but vectors must go in opposite directions
-     */
-    static func isContraDirectional(_ aP1: CGPoint, _ aP2: CGPoint, _ bP1: CGPoint, _ bP2: CGPoint) -> Bool {
-        let a: CGFloat = Trig.angle(aP1, aP2)
-        let b: CGFloat = Trig.angle(bP1, bP2)
-        return Trig.isContraDirectional(a, b)
-    }
-    /**
-     * Asserts codirectionality
-     * - Fixme: ⚠️️ describe whats different
-     * - Fixme: ⚠️️ rename to isCoDir
-     */
-    static func isCoDirectional(_ a1: CGPoint, _ a2: CGPoint, _ b1: CGPoint, _ b2: CGPoint) -> Bool {
-        let a: CGFloat = Trig.angle(a1, a2)
-        let b: CGFloat = Trig.angle(b1, b2)
-        return Trig.isCoDir(a, b)
-    }
+   
 }
 /**
  * - Fixme: ⚠️️ ⚠️️ When needed add these:

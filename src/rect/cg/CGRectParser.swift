@@ -1,5 +1,9 @@
 import Foundation
+#if os(iOS)
+import NumberSugariOS
+#elseif os(macOS)
 import NumberSugarMacOS
+#endif
 /**
  * - Note:  CGRectExtension also has alot of methods for parsing the CGRect
  */
@@ -90,7 +94,7 @@ class CGRectParser {
         var rotatedPoints: [CGPoint] = CGPointModifier.rotatePoints(points, CGPoint(), -rotation)
         return rectangle(topLeft: rotatedPoints[0], bottomRight: rotatedPoints[1])
     }
-    static func rectangle(topLeft: CGPoint, bottomRight: CGPoint) -> CGRect{
+    static func rectangle(topLeft: CGPoint, bottomRight: CGPoint) -> CGRect {
         let width: CGFloat = CGFloatParser.difference(topLeft.x, bottomRight.x)
         let height: CGFloat = CGFloatParser.difference(topLeft.y, bottomRight.y)
         return CGRect(topLeft.x, topLeft.y, width, height)

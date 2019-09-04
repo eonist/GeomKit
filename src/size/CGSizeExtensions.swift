@@ -1,5 +1,9 @@
 import Foundation
+#if os(iOS)
+import NumberSugariOS
+#elseif os(macOS)
 import NumberSugarMacOS
+#endif
 /*Convenient extensions*/
 extension CGSize {
     init(_ width: CGFloat, _ height: CGFloat) { self.init(width: width, height: height)}

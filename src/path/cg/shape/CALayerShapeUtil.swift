@@ -11,7 +11,7 @@ class CGShapeUtil {
     *    return aPath
     * }()
     */
-    static func drawLine( lineLayer:CAShapeLayer, line:(p1: CGPoint, p2: CGPoint), style:(stroke:NSColor,strokeWidth: CGFloat)) -> CAShapeLayer{
+    static func drawLine( lineLayer: CAShapeLayer, line: (p1: CGPoint, p2: CGPoint), style: (stroke: NSColor,strokeWidth: CGFloat)) -> CAShapeLayer {
 		let lineLayer:CAShapeLayer = .init()
 		let path:CGMutablePath = CGMutablePath()
 		path.move(to: line.p1)
@@ -25,7 +25,7 @@ class CGShapeUtil {
    /**
     * polyline
     */
-   static func drawPolyLine(points: [CGPoint], style: (fillColor: NSColor?, strokeColor: NSColor?, thickness: CGFloat?)?, close: Bool = false) -> CAShapeLayer{
+   static func drawPolyLine(points: [CGPoint], style: (fillColor: NSColor?, strokeColor: NSColor?, thickness: CGFloat?)?, close: Bool = false) -> CAShapeLayer {
       let shapeLayer:CAShapeLayer = .init()
       let path:CGMutablePath = CGPathParser.polyLine(points: points, close: close)
       shapeLayer.path = path/*Setup the CAShapeLayer with the path, colors, and line width*/
@@ -40,8 +40,8 @@ class CGShapeUtil {
     * let rectShape = CGShapeUtil.drawRect(shapeLayer:.init(),.init(x:0,y:0,width:100,height:100),style(nil,.black,14))
     * view.layer.addSublayer(rectShape)
     */
-   static func drawRect(shapeLayer:CAShapeLayer, rect: CGRect, style:(fillColor:NSColor?,strokeColor:NSColor?,thickness: CGFloat?)?) -> CAShapeLayer{
-      let path:CGMutablePath  = CGMutablePath()
+   static func drawRect(shapeLayer:CAShapeLayer, rect: CGRect, style: (fillColor: NSColor?, strokeColor: NSColor?, thickness: CGFloat?)?) -> CAShapeLayer {
+      let path: CGMutablePath  = CGMutablePath()
       path.addRect(rect)
       shapeLayer.path = path
       shapeLayer.strokeColor = style?.strokeColor?.cgColor

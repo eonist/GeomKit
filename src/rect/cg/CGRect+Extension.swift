@@ -52,7 +52,7 @@ extension CGRect {
     var right: CGPoint { get { return CGPoint(self.minX, self.midY) } }
     var corners: Array<CGPoint> { return CGRectParser.corners(self) }
     var sides: Array<CGPoint> { return CGRectParser.sides(self) }
-    var nsRect: NSRect { return NSRectFromCGRect(self) }
+//    var nsRect: NSRect { return NSRectFromCGRect(self) }
     /**
      * - Fixme: ⚠️️ Maybe for x,y,width,height aswell?
      * - Fixme: ⚠️️ Make it enum! it's faster
