@@ -11,20 +11,20 @@ extension CGMutablePath{
      * Returns a copy of it self
      * - Note: this was previously copy, but swift 3 uses this method
      */
-    func clone()->CGMutablePath {
+    public func clone()->CGMutablePath {
         return self.mutableCopy()!
     }
-    func moveTo(_ x: CGFloat, _ y: CGFloat) {/*Convenince*/
+    public func moveTo(_ x: CGFloat, _ y: CGFloat) {/*Convenince*/
         self.move(to: CGPoint(x,y))
     }
-    func moveTo(_ point: CGPoint) {/*Convenince*/
+    public func moveTo(_ point: CGPoint) {/*Convenince*/
         self.move(to: point)
     }
     /**
      * Convenince
      * - Note: If `delta' is positive, then the arc is drawn counter-clockwise; if negative, clockwise.
      */
-    func addRelativeArc(_ center: CGPoint, _ xRadii: CGFloat, _ startAngle: CGFloat, _ delta: CGFloat, _ matrix: CGAffineTransform){
+    public func addRelativeArc(_ center: CGPoint, _ xRadii: CGFloat, _ startAngle: CGFloat, _ delta: CGFloat, _ matrix: CGAffineTransform){
         self.addRelativeArc(center: center, radius: xRadii, startAngle: startAngle, delta: delta, transform: matrix)//swift 3 updated
     }
 }
@@ -34,7 +34,7 @@ extension CGPath {
      * - Note: Great method for parsing through CGPath instances
      * - Fixme: ⚠️️ swift 3 update, this method changed drastically, I think Oleb from obj-c.io has a swift 3 version of this that is better.
      */
-    func forEach( body: @convention(block) (CGPathElement) -> Void) {
+    public func forEach( body: @convention(block) (CGPathElement) -> Void) {
         typealias Body = @convention(block) (CGPathElement) -> Void
         func callback(info: UnsafeMutableRawPointer, element: UnsafePointer<CGPathElement>) {
             let body = unsafeBitCast(info, to: Body.self)

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1972E6023392C8F00CE772C /* CGLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC8231C2F82000E15A4 /* CGLine.swift */; };
+		F1972E6123392CEB00CE772C /* CGLineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC7231C2F82000E15A4 /* CGLineAsserter.swift */; };
+		F1972E642339305500CE772C /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6223392F4600CE772C /* CGPoint+Operator.swift */; };
+		F1972E652339305500CE772C /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6223392F4600CE772C /* CGPoint+Operator.swift */; };
 		F1B4039C231D8F0F00163CAD /* GeomSugariOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F1B4039A231D8F0F00163CAD /* GeomSugariOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F1B403A2231D8F1900163CAD /* NumberSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B403A1231D8F1900163CAD /* NumberSugariOS.framework */; };
 		F1B403A4231D8F1F00163CAD /* NumberSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B403A3231D8F1F00163CAD /* NumberSugarMacOS.framework */; };
@@ -16,10 +20,9 @@
 		F1B403A8231D8F7A00163CAD /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAD231C2F82000E15A4 /* CGRect+Extension.swift */; };
 		F1B403A9231D8F7A00163CAD /* RectGraphicUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAE231C2F82000E15A4 /* RectGraphicUtils.swift */; };
 		F1B403AA231D8F7A00163CAD /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */; };
-		F1B403AB231D8F7A00163CAD /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB1231C2F82000E15A4 /* CGPointExtensions.swift */; };
+		F1B403AB231D8F7A00163CAD /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */; };
 		F1B403AC231D8F7A00163CAD /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */; };
 		F1B403AD231D8F7A00163CAD /* CGPointModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB3231C2F82000E15A4 /* CGPointModifier.swift */; };
-		F1B403AE231D8F7A00163CAD /* NSBezierPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB6231C2F82000E15A4 /* NSBezierPathParser.swift */; };
 		F1B403B0231D8F7A00163CAD /* CALayerShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBA231C2F82000E15A4 /* CALayerShapeUtil.swift */; };
 		F1B403B1231D8F7A00163CAD /* CGPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBB231C2F82000E15A4 /* CGPathExtensions.swift */; };
 		F1B403B2231D8F7A00163CAD /* CubicCurveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBD231C2F82000E15A4 /* CubicCurveUtils.swift */; };
@@ -42,7 +45,7 @@
 		F1C57FD8231C2F82000E15A4 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAD231C2F82000E15A4 /* CGRect+Extension.swift */; };
 		F1C57FD9231C2F82000E15A4 /* RectGraphicUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAE231C2F82000E15A4 /* RectGraphicUtils.swift */; };
 		F1C57FDA231C2F82000E15A4 /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */; };
-		F1C57FDB231C2F82000E15A4 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB1231C2F82000E15A4 /* CGPointExtensions.swift */; };
+		F1C57FDB231C2F82000E15A4 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */; };
 		F1C57FDC231C2F82000E15A4 /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */; };
 		F1C57FDD231C2F82000E15A4 /* CGPointModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB3231C2F82000E15A4 /* CGPointModifier.swift */; };
 		F1C57FDE231C2F82000E15A4 /* NSBezierPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB6231C2F82000E15A4 /* NSBezierPathParser.swift */; };
@@ -84,6 +87,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F1972E6223392F4600CE772C /* CGPoint+Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Operator.swift"; sourceTree = "<group>"; };
 		F1B40398231D8F0E00163CAD /* GeomSugariOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeomSugariOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B4039A231D8F0F00163CAD /* GeomSugariOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeomSugariOS.h; sourceTree = "<group>"; };
 		F1B4039B231D8F0F00163CAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,7 +109,7 @@
 		F1C57FAD231C2F82000E15A4 /* CGRect+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
 		F1C57FAE231C2F82000E15A4 /* RectGraphicUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectGraphicUtils.swift; sourceTree = "<group>"; };
 		F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointParser.swift; sourceTree = "<group>"; };
-		F1C57FB1231C2F82000E15A4 /* CGPointExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
+		F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointAsserter.swift; sourceTree = "<group>"; };
 		F1C57FB3231C2F82000E15A4 /* CGPointModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointModifier.swift; sourceTree = "<group>"; };
 		F1C57FB6231C2F82000E15A4 /* NSBezierPathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSBezierPathParser.swift; sourceTree = "<group>"; };
@@ -249,7 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */,
-				F1C57FB1231C2F82000E15A4 /* CGPointExtensions.swift */,
+				F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */,
+				F1972E6223392F4600CE772C /* CGPoint+Operator.swift */,
 				F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */,
 				F1C57FB3231C2F82000E15A4 /* CGPointModifier.swift */,
 			);
@@ -485,24 +490,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1972E652339305500CE772C /* CGPoint+Operator.swift in Sources */,
 				F1B403A7231D8F7A00163CAD /* CGRectAsserter.swift in Sources */,
+				F1972E6023392C8F00CE772C /* CGLine.swift in Sources */,
 				F1B403BB231D8F7A00163CAD /* CGAffineTransformParser.swift in Sources */,
 				F1B403B9231D8F7A00163CAD /* CGAffineTransformExtensions.swift in Sources */,
 				F1B403B4231D8F7A00163CAD /* CGPathParser.swift in Sources */,
 				F1B403A9231D8F7A00163CAD /* RectGraphicUtils.swift in Sources */,
 				F1B403A8231D8F7A00163CAD /* CGRect+Extension.swift in Sources */,
-				F1B403AB231D8F7A00163CAD /* CGPointExtensions.swift in Sources */,
+				F1B403AB231D8F7A00163CAD /* CGPoint+Extension.swift in Sources */,
 				F1B403B3231D8F7A00163CAD /* CGPathModifier.swift in Sources */,
 				F1B403B0231D8F7A00163CAD /* CALayerShapeUtil.swift in Sources */,
 				F1B403B1231D8F7A00163CAD /* CGPathExtensions.swift in Sources */,
 				F1B403AA231D8F7A00163CAD /* CGPointParser.swift in Sources */,
 				F1B403B5231D8F7A00163CAD /* CGSizeExtensions.swift in Sources */,
-				F1B403AE231D8F7A00163CAD /* NSBezierPathParser.swift in Sources */,
 				F1B403BA231D8F7A00163CAD /* CGAffineTransformModifier.swift in Sources */,
 				F1B403AC231D8F7A00163CAD /* CGPointAsserter.swift in Sources */,
 				F1B403B2231D8F7A00163CAD /* CubicCurveUtils.swift in Sources */,
 				F1B403A6231D8F7A00163CAD /* CGRectParser.swift in Sources */,
 				F1B403A5231D8F7A00163CAD /* CGRectModifier.swift in Sources */,
+				F1972E6123392CEB00CE772C /* CGLineAsserter.swift in Sources */,
 				F1B403AD231D8F7A00163CAD /* CGPointModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,9 +531,10 @@
 				F1C57FD7231C2F82000E15A4 /* CGRectAsserter.swift in Sources */,
 				F1C57FE4231C2F82000E15A4 /* CGPathParser.swift in Sources */,
 				F1C57FE8231C2F82000E15A4 /* CGLineAsserter.swift in Sources */,
+				F1972E642339305500CE772C /* CGPoint+Operator.swift in Sources */,
 				F1C57FD9231C2F82000E15A4 /* RectGraphicUtils.swift in Sources */,
 				F1C57FD8231C2F82000E15A4 /* CGRect+Extension.swift in Sources */,
-				F1C57FDB231C2F82000E15A4 /* CGPointExtensions.swift in Sources */,
+				F1C57FDB231C2F82000E15A4 /* CGPoint+Extension.swift in Sources */,
 				F1C57FE3231C2F82000E15A4 /* CGPathModifier.swift in Sources */,
 				F1C57FE0231C2F82000E15A4 /* CALayerShapeUtil.swift in Sources */,
 				F1C57FEF231C2F82000E15A4 /* CGAffineTransformExtensions.swift in Sources */,

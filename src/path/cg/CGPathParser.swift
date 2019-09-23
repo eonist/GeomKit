@@ -2,7 +2,7 @@ import Foundation
 //import AppKit/*Needed for the NSBezierPath type*/
 
 public typealias NSRectCorner = (topLeft: CGFloat, topRight: CGFloat, bottomLeft: CGFloat, bottomRight: CGFloat)
-class CGPathParser {
+public class CGPathParser {
    /**
     * Returns a path with straight lines derived from an array of points (think follow the dots)
     * - Fixme: ⚠️️ ⚠️️ shouldn't this path be closed by a real close call?
@@ -15,7 +15,7 @@ class CGPathParser {
     * CGPathModifier.fill(shape: shapeLayer, cgPath: cgPath, fillColor: .green)
     * self.view.layer.addSublayer(shapeLayer)
     */
-   static func polyLine(points: [CGPoint], close: Bool = false, offset: CGPoint = .init(x: 0,y: 0)) -> CGMutablePath {
+   public static func polyLine(points: [CGPoint], close: Bool = false, offset: CGPoint = .init(x: 0,y: 0)) -> CGMutablePath {
       let path:CGMutablePath = CGMutablePath()
       if points.count > 0 { path.move(to: CGPoint(x:points[0].x+offset.x, y:points[0].y+offset.y))}
       for i in 1..<points.count{
@@ -31,7 +31,7 @@ class CGPathParser {
    /**
     * - Note: We do not need to close this path
     */
-   static func line(p1: CGPoint, p2: CGPoint) -> CGMutablePath{
+   public static func line(p1: CGPoint, p2: CGPoint) -> CGMutablePath{
       let linePath: CGMutablePath = CGMutablePath()
       linePath.move(to: p1)
       linePath.addLine(to: p2)
@@ -39,12 +39,13 @@ class CGPathParser {
    }
    /**
     * ## Examples: CGContextAddPath(context, CircleParser.circlePath(0,0,100))
-    * - Parameter: x is the center x
-    * - Parameter: y is the center y
+    * - Parameters:
+    *   - x: is the center x
+    *   - y: is the center y
     * - Important: circle is drawn from center position
     * - Note: you may add convenience methods for drawing circles from the topLeft position later
     */
-   static func circle( radius: CGFloat,  cx: CGFloat = 0,  cy: CGFloat = 0) -> CGMutablePath{
+   public static func circle( radius: CGFloat,  cx: CGFloat = 0,  cy: CGFloat = 0) -> CGMutablePath{
       let circlePath:CGMutablePath = CGMutablePath()
       let circleCenter: CGPoint = CGPoint(x: cx, y: cy)
       let circleRadius: CGFloat  = radius
@@ -57,13 +58,13 @@ class CGPathParser {
    /**
     * Returns a circle path from top left
     */
-   static func circ( radius: CGFloat,  x: CGFloat = 0,  y: CGFloat = 0) -> CGMutablePath{
+   public static func circ( radius: CGFloat,  x: CGFloat = 0,  y: CGFloat = 0) -> CGMutablePath{
       return ellipse(radius*2, radius*2, x, x)
    }
    /**
     * Returns a CGPath with data that represents a rect
     */
-   static func rect(w: CGFloat = 100, h: CGFloat = 100, x: CGFloat = 0, y: CGFloat = 0) -> CGMutablePath{
+   public static func rect(w: CGFloat = 100, h: CGFloat = 100, x: CGFloat = 0, y: CGFloat = 0) -> CGMutablePath{
       let rectPath: CGMutablePath  = CGMutablePath()
       let rectangle: CGRect = CGRect(x, y, w, h)/* Here are our rectangle boundaries */
       rectPath.addRect(rectangle)/* Add the rectangle to the path */
@@ -77,7 +78,7 @@ class CGPathParser {
     * - Note: you may add convenience methods for drawing ellipses from the center later
     * - Fixme: ⚠️️ ⚠️️ impliment the transformation param, its currently inactive
     */
-   static func ellipse(_ w: CGFloat = 100, _ h: CGFloat = 100, _ x: CGFloat = 0, _ y: CGFloat = 0, _ transformation:CGAffineTransform? = nil)->CGMutablePath{
+   public static func ellipse(_ w: CGFloat = 100, _ h: CGFloat = 100, _ x: CGFloat = 0, _ y: CGFloat = 0, _ transformation:CGAffineTransform? = nil)->CGMutablePath{
       let ellipsePath:CGMutablePath  = CGMutablePath()
       let rect: CGRect = CGRect(x, y,w, h)
       ellipsePath.addEllipse(in: rect)
@@ -90,7 +91,7 @@ class CGPathParser {
     * - Note: you can also useCGPathParsereWithRoundedRect() and CGPathAddRoundedRect()
     * - - Fixme: ⚠️️ use apples native roundedCorner class to represents the corner fillets, and pas cgrect, also add shouldclose flag
     */
-   static func roundedRect(rect: CGRect, radius: NSRectCorner) -> CGMutablePath {
+   public static func roundedRect(rect: CGRect, radius: NSRectCorner) -> CGMutablePath {
       let path: CGMutablePath = .init()
       path.move(to: .init(x: rect.midX, y: rect.minY))//swift 3 was-> CGPathMoveToPoint
       path.addArc(tangent1End: .init(x: rect.maxX, y: rect.minY), tangent2End: .init(x: rect.maxX, y: rect.maxY), radius: radius.topRight)//TR //swift 3 was CGPathAddArcToPoint
@@ -121,24 +122,23 @@ extension CGPathParser{
    /**
     * Convenince method
     */
-   static func ellipse( rect: CGRect) -> CGMutablePath{
+   public static func ellipse( rect: CGRect) -> CGMutablePath{
       return ellipse(rect.width, rect.height, rect.x, rect.y)
    }
    /**
     * Draws an ellipse from the center
     */
-   static func ellipse( center: CGPoint, size: CGSize) -> CGMutablePath{
+   public static func ellipse( center: CGPoint, size: CGSize) -> CGMutablePath{
       return ellipse(size.width, size.height, center.x - (size.width / 2), center.y - (size.height / 2))
    }
    /**
     * RoundRect with only w and h of all 4 corners (SVG uses this method)
     */
-   static func roundRect( rect: CGRect, cornerheight: CGFloat, cornerWidth: CGFloat) -> CGMutablePath {
+   public static func roundRect( rect: CGRect, cornerheight: CGFloat, cornerWidth: CGFloat) -> CGMutablePath {
       let path: CGMutablePath = CGMutablePath()
       path.addRoundedRect(in: rect, cornerWidth: cornerWidth, cornerHeight: cornerheight)
       return path
    }
    //DEPRECATED:
-   static func lines(_ points: [CGPoint], _ close: Bool = false, _ offset: CGPoint = CGPoint(0, 0)) -> CGMutablePath { return polyLine(points: points,close: close,offset: offset) }//deprecated
+   public static func lines(_ points: [CGPoint], _ close: Bool = false, _ offset: CGPoint = CGPoint(0, 0)) -> CGMutablePath { return polyLine(points: points,close: close,offset: offset) }//deprecated
 }
-

@@ -6,12 +6,12 @@ import NumberSugarMacOS
 #endif
 /*Convenient extensions*/
 extension CGSize {
-    init(_ width: CGFloat, _ height: CGFloat) { self.init(width: width, height: height)}
-    init(_ width:Double, _ height: Double) { self.init(width: width, height: height) }
-    init(_ width: Int, _ height: Int) { self.init(width: CGFloat(width), height: CGFloat(height)) }
-    var w: CGFloat { set { self.width = newValue} get { return self.width } }
-    var h: CGFloat { set { self.height = newValue} get { return self.height } }
-    func isNear(_ p: CGSize, _ epsilon: CGFloat) -> Bool { return CGPointAsserter.nearEquals(CGPoint(self.w, self.h), CGPoint(p.w, p.h), epsilon) }
+    public init(_ width: CGFloat, _ height: CGFloat) { self.init(width: width, height: height)}
+    public init(_ width:Double, _ height: Double) { self.init(width: width, height: height) }
+    public init(_ width: Int, _ height: Int) { self.init(width: CGFloat(width), height: CGFloat(height)) }
+    public var w: CGFloat { set { self.width = newValue} get { return self.width } }
+    public var h: CGFloat { set { self.height = newValue} get { return self.height } }
+    public func isNear(_ p: CGSize, _ epsilon: CGFloat) -> Bool { return CGPointAsserter.nearEquals(CGPoint(self.w, self.h), CGPoint(p.w, p.h), epsilon) }
     /**
      * ## Examples: CGSize(width:100,height:200)[.hor]//100
      */
@@ -32,12 +32,12 @@ extension CGSize {
 //            }
 //        }
 //    }
-    func clip(_ min: CGSize, _ max: CGSize) -> CGSize{
+    public func clip(_ min: CGSize, _ max: CGSize) -> CGSize{
         let w: CGFloat = self.width.clip(min.width, max.width)
         let h: CGFloat = self.height.clip(min.height, max.height)
         return CGSize(w,h)
     }
-    func interpolate(_ to: CGSize, _ scalar: CGFloat) -> CGSize {/*Convenience*/
+    public func interpolate(_ to: CGSize, _ scalar: CGFloat) -> CGSize {/*Convenience*/
         return CGSize(self.w.interpolate(to.w, scalar), self.h.interpolate(to.h, scalar))
     }
 }

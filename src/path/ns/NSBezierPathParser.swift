@@ -1,10 +1,12 @@
-import Foundation
-
-class NSBezierPathParser {
+import Cocoa
+/**
+ * - Note: This class only works in macOS
+ */
+public class NSBezierPathParser {
    /**
     * untested
     */
-   static func cgPath(_ nsBezierPath: NSBezierPath) -> CGPath? {
+   public static func cgPath(_ nsBezierPath: NSBezierPath) -> CGPath? {
       if nsBezierPath.elementCount == 0 { return nil }
       let path = CGMutablePath()
       var didClosePath = false
