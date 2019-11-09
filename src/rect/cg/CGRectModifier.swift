@@ -2,6 +2,7 @@ import Foundation
 
 public class CGRectModifier {
     /**
+     * Positions a rectangle (top-left pivot)
      * - Note: modifies the original Rectangle instance, but is returned for chaining purposes
      * - Note: positions from the top left of the rectangle
      */
@@ -11,6 +12,7 @@ public class CGRectModifier {
         return rectangle
     }
     /**
+     * Positions a rectangle (center pivot)
      * - Parameter: position this value is the new center-position
      * - Fixme: ⚠️️ ⚠️️ the difference could be calculated before-hand
      * - Note: the rectangle is returned because it may be convenient when you chain methods together

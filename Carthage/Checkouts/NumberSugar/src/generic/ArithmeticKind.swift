@@ -2,6 +2,7 @@ import Foundation
 /**
  * Experimental
  * - Fixme: ⚠️️ ⚠️️ Add more operators *= -= += /= etc
+ * - Note: there is also the Native Numeric type
  * - Note: These methods only seem to work when a method with generic properties is involved
  */
 protocol ArithmeticKind {

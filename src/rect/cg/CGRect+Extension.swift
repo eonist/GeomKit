@@ -49,8 +49,8 @@ extension CGRect {
     public var bottom: CGPoint { get { return CGPoint(self.midX, self.maxY) } }
     public var left: CGPoint { get { return CGPoint(self.maxX, self.midY) } }
     public var right: CGPoint { get { return CGPoint(self.minX, self.midY) } }
-    public var corners: Array<CGPoint> { return CGRectParser.corners(self) }
-    public var sides: Array<CGPoint> { return CGRectParser.sides(self) }
+	public var corners: Array<CGPoint> { return CGRectParser.corners(rect: self) }
+	public var sides: Array<CGPoint> { return CGRectParser.sides(rect: self) }
 //    var nsRect: NSRect { return NSRectFromCGRect(self) }
     /**
      * - Fixme: ⚠️️ Maybe for x,y,width,height aswell?

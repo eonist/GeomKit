@@ -36,11 +36,11 @@ public class CGFloatModifier {
     * - Parameter: number: can be both positive and negative
     * - Parameter: closest: must be a positive number
     * ## Examples:
-    * print(NumberModifier.roundTo(46, 45));//45
-    * print(NumberModifier.roundTo(0, 1));//0
-    * print(NumberModifier.roundTo(100, 180));//180
-    * print(NumberModifier.roundTo(45, 90));//90
-    * print(NumberModifier.roundTo(0, 45));//0
+    * print(NumberModifier.roundTo(46, 45)); // 45
+    * print(NumberModifier.roundTo(0, 1)); // 0
+    * print(NumberModifier.roundTo(100, 180)); // 180
+    * print(NumberModifier.roundTo(45, 90)); // 90
+    * print(NumberModifier.roundTo(0, 45)); // 0
     */
    public static func roundTo(_ number: CGFloat, _ closest: CGFloat) -> CGFloat {
       let remainder: CGFloat = number %% closest
