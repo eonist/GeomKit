@@ -1,24 +1,24 @@
 import Foundation
-/*Class methods:*/
+// Class methods
 let π = CGFloat(Double.pi) // Global variable
 
 extension CGPoint {
-    static func polarPoint(_ radius: CGFloat, _ angle: CGFloat) -> CGPoint {/*Convenience*/
-        return CGPointParser.polar(radius, angle)
+    static func polarPoint(_ radius: CGFloat, _ angle: CGFloat) -> CGPoint { // Convenience
+		return CGPointParser.polar(radius: radius, angle: angle)
     }
-    static func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {/*Convenience*/
-        return CGPointParser.distance(a, b)
+    static func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat { // Convenience
+		return CGPointParser.distance(a: a, b: b)
     }
-    static func interpolate(_ a: CGPoint, _ b: CGPoint, _ scalar: CGFloat) -> CGPoint{/*Convenience*/
+    static func interpolate(_ a: CGPoint, _ b: CGPoint, _ scalar: CGFloat) -> CGPoint { // Convenience
         return CGPointParser.interpolate(a, b, scalar)
     }
 }
-/*Convenient extensions*/
+// Convenient extensions
 extension CGPoint{
     // Initiaters
-    public init(_ x: Double, _ y: Double) { self.init(x: CGFloat(x), y: CGFloat(y))}/*Init a CGPoint with Double values*/
-    public init(_ x: Int, _ y: Int) { self.init(x: CGFloat(x), y: CGFloat(y)) }/*Init a CGPoint with Int values*/
-    public init(_ x: CGFloat, _ y: CGFloat) {self.init(x: x, y: y)}/*Init a CGPoint with CGFloat values (this method differes from the default by omitting the required argument names)*/
+    public init(_ x: Double, _ y: Double) { self.init(x: CGFloat(x), y: CGFloat(y))} // Init a CGPoint with Double values
+    public init(_ x: Int, _ y: Int) { self.init(x: CGFloat(x), y: CGFloat(y)) } // Init a CGPoint with Int values
+    public init(_ x: CGFloat, _ y: CGFloat) { self.init(x: x, y: y) } // Init a CGPoint with CGFloat values (this method differes from the default by omitting the required argument names)
     // Parsers
     public func distance(_ p: CGPoint) -> CGFloat { return CGPoint.distance(self, p) }//distance from self to p
     public func polarPoint(_ radius: CGFloat, _ angle: CGFloat) -> CGPoint { return self + CGPoint.polarPoint(radius, angle) }//polarPoint from self

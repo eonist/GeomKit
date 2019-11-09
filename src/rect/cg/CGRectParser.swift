@@ -104,7 +104,7 @@ public class CGRectParser {
     * - Parameter: circleCenter - center of circle
     * - Parameter: radius - radius of circle
     */
-   public static func squareInCircle(circleCenter: CGPoint, radius: CGFloat) -> CGRect{
+   public static func squareInCircle(circleCenter: CGPoint, radius: CGFloat) -> CGRect {
       let side = sqrt(radius * radius * 2)// calc side length of square
       let half = side * 0.5// position offset
       return CGRect.init(x: circleCenter.x - half, y: circleCenter.y - half, width: side, height: side)

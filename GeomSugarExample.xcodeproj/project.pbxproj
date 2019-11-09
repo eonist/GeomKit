@@ -18,7 +18,6 @@
 		F1B403A6231D8F7A00163CAD /* CGRectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAB231C2F82000E15A4 /* CGRectParser.swift */; };
 		F1B403A7231D8F7A00163CAD /* CGRectAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAC231C2F82000E15A4 /* CGRectAsserter.swift */; };
 		F1B403A8231D8F7A00163CAD /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAD231C2F82000E15A4 /* CGRect+Extension.swift */; };
-		F1B403A9231D8F7A00163CAD /* RectGraphicUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAE231C2F82000E15A4 /* RectGraphicUtils.swift */; };
 		F1B403AA231D8F7A00163CAD /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */; };
 		F1B403AB231D8F7A00163CAD /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */; };
 		F1B403AC231D8F7A00163CAD /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */; };
@@ -43,7 +42,6 @@
 		F1C57FD6231C2F82000E15A4 /* CGRectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAB231C2F82000E15A4 /* CGRectParser.swift */; };
 		F1C57FD7231C2F82000E15A4 /* CGRectAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAC231C2F82000E15A4 /* CGRectAsserter.swift */; };
 		F1C57FD8231C2F82000E15A4 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAD231C2F82000E15A4 /* CGRect+Extension.swift */; };
-		F1C57FD9231C2F82000E15A4 /* RectGraphicUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAE231C2F82000E15A4 /* RectGraphicUtils.swift */; };
 		F1C57FDA231C2F82000E15A4 /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */; };
 		F1C57FDB231C2F82000E15A4 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */; };
 		F1C57FDC231C2F82000E15A4 /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */; };
@@ -107,7 +105,6 @@
 		F1C57FAB231C2F82000E15A4 /* CGRectParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectParser.swift; sourceTree = "<group>"; };
 		F1C57FAC231C2F82000E15A4 /* CGRectAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectAsserter.swift; sourceTree = "<group>"; };
 		F1C57FAD231C2F82000E15A4 /* CGRect+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
-		F1C57FAE231C2F82000E15A4 /* RectGraphicUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectGraphicUtils.swift; sourceTree = "<group>"; };
 		F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointParser.swift; sourceTree = "<group>"; };
 		F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
 		F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointAsserter.swift; sourceTree = "<group>"; };
@@ -233,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				F1C57FA9231C2F82000E15A4 /* cg */,
-				F1C57FAE231C2F82000E15A4 /* RectGraphicUtils.swift */,
 			);
 			path = rect;
 			sourceTree = "<group>";
@@ -496,7 +492,6 @@
 				F1B403BB231D8F7A00163CAD /* CGAffineTransformParser.swift in Sources */,
 				F1B403B9231D8F7A00163CAD /* CGAffineTransformExtensions.swift in Sources */,
 				F1B403B4231D8F7A00163CAD /* CGPathParser.swift in Sources */,
-				F1B403A9231D8F7A00163CAD /* RectGraphicUtils.swift in Sources */,
 				F1B403A8231D8F7A00163CAD /* CGRect+Extension.swift in Sources */,
 				F1B403AB231D8F7A00163CAD /* CGPoint+Extension.swift in Sources */,
 				F1B403B3231D8F7A00163CAD /* CGPathModifier.swift in Sources */,
@@ -532,7 +527,6 @@
 				F1C57FE4231C2F82000E15A4 /* CGPathParser.swift in Sources */,
 				F1C57FE8231C2F82000E15A4 /* CGLineAsserter.swift in Sources */,
 				F1972E642339305500CE772C /* CGPoint+Operator.swift in Sources */,
-				F1C57FD9231C2F82000E15A4 /* RectGraphicUtils.swift in Sources */,
 				F1C57FD8231C2F82000E15A4 /* CGRect+Extension.swift in Sources */,
 				F1C57FDB231C2F82000E15A4 /* CGPoint+Extension.swift in Sources */,
 				F1C57FE3231C2F82000E15A4 /* CGPathModifier.swift in Sources */,

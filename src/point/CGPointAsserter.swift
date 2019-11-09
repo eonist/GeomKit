@@ -115,16 +115,16 @@ public class CGPointAsserter {
      * - Note: if two of the points are equals, then this method may not work, better assert for equals before utilizing this method
      * - Fixme: ⚠️️ if two points are equal then the three are colliinear actually
      */
-    public static func collinear(_ p1: CGPoint, _ p2: CGPoint, _ p3: CGPoint) -> Bool {//- Fixme: ⚠️️ rename to is..., depricate and link, or not?!?!
-        let a: CGFloat = CGPointParser.slope(p2, p3)
-        let b: CGFloat = CGPointParser.slope(p2, p1)
-        let c: CGFloat = CGPointParser.slope(p3, p1)
-        return (a == b && b == c) || (CGFloatAsserter.isInfinity(a) && CGFloatAsserter.isInfinity(b) && CGFloatAsserter.isInfinity(c))//why do we assert infinity again?
+    public static func collinear(_ p1: CGPoint, _ p2: CGPoint, _ p3: CGPoint) -> Bool { // - Fixme: ⚠️️ rename to is..., depricate and link, or not?!?!
+			let a: CGFloat = CGPointParser.slope(a: p2, b: p3)
+			let b: CGFloat = CGPointParser.slope(a: p2, b: p1)
+			let c: CGFloat = CGPointParser.slope(a: p3, b: p1)
+			return (a == b && b == c) || (CGFloatAsserter.isInfinity(a) && CGFloatAsserter.isInfinity(b) && CGFloatAsserter.isInfinity(c))//why do we assert infinity again?
     }
     /**
      * - Fixme: ⚠️️ rename to isNearlyEqual, or isNearEqual
      */
-    public static func nearEquals(_ a: CGPoint, _ b: CGPoint, _ epsilon: CGFloat) -> Bool{
+    public static func nearEquals(_ a: CGPoint, _ b: CGPoint, _ epsilon: CGFloat) -> Bool {
         return CGFloatAsserter.isNear(a.x, b.x, epsilon) && CGFloatAsserter.isNear(a.y, b.y, epsilon)
     }
 }

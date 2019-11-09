@@ -2,21 +2,21 @@ import Foundation
 /**
  * Move the logic into CGRectModifier and CGRectParser and CGRectAsserter
  * For rect.isWithin(point) use: rect.contains(point)
- * RESEARCH: lots of Convenient CGRect methods here: https://github.com/nschum/SwiftCGRectExtensions/blob/master/CGRectExtensions/CGRectExtensions.swift
+ * - Note: lots of Convenient CGRect methods here: https://github.com/nschum/SwiftCGRectExtensions/blob/master/CGRectExtensions/CGRectExtensions.swift
  */
 extension CGRect {
     /**
      * Clones CGRect
      * ## Examples:  CGRect(0,0,100,100).clone()
      */
-    public func clone() -> CGRect {//remove this, use copy instead
-        return CGRect(self.origin.x, self.origin.y, self.width, self.height)
+    public func clone() -> CGRect { // remove this, use copy instead
+		return .init(self.origin.x, self.origin.y, self.width, self.height)
     }
     /**
      * Same as clone (Consistency)
      */
     public func copy() -> CGRect {
-        return CGRect(self.origin.x, self.origin.y, self.width, self.height)
+		return .init(self.origin.x, self.origin.y, self.width, self.height)
     }
     /**
      * Create a path using the coordinates of the rect passed in
