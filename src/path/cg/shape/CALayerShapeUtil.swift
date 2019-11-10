@@ -9,6 +9,8 @@ public class CGShapeUtil {
    typealias Line = (p1: CGPoint, p2: CGPoint)
    typealias LineStyle = (stroke: Color, strokeWidth: CGFloat)
    typealias Style = (fillColor: Color?, strokeColor: Color?, thickness: CGFloat?)
+   //   typealias Corners = (topLeft: CGFloat,  topRight: CGFloat,  bottomLeft: CGFloat,  bottomRight: CGFloat)
+      // public typealias Style = (fill: Color, stroke: Color, strokeWidth: CGFloat)
 	/**
     * Draw line
 	 * - Note: remember to: shapeLayer.addSublayer(lineLayer)
@@ -37,7 +39,7 @@ public class CGShapeUtil {
     */
    public static func drawPolyLine(points: [CGPoint], style: Style?, close: Bool = false) -> CAShapeLayer {
       let shapeLayer: CAShapeLayer = .init()
-      let path:CGMutablePath = CGPathParser.polyLine(points: points, close: close)
+      let path: CGMutablePath = CGPathParser.polyLine(points: points, close: close)
       shapeLayer.path = path // Setup the CAShapeLayer with the path, colors, and line width
       shapeLayer.strokeColor = style?.strokeColor?.cgColor
       shapeLayer.lineWidth = style?.thickness ?? shapeLayer.lineWidth
@@ -72,14 +74,14 @@ public class CGShapeUtil {
       return drawCircle(with: circleLayer, rect: rect, style: style, progress: progress)
    }
    /**
-   * Draws circle
-   * - - Parameter: progress: 0-1
-   */
+    * Draws circle
+    * - - Parameter: progress: 0-1
+    */
   public static func drawCircle(with circleLayer: CAShapeLayer, rect: CGRect, style: Style, progress: CGFloat) -> CAShapeLayer{
      circleLayer.path = .init(ellipseIn: rect, transform: nil) // Setup the CAShapeLayer with the path, colors, and line width
-     circleLayer.fillColor = style.fill.cgColor
-     circleLayer.strokeColor = style.stroke.cgColor
-     circleLayer.lineWidth = style.strokeWidth
+     circleLayer.fillColor = style?.fill.cgColor
+     circleLayer.strokeColor = style?.stroke.cgColor
+     circleLayer.lineWidth = style?.strokeWidth
      circleLayer.lineCap = .round
      circleLayer.strokeEnd = progress // Sets progress of the stroke between predefined start and predefined end
      return circleLayer
@@ -94,14 +96,12 @@ public class CGShapeUtil {
       shape.path = cgPath // Setup the CAShapeLayer with the path, colors, and line width
       shape.fillColor = fillColor.cgColor
    }
-//   typealias Corners = (topLeft: CGFloat,  topRight: CGFloat,  bottomLeft: CGFloat,  bottomRight: CGFloat)
-   public typealias Style = (fill: Color, stroke: Color, strokeWidth: CGFloat)
    /**
     * Draws rounded rect
     */
    public static func drawRoundedRect(layer: CAShapeLayer, rect: CGRect, radius: NSRectCorner, style: Style) -> CAShapeLayer{
       let path = CGPathParser.roundedRect(rect: rect, radius: radius)
-      layer.path = path/*Setup the CAShapeLayer with the path, colors, and line width*/
+      layer.path = path // Setup the CAShapeLayer with the path, colors, and line width
       layer.fillColor = style.fill.cgColor
       layer.strokeColor = style.stroke.cgColor
       layer.lineWidth = style.strokeWidth

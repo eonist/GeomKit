@@ -3,10 +3,10 @@ import Foundation
 let π = CGFloat(Double.pi) // Global variable
 
 extension CGPoint {
-    static func polarPoint(_ radius: CGFloat, _ angle: CGFloat) -> CGPoint { // Convenience
+    static func polarPoint(radius: CGFloat, angle: CGFloat) -> CGPoint { // Convenience
 		return CGPointParser.polar(radius: radius, angle: angle)
     }
-    static func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat { // Convenience
+    static func distance(a: CGPoint, b: CGPoint) -> CGFloat { // Convenience
 		return CGPointParser.distance(a: a, b: b)
     }
     static func interpolate(_ a: CGPoint, _ b: CGPoint, _ scalar: CGFloat) -> CGPoint { // Convenience
@@ -20,10 +20,10 @@ extension CGPoint{
     public init(_ x: Int, _ y: Int) { self.init(x: CGFloat(x), y: CGFloat(y)) } // Init a CGPoint with Int values
     public init(_ x: CGFloat, _ y: CGFloat) { self.init(x: x, y: y) } // Init a CGPoint with CGFloat values (this method differes from the default by omitting the required argument names)
     // Parsers
-    public func distance(_ p: CGPoint) -> CGFloat { return CGPoint.distance(self, p) }//distance from self to p
-    public func polarPoint(_ radius: CGFloat, _ angle: CGFloat) -> CGPoint { return self + CGPoint.polarPoint(radius, angle) }//polarPoint from self
+    public func distance(_ p: CGPoint) -> CGFloat { return CGPoint.distance(self, p) } // distance from self to p
+    public func polarPoint(_ radius: CGFloat, _ angle: CGFloat) -> CGPoint { return self + CGPoint.polarPoint(radius, angle) } // polarPoint from self
     // func polar(radius: CGFloat, _ angle: CGFloat) -> CGPoint { return polarPoint(radius, angle) }//convenience and legacy support
-    public func interpolate(_ to: CGPoint, _ scalar: CGFloat) -> CGPoint { return CGPoint.interpolate(self, to, scalar) }//interpolate from self to b by scalar
+    public func interpolate(_ to: CGPoint, _ scalar: CGFloat) -> CGPoint { return CGPoint.interpolate(self, to, scalar) } // interpolate from self to b by scalar
     public func copy() -> CGPoint { return CGPoint(self.x, self.y) }
     public func clone() -> CGPoint { return CGPoint(self.x, self.y) }
     public func add(_ p: CGPoint) -> CGPoint { return CGPointParser.add(self, p) }

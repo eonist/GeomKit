@@ -39,7 +39,7 @@ public class CGPointParser {
      * Returns the distance between two points
      * - Note: Math formula for distance of two points is: AB2 = dx2 + dy2 (distance = sqrt(dx2 + dy2)) where one side is dx - the difference in x-coordinates, and the other is dy - the difference in y-coordinates.
      * - Note: Math formula: c^2=a^2+b^2 (||u|| = √h^2+v^2) (in triangle notation c= hypotenus etc)
-     * there is also : let distance = hypot(p1.x - p2.x, p1.y - p2.y)
+     * - Note: there is also : let distance = hypot(p1.x - p2.x, p1.y - p2.y)
      */
     public static func distance(a: CGPoint, b: CGPoint) -> CGFloat {
         let xDifference: CGFloat = CGFloatParser.relativeDifference(a.x, b.x)

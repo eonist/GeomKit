@@ -12,8 +12,9 @@ public class CGPathModifier {
     * - parameter p: the point the path should be transled to
     */
    @discardableResult
-   public static func translate( path:inout CGMutablePath, p: CGPoint) -> CGMutablePath{
-      var transformation:CGAffineTransform = CGAffineTransform(translationX: p.x, y: p.y)//swift 3 was -> CGAffineTransformMakeTranslation(x,
+   public static func translate(path:inout CGMutablePath, p: CGPoint) -> CGMutablePath {
+      var transformation: CGAffineTransform = .init(translationX: p.x, y: p.y)//swift 3 was -> CGAffineTransformMakeTranslation(x,
+      // - Fixme: ⚠️️ get rid of forced unwrap here
       path = path.mutableCopy(using: &transformation)!//swift 3 , was-> CGPathCreateMutableCopyByTransformingPath
       return path
    }
@@ -26,8 +27,9 @@ public class CGPathModifier {
     * - parameter angle: the angle the path should be rotated by
     */
    @discardableResult
-   public static func rotate(path:inout CGMutablePath, angle: CGFloat) -> CGPath{
-      var transformation:CGAffineTransform  = CGAffineTransform(rotationAngle: angle)//swift 3-> was: CGAffineTransformMakeRotation
+   public static func rotate(path:inout CGMutablePath, angle: CGFloat) -> CGPath {
+      var transformation: CGAffineTransform  = .init(rotationAngle: angle)//swift 3-> was: CGAffineTransformMakeRotation
+      // - Fixme: ⚠️️ get rid of forced unwrap here
       path = path.mutableCopy(using: &transformation)!
       return path
    }
@@ -40,7 +42,7 @@ public class CGPathModifier {
       let rect = path.boundingBox
       let offset: CGPoint = .init(x: -rect.width / 2,y: -(rect.height) / 2)
       CGPathModifier.translate(path: &path, p: offset)
-      CGPathModifier.rotate(path: &path, angle: angle)//45deg
+      CGPathModifier.rotate(path: &path, angle: angle) // 45deg
       let reOffset: CGPoint = .init(x: rect.width / 2, y: (rect.height) / 2)
       CGPathModifier.translate(path: &path, p: reOffset)
       return path
@@ -50,9 +52,9 @@ public class CGPathModifier {
     * ## Examples: scale(path,2,2)//doubles the size of the path
     * - Caution: When using this method remeber to use the CGPathCreateMutableCopy(somePath) if you dont want to edit the original path (THe return statment is jsut for convenince)
     */
-   public static func scale(_ path:inout CGPath, _ x: CGFloat = 1, _ y: CGFloat = 1) -> CGPath{
-      var transformation: CGAffineTransform  = CGAffineTransform(scaleX: x, y: y)//swift 3 upgrade
-      path = path.mutableCopy(using: &transformation)!//swift 3 upgrade
+   public static func scale(_ path:inout CGPath, _ x: CGFloat = 1, _ y: CGFloat = 1) -> CGPath {
+      var transformation: CGAffineTransform  = .init(scaleX: x, y: y) // swift 3 upgrade
+      path = path.mutableCopy(using: &transformation)! // swift 3 upgrade
       return path
    }
    /**
@@ -60,17 +62,19 @@ public class CGPathModifier {
     * skew(path,M_PI/8,M_PI/12)//alpha is 22.5 degrees and beta is 15 degrees.
     * - Caution: When using this method remeber to use the CGPathCreateMutableCopy(somePath) if you dont want to edit the original path (THe return statment is jsut for convenince)
     */
-   public static func skew(_ path:inout CGPath, _ alpha: Double, _ beta: Double) -> CGPath{
+   public static func skew(_ path:inout CGPath, _ alpha: Double, _ beta: Double) -> CGPath {
       var transformation = CGAffineTransform.identity
-      /*Create an affine transform that skews the coordinate system, by skewing the x axis by alpha radians and the y axis by beta radians.*/
+      // Create an affine transform that skews the coordinate system, by skewing the x axis by alpha radians and the y axis by beta radians.
       let alp: CGFloat = CGFloat(tan(alpha))
       let bet: CGFloat = CGFloat(tan(beta))
-      transformation = CGAffineTransform(1, alp, bet, 1, 0, 0);
-      path = path.mutableCopy(using: &transformation)!/*Apply that transform to the path*/
+      transformation = CGAffineTransform(1, alp, bet, 1, 0, 0)
+      // - Fixme: ⚠️️ get rid of forced unwrap here
+      path = path.mutableCopy(using: &transformation)! // Apply that transform to the path
       return path
    }
-   public static func transform(_ path: CGMutablePath, _ transformation: CGAffineTransform) -> CGMutablePath{
+   public static func transform(_ path: CGMutablePath, _ transformation: CGAffineTransform) -> CGMutablePath {
       var transformation: CGAffineTransform = transformation.copy()
+      // - Fixme: ⚠️️ get rid of forced unwrap here
       return path.mutableCopy(using: &transformation)!//Swift 3 upgrade
    }
 }

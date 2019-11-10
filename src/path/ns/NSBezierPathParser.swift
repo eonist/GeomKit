@@ -1,6 +1,7 @@
 import Cocoa
 /**
- * - Note: This class only works in macOS
+ * - Note: This class only works in mac
+ * - Fixme: ⚠️️mark this only for macos
  */
 public class NSBezierPathParser {
    /**
@@ -10,7 +11,7 @@ public class NSBezierPathParser {
       if nsBezierPath.elementCount == 0 { return nil }
       let path = CGMutablePath()
       var didClosePath = false
-      for i in 0...nsBezierPath.elementCount-1 { // - Fixme: ⚠️️ ⚠️️ why isn't this: 0..<.elementCount?
+      for i in 0...nsBezierPath.elementCount-1 { // - Fixme: ⚠️ why isn't this: 0..<.elementCount?
          var points = [NSPoint](repeating: NSZeroPoint, count: 3)
          switch nsBezierPath.element(at: i, associatedPoints: &points) {
          case .moveTo: path.move(to: points[0]) // swift 3 updated
