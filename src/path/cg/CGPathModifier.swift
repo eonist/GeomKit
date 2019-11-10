@@ -8,8 +8,8 @@ public class CGPathModifier {
     * ## Examples:
     * CGPathModifier.translate(&path,20,20)
     * - Caution: ⚠️️ When using this method remeber to use the CGPathCreateMutableCopy(somePath) if you dont want to edit the original path (THe return statment is jsut for convenince)
-    * - parameter path: the path to be translated
-    * - parameter p: the point the path should be transled to
+    * - Parameter path: the path to be translated
+    * - Parameter p: the point the path should be transled to
     */
    @discardableResult
    public static func translate(path:inout CGMutablePath, p: CGPoint) -> CGMutablePath {
@@ -72,9 +72,12 @@ public class CGPathModifier {
       path = path.mutableCopy(using: &transformation)! // Apply that transform to the path
       return path
    }
+   /**
+    * transform
+    */
    public static func transform(_ path: CGMutablePath, _ transformation: CGAffineTransform) -> CGMutablePath {
       var transformation: CGAffineTransform = transformation.copy()
       // - Fixme: ⚠️️ get rid of forced unwrap here
-      return path.mutableCopy(using: &transformation)!//Swift 3 upgrade
+      return path.mutableCopy(using: &transformation)! // Swift 3 upgrade
    }
 }

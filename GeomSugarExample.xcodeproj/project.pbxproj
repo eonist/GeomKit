@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,7 @@
 		F1972E642339305500CE772C /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6223392F4600CE772C /* CGPoint+Operator.swift */; };
 		F1972E652339305500CE772C /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6223392F4600CE772C /* CGPoint+Operator.swift */; };
 		F1B4039C231D8F0F00163CAD /* GeomSugariOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F1B4039A231D8F0F00163CAD /* GeomSugariOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1B403A2231D8F1900163CAD /* NumberSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B403A1231D8F1900163CAD /* NumberSugariOS.framework */; };
+		F1B403A2231D8F1900163CAD /* NumberSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B403A1231D8F1900163CAD /* NumberSugariOS.framework */; platformFilter = ios; };
 		F1B403A4231D8F1F00163CAD /* NumberSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B403A3231D8F1F00163CAD /* NumberSugarMacOS.framework */; };
 		F1B403A5231D8F7A00163CAD /* CGRectModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAA231C2F82000E15A4 /* CGRectModifier.swift */; };
 		F1B403A6231D8F7A00163CAD /* CGRectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FAB231C2F82000E15A4 /* CGRectParser.swift */; };
@@ -584,7 +584,7 @@
 				);
 				INFOPLIST_FILE = GeomSugariOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -594,8 +594,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -617,7 +618,7 @@
 				);
 				INFOPLIST_FILE = GeomSugariOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,8 +628,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -686,6 +688,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -741,6 +744,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -764,6 +768,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomSugarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -784,6 +789,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomSugarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -813,6 +819,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomSugarMacOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -845,6 +852,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomSugarMacOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

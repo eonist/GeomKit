@@ -2,30 +2,24 @@ import Foundation
 
 extension CGMutablePath{
     /**
-     * - Note: its probably better to move this method into the Graphic class since then it can be overriden by subclasses, which you cant do with this extension method, really?
-     */
-    //func add(_ path:CGPath){
-     //   self.add(path)//swift 3 update
-    //}
-    /**
      * Returns a copy of it self
      * - Note: this was previously copy, but swift 3 uses this method
      */
-    public func clone()->CGMutablePath {
-        return self.mutableCopy()!
+    public func clone() -> CGMutablePath? {
+        return self.mutableCopy()
     }
-    public func moveTo(_ x: CGFloat, _ y: CGFloat) {/*Convenince*/
-        self.move(to: CGPoint(x,y))
+    public func moveTo(x: CGFloat, y: CGFloat) { // Convenince
+        self.move(to: .init(x, y))
     }
-    public func moveTo(_ point: CGPoint) {/*Convenince*/
-        self.move(to: point)
+    public func moveTo(p: CGPoint) { // Convenince
+        self.move(to: p)
     }
     /**
      * Convenince
      * - Note: If `delta' is positive, then the arc is drawn counter-clockwise; if negative, clockwise.
      */
-    public func addRelativeArc(_ center: CGPoint, _ xRadii: CGFloat, _ startAngle: CGFloat, _ delta: CGFloat, _ matrix: CGAffineTransform){
-        self.addRelativeArc(center: center, radius: xRadii, startAngle: startAngle, delta: delta, transform: matrix)//swift 3 updated
+    public func addRelativeArc(center: CGPoint, xRadii: CGFloat, startAngle: CGFloat, delta: CGFloat, matrix: CGAffineTransform) {
+        self.addRelativeArc(center: center, radius: xRadii, startAngle: startAngle, delta: delta, transform: matrix) // swift 3 updated
     }
 }
 extension CGPath {
@@ -34,7 +28,7 @@ extension CGPath {
      * - Note: Great method for parsing through CGPath instances
      * - Fixme: ⚠️️ swift 3 update, this method changed drastically, I think Oleb from obj-c.io has a swift 3 version of this that is better.
      */
-    public func forEach( body: @convention(block) (CGPathElement) -> Void) {
+    public func forEach(body: @convention(block) (CGPathElement) -> Void) {
         typealias Body = @convention(block) (CGPathElement) -> Void
         func callback(info: UnsafeMutableRawPointer, element: UnsafePointer<CGPathElement>) {
             let body = unsafeBitCast(info, to: Body.self)

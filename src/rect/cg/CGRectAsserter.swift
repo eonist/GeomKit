@@ -1,14 +1,14 @@
 import Foundation
 
 class CGRectAsserter {
-    public static func containsOrIntersectsLine(_ rectangle: CGRect, line: CGLine) -> Bool {
-        return containsLine(rectangle, line: line) || intersectsLine(rectangle, line: line)
+    public static func containsOrIntersectsLine(rect: CGRect, line: CGLine) -> Bool {
+		return containsLine(rect: rect, line: line) || intersectsLine(rect: rect, line: line)
     }
     /**
      * Asserts if - Parameter: rectangle contains the line - Parameter: p1 to - Parameter: p2
      */
-    public static func containsLine(_ rectangle: CGRect, line: CGLine) -> Bool {
-        return rectangle.contains(line.p1) && rectangle.contains(line.p2)
+    public static func containsLine(rect: CGRect, line: CGLine) -> Bool {
+        return rect.contains(line.p1) && rect.contains(line.p2)
     }
     /**
      * Asserts if - Parameter: rectangle intersects the line - Parameter: p1 to - Parameter: p2
@@ -16,7 +16,7 @@ class CGRectAsserter {
      * - Note:  the for loop does not call RectangleParser.sides more than once
      * ## Examples: RectangleAsserter.intersectsLine(CGRect(200,200,500,500),PrimitiveLine(CGPoint(0,0), CGPoint(60,60)));//false
      */
-    public static func intersectsLine(_ rectangle: CGRect, line: CGLine) -> Bool {
-		return CGRectParser.sides(rect: rectangle).firstIndex(where: { CGLineAsserter.intersects($0, line) }) != nil
+    public static func intersectsLine(rect: CGRect, line: CGLine) -> Bool {
+		return CGRectParser.sides(rect: rect).firstIndex(where: { CGLineAsserter.intersects(a: $0, b: line) }) != nil
     }
 }

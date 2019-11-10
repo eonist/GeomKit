@@ -2,8 +2,8 @@
   "Mac" : [
     {
       "name" : "NumberSugarMacOS",
-      "hash" : "12a53b30d11aaea3e76f0a7c0e80b0f145fa409385a55827f3c6b281660284a3",
-      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+      "hash" : "adeb3410bc9f6accb01907947bc5c174180566173a513cd422166a929fc8252a",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ],
   "watchOS" : [
@@ -16,8 +16,8 @@
   "iOS" : [
     {
       "name" : "NumberSugariOS",
-      "hash" : "729e0639a21ffa603fe24dbd568d366c25aeaebcea34c77e12ba911ab326baa0",
-      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+      "hash" : "62c69316c4effe5b34ffc7fb526edadf11fc957ba821b3cf81376fdfd92304b2",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ]
 }
