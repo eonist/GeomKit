@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1972E6023392C8F00CE772C /* CGLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC8231C2F82000E15A4 /* CGLine.swift */; };
-		F1972E6123392CEB00CE772C /* CGLineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC7231C2F82000E15A4 /* CGLineAsserter.swift */; };
+		F1972E6023392C8F00CE772C /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC8231C2F82000E15A4 /* Line.swift */; };
+		F1972E6123392CEB00CE772C /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC7231C2F82000E15A4 /* LineAsserter.swift */; };
 		F1972E642339305500CE772C /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6223392F4600CE772C /* CGPoint+Operator.swift */; };
 		F1972E652339305500CE772C /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1972E6223392F4600CE772C /* CGPoint+Operator.swift */; };
 		F1B4039C231D8F0F00163CAD /* GeomSugariOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F1B4039A231D8F0F00163CAD /* GeomSugariOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,12 +52,13 @@
 		F1C57FE2231C2F82000E15A4 /* CubicCurveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBD231C2F82000E15A4 /* CubicCurveUtils.swift */; };
 		F1C57FE3231C2F82000E15A4 /* CGPathModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBE231C2F82000E15A4 /* CGPathModifier.swift */; };
 		F1C57FE4231C2F82000E15A4 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBF231C2F82000E15A4 /* CGPathParser.swift */; };
-		F1C57FE8231C2F82000E15A4 /* CGLineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC7231C2F82000E15A4 /* CGLineAsserter.swift */; };
-		F1C57FE9231C2F82000E15A4 /* CGLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC8231C2F82000E15A4 /* CGLine.swift */; };
+		F1C57FE8231C2F82000E15A4 /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC7231C2F82000E15A4 /* LineAsserter.swift */; };
+		F1C57FE9231C2F82000E15A4 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC8231C2F82000E15A4 /* Line.swift */; };
 		F1C57FEA231C2F82000E15A4 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FCA231C2F82000E15A4 /* CGSize+Extension.swift */; };
 		F1C57FEF231C2F82000E15A4 /* CGAffineTransformExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FD2231C2F82000E15A4 /* CGAffineTransformExtensions.swift */; };
 		F1C57FF0231C2F82000E15A4 /* CGAffineTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FD3231C2F82000E15A4 /* CGAffineTransformModifier.swift */; };
 		F1C57FF1231C2F82000E15A4 /* CGAffineTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FD4231C2F82000E15A4 /* CGAffineTransformParser.swift */; };
+		F1D7F9642378C25500E80BCF /* CGRect+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F9632378C25500E80BCF /* CGRect+Operator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,12 +116,13 @@
 		F1C57FBD231C2F82000E15A4 /* CubicCurveUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicCurveUtils.swift; sourceTree = "<group>"; };
 		F1C57FBE231C2F82000E15A4 /* CGPathModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPathModifier.swift; sourceTree = "<group>"; };
 		F1C57FBF231C2F82000E15A4 /* CGPathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPathParser.swift; sourceTree = "<group>"; };
-		F1C57FC7231C2F82000E15A4 /* CGLineAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGLineAsserter.swift; sourceTree = "<group>"; };
-		F1C57FC8231C2F82000E15A4 /* CGLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGLine.swift; sourceTree = "<group>"; };
+		F1C57FC7231C2F82000E15A4 /* LineAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAsserter.swift; sourceTree = "<group>"; };
+		F1C57FC8231C2F82000E15A4 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		F1C57FCA231C2F82000E15A4 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 		F1C57FD2231C2F82000E15A4 /* CGAffineTransformExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransformExtensions.swift; sourceTree = "<group>"; };
 		F1C57FD3231C2F82000E15A4 /* CGAffineTransformModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransformModifier.swift; sourceTree = "<group>"; };
 		F1C57FD4231C2F82000E15A4 /* CGAffineTransformParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransformParser.swift; sourceTree = "<group>"; };
+		F1D7F9632378C25500E80BCF /* CGRect+Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Operator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				F1C57FAA231C2F82000E15A4 /* CGRectModifier.swift */,
 				F1C57FAB231C2F82000E15A4 /* CGRectParser.swift */,
 				F1C57FAC231C2F82000E15A4 /* CGRectAsserter.swift */,
+				F1D7F9632378C25500E80BCF /* CGRect+Operator.swift */,
 				F1C57FAD231C2F82000E15A4 /* CGRect+Extension.swift */,
 			);
 			path = cg;
@@ -249,10 +252,10 @@
 			isa = PBXGroup;
 			children = (
 				F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */,
-				F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */,
-				F1972E6223392F4600CE772C /* CGPoint+Operator.swift */,
 				F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */,
 				F1C57FB3231C2F82000E15A4 /* CGPointModifier.swift */,
+				F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */,
+				F1972E6223392F4600CE772C /* CGPoint+Operator.swift */,
 			);
 			path = point;
 			sourceTree = "<group>";
@@ -306,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				F1C57FC6231C2F82000E15A4 /* utils */,
-				F1C57FC8231C2F82000E15A4 /* CGLine.swift */,
+				F1C57FC8231C2F82000E15A4 /* Line.swift */,
 			);
 			path = line;
 			sourceTree = "<group>";
@@ -314,7 +317,7 @@
 		F1C57FC6231C2F82000E15A4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				F1C57FC7231C2F82000E15A4 /* CGLineAsserter.swift */,
+				F1C57FC7231C2F82000E15A4 /* LineAsserter.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -546,7 +549,7 @@
 			files = (
 				F1972E652339305500CE772C /* CGPoint+Operator.swift in Sources */,
 				F1B403A7231D8F7A00163CAD /* CGRectAsserter.swift in Sources */,
-				F1972E6023392C8F00CE772C /* CGLine.swift in Sources */,
+				F1972E6023392C8F00CE772C /* Line.swift in Sources */,
 				F1B403BB231D8F7A00163CAD /* CGAffineTransformParser.swift in Sources */,
 				F1B403B9231D8F7A00163CAD /* CGAffineTransformExtensions.swift in Sources */,
 				F1B403B4231D8F7A00163CAD /* CGPathParser.swift in Sources */,
@@ -562,7 +565,7 @@
 				F1B403B2231D8F7A00163CAD /* CubicCurveUtils.swift in Sources */,
 				F1B403A6231D8F7A00163CAD /* CGRectParser.swift in Sources */,
 				F1B403A5231D8F7A00163CAD /* CGRectModifier.swift in Sources */,
-				F1972E6123392CEB00CE772C /* CGLineAsserter.swift in Sources */,
+				F1972E6123392CEB00CE772C /* LineAsserter.swift in Sources */,
 				F1B403AD231D8F7A00163CAD /* CGPointModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,6 +576,7 @@
 			files = (
 				F1C57F94231C2A5A000E15A4 /* View.swift in Sources */,
 				F1C57F86231C2989000E15A4 /* AppDelegate.swift in Sources */,
+				F1D7F9642378C25500E80BCF /* CGRect+Operator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +587,7 @@
 				F1C57FEA231C2F82000E15A4 /* CGSize+Extension.swift in Sources */,
 				F1C57FD7231C2F82000E15A4 /* CGRectAsserter.swift in Sources */,
 				F1C57FE4231C2F82000E15A4 /* CGPathParser.swift in Sources */,
-				F1C57FE8231C2F82000E15A4 /* CGLineAsserter.swift in Sources */,
+				F1C57FE8231C2F82000E15A4 /* LineAsserter.swift in Sources */,
 				F1972E642339305500CE772C /* CGPoint+Operator.swift in Sources */,
 				F1C57FD8231C2F82000E15A4 /* CGRect+Extension.swift in Sources */,
 				F1C57FDB231C2F82000E15A4 /* CGPoint+Extension.swift in Sources */,
@@ -592,7 +596,7 @@
 				F1C57FEF231C2F82000E15A4 /* CGAffineTransformExtensions.swift in Sources */,
 				F1C57FE1231C2F82000E15A4 /* CGPathExtensions.swift in Sources */,
 				F1C57FDA231C2F82000E15A4 /* CGPointParser.swift in Sources */,
-				F1C57FE9231C2F82000E15A4 /* CGLine.swift in Sources */,
+				F1C57FE9231C2F82000E15A4 /* Line.swift in Sources */,
 				F1C57FDE231C2F82000E15A4 /* NSBezierPathParser.swift in Sources */,
 				F1C57FDC231C2F82000E15A4 /* CGPointAsserter.swift in Sources */,
 				F1C57FF1231C2F82000E15A4 /* CGAffineTransformParser.swift in Sources */,
