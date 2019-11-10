@@ -38,9 +38,9 @@ public class CGPathModifier {
     * ## Examples: -CGFloat.pi/2.0
     */
    @discardableResult
-   public static func centerRotate(path:inout CGMutablePath, angle: CGFloat) -> CGPath{
+   public static func centerRotate(path:inout CGMutablePath, angle: CGFloat) -> CGPath {
       let rect = path.boundingBox
-      let offset: CGPoint = .init(x: -rect.width / 2,y: -(rect.height) / 2)
+      let offset: CGPoint = .init(x: -rect.width / 2, y: -(rect.height) / 2)
       CGPathModifier.translate(path: &path, p: offset)
       CGPathModifier.rotate(path: &path, angle: angle) // 45deg
       let reOffset: CGPoint = .init(x: rect.width / 2, y: (rect.height) / 2)
@@ -65,8 +65,8 @@ public class CGPathModifier {
    public static func skew(_ path:inout CGPath, _ alpha: Double, _ beta: Double) -> CGPath {
       var transformation = CGAffineTransform.identity
       // Create an affine transform that skews the coordinate system, by skewing the x axis by alpha radians and the y axis by beta radians.
-      let alp: CGFloat = CGFloat(tan(alpha))
-      let bet: CGFloat = CGFloat(tan(beta))
+      let alp = CGFloat(tan(alpha))
+      let bet = CGFloat(tan(beta))
       transformation = CGAffineTransform(1, alp, bet, 1, 0, 0)
       // - Fixme: ⚠️️ get rid of forced unwrap here
       path = path.mutableCopy(using: &transformation)! // Apply that transform to the path

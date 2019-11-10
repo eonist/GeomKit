@@ -22,14 +22,14 @@ public class CubicCurveUtils {
       let b: CGFloat = c0.x
       let c: CGFloat = c1.x
       let d: CGFloat = p1.x
-      /**/
+      //
       let A: CGFloat = d - 3 * c + 3 * b - a
       let B: CGFloat = 3 * c - 6 * b + 3 * a
       let C: CGFloat = 3 * b - 3 * a
       let D: CGFloat = a - x
-      /* So we need to solve At³ + Bt² + Ct + D = 0 */
+      // So we need to solve At³ + Bt² + Ct + D = 0
       let t: CGFloat = CubicCurveUtils.cubic(A, B, C, D)
-      /* Replace the t on Bezier function and get x,y */
+      // Replace the t on Bezier function and get x,y
       return CubicCurveUtils.pnt(p0, c0, c1, p1, t)
    }
 }
@@ -40,8 +40,8 @@ extension CubicCurveUtils {
    /**
     * Returns point on a CubicCurve for - Parameter: t (0-1)
     */
-   private static func pnt(_ a: CGPoint, _ b: CGPoint, _ c: CGPoint, _ d: CGPoint, _ t: CGFloat) -> CGPoint{
-      let mt: CGFloat  = 1 - t
+   private static func pnt(_ a: CGPoint, _ b: CGPoint, _ c: CGPoint, _ d: CGPoint, _ t: CGFloat) -> CGPoint {
+      let mt: CGFloat = 1 - t
       let mt2: CGFloat = mt * mt
       let mt3: CGFloat = mt2 * mt
       /*fx(t) = x1 * (1-t)³ + x2 * 3 * (1-t)²t + x3 * 3 * (1-t)t² + x4 * t³*/
@@ -55,7 +55,7 @@ extension CubicCurveUtils {
     * refer to http://www.1728.org/cubic.htm
     * - Note: FORMULA: ax³ + bx² + cx + d = 0
     */
-   private static func cubic(_ a: CGFloat, _ b: CGFloat, _ c: CGFloat, _ d: CGFloat)->CGFloat{
+   private static func cubic(_ a: CGFloat, _ b: CGFloat, _ c: CGFloat, _ d: CGFloat) -> CGFloat {
       var d: CGFloat = d // May not work, could be inout?!? seems to work regardless
       var m: CGFloat = 0
       var m2: CGFloat = 0
@@ -69,44 +69,44 @@ extension CubicCurveUtils {
       var sign: CGFloat = 0
       var dans: CGFloat = 0
       let f: CGFloat = (((3 * c) / a) - (((b * b) / (a * a)))) / 3
-      let b3: CGFloat = b*b*b
-      let a3: CGFloat = a*a*a
-      let a2: CGFloat = a*a
+      let b3: CGFloat = b * b * b
+      let a3: CGFloat = a * a * a
+      let a2: CGFloat = a * a
       let g: CGFloat = ((2 * ((b3) / (a3)) - (9 * b * c / (a2)) + ((27 * (d / a))))) / 27
       let h: CGFloat = (((g * g) / 4) + ((f * f * f) / 27))
       if h > 0 {
          m = -(g / 2) + (sqrt(h))
          k = m < 0 ? -1 : 1
          m2 = pow((m * k), (1 / 3))
-         m2 = m2 * k
+         m2 *= k
          n = -(g / 2) - (sqrt(h))
          k = n < 0 ? -1 : 1
          n2 = pow((n * k), (1 / 3))
-         n2 = n2 * k
-         x =  (m2 + n2) - (b / (3 * a))
+         n2 *= k
+         x = (m2 + n2) - (b / (3 * a))
       } else {
          r = sqrt((g * g / 4) - h)
          k = r < 0 ? -1 : 1
          rc = pow((r * k), (1 / 3)) * k
-         theta = acos((-g/(2 * r)))
+         theta = acos((-g / (2 * r)))
          x = 2 * (rc * cos(theta / 3)) - (b / (3 * a))
-         x = x * 1E+14
+         x *= 1E+14
          x = round(x)
-         x = x / 1E+14
+         x /= 1E+14
       }
       if f + g + h == 0 {
          if d < 0 {
-            sign = sign - 1
+            sign -= 1
          }
          if d >= 0 {
             sign = 1
          }
          if sign > 0 {
             dans = pow(d / a, 1 / 3)
-            dans = dans * -1
+            dans *= -1
          }
          if sign < 0 {
-            d = d * -1
+            d *= -1
             dans = pow(d / a, 1 / 3)
          }
          x = dans

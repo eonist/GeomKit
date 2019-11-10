@@ -30,7 +30,7 @@ public class CGPointParser {
         } else if angle == -π / 2 {
 				return .init(0, -len)
         } else if angle == π / 2 {
-				return .init(0,len)
+				return .init(0, len)
         } else {
 				return .init(cos(angle) * len, sin(angle) * len)
         }
@@ -154,12 +154,12 @@ public class CGPointParser {
      * Returns a CGRect that makes derived from - Parameter: points (think bounding box of points)
      */
     public static func rectangle(pts: [CGPoint]) -> CGRect {
-		var max: CGPoint = pts.count > 0 ? (pts[0] as CGPoint).copy() : .init()
-		var min: CGPoint = pts.count > 0 ? (pts[0] as CGPoint).copy() : .init()
+		var max: CGPoint = !pts.isEmpty ? (pts[0] as CGPoint).copy() : .init()
+		var min: CGPoint = !pts.isEmpty ? (pts[0] as CGPoint).copy() : .init()
         pts.forEach { point in
             if point.x > max.x { max.x = point.x }
             else if point.x < min.x { min = .init(point.x, min.y) }
-            if point.y > max.y { max.y = point.y}
+            if point.y > max.y { max.y = point.y }
             else if point.y < min.y { min.y = point.y }
         }
 		return cornersToRectangle(topLeft: min, bottomRight: max)
@@ -295,8 +295,8 @@ public class CGPointParser {
       if distance == 0 { return nil } // Error, parallel lines
       let u: CGFloat = ((b.p1.x - a.p1.x) * (b.p2.y - b.p1.y) - (b.p1.y - a.p1.y) * (b.p2.x - b.p1.x)) / distance
       let v: CGFloat = ((b.p1.x - a.p1.x) * (a.p2.y - a.p1.y) - (b.p1.y - a.p1.y) * (a.p2.x - a.p1.x)) / distance
-      if (u < 0.0 || u > 1.0) { return nil } // Error, intersection not inside a
-      if (v < 0.0 || v > 1.0) { return nil } // Error, intersection not inside b
+      if u < 0.0 || u > 1.0 { return nil } // Error, intersection not inside a
+      if v < 0.0 || v > 1.0 { return nil } // Error, intersection not inside b
       return .init(x: a.p1.x + u * (a.p2.x - a.p1.x), y: a.p1.y + u * (a.p2.y - a.p1.y))
    }
     /**

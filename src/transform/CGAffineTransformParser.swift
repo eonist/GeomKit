@@ -1,6 +1,6 @@
 import Foundation
 typealias MatrixParser = CGAffineTransformParser // Convenience
-class CGAffineTransformParser {
+public class CGAffineTransformParser {
     /**
      * Convenience, See MatrixModifier.transformWithPivot for more detail
      */
@@ -40,7 +40,7 @@ class CGAffineTransformParser {
     /**
      * Translate
      */
-    public static func translate(transform: CGTransform, x: CGFloat, y: CGFloat) -> CGTransform{
+    public static func translate(transform: CGTransform, x: CGFloat, y: CGFloat) -> CGTransform {
         var transform = transform
         transform.translate(x, y)
         return transform

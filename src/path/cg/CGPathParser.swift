@@ -17,9 +17,9 @@ public class CGPathParser {
     * CGPathModifier.fill(shape: shapeLayer, cgPath: cgPath, fillColor: .green)
     * self.view.layer.addSublayer(shapeLayer)
     */
-   public static func polyLine(points: [CGPoint], close: Bool = false, offset: CGPoint = .init(x: 0,y: 0)) -> CGMutablePath {
+   public static func polyLine(points: [CGPoint], close: Bool = false, offset: CGPoint = .init(x: 0, y: 0)) -> CGMutablePath {
       let path: CGMutablePath = .init()
-      if points.count > 0 { path.move(to: .init(x: points[0].x + offset.x, y: points[0].y + offset.y)) }
+      if !points.isEmpty { path.move(to: .init(x: points[0].x + offset.x, y: points[0].y + offset.y)) }
       for i in 1..<points.count {
          path.addLine(to: .init(x: points[i].x + offset.x, y: points[i].y + offset.y))
       }
@@ -46,7 +46,7 @@ public class CGPathParser {
     * - Important: ⚠️️ circle is drawn from center position
     * - Note: you may add convenience methods for drawing circles from the topLeft position later
     */
-   public static func circle(radius: CGFloat,  cx: CGFloat = 0,  cy: CGFloat = 0) -> CGMutablePath {
+   public static func circle(radius: CGFloat, cx: CGFloat = 0, cy: CGFloat = 0) -> CGMutablePath {
       let circlePath: CGMutablePath = .init()
       let circleCenter: CGPoint = .init(x: cx, y: cy)
       let circleRadius: CGFloat = radius
@@ -60,19 +60,18 @@ public class CGPathParser {
     * Returns a circle path from top left
     */
    public static func circ(radius: CGFloat, x: CGFloat = 0, y: CGFloat = 0) -> CGMutablePath {
-      let rect: CGRect = .init(origin: .init(x, y), size: .init(radius * 2, radius * 2))
+      let rect: CGRect = .init(origin: .init(x, y), size: .init(width: radius * 2, height: radius * 2))
       return ellipse(rect: rect)
    }
    /**
     * Returns a CGPath with data that represents a rect
     */
-   public static func rect(w: CGFloat = 100, h: CGFloat = 100, x: CGFloat = 0, y: CGFloat = 0) -> CGMutablePath{
+   public static func rect(w: CGFloat = 100, h: CGFloat = 100, x: CGFloat = 0, y: CGFloat = 0) -> CGMutablePath {
       let rectPath: CGMutablePath = .init()
-      let rectangle: CGRect = CGRect(x, y, w, h) // Here are our rectangle boundaries
+      let rectangle: CGRect = .init(x, y, w, h) // Here are our rectangle boundaries
       rectPath.addRect(rectangle) // Add the rectangle to the path
       return rectPath
    }
-   
    /**
     * ## Examples: roundRect(5,100,100)
     * - - Fixme: ⚠️️ Draws a rounded rectangle using the size of individual x and y radii to draw the rounded corners.: drawRoundRectComplex2(x:Number, y:Number, width:Number, height:Number, radiusX:Number, radiusY:Number, topLeftRadiusX:Number, topLeftRadiusY:Number, topRightRadiusX:Number, topRightRadiusY:Number, bottomLeftRadiusX:Number, bottomLeftRadiusY:Number, bottomRightRadiusX:Number, bottomRightRadiusY:Number):void you have the code for this somewhere
@@ -123,7 +122,7 @@ extension CGPathParser {
     * RoundRect with only w and h of all 4 corners (SVG uses this method)
     */
    public static func roundRect( rect: CGRect, cornerheight: CGFloat, cornerWidth: CGFloat) -> CGMutablePath {
-      let path: CGMutablePath = CGMutablePath()
+      let path: CGMutablePath = .init()
       path.addRoundedRect(in: rect, cornerWidth: cornerWidth, cornerHeight: cornerheight)
       return path
    }

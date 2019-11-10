@@ -27,7 +27,7 @@
 		F1B403B2231D8F7A00163CAD /* CubicCurveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBD231C2F82000E15A4 /* CubicCurveUtils.swift */; };
 		F1B403B3231D8F7A00163CAD /* CGPathModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBE231C2F82000E15A4 /* CGPathModifier.swift */; };
 		F1B403B4231D8F7A00163CAD /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBF231C2F82000E15A4 /* CGPathParser.swift */; };
-		F1B403B5231D8F7A00163CAD /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FCA231C2F82000E15A4 /* CGSizeExtensions.swift */; };
+		F1B403B5231D8F7A00163CAD /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FCA231C2F82000E15A4 /* CGSize+Extension.swift */; };
 		F1B403B9231D8F7A00163CAD /* CGAffineTransformExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FD2231C2F82000E15A4 /* CGAffineTransformExtensions.swift */; };
 		F1B403BA231D8F7A00163CAD /* CGAffineTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FD3231C2F82000E15A4 /* CGAffineTransformModifier.swift */; };
 		F1B403BB231D8F7A00163CAD /* CGAffineTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FD4231C2F82000E15A4 /* CGAffineTransformParser.swift */; };
@@ -54,7 +54,7 @@
 		F1C57FE4231C2F82000E15A4 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FBF231C2F82000E15A4 /* CGPathParser.swift */; };
 		F1C57FE8231C2F82000E15A4 /* CGLineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC7231C2F82000E15A4 /* CGLineAsserter.swift */; };
 		F1C57FE9231C2F82000E15A4 /* CGLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FC8231C2F82000E15A4 /* CGLine.swift */; };
-		F1C57FEA231C2F82000E15A4 /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FCA231C2F82000E15A4 /* CGSizeExtensions.swift */; };
+		F1C57FEA231C2F82000E15A4 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FCA231C2F82000E15A4 /* CGSize+Extension.swift */; };
 		F1C57FEF231C2F82000E15A4 /* CGAffineTransformExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FD2231C2F82000E15A4 /* CGAffineTransformExtensions.swift */; };
 		F1C57FF0231C2F82000E15A4 /* CGAffineTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FD3231C2F82000E15A4 /* CGAffineTransformModifier.swift */; };
 		F1C57FF1231C2F82000E15A4 /* CGAffineTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C57FD4231C2F82000E15A4 /* CGAffineTransformParser.swift */; };
@@ -117,7 +117,7 @@
 		F1C57FBF231C2F82000E15A4 /* CGPathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPathParser.swift; sourceTree = "<group>"; };
 		F1C57FC7231C2F82000E15A4 /* CGLineAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGLineAsserter.swift; sourceTree = "<group>"; };
 		F1C57FC8231C2F82000E15A4 /* CGLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGLine.swift; sourceTree = "<group>"; };
-		F1C57FCA231C2F82000E15A4 /* CGSizeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtensions.swift; sourceTree = "<group>"; };
+		F1C57FCA231C2F82000E15A4 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 		F1C57FD2231C2F82000E15A4 /* CGAffineTransformExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransformExtensions.swift; sourceTree = "<group>"; };
 		F1C57FD3231C2F82000E15A4 /* CGAffineTransformModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransformModifier.swift; sourceTree = "<group>"; };
 		F1C57FD4231C2F82000E15A4 /* CGAffineTransformParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAffineTransformParser.swift; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 		F1C57FC9231C2F82000E15A4 /* size */ = {
 			isa = PBXGroup;
 			children = (
-				F1C57FCA231C2F82000E15A4 /* CGSizeExtensions.swift */,
+				F1C57FCA231C2F82000E15A4 /* CGSize+Extension.swift */,
 			);
 			path = size;
 			sourceTree = "<group>";
@@ -367,6 +367,7 @@
 				F1B40394231D8F0E00163CAD /* Sources */,
 				F1B40395231D8F0E00163CAD /* Frameworks */,
 				F1B40396231D8F0E00163CAD /* Resources */,
+				F1D7F9602378A80300E80BCF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -385,6 +386,7 @@
 				F1C57F7F231C2989000E15A4 /* Frameworks */,
 				F1C57F80231C2989000E15A4 /* Resources */,
 				F1C57FA6231C2F6E000E15A4 /* Embed Frameworks */,
+				F1D7F9622378A84B00E80BCF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -404,6 +406,7 @@
 				F1C57F96231C2F6E000E15A4 /* Sources */,
 				F1C57F97231C2F6E000E15A4 /* Frameworks */,
 				F1C57F98231C2F6E000E15A4 /* Resources */,
+				F1D7F9612378A83F00E80BCF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -481,6 +484,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F1D7F9602378A80300E80BCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		F1D7F9612378A83F00E80BCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1D7F9622378A84B00E80BCF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F1B40394231D8F0E00163CAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -498,7 +556,7 @@
 				F1B403B0231D8F7A00163CAD /* CALayerShapeUtil.swift in Sources */,
 				F1B403B1231D8F7A00163CAD /* CGPathExtensions.swift in Sources */,
 				F1B403AA231D8F7A00163CAD /* CGPointParser.swift in Sources */,
-				F1B403B5231D8F7A00163CAD /* CGSizeExtensions.swift in Sources */,
+				F1B403B5231D8F7A00163CAD /* CGSize+Extension.swift in Sources */,
 				F1B403BA231D8F7A00163CAD /* CGAffineTransformModifier.swift in Sources */,
 				F1B403AC231D8F7A00163CAD /* CGPointAsserter.swift in Sources */,
 				F1B403B2231D8F7A00163CAD /* CubicCurveUtils.swift in Sources */,
@@ -522,7 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C57FEA231C2F82000E15A4 /* CGSizeExtensions.swift in Sources */,
+				F1C57FEA231C2F82000E15A4 /* CGSize+Extension.swift in Sources */,
 				F1C57FD7231C2F82000E15A4 /* CGRectAsserter.swift in Sources */,
 				F1C57FE4231C2F82000E15A4 /* CGPathParser.swift in Sources */,
 				F1C57FE8231C2F82000E15A4 /* CGLineAsserter.swift in Sources */,

@@ -78,14 +78,14 @@ public class CGShapeUtil {
    public static func drawCircle(with circleLayer: CAShapeLayer, circle: (center: CGPoint, radius: CGFloat), style: Style, progress: CGFloat) -> CAShapeLayer {
       let pt: CGPoint = .init(x: circle.center.x - circle.radius, y: circle.center.y - circle.radius)
       let size: CGSize = .init(width: circle.radius * 2, height: circle.radius * 2)
-      let rect = CGRect.init(origin: pt , size: size )
+      let rect: CGRect = .init(origin: pt, size: size )
       return drawCircle(with: circleLayer, rect: rect, style: style, progress: progress)
    }
    /**
     * Draws circle
     * - - Parameter: progress: 0-1
     */
-   public static func drawCircle(with circleLayer: CAShapeLayer, rect: CGRect, style: Style?, progress: CGFloat) -> CAShapeLayer{
+   public static func drawCircle(with circleLayer: CAShapeLayer, rect: CGRect, style: Style?, progress: CGFloat) -> CAShapeLayer {
       circleLayer.path = .init(ellipseIn: rect, transform: nil) // Setup the CAShapeLayer with the path, colors, and line width
       circleLayer.fillColor = style?.fillColor?.cgColor
       circleLayer.strokeColor = style?.strokeColor?.cgColor
@@ -100,7 +100,7 @@ public class CGShapeUtil {
     * - parameter cgPath: the cgPath to fill inside
     * - parameter fillColor: the color to apply to the shape
     */
-   public static func fill(shape: CAShapeLayer, cgPath: CGPath, fillColor: Color){
+   public static func fill(shape: CAShapeLayer, cgPath: CGPath, fillColor: Color) {
       shape.path = cgPath // Setup the CAShapeLayer with the path, colors, and line width
       shape.fillColor = fillColor.cgColor
    }
@@ -130,4 +130,3 @@ public class CGShapeUtil {
 //      circleLayer.lineCap = .round
 //      circleLayer.strokeEnd = progress/*Sets progress of the stroke between predefined start and predefined end*/
 //   }
-

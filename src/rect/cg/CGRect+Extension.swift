@@ -24,33 +24,33 @@ extension CGRect {
     */
    public var path: CGMutablePath { return CGRectParser.path(rect: self) }
    // Initialization
-   public init(_ pos: CGPoint, _ size: CGSize){ self.init(origin: pos, size: size)}
-   public init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}//- Fixme: ⚠️️add initializer to CGSize
-   public init(_ x: Double, _ y: Double, _ width: Double, _ height: Double){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}//- Fixme: ⚠️️add initializer to CGSize
-   public init(_ x: CGFloat, _ y: CGFloat, _ width: Double, _ height: Double){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}
-   public init(_ x: Int, _ y: Int, _ width: Double, _ height:Double){ self.init(origin: CGPoint(x,y),size: CGSize( width, height))}
+   public init(_ pos: CGPoint, _ size: CGSize) { self.init(origin: pos, size: size) }
+   public init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) { self.init(origin: CGPoint(x, y), size: CGSize( width: width, height: height)) }//- Fixme: ⚠️️add initializer to CGSize
+   public init(_ x: Double, _ y: Double, _ width: Double, _ height: Double) { self.init(origin: CGPoint(x, y), size: CGSize( width: width, height: height)) }//- Fixme: ⚠️️add initializer to CGSize
+   public init(_ x: CGFloat, _ y: CGFloat, _ width: Double, _ height: Double) { self.init(origin: CGPoint(x, y), size: CGSize( width: width, height: height)) }
+   public init(_ x: Int, _ y: Int, _ width: Double, _ height: Double) { self.init(origin: CGPoint(x, y), size: CGSize( width: width, height: height)) }
    // Position
-   public var x: CGFloat { set { origin.x = newValue} get { return origin.x } }
-   public var y: CGFloat { set { origin.y = newValue} get { return origin.y } }
+   public var x: CGFloat { set { origin.x = newValue } get { return origin.x } }
+   public var y: CGFloat { set { origin.y = newValue } get { return origin.y } }
    // Size
    /*var width: CGFloat {set {size.width = newValue} get {return size.width} }
     var height: CGFloat {set {size.height = newValue} get {return size.height} }*/
    /*⚠️️ - Note:  Siwft3 seems to have problems with width get and height get as extensions so use w and h instead. set worked for some reason but still*/
-   public var w: CGFloat { set { size.width = newValue} get { return size.width } }
-   public var h: CGFloat { set { size.height = newValue} get { return size.height } }
+   public var w: CGFloat { set { size.width = newValue } get { return size.width } }
+   public var h: CGFloat { set { size.height = newValue } get { return size.height } }
    // Corners
-   public var topLeft: CGPoint { get { return self.origin } }
-   public var point: CGPoint { get { return self.origin } }
-   public var bottomLeft: CGPoint { get { return .init(self.minX, self.maxY) } }
-   public var bottomRight: CGPoint { get { return .init(self.maxX, self.maxY) } }
-   public var topRight: CGPoint { get { return .init(self.maxX, self.minY) } }
-   public var center: CGPoint { get { return .init(self.midX, self.midY) } }
-   public var top: CGPoint { get { return .init(self.midX, self.minY) } }
-   public var bottom: CGPoint { get { return .init(self.midX, self.maxY) } }
-   public var left: CGPoint { get { return .init(self.maxX, self.midY) } }
-   public var right: CGPoint { get { return .init(self.minX, self.midY) } }
-   public var corners: Array<CGPoint> { return CGRectParser.corners(rect: self) }
-   public var sides: Array<CGPoint> { return CGRectParser.sides(rect: self) }
+   public var topLeft: CGPoint { return self.origin }
+   public var point: CGPoint { return self.origin }
+   public var bottomLeft: CGPoint { return .init(self.minX, self.maxY) }
+   public var bottomRight: CGPoint { return .init(self.maxX, self.maxY) }
+   public var topRight: CGPoint { return .init(self.maxX, self.minY) }
+   public var center: CGPoint { return .init(self.midX, self.midY) }
+   public var top: CGPoint { return .init(self.midX, self.minY) }
+   public var bottom: CGPoint { return .init(self.midX, self.maxY) }
+   public var left: CGPoint { return .init(self.maxX, self.midY) }
+   public var right: CGPoint { return .init(self.minX, self.midY) }
+   public var corners: [CGPoint] { return CGRectParser.corners(rect: self) }
+   public var sides: [CGPoint] { return CGRectParser.sides(rect: self) }
    /**
     * Negative inset equals outset
     */
@@ -67,7 +67,7 @@ extension CGRect {
       return self.offsetBy(dx: dx, dy: dy)
    }
    public func offset(_ point: CGPoint) -> CGRect { // Convenience
-      return self.offsetBy(dx: point.x,dy: point.y)
+      return self.offsetBy(dx: point.x, dy: point.y)
    }
    /**
     * - Note:  Alters the original CGRect instance
@@ -86,13 +86,17 @@ extension CGRect {
       return CGRect(self.x, self.y, self.width + dx, self.height + dy)
    }
 }
-public func +(a: CGRect, b: CGPoint) -> CGRect { return .init(a.x + b.x, a.y + b.y, a.width, a.height) }//Adds the coordinates of point p to the coordinates of this point to create a new point
-public func +=(a: inout CGRect, b: CGPoint) { a.x += b.x;a.y += b.y; } // modifies a by adding b, could also have used: offsetBy()
-public func -=(a: inout CGRect, b: CGPoint) { a.x -= b.x;a.y -= b.y; } // modifies a by adding b, could also have used: offsetBy()
-
-public func +(a: CGRect, b: CGRect) -> CGRect { return .init(a.origin + b.origin, a.size + b.size) }
-public func -(a: CGRect, b: CGRect) -> CGRect { return .init(a.origin - b.origin, a.size - b.size) }
-public func *(a: CGRect, b: CGRect) -> CGRect { return .init(a.origin * b.origin, a.size * b.size) }
+/**
+ * Extension
+ */
+extension CGRect {
+   public static func + (a: CGRect, b: CGPoint) -> CGRect { return .init(a.x + b.x, a.y + b.y, a.width, a.height) }//Adds the coordinates of point p to the coordinates of this point to create a new point
+   public static func += (a: inout CGRect, b: CGPoint) { a.x += b.x;a.y += b.y; } // modifies a by adding b, could also have used: offsetBy()
+   public static func -= (a: inout CGRect, b: CGPoint) { a.x -= b.x;a.y -= b.y; } // modifies a by adding b, could also have used: offsetBy()
+   public static func + (a: CGRect, b: CGRect) -> CGRect { return .init(origin: a.origin + b.origin, size: CGSize(width: a.size.width + b.size.width, height: a.size.height + b.size.height)) }
+   public static func - (a: CGRect, b: CGRect) -> CGRect { return .init(origin: a.origin - b.origin, size: CGSize(width: a.size.width - b.size.width, height: a.size.height - b.size.height)) }
+   public static func * (a: CGRect, b: CGRect) -> CGRect { return .init(origin: a.origin * b.origin, size: CGSize(width: a.size.width * b.size.width, height: a.size.height * b.size.height)) }
+}
 //public func -(a: CGSize, b: CGSize) -> CGSize { return CGSize(a.width - b.width,a.height - b.height)}
 //public func * (a: CGSize, b: CGSize) -> CGSize {return CGSize(a.w*b.w, a.h*b.h)}
 
@@ -119,4 +123,3 @@ public func *(a: CGRect, b: CGRect) -> CGRect { return .init(a.origin * b.origin
 //            fatalError("UNSUPORTED CORNER TYPE: " + key.rawValue + " WITH VALUE: " + String(describing: newValue))
 //        }
 //    }
-

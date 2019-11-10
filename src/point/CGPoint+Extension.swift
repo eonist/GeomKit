@@ -14,10 +14,10 @@ extension CGPoint {
    }
 }
 // Convenient extensions
-extension CGPoint{
+extension CGPoint {
    // Initiaters
    // deperecate the bellow ⚠️️
-   public init(_ x: Double, _ y: Double) { self.init(x: CGFloat(x), y: CGFloat(y))} // Init a CGPoint with Double values
+   public init(_ x: Double, _ y: Double) { self.init(x: CGFloat(x), y: CGFloat(y)) } // Init a CGPoint with Double values
    public init(_ x: Int, _ y: Int) { self.init(x: CGFloat(x), y: CGFloat(y)) } // Init a CGPoint with Int values
    public init(_ x: CGFloat, _ y: CGFloat) { self.init(x: x, y: y) } // Init a CGPoint with CGFloat values (this method differes from the default by omitting the required argument names)
    // Parsers
@@ -55,5 +55,3 @@ extension CGPoint{
 //            }
 //        }
 //    }
-
-

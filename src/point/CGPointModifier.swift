@@ -13,7 +13,7 @@ public class CGPointModifier {
     public static func rot(point: CGPoint, pivot: CGPoint, rot: CGFloat) -> CGPoint {
         let x: CGFloat = pivot.x + ( cos(rot) * (point.x - pivot.x) - sin(rot) * (point.y - pivot.y))
         let y: CGFloat = pivot.y + ( sin(rot) * (point.x - pivot.x) + cos(rot) * (point.y - pivot.y))
-        return CGPoint(x,y)
+      return .init(x, y)
     }
     /**
      * UNTESTED, but should work
@@ -54,7 +54,7 @@ public class CGPointModifier {
      * - Parameter: scale: 0 - 1
      */
     public static func scale(p: CGPoint, pivot: CGPoint, scale: CGPoint) -> CGPoint {
-        var transform: CGAffineTransform = CGAffineTransform.identity
+        var transform: CGAffineTransform = .identity
         transform.scaleFromPoint(scale: scale, pivot: pivot)
         return p.applying(transform)
     }

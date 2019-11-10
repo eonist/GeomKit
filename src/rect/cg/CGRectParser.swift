@@ -51,7 +51,7 @@ public class CGRectParser {
       let path: CGMutablePath = .init()
       path.move(to: rect.origin) // was-> CGPathMoveToPoint
       path.addLine(to: .init(rect.origin.x + rect.size.width, rect.origin.y))// ***** Segment 1 *****
-      path.addLine(to: .init(rect.origin.x + rect.size.width,rect.origin.y + rect.size.height))// ***** Segment 2 *****
+      path.addLine(to: .init(rect.origin.x + rect.size.width, rect.origin.y + rect.size.height))// ***** Segment 2 *****
       path.addLine(to: .init(rect.origin.x, rect.origin.y + rect.size.height))// ***** Segment 3 *****
       path.closeSubpath() // ***** Segment 4 created by closing the path *****
       return path
@@ -128,6 +128,3 @@ public class CGRectParser {
 //        globalRectangle.y = localRectangle.y
 //        return globalRectangle
 //    }
-
-
-

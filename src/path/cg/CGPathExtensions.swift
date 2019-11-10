@@ -1,6 +1,6 @@
 import Foundation
 
-extension CGMutablePath{
+extension CGMutablePath {
     /**
      * Returns a copy of it self
      * - Note: this was previously copy, but swift 3 uses this method
