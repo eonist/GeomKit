@@ -308,10 +308,10 @@ public class CGPointParser {
     public static func normalizedIntersection(aP1: CGPoint, aP2: CGPoint, bP1: CGPoint, bP2: CGPoint) -> CGPoint {
         if aP1.equals(bP1) || aP1.equals(bP2) { return aP1 }
         else if aP2.equals(bP1) || aP2.equals(bP2) { return aP2 }
-        else if CGPointAsserter.collinear(p1: aP1, p2: aP2, p3: bP1) { return bP1 }
-        else if CGPointAsserter.collinear(p1: aP1, p2: aP2, p3: bP2) { return bP2 }
-        else if CGPointAsserter.collinear(p1: bP1, p2: bP2, p3: aP1) { return aP1 }
-        else if CGPointAsserter.collinear(p1: bP1, p2: bP2, p3: aP2) { return aP2 }
+        else if LineAsserter.collinear(p1: aP1, p2: aP2, p3: bP1) { return bP1 }
+        else if LineAsserter.collinear(p1: aP1, p2: aP2, p3: bP2) { return bP2 }
+        else if LineAsserter.collinear(p1: bP1, p2: bP2, p3: aP1) { return aP1 }
+        else if LineAsserter.collinear(p1: bP1, p2: bP2, p3: aP2) { return aP2 }
         else { return CGPointParser.intersection(p1: aP1, p2: aP2, p3: bP1, p4: bP2) }
     }
 }
