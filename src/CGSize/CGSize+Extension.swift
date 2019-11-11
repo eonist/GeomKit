@@ -19,6 +19,9 @@ extension CGSize {
       let h: CGFloat = self.height.clip(min.height, max.height)
       return .init(width: w, height: h)
    }
+   /**
+    *
+    */
    public func interpolate(_ to: CGSize, _ scalar: CGFloat) -> CGSize {
       return .init(width: self.w.interpolate(to.w, scalar), height: self.h.interpolate(to.h, scalar))
    }

@@ -1,3 +1,4 @@
+#if os(macOS)
 import Cocoa
 /**
  * - Note: This class only works in mac
@@ -25,3 +26,4 @@ public class NSBezierPathParser {
       return path.copy()
    }
 }
+#endif

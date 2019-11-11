@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 /**
  * - Note: Used to be named: PrimitiveLine
  * - Fixme: ⚠️️ rename to CGLine (Occupying the name Line for something so simple isn't necessary)

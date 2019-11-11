@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 
 public class CGRectAsserter {
    public static func containsOrIntersectsLine(rect: CGRect, line: Line) -> Bool {

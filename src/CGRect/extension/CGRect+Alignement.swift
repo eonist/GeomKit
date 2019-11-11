@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 /**
  * Alignment
  * - Fixme: Possibly make this CGRectAlignment.topLeft(rect)

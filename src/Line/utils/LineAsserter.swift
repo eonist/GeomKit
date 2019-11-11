@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 #if os(iOS)
 import NumberSugariOS
 #elseif os(macOS)

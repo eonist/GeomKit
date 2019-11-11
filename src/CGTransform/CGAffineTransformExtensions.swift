@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 /**
  * - Fixme: Make an alias named Transform?
  */

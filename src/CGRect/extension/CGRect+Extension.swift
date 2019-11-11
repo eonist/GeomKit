@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 /**
  * Move the logic into CGRectModifier and CGRectParser and CGRectAsserter
  * For rect.isWithin(point) use: rect.contains(point)

@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 public typealias MatrixModifier = CGAffineTransformModifier // Convenience
 public class CGAffineTransformModifier {
    /**

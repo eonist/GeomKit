@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 /**
  * Extension
  */
@@ -7,21 +7,21 @@ extension CGRect {
     * Adds the coordinates of point p to the coordinates of this point to create a new point
     */
    public static func + (a: CGRect, b: CGPoint) -> CGRect {
-      return .init(a.x + b.x, a.y + b.y, a.width, a.height)
+      return .init(x: a.minX + b.x, y: a.minY + b.y, width: a.width, height: a.height)
    }
    /**
     * Modifies a by adding b, could also have used: offsetBy()
     */
    public static func += (a: inout CGRect, b: CGPoint) {
-      a.x += b.x
-      a.y += b.y
+      a.origin.x += b.x
+      a.origin.y += b.y
    }
    /**
     * Modifies a by adding b, could also have used: offsetBy()
     */
    public static func -= (a: inout CGRect, b: CGPoint) {
-      a.x -= b.x
-      a.y -= b.y
+      a.origin.x -= b.x
+      a.origin.y -= b.y
    }
    /**
     * Addition

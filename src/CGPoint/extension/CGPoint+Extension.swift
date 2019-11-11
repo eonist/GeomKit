@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 // Class methods
 let π = CGFloat(Double.pi) // Global variable
 /**

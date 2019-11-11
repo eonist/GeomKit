@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 /**
  * - Fixme: Maybe devide into CGPathParser.Rect CGPathParser.Ellipse CGPathParser.Circle etc. more seperation
  */

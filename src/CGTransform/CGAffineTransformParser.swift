@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 typealias MatrixParser = CGAffineTransformParser
 public class CGAffineTransformParser {
    /**
