@@ -1,5 +1,4 @@
 [![codebeat badge](https://codebeat.co/badges/bdda373a-6022-49be-949b-dece00d40a10)](https://codebeat.co/projects/github-com-eonist-geomsugar-master)
-![mit Status](https://img.shields.io/badge/License-MIT-brightgreen.svg) 
 ![platform](https://img.shields.io/badge/Platform-macOS/iOS-blue.svg) 
 ![Lang](https://img.shields.io/badge/Language-Swift%205.1-orange.svg)
 [![SPM compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
