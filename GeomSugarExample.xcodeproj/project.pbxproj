@@ -63,6 +63,8 @@
 		F1D7F968237979EB00E80BCF /* CGPointTrig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F965237979E600E80BCF /* CGPointTrig.swift */; };
 		F1D7F96B23797BE200E80BCF /* CGPointTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F96923797A8300E80BCF /* CGPointTransformation.swift */; };
 		F1D7F96C23797BE300E80BCF /* CGPointTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F96923797A8300E80BCF /* CGPointTransformation.swift */; };
+		F1D7F9702379895000E80BCF /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F96F2379895000E80BCF /* LineParser.swift */; };
+		F1D7F9712379895000E80BCF /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F96F2379895000E80BCF /* LineParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,7 @@
 		F1D7F9632378C25500E80BCF /* CGRect+Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Operator.swift"; sourceTree = "<group>"; };
 		F1D7F965237979E600E80BCF /* CGPointTrig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointTrig.swift; sourceTree = "<group>"; };
 		F1D7F96923797A8300E80BCF /* CGPointTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointTransformation.swift; sourceTree = "<group>"; };
+		F1D7F96F2379895000E80BCF /* LineParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				F1C57FC7231C2F82000E15A4 /* LineAsserter.swift */,
+				F1D7F96F2379895000E80BCF /* LineParser.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -560,6 +564,7 @@
 				F1972E6023392C8F00CE772C /* Line.swift in Sources */,
 				F1B403BB231D8F7A00163CAD /* CGAffineTransformParser.swift in Sources */,
 				F1B403B9231D8F7A00163CAD /* CGAffineTransformExtensions.swift in Sources */,
+				F1D7F9712379895000E80BCF /* LineParser.swift in Sources */,
 				F1B403B4231D8F7A00163CAD /* CGPathParser.swift in Sources */,
 				F1D7F968237979EB00E80BCF /* CGPointTrig.swift in Sources */,
 				F1D7F96B23797BE200E80BCF /* CGPointTransformation.swift in Sources */,
@@ -602,6 +607,7 @@
 				F1972E642339305500CE772C /* CGPoint+Operator.swift in Sources */,
 				F1C57FD8231C2F82000E15A4 /* CGRect+Extension.swift in Sources */,
 				F1C57FDB231C2F82000E15A4 /* CGPoint+Extension.swift in Sources */,
+				F1D7F9702379895000E80BCF /* LineParser.swift in Sources */,
 				F1C57FE3231C2F82000E15A4 /* CGPathModifier.swift in Sources */,
 				F1D7F96C23797BE300E80BCF /* CGPointTransformation.swift in Sources */,
 				F1C57FE0231C2F82000E15A4 /* CALayerShapeUtil.swift in Sources */,

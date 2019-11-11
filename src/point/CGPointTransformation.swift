@@ -24,7 +24,7 @@ public class CGPointTransformation {
     * Returns points rotated around a pivot point
     * - Note: does not modifiy the original points
     * - Parameter: rotation: in radians (suppers radian values from -∞ to +∞)
-    * - Fixme: ⚠️️make a similar method that takes initPoints and points, this way you avoid recrating a new array everytime
+    * - Fixme: ⚠️️ Make a similar method that takes initPoints and points, this way you avoid recrating a new array everytime
     */
    public static func rotatePoints(points: [CGPoint], pivot: CGPoint, rotation: CGFloat) -> [CGPoint] {
       var rotatedPoints: [CGPoint] = []
