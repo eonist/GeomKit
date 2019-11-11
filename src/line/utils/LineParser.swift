@@ -1,6 +1,6 @@
 import Foundation
 
-class LineParser {
+public class LineParser {
    /**
     * Returns the point of intersection between two lines
     * - Parameter: p1, p2 (Point) line 1 point struct
@@ -66,7 +66,6 @@ class LineParser {
       else if LineAsserter.collinear(p1: a.p1, p2: a.p2, p3: b.p2) { return b.p2 }
       else if LineAsserter.collinear(p1: b.p1, p2: b.p2, p3: a.p1) { return a.p1 }
       else if LineAsserter.collinear(p1: b.p1, p2: b.p2, p3: a.p2) { return a.p2 }
-      else { return CGPointParser.intersection(p1: a.p1, p2: a.p2, p3: b.p1, p4: b.p2) }
+      else { return LineParser.intersection(a: a, b: b) }
    }
 }
-

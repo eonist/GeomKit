@@ -66,10 +66,9 @@ public class CGPathParser {
    /**
     * Returns a CGPath with data that represents a rect
     */
-   public static func rect(w: CGFloat = 100, h: CGFloat = 100, x: CGFloat = 0, y: CGFloat = 0) -> CGMutablePath {
+   public static func rect(rect: CGRect) -> CGMutablePath {
       let rectPath: CGMutablePath = .init()
-      let rectangle: CGRect = .init(x, y, w, h) // Here are our rectangle boundaries
-      rectPath.addRect(rectangle) // Add the rectangle to the path
+      rectPath.addRect(rect) // Add the rectangle to the path
       return rectPath
    }
    /**

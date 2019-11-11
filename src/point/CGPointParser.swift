@@ -90,7 +90,7 @@ public class CGPointParser {
    public static func cornersToRectangle(topLeft: CGPoint, bottomRight: CGPoint) -> CGRect {
       let width: CGFloat = CGFloatParser.distance(topLeft.x, bottomRight.x)
       let height: CGFloat = CGFloatParser.distance(topLeft.y, bottomRight.y)
-      return .init(topLeft.x, topLeft.y, width, height)
+      return .init(x: topLeft.x, y: topLeft.y, width: width, height: height)
    }
    /**
     * Returns the avarage point in an array of point

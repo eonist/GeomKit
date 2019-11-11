@@ -65,6 +65,10 @@
 		F1D7F96C23797BE300E80BCF /* CGPointTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F96923797A8300E80BCF /* CGPointTransformation.swift */; };
 		F1D7F9702379895000E80BCF /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F96F2379895000E80BCF /* LineParser.swift */; };
 		F1D7F9712379895000E80BCF /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F96F2379895000E80BCF /* LineParser.swift */; };
+		F1D7F97623798EB000E80BCF /* CGRect+Alignement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97523798EB000E80BCF /* CGRect+Alignement.swift */; };
+		F1D7F97723798EB000E80BCF /* CGRect+Alignement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97523798EB000E80BCF /* CGRect+Alignement.swift */; };
+		F1D7F97923798EC100E80BCF /* CGRect+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97823798EC100E80BCF /* CGRect+Offset.swift */; };
+		F1D7F97A23798EC100E80BCF /* CGRect+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97823798EC100E80BCF /* CGRect+Offset.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +136,8 @@
 		F1D7F965237979E600E80BCF /* CGPointTrig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointTrig.swift; sourceTree = "<group>"; };
 		F1D7F96923797A8300E80BCF /* CGPointTransformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointTransformation.swift; sourceTree = "<group>"; };
 		F1D7F96F2379895000E80BCF /* LineParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineParser.swift; sourceTree = "<group>"; };
+		F1D7F97523798EB000E80BCF /* CGRect+Alignement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Alignement.swift"; sourceTree = "<group>"; };
+		F1D7F97823798EC100E80BCF /* CGRect+Offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Offset.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,11 +254,10 @@
 		F1C57FA9231C2F82000E15A4 /* cg */ = {
 			isa = PBXGroup;
 			children = (
-				F1C57FAA231C2F82000E15A4 /* CGRectModifier.swift */,
 				F1C57FAB231C2F82000E15A4 /* CGRectParser.swift */,
+				F1C57FAA231C2F82000E15A4 /* CGRectModifier.swift */,
 				F1C57FAC231C2F82000E15A4 /* CGRectAsserter.swift */,
-				F1D7F9632378C25500E80BCF /* CGRect+Operator.swift */,
-				F1C57FAD231C2F82000E15A4 /* CGRect+Extension.swift */,
+				F1D7F97423798D4500E80BCF /* extension */,
 			);
 			path = cg;
 			sourceTree = "<group>";
@@ -261,12 +266,10 @@
 			isa = PBXGroup;
 			children = (
 				F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */,
-				F1D7F965237979E600E80BCF /* CGPointTrig.swift */,
-				F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */,
-				F1D7F96923797A8300E80BCF /* CGPointTransformation.swift */,
 				F1C57FB3231C2F82000E15A4 /* CGPointModifier.swift */,
-				F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */,
-				F1972E6223392F4600CE772C /* CGPoint+Operator.swift */,
+				F1C57FB2231C2F82000E15A4 /* CGPointAsserter.swift */,
+				F1D7F97323798D2C00E80BCF /* extension */,
+				F1D7F97223798D1C00E80BCF /* util */,
 			);
 			path = point;
 			sourceTree = "<group>";
@@ -350,6 +353,35 @@
 				F1C57FD4231C2F82000E15A4 /* CGAffineTransformParser.swift */,
 			);
 			path = transform;
+			sourceTree = "<group>";
+		};
+		F1D7F97223798D1C00E80BCF /* util */ = {
+			isa = PBXGroup;
+			children = (
+				F1D7F965237979E600E80BCF /* CGPointTrig.swift */,
+				F1D7F96923797A8300E80BCF /* CGPointTransformation.swift */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		F1D7F97323798D2C00E80BCF /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				F1C57FB1231C2F82000E15A4 /* CGPoint+Extension.swift */,
+				F1972E6223392F4600CE772C /* CGPoint+Operator.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		F1D7F97423798D4500E80BCF /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				F1D7F9632378C25500E80BCF /* CGRect+Operator.swift */,
+				F1C57FAD231C2F82000E15A4 /* CGRect+Extension.swift */,
+				F1D7F97523798EB000E80BCF /* CGRect+Alignement.swift */,
+				F1D7F97823798EC100E80BCF /* CGRect+Offset.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -560,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1972E652339305500CE772C /* CGPoint+Operator.swift in Sources */,
+				F1D7F97723798EB000E80BCF /* CGRect+Alignement.swift in Sources */,
 				F1B403A7231D8F7A00163CAD /* CGRectAsserter.swift in Sources */,
 				F1972E6023392C8F00CE772C /* Line.swift in Sources */,
 				F1B403BB231D8F7A00163CAD /* CGAffineTransformParser.swift in Sources */,
@@ -567,6 +600,7 @@
 				F1D7F9712379895000E80BCF /* LineParser.swift in Sources */,
 				F1B403B4231D8F7A00163CAD /* CGPathParser.swift in Sources */,
 				F1D7F968237979EB00E80BCF /* CGPointTrig.swift in Sources */,
+				F1D7F97A23798EC100E80BCF /* CGRect+Offset.swift in Sources */,
 				F1D7F96B23797BE200E80BCF /* CGPointTransformation.swift in Sources */,
 				F1B403A8231D8F7A00163CAD /* CGRect+Extension.swift in Sources */,
 				F1B403AB231D8F7A00163CAD /* CGPoint+Extension.swift in Sources */,
@@ -599,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D7F97623798EB000E80BCF /* CGRect+Alignement.swift in Sources */,
 				F1C57FEA231C2F82000E15A4 /* CGSize+Extension.swift in Sources */,
 				F1C57FD7231C2F82000E15A4 /* CGRectAsserter.swift in Sources */,
 				F1C57FE4231C2F82000E15A4 /* CGPathParser.swift in Sources */,
@@ -620,6 +655,7 @@
 				F1C57FF1231C2F82000E15A4 /* CGAffineTransformParser.swift in Sources */,
 				F1C57FE2231C2F82000E15A4 /* CubicCurveUtils.swift in Sources */,
 				F1C57FD6231C2F82000E15A4 /* CGRectParser.swift in Sources */,
+				F1D7F97923798EC100E80BCF /* CGRect+Offset.swift in Sources */,
 				F1C57FF0231C2F82000E15A4 /* CGAffineTransformModifier.swift in Sources */,
 				F1C57FD5231C2F82000E15A4 /* CGRectModifier.swift in Sources */,
 				F1C57FDD231C2F82000E15A4 /* CGPointModifier.swift in Sources */,
