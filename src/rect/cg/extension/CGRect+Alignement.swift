@@ -1,6 +1,7 @@
 import Foundation
 /**
  * Alignment
+ * - Fixme: Possibly make this CGRectAlignment.topLeft(rect)
  */
 extension CGRect {
    public var topLeft: CGPoint { return self.origin }

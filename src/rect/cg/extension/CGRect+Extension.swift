@@ -16,7 +16,7 @@ extension CGRect {
     * Create a path using the coordinates of the rect passed in
     * ## Examples:  CGRect(0,0,100,100).path
     */
-   public var path: CGMutablePath { return CGRectParser.path(rect: self) }
+   public var path: CGMutablePath { return CGRectParser.Path.path(rect: self) }
    public var corners: [CGPoint] { return CGRectParser.corners(rect: self) }
    public var sides: [CGPoint] { return CGRectParser.sides(rect: self) }
    /**

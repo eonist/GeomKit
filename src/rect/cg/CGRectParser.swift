@@ -27,6 +27,64 @@ public class CGRectParser {
       return .interpolate(rectangle.topLeft, rectangle.bottomRight, 0.5)
    }
    /**
+    * Returns the midPoint of each side in - Parameter: rect
+    */
+   public static func sides(rect: CGRect) -> [CGPoint] { // <--Was previously named sidePoints
+      return [rect.left, rect.right, rect.top, rect.bottom]
+   }
+   /**
+    * Returns all the corners in - Parameter: rect
+    */
+   public static func corners(rect: CGRect) -> [CGPoint] {
+      return [rect.topLeft, rect.topRight, rect.bottomLeft, rect.bottomRight]
+   }
+   /**
+    * - Fixme: ⚠️️ maybe get the local rect with the pivot as center?? how does it work, hmmm
+    */
+   public static func localRectangle(topLeft: CGPoint, bottomRight: CGPoint, rotation: CGFloat) -> CGRect {
+      let points: [CGPoint] = [topLeft, bottomRight]
+      let rotatedPoints: [CGPoint] = CGPointTransformation.rotatePoints(points: points, pivot: .init(), rotation: -rotation)
+      return rectangle(topLeft: rotatedPoints[0], bottomRight: rotatedPoints[1])
+   }
+   /**
+    * - Fixme: Write doc
+    */
+   public static func rectangle(topLeft: CGPoint, bottomRight: CGPoint) -> CGRect {
+      let width: CGFloat = CGFloatParser.difference(topLeft.x, bottomRight.x)
+      let height: CGFloat = CGFloatParser.difference(topLeft.y, bottomRight.y)
+      return .init(origin: topLeft, size: .init(width, height))
+   }
+}
+/**
+ * Line
+ */
+extension CGRectParser { public class Side {} }
+extension CGRectParser.Side {
+   /**
+    * Returns an array with Line instances of all sides of a rectangle
+    */
+   public static func sides(rect: CGRect) -> [CGLine] {
+      return [topSide(rect: rect), rightSide(rect: rect), bottomSide(rect: rect), leftSide(rect: rect)]
+   }
+   public static func topSide(rect: CGRect) -> CGLine {
+      return .init(p1: rect.topLeft, p2: .init(x: rect.right.x, y: rect.top.y))
+   }
+   public static func rightSide(rect: CGRect) -> CGLine {
+      return .init(p1: .init(x: rect.right.x, y: rect.top.y), p2: rect.bottomRight)
+   }
+   public static func bottomSide(rect: CGRect) -> CGLine {
+      return .init(p1: rect.bottomRight, p2: .init(x: rect.left.x, y: rect.bottom.y))
+   }
+   public static func leftSide(rect: CGRect) -> CGLine {
+      return .init(p1: .init(rect.left.x, rect.bottom.y), p2: rect.topLeft)
+   }
+}
+/**
+ * Path
+ */
+extension CGRectParser { public class Path {} }
+extension CGRectParser.Path {
+   /**
     * Returns A CGPath that is shaped like a Rounded Rectangle
     * ## Examples:
     * let cgPath = CGRectParser.roundRect(rect:.init(origin: .zero, size: .init(width:100,height:100)), radius: 20)
@@ -56,64 +114,8 @@ public class CGRectParser {
       path.closeSubpath() // ***** Segment 4 created by closing the path *****
       return path
    }
-   /**
-    * Returns the midPoint of each side in - Parameter: rect
-    */
-   public static func sides(rect: CGRect) -> [CGPoint] { // <--Was previously named sidePoints
-      return [rect.left, rect.right, rect.top, rect.bottom]
-   }
-   /**
-    * Returns an array with Line instances of all sides of a rectangle
-    */
-   public static func sides(rect: CGRect) -> [CGLine] {
-      return [topSide(rect: rect), rightSide(rect: rect), bottomSide(rect: rect), leftSide(rect: rect)]
-   }
-   public static func topSide(rect: CGRect) -> CGLine {
-      return .init(p1: rect.topLeft, p2: .init(x: rect.right.x, y: rect.top.y))
-   }
-   public static func rightSide(rect: CGRect) -> CGLine {
-      return .init(p1: .init(x: rect.right.x, y: rect.top.y), p2: rect.bottomRight)
-   }
-   public static func bottomSide(rect: CGRect) -> CGLine {
-      return .init(p1: rect.bottomRight, p2: .init(x: rect.left.x, y: rect.bottom.y))
-   }
-   public static func leftSide(rect: CGRect) -> CGLine {
-      return .init(p1: .init(rect.left.x, rect.bottom.y), p2: rect.topLeft)
-   }
-   /**
-    * Returns all the corners in - Parameter: rect
-    */
-   public static func corners(rect: CGRect) -> [CGPoint] {
-      return [rect.topLeft, rect.topRight, rect.bottomLeft, rect.bottomRight]
-   }
-   /**
-    * - Fixme: ⚠️️ maybe get the local rect with the pivot as center?? how does it work, hmmm
-    */
-   public static func localRectangle(topLeft: CGPoint, bottomRight: CGPoint, rotation: CGFloat) -> CGRect {
-      let points: [CGPoint] = [topLeft, bottomRight]
-      let rotatedPoints: [CGPoint] = CGPointTransformation.rotatePoints(points: points, pivot: .init(), rotation: -rotation)
-      return rectangle(topLeft: rotatedPoints[0], bottomRight: rotatedPoints[1])
-   }
-   /**
-    * - Fixme: Write doc
-    */
-   public static func rectangle(topLeft: CGPoint, bottomRight: CGPoint) -> CGRect {
-      let width: CGFloat = CGFloatParser.difference(topLeft.x, bottomRight.x)
-      let height: CGFloat = CGFloatParser.difference(topLeft.y, bottomRight.y)
-      return .init(origin: topLeft, size: .init(width, height))
-   }
-   /**
-    * Returns a square that fits inside a circle
-    * - Parameter: circleCenter - center of circle
-    * - Parameter: radius - radius of circle
-    */
-   public static func squareInCircle(circleCenter: CGPoint, radius: CGFloat) -> CGRect {
-      let side = sqrt(radius * radius * 2)// Calc side length of square
-      let half = side * 0.5// Position offset
-      let pt: CGPoint = .init(x: circleCenter.x - half, y: circleCenter.y - half)
-      return .init(origin: pt, size: .init(width: side, height: side))
-   }
 }
+
 /**
  * - Fixme: ⚠️️ ⚠️️ create a similar method for localToGlobal
  * - Note:  This method used to be a modifying method but was remade as a parser, as its easier to use this way (make a duplocate method if mutating is need in the future)
