@@ -8,10 +8,12 @@ import NumberSugarMacOS
  * Convenient extensions
  */
 extension CGSize {
-   public var w: CGFloat { set { self.width = newValue } get { return self.width } }
-   public var h: CGFloat { set { self.height = newValue } get { return self.height } }
-   public func isNear(p: CGSize, epsilon: CGFloat) -> Bool { return CGPointAsserter.nearEquals(a: .init(x: self.w, y: self.h), b: .init(x: p.w, y: p.h), epsilon: epsilon) }
    /**
+    * isNear
+    */
+   public func isNear(p: CGSize, epsilon: CGFloat) -> Bool { return CGPointAsserter.nearEquals(a: .init(x: self.width, y: self.height), b: .init(x: p.width, y: p.height), epsilon: epsilon) }
+   /**
+    * clip
     * - Fixme: write example and doc
     */
    public func clip(_ min: CGSize, _ max: CGSize) -> CGSize {
@@ -20,10 +22,10 @@ extension CGSize {
       return .init(width: w, height: h)
    }
    /**
-    *
+    * interpolate
     */
    public func interpolate(_ to: CGSize, _ scalar: CGFloat) -> CGSize {
-      return .init(width: self.w.interpolate(to.w, scalar), height: self.h.interpolate(to.h, scalar))
+      return .init(width: self.width.interpolate(to.width, scalar), height: self.height.interpolate(to.height, scalar))
    }
 }
 /**
@@ -32,7 +34,7 @@ extension CGSize {
 extension CGSize {
    public static func + (a: CGSize, b: CGSize) -> CGSize { return .init(width: a.width + b.width, height: a.height + b.height) }
    public static func - (a: CGSize, b: CGSize) -> CGSize { return .init(width: a.width - b.width, height: a.height - b.height) }
-   public static func * (a: CGSize, b: CGSize) -> CGSize { return .init(width: a.w * b.w, height: a.h * b.h) }
+   public static func * (a: CGSize, b: CGSize) -> CGSize { return .init(width: a.width * b.width, height: a.height * b.height) }
    /**
     * Modifies a by adding b
     */
@@ -41,7 +43,7 @@ extension CGSize {
     * Modifies a by subtracting b
     */
    public static func -= ( a: inout CGSize, b: CGSize) { a.width -= b.width; a.height -= b.height }
-   public static func * (a: CGSize, b: CGFloat) -> CGSize { return .init(width: a.w * b, height: a.h * b) }
+   public static func * (a: CGSize, b: CGFloat) -> CGSize { return .init(width: a.width * b, height: a.height * b) }
 }
 
 /**

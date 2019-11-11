@@ -8,7 +8,7 @@ import NumberSugarMacOS
 public class CGPointParser {
    /**
     * Returns a point between - Parameter: p1 and - Parameter: p2 multiplied by the - Parameter: scalar
-    * - Parameter: scalar: the scalar is between 0 and 1
+    * - Parameter scalar: the scalar is between 0 and 1
     * - Fixme: ⚠️️ Using Math.abs could be more optimized? this optimization needs research. check the proto site
     */
    public static func interpolate(a: CGPoint, b: CGPoint, scalar: CGFloat) -> CGPoint {
@@ -38,12 +38,12 @@ public class CGPointParser {
     * Returns the difference between two points
     * - Note: Great when finding polar points when the pivot isnt at point 0,0
     * ## Examples:
-    * print(new Point(20,20),new Point(-40,-40))//Output: (-60,-60)
-    * print(new Point(20,20),new Point(40,-40))//Output: (20,-60)
-    * print(difference(new Point(2,2), new Point(4,4)))//Outputs: (2,2)
-    * print(difference(new Point(2,2), new Point(-4,-4)))//Outputs: (-6,-6)
-    * print(difference(new Point(-2,-2), new Point(-4,-4)))//Outputs: (-2,-2)
-    * print(difference(new Point(-2,-2), new Point(4,4)))//Outputs: (6,6)
+    * print(CGPoint(x: 20, y: 20), CGPoint(x: -40, y: -40))//Output: (-60,-60)
+    * print(CGPoint(x: 20, y: 20), CGPoint(x: 40, y: -40))//Output: (20,-60)
+    * print(CGPointParser.difference(p1: CGPoint(x: 2, y: 2), p2: CGPoint(x: 4, y: 4)))//Outputs: (2,2)
+    * print(CGPointParser.difference(p1: CGPoint(x: 2, y: 2), p2: CGPoint(x: -4, y: -4)))//Outputs: (-6,-6)
+    * print(CGPointParser.difference(p1: CGPoint(x: -2, y: -2), p2: CGPoint(x: -4, y: -4)))//Outputs: (-2,-2)
+    * print(CGPointParser.difference(p1: CGPoint(x: -2, y: -2), p2: CGPoint(x: 4, y: 4)))//Outputs: (6,6)
     * - Fixme: ⚠️️ is there a math formula ? write the formula you have atleast
     */
    public static func difference(p1: CGPoint, p2: CGPoint) -> CGPoint {
