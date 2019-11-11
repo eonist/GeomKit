@@ -68,9 +68,9 @@ public class LineAsserter {
     * - Fixme: ⚠️️ if two points are equal then the three are colliinear actually
     */
    public static func collinear(p1: CGPoint, p2: CGPoint, p3: CGPoint) -> Bool { // - Fixme: ⚠️️ rename to is..., depricate and link, or not?!?!
-      let a: CGFloat = CGPointParser.slope(a: p2, b: p3)
-      let b: CGFloat = CGPointParser.slope(a: p2, b: p1)
-      let c: CGFloat = CGPointParser.slope(a: p3, b: p1)
+      let a: CGFloat = CGPointTrig.slope(a: p2, b: p3)
+      let b: CGFloat = CGPointTrig.slope(a: p2, b: p1)
+      let c: CGFloat = CGPointTrig.slope(a: p3, b: p1)
       return (a == b && b == c) || (CGFloatAsserter.isInfinity(a) && CGFloatAsserter.isInfinity(b) && CGFloatAsserter.isInfinity(c))//why do we assert infinity again?
    }
 }

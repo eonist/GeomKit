@@ -11,7 +11,7 @@ public class CGPointAsserter {
    /**
     * Asserts if p1 is less than p2 (but eigther x OR y can be equal to the other x or y)
     * - Note: think - Parameter: p1 is eigther to the left of - Parameter: p2 or above - Parameter: p2
-    * - Note: but both x and y cant be the same in both points
+    * - Note: but both x and y can't be the same in both points
     */
    public static func less(p1: CGPoint, p2: CGPoint) -> Bool {
       return (p1.x <= p2.x && p1.y < p2.y) || (p1.x < p2.x && p1.y <= p2.y)
