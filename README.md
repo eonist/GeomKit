@@ -27,7 +27,7 @@ self.view.layer.addSublayer(shapeLayer)
 ```
 
 ### Todo:
-- Add HoundCI
-- Add SPM to GeomKit
-- Write examples
-- Write UnitTests
+- Add HoundCI ✅
+- Add SPM to GeomKit 👈
+- Write example ✅
+- Write UnitTests ✅

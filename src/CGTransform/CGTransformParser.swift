@@ -1,12 +1,12 @@
 import CoreGraphics
-typealias MatrixParser = CGAffineTransformParser
+typealias CGTransformParser = CGAffineTransformParser
 public class CGAffineTransformParser {
    /**
     * Convenience, See MatrixModifier.transformWithPivot for more detail
     */
    public static func transformWithPivot(transform: CGTransform, scale: CGPoint, rotation: CGFloat, offset: CGPoint, pivot: CGPoint, initRotation: CGFloat = 0) -> CGTransform {
       var transform = transform
-      return MatrixModifier.transformWithPivot(transform: &transform, scale: scale, rotation: rotation, offset: offset, pivot: pivot)
+      return CGTransformModifier.transformWithPivot(transform: &transform, scale: scale, rotation: rotation, offset: offset, pivot: pivot)
    }
    /**
     * Returns a matrix that you can get an objects position clockwise from the pivot, can also futher be manipulated if the input matrix has variables.

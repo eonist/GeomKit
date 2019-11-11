@@ -1,6 +1,6 @@
 import CoreGraphics
 // Class methods
-let π = CGFloat(Double.pi) // Global variable
+public let π = CGFloat(Double.pi) // Global variable
 /**
  * Aritmetic
  */
@@ -33,13 +33,13 @@ extension CGPoint {
    public func polarPoint(radius: CGFloat, angle: CGFloat) -> CGPoint {
       return self + CGPoint.polarPoint(radius: radius, angle: angle)
    }
-   static func polarPoint(radius: CGFloat, angle: CGFloat) -> CGPoint {
+   public static func polarPoint(radius: CGFloat, angle: CGFloat) -> CGPoint {
       return CGPointTrig.polar(radius: radius, angle: angle)
    }
-   static func distance(a: CGPoint, b: CGPoint) -> CGFloat {
+   public static func distance(a: CGPoint, b: CGPoint) -> CGFloat {
       return CGPointParser.distance(a: a, b: b)
    }
-   static func interpolate(a: CGPoint, b: CGPoint, scalar: CGFloat) -> CGPoint {
+   public static func interpolate(a: CGPoint, b: CGPoint, scalar: CGFloat) -> CGPoint {
       return CGPointParser.interpolate(a: a, b: b, scalar: scalar)
    }
 }

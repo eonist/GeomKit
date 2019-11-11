@@ -1,5 +1,5 @@
 import CoreGraphics
-public typealias MatrixModifier = CGAffineTransformModifier // Convenience
+public typealias CGTransformModifier = CGAffineTransformModifier // Convenience
 public class CGAffineTransformModifier {
    /**
     * - Note: The result may vary if you change the order of how the translations are applied. This method does not work if you need to rotate and scale around a point for instance, then you need to change the order
