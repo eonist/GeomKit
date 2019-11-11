@@ -7,23 +7,29 @@ import Foundation
 extension CGRect {
    /**
     * Clones CGRect
-    * ## Examples:  CGRect(0,0,100,100).clone()
+    * ## Examples:  CGRect.zero.clone()
     */
    public func clone() -> CGRect { // remove this, use copy instead
       return .init(origin: self.origin, size: self.size)
    }
    /**
     * Create a path using the coordinates of the rect passed in
-    * ## Examples:  CGRect(0,0,100,100).path
+    * ## Examples: CGRect.zero.path
     */
-   public var path: CGMutablePath { return CGRectParser.Path.path(rect: self) }
-   public var corners: [CGPoint] { return CGRectParser.corners(rect: self) }
-   public var sides: [CGPoint] { return CGRectParser.sides(rect: self) }
+   public var path: CGMutablePath {
+      return CGRectParser.Path.path(rect: self)
+   }
+   public var corners: [CGPoint] {
+      return CGRectParser.corners(rect: self)
+   }
+   public var sides: [CGPoint] {
+      return CGRectParser.sides(rect: self)
+   }
    /**
     * Expands the size of the rect from it's pivot
     */
    public func expand(dx: CGFloat, dy: CGFloat) -> CGRect {
-      return CGRect(origin: .init(x: self.origin.x, y: self.origin.y), size: .init(width: self.width + dx, height: self.height + dy))
+      return .init(origin: self.origin, size: .init(width: self.width + dx, height: self.height + dy))
    }
 }
 // var nsRect: NSRect { return NSRectFromCGRect(self) }

@@ -75,6 +75,9 @@
 		F1D7F98123799F9E00E80BCF /* CGRectParser.Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97F23799F9E00E80BCF /* CGRectParser.Path.swift */; };
 		F1D7F98323799FB300E80BCF /* CGRectParser.Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F98223799FB300E80BCF /* CGRectParser.Side.swift */; };
 		F1D7F98423799FB300E80BCF /* CGRectParser.Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F98223799FB300E80BCF /* CGRectParser.Side.swift */; };
+		F1D7F98E2379C46300E80BCF /* GeomSugariOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F98D2379C46300E80BCF /* GeomSugariOSTests.swift */; };
+		F1D7F9902379C46300E80BCF /* GeomSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B40398231D8F0E00163CAD /* GeomSugariOS.framework */; };
+		F1D7F9962379C62100E80BCF /* GeomSugariOS.framework in Resources */ = {isa = PBXBuildFile; fileRef = F1B40398231D8F0E00163CAD /* GeomSugariOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F1C57F99231C2F6E000E15A4;
 			remoteInfo = GeomSugarMacOS;
+		};
+		F1D7F9912379C46300E80BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1C57F7A231C2989000E15A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F1B40397231D8F0E00163CAD;
+			remoteInfo = GeomSugariOS;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -147,6 +157,9 @@
 		F1D7F97C2379918800E80BCF /* CircleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleParser.swift; sourceTree = "<group>"; };
 		F1D7F97F23799F9E00E80BCF /* CGRectParser.Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectParser.Path.swift; sourceTree = "<group>"; };
 		F1D7F98223799FB300E80BCF /* CGRectParser.Side.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectParser.Side.swift; sourceTree = "<group>"; };
+		F1D7F98B2379C46300E80BCF /* GeomSugariOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeomSugariOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D7F98D2379C46300E80BCF /* GeomSugariOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeomSugariOSTests.swift; sourceTree = "<group>"; };
+		F1D7F98F2379C46300E80BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +184,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1B403A4231D8F1F00163CAD /* NumberSugarMacOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1D7F9882379C46300E80BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1D7F9902379C46300E80BCF /* GeomSugariOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +223,7 @@
 				F1C57F84231C2989000E15A4 /* GeomSugarExample */,
 				F1C57F9B231C2F6E000E15A4 /* GeomSugarMacOS */,
 				F1B40399231D8F0E00163CAD /* GeomSugariOS */,
+				F1D7F98C2379C46300E80BCF /* GeomSugariOSTests */,
 				F1C57F83231C2989000E15A4 /* Products */,
 				F1B403A0231D8F1800163CAD /* Frameworks */,
 			);
@@ -213,6 +235,7 @@
 				F1C57F82231C2989000E15A4 /* GeomSugarExample.app */,
 				F1C57F9A231C2F6E000E15A4 /* GeomSugarMacOS.framework */,
 				F1B40398231D8F0E00163CAD /* GeomSugariOS.framework */,
+				F1D7F98B2379C46300E80BCF /* GeomSugariOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -388,6 +411,15 @@
 			path = CGPath;
 			sourceTree = "<group>";
 		};
+		F1D7F98C2379C46300E80BCF /* GeomSugariOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1D7F98D2379C46300E80BCF /* GeomSugariOSTests.swift */,
+				F1D7F98F2379C46300E80BCF /* Info.plist */,
+			);
+			path = GeomSugariOSTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -468,13 +500,31 @@
 			productReference = F1C57F9A231C2F6E000E15A4 /* GeomSugarMacOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F1D7F98A2379C46300E80BCF /* GeomSugariOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1D7F9932379C46300E80BCF /* Build configuration list for PBXNativeTarget "GeomSugariOSTests" */;
+			buildPhases = (
+				F1D7F9872379C46300E80BCF /* Sources */,
+				F1D7F9882379C46300E80BCF /* Frameworks */,
+				F1D7F9892379C46300E80BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F1D7F9922379C46300E80BCF /* PBXTargetDependency */,
+			);
+			name = GeomSugariOSTests;
+			productName = GeomSugariOSTests;
+			productReference = F1D7F98B2379C46300E80BCF /* GeomSugariOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F1C57F7A231C2989000E15A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = FutureLab;
 				TargetAttributes = {
@@ -486,6 +536,9 @@
 					};
 					F1C57F99231C2F6E000E15A4 = {
 						CreatedOnToolsVersion = 10.2;
+					};
+					F1D7F98A2379C46300E80BCF = {
+						CreatedOnToolsVersion = 11.2;
 					};
 				};
 			};
@@ -505,6 +558,7 @@
 				F1C57F81231C2989000E15A4 /* GeomSugarExample */,
 				F1C57F99231C2F6E000E15A4 /* GeomSugarMacOS */,
 				F1B40397231D8F0E00163CAD /* GeomSugariOS */,
+				F1D7F98A2379C46300E80BCF /* GeomSugariOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -530,6 +584,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1D7F9892379C46300E80BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1D7F9962379C62100E80BCF /* GeomSugariOS.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +734,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1D7F9872379C46300E80BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1D7F98E2379C46300E80BCF /* GeomSugariOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -679,6 +749,11 @@
 			isa = PBXTargetDependency;
 			target = F1C57F99231C2F6E000E15A4 /* GeomSugarMacOS */;
 			targetProxy = F1C57F9F231C2F6E000E15A4 /* PBXContainerItemProxy */;
+		};
+		F1D7F9922379C46300E80BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F1B40397231D8F0E00163CAD /* GeomSugariOS */;
+			targetProxy = F1D7F9912379C46300E80BCF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -988,6 +1063,43 @@
 			};
 			name = Release;
 		};
+		F1D7F9942379C46300E80BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeomSugariOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomSugariOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1D7F9952379C46300E80BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeomSugariOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomSugariOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1023,6 +1135,15 @@
 			buildConfigurations = (
 				F1C57FA3231C2F6E000E15A4 /* Debug */,
 				F1C57FA4231C2F6E000E15A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1D7F9932379C46300E80BCF /* Build configuration list for PBXNativeTarget "GeomSugariOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1D7F9942379C46300E80BCF /* Debug */,
+				F1D7F9952379C46300E80BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
