@@ -2,7 +2,7 @@ import Foundation
 
 public class CGPointTransformation {
    /**
-    * UNTESTED, but should work
+    * - Caution: ⚠️️ UNTESTED, but should work
     * Returns a point rotated around a pivot point
     * - Note: does not modifify the - Parameter: point
     * - Fixme: ⚠️️ rename to matrixRot?
@@ -47,9 +47,10 @@ public class CGPointTransformation {
    /**
     * Scales an array of points from - Parameter: pivotPoint to - Parameter: xScale and - Parameter: yScale
     * - Note: Does not modify the original array
-    * - Parameter: points reoresents the points to be scaled
-    * - Parameter: pivot represents the origin point where the - Parameter: points are scaled from
-    * - Parameter: scale represents the x and y axis scale ratio
+    * - Parameters:
+    *   - points: reoresents the points to be scaled
+    *   - pivot: represents the origin point where the - Parameter: points are scaled from
+    *   - scale: represents the x and y axis scale ratio
     * ## Examples:
     * circle.setPosition(100,100)
     * var pivotPoint:Point = new Point(50,50)

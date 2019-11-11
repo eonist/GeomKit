@@ -22,7 +22,7 @@ public class LineParser {
       let (x1, y1, x4, y4) = (a.p1.x, a.p1.y, b.p2.x, b.p2.y)
       let (dx1, dx2) = (a.p2.x - x1, b.p1.x - x4)
       var p: CGPoint = .init()
-      if dx1 == 0 || dx2 == 0 { // - Fixme: ⚠️️ not 0 or what?
+      if dx1 == 0 || dx2 == 0 { // - Fixme: ⚠️️ not 0 or?
          p.x = 0
          p.y = 0
       }

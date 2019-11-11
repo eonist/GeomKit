@@ -1,12 +1,12 @@
 import Foundation
-typealias MatrixParser = CGAffineTransformParser // Convenience
+typealias MatrixParser = CGAffineTransformParser
 public class CGAffineTransformParser {
    /**
     * Convenience, See MatrixModifier.transformWithPivot for more detail
     */
    public static func transformWithPivot(transform: CGTransform, scale: CGPoint, rotation: CGFloat, offset: CGPoint, pivot: CGPoint, initRotation: CGFloat = 0) -> CGTransform {
       var transform = transform
-      return MatrixModifier.transformWithPivot(&transform, scale, rotation, offset, pivot)
+      return MatrixModifier.transformWithPivot(transform: &transform, scale: scale, rotation: rotation, offset: offset, pivot: pivot)
    }
    /**
     * Returns a matrix that you can get an objects position clockwise from the pivot, can also futher be manipulated if the input matrix has variables.
@@ -16,19 +16,21 @@ public class CGAffineTransformParser {
     */
    public static func rotateAroundPoint(transform: CGTransform, rotation: CGFloat, pivot: CGPoint) -> CGTransform {
       var transform = transform
-      transform.translate(x: pivot.x, pivot.y) // this looks strage, but you sort of set the point here
+      transform.translate(x: pivot.x, y: pivot.y) // this looks strage, but you sort of set the point here
       transform.rotate(rotation: rotation) // = CGAffineTransformRotate(transform, rotation);
-      transform.translate(x: -pivot.x, -pivot.y) // Then you reset the offset to the original position
+      transform.translate(x: -pivot.x, y: -pivot.y) // Then you reset the offset to the original position
       return transform
    }
+   
    /**
     * - Note: You can chain scaleFromPoint and rotatAroundPoint and eventually skewFromPoint. This is a great way to get different transform results quickly
     * - Important: ⚠️️ You scale a view from the center. So if you want to scale from TopLeft, you have to calcualte the pivot from the centers POV. So: CGPoint(x:-width/2,y:-height/2)
     * ## Examples:
     * tagView.transform = CGAffineTransformParser.scaleFromPoint(transform: tagView.transform, scale: .init(x:0.5,y:0.5), pivot: .init(x:0,y:-(100+arrowHeight)/2))
-    * - Parameter transform: The current transform applied to the view
-    * - Parameter scale: CGPoint values from 0-1
-    * - Parameter pivot: The CGPoint to scale from
+    * - Parameters:
+    *   - transform: The current transform applied to the view
+    *   - scale: CGPoint values from 0-1
+    *   - pivot: The CGPoint to scale from
     */
    public static func scaleFromPoint(transform: CGAffineTransform, scale: CGPoint, pivot: CGPoint) -> CGAffineTransform {
       var transform = transform
@@ -42,7 +44,7 @@ public class CGAffineTransformParser {
     */
    public static func translate(transform: CGTransform, x: CGFloat, y: CGFloat) -> CGTransform {
       var transform = transform
-      transform.translate(x: x, y)
+      transform.translate(x: x, y: y)
       return transform
    }
    /**

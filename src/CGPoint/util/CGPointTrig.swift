@@ -29,8 +29,9 @@ public class CGPointTrig {
    /**
     * Returns a point, in a polar cordinate system (from 0,0), for - Parameter: angle and - Parameter: length
     * Return: a point on a circle where the pivot is TopLeft Corner (0,0)
-    * - Parameter: radius: the radius of the circle
-    * - Parameter: angle: the angle where the point is (in radians) (-π to π) (3.14.. to 3.14..)
+    * - Parameters:
+    *   - radius: the radius of the circle
+    *   - angle: the angle where the point is (in radians) (-π to π) (3.14.. to 3.14..)
     * - Note: formula "<angle*cos*radius,angle*sin*radius>"
     * - Note: One can also use Point.polar(radius,radian) or equivilent method in the spesific language
     * Base formula CosΘ = x/len
@@ -63,7 +64,7 @@ public class CGPointTrig {
    }
    /**
     * Returns the x position when a line passes through - Parameter: p1 and - Parameter: y2 and that line has a slope-value of - Parameter: slope
-    * - Parameter: slope (the rate of change between x and y) use PointParser.slope(p1,p2) to find the slope
+    * - Parameter slope: (the rate of change between x and y) use PointParser.slope(p1,p2) to find the slope
     * - Note: based on the equation: "slope = (y2-y1)/(x2-x1)"
     * - Note: the Angle.y() is a similar method but it uses the angle to find the x
     * - Note: this method is great if you have 2 points and you want to find the third but you only know the y value of that point
@@ -78,9 +79,10 @@ public class CGPointTrig {
     * - Note: based on the equation: "slope = (y2-y1)/(x2-x1)"
     * - Note: the Angle.x() is a similar method but it uses the angle to find the x
     * - Note: this method is great if you have 2 points and you want to find the third but you only know the x value of that point
-    * - Parameter: slope (the rate of change between x and y) use PointParser.slope(p1,p2) to find the slope
-    * - Parameter: p1: the first Point that makes up the line that makes up the slope
-    * - Parameter: x2: the x marks the spot. X is the final x in the point on the slope.
+    * - Parameters:
+    *   - slope: (the rate of change between x and y) use PointParser.slope(p1,p2) to find the slope
+    *   - p1: the first Point that makes up the line that makes up the slope
+    *   - x2: the x marks the spot. X is the final x in the point on the slope.
     * ## Examples:
     * PointParser.y(CGPoint(100,100), 200, 1);//Output: 200
     */

@@ -19,7 +19,7 @@ extension CGAffineTransform {
    /**
     * Translate
     */
-   public mutating func translate(x: CGFloat, _ y: CGFloat) {
+   public mutating func translate(x: CGFloat, y: CGFloat) {
       self = self.translatedBy(x: x, y: y) // -> CGAffineTransformTranslate
    }
    /**
@@ -55,7 +55,7 @@ extension CGAffineTransform {
       return CGAffineTransformParser.transformAroundPoint(transform: transform, scale: scale, rotation: rotation, offset: offset, pivot: pivot)
    }
    public static func transformWithPivot(transform:inout CGTransform, scale: CGPoint, rotation: CGFloat, offset: CGPoint, pivot: CGPoint, initRotation: CGFloat = 0) {
-      _ = CGAffineTransformModifier.transformWithPivot(&transform, scale, rotation, offset, pivot, initRotation)
+      _ = CGAffineTransformModifier.transformWithPivot(transform: &transform, scale: scale, rotation: rotation, offset: offset, pivot: pivot, initRotation: initRotation)
    }
    public static func copy(transform: CGTransform) -> CGTransform {
       return CGAffineTransformParser.copy(transform: transform)
@@ -70,7 +70,7 @@ extension CGAffineTransform {
       return CGAffineTransformParser.copy(transform: self)
    }
    public func transformPoint(point: CGPoint) -> CGPoint {
-      return CGAffineTransformModifier.transformPoint(point, self)
+      return CGAffineTransformModifier.transformPoint(point: point, transform: self)
    }
    /**
     * ## Examples:

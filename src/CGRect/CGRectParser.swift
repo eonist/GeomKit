@@ -52,7 +52,7 @@ public class CGRectParser {
    public static func rectangle(tl: CGPoint, br: CGPoint) -> CGRect {
       let width: CGFloat = CGFloatParser.difference(tl.x, br.x)
       let height: CGFloat = CGFloatParser.difference(tl.y, br.y)
-      return .init(origin: tl, size: .init(width, height))
+      return .init(origin: tl, size: .init(width: width, height: height))
    }
 }
 /**
