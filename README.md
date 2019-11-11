@@ -5,6 +5,7 @@
 [![SPM compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![SwiftLint Sindre](https://img.shields.io/badge/SwiftLint-Sindre-hotpink.svg)](https://github.com/sindresorhus/swiftlint-sindre)
+[![Build Status](https://travis-ci.com/eonist/GeomKit.svg?branch=master)](https://travis-ci.com/eonist/GeomKit)
 
 <img width="100" alt="img" src="https://rawgit.com/stylekit/img/master/GraphicsLib.svg">
 
@@ -19,7 +20,11 @@ Geometry classes
 ### Example:
 
 ```swift
-
+let rect: CGRect = .init(origin: .zero, size: .init(width: 100, height: 100))
+let cgPath = CGRectParser.roundRect(rect: rect, radius: 20)
+let shapeLayer: CAShapeLayer = .init()
+CGPathModifier.fill(shape: shapeLayer, cgPath: cgPath, fillColor: .green)
+self.view.layer.addSublayer(shapeLayer)
 ```
 
 ### Todo:

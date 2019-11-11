@@ -7,22 +7,22 @@ extension CGRectParser.Path {
    /**
     * Returns A CGPath that is shaped like a Rounded Rectangle
     * ## Examples:
-    * let cgPath = CGRectParser.roundRect(rect:.init(origin: .zero, size: .init(width:100,height:100)), radius: 20)
+    * let rect: CGRect = .init(origin: .zero, size: .init(width: 100, height: 100))
+    * let cgPath = CGRectParser.roundRect(rect: rect, radius: 20)
     * let shapeLayer: CAShapeLayer = .init()
     * CGPathModifier.fill(shape: shapeLayer, cgPath: cgPath, fillColor: .green)
     * self.view.layer.addSublayer(shapeLayer)
     */
    public static func roundRect(rect: CGRect, radius: CGFloat) -> CGMutablePath {
       let path: CGMutablePath = .init()
-      path.move(to: .init(x: rect.midX, y: rect.minY)) // was -> CGPathMoveToPoint
-      let closure = { (tangent1End: CGPoint, tangent2End: CGPoint) in
-         path.addArc(tangent1End: tangent1End, tangent2End: tangent2End, radius: radius)
-      }
-      //try to store in array and forloop the bellow
-      closure(.init(x: rect.maxX, y: rect.minY), .init(x: rect.maxX, y: rect.maxY))
-      closure(.init(x: rect.maxX, y: rect.maxY), .init(x: rect.minX, y: rect.maxY))
-      closure(.init(x: rect.minX, y: rect.maxY), .init(x: rect.minX, y: rect.minY))
-      closure(.init(x: rect.minX, y: rect.minY), .init(x: rect.maxX, y: rect.minY))
+      path.move(to: .init(x: rect.midX, y: rect.minY))
+      let pts: [(CGPoint, CGPoint)] = [
+         (.init(x: rect.maxX, y: rect.minY), .init(x: rect.maxX, y: rect.maxY)),
+         (.init(x: rect.maxX, y: rect.maxY), .init(x: rect.minX, y: rect.maxY)),
+         (.init(x: rect.minX, y: rect.maxY), .init(x: rect.minX, y: rect.minY)),
+         (.init(x: rect.minX, y: rect.minY), .init(x: rect.maxX, y: rect.minY))
+      ]
+      pts.forEach { path.addArc(tangent1End: $0.0, tangent2End: $0.1, radius: radius) }
       path.closeSubpath()
       return path
    }

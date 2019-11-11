@@ -9,7 +9,6 @@ public class CGPointParser {
    /**
     * Returns a point between - Parameter: p1 and - Parameter: p2 multiplied by the - Parameter: scalar
     * - Parameter: scalar: the scalar is between 0 and 1
-    * - Note: PointParser.interpolate() is different form the Adobe flash native Point.interpolate, the later multiplies from p2 to p1, the former multiplies form p1 tp p2 which i think is more logical
     * - Fixme: ⚠️️ Using Math.abs could be more optimized? this optimization needs research. check the proto site
     */
    public static func interpolate(a: CGPoint, b: CGPoint, scalar: CGFloat) -> CGPoint {
