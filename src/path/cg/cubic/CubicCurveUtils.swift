@@ -48,7 +48,7 @@ extension CubicCurveUtils {
       let x: CGFloat = a.x * mt3 + b.x * 3 * mt2 * t + c.x * 3 * mt * t * t + d.x * t * t * t
       /*fy(t) = y1 * (1-t)³ + y2 * 3 * (1-t)²t + y3 * 3 * (1-t)t² + y4 * t³*/
       let y: CGFloat = a.y * mt3 + b.y * 3 * mt2 * t + c.y * 3 * mt * t * t + d.y * t * t * t
-      return CGPoint(x, y)
+      return CGPoint(x: x, y: y)
    }
    /**
     * Cubic Equation Calculator

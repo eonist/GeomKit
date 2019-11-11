@@ -60,7 +60,7 @@ public class CGPathParser {
     * Returns a circle path from top left
     */
    public static func circ(radius: CGFloat, x: CGFloat = 0, y: CGFloat = 0) -> CGMutablePath {
-      let rect: CGRect = .init(origin: .init(x, y), size: .init(width: radius * 2, height: radius * 2))
+      let rect: CGRect = .init(origin: .init(x: x, y: y), size: .init(width: radius * 2, height: radius * 2))
       return ellipse(rect: rect)
    }
    /**
@@ -103,7 +103,7 @@ extension CGPathParser {
     * Draws an ellipse from the center
     */
    public static func ellipse( center: CGPoint, size: CGSize) -> CGMutablePath {
-      let point: CGPoint = .init(center.x - (size.width / 2), center.y - (size.height / 2))
+      let point: CGPoint = .init(x: center.x - (size.width / 2), y: center.y - (size.height / 2))
       return ellipse(rect: .init(origin: point, size: size))
    }
    /**

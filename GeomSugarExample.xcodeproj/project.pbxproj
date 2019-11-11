@@ -71,6 +71,10 @@
 		F1D7F97A23798EC100E80BCF /* CGRect+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97823798EC100E80BCF /* CGRect+Offset.swift */; };
 		F1D7F97D2379918800E80BCF /* CircleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97C2379918800E80BCF /* CircleParser.swift */; };
 		F1D7F97E2379918800E80BCF /* CircleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97C2379918800E80BCF /* CircleParser.swift */; };
+		F1D7F98023799F9E00E80BCF /* CGRectParser.Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97F23799F9E00E80BCF /* CGRectParser.Path.swift */; };
+		F1D7F98123799F9E00E80BCF /* CGRectParser.Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F97F23799F9E00E80BCF /* CGRectParser.Path.swift */; };
+		F1D7F98323799FB300E80BCF /* CGRectParser.Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F98223799FB300E80BCF /* CGRectParser.Side.swift */; };
+		F1D7F98423799FB300E80BCF /* CGRectParser.Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F98223799FB300E80BCF /* CGRectParser.Side.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +145,8 @@
 		F1D7F97523798EB000E80BCF /* CGRect+Alignement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Alignement.swift"; sourceTree = "<group>"; };
 		F1D7F97823798EC100E80BCF /* CGRect+Offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Offset.swift"; sourceTree = "<group>"; };
 		F1D7F97C2379918800E80BCF /* CircleParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleParser.swift; sourceTree = "<group>"; };
+		F1D7F97F23799F9E00E80BCF /* CGRectParser.Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectParser.Path.swift; sourceTree = "<group>"; };
+		F1D7F98223799FB300E80BCF /* CGRectParser.Side.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectParser.Side.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				F1C57FAB231C2F82000E15A4 /* CGRectParser.swift */,
+				F1D7F98223799FB300E80BCF /* CGRectParser.Side.swift */,
+				F1D7F97F23799F9E00E80BCF /* CGRectParser.Path.swift */,
 				F1C57FAA231C2F82000E15A4 /* CGRectModifier.swift */,
 				F1C57FAC231C2F82000E15A4 /* CGRectAsserter.swift */,
 				F1D7F97423798D4500E80BCF /* extension */,
@@ -605,6 +613,7 @@
 			files = (
 				F1972E652339305500CE772C /* CGPoint+Operator.swift in Sources */,
 				F1D7F97723798EB000E80BCF /* CGRect+Alignement.swift in Sources */,
+				F1D7F98123799F9E00E80BCF /* CGRectParser.Path.swift in Sources */,
 				F1B403A7231D8F7A00163CAD /* CGRectAsserter.swift in Sources */,
 				F1972E6023392C8F00CE772C /* Line.swift in Sources */,
 				F1B403BB231D8F7A00163CAD /* CGAffineTransformParser.swift in Sources */,
@@ -616,6 +625,7 @@
 				F1D7F97A23798EC100E80BCF /* CGRect+Offset.swift in Sources */,
 				F1D7F96B23797BE200E80BCF /* CGPointTransformation.swift in Sources */,
 				F1B403A8231D8F7A00163CAD /* CGRect+Extension.swift in Sources */,
+				F1D7F98423799FB300E80BCF /* CGRectParser.Side.swift in Sources */,
 				F1B403AB231D8F7A00163CAD /* CGPoint+Extension.swift in Sources */,
 				F1B403B3231D8F7A00163CAD /* CGPathModifier.swift in Sources */,
 				F1B403B0231D8F7A00163CAD /* CALayerShapeUtil.swift in Sources */,
@@ -648,6 +658,7 @@
 			files = (
 				F1D7F97623798EB000E80BCF /* CGRect+Alignement.swift in Sources */,
 				F1C57FEA231C2F82000E15A4 /* CGSize+Extension.swift in Sources */,
+				F1D7F98323799FB300E80BCF /* CGRectParser.Side.swift in Sources */,
 				F1C57FD7231C2F82000E15A4 /* CGRectAsserter.swift in Sources */,
 				F1C57FE4231C2F82000E15A4 /* CGPathParser.swift in Sources */,
 				F1C57FE8231C2F82000E15A4 /* LineAsserter.swift in Sources */,
@@ -656,6 +667,7 @@
 				F1C57FD8231C2F82000E15A4 /* CGRect+Extension.swift in Sources */,
 				F1C57FDB231C2F82000E15A4 /* CGPoint+Extension.swift in Sources */,
 				F1D7F9702379895000E80BCF /* LineParser.swift in Sources */,
+				F1D7F98023799F9E00E80BCF /* CGRectParser.Path.swift in Sources */,
 				F1C57FE3231C2F82000E15A4 /* CGPathModifier.swift in Sources */,
 				F1D7F96C23797BE300E80BCF /* CGPointTransformation.swift in Sources */,
 				F1C57FE0231C2F82000E15A4 /* CALayerShapeUtil.swift in Sources */,

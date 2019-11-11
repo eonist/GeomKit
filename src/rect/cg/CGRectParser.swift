@@ -56,67 +56,6 @@ public class CGRectParser {
    }
 }
 /**
- * Line
- */
-extension CGRectParser { public class Side {} }
-extension CGRectParser.Side {
-   /**
-    * Returns an array with Line instances of all sides of a rectangle
-    */
-   public static func sides(rect: CGRect) -> [CGLine] {
-      return [topSide(rect: rect), rightSide(rect: rect), bottomSide(rect: rect), leftSide(rect: rect)]
-   }
-   public static func topSide(rect: CGRect) -> CGLine {
-      return .init(p1: rect.topLeft, p2: .init(x: rect.right.x, y: rect.top.y))
-   }
-   public static func rightSide(rect: CGRect) -> CGLine {
-      return .init(p1: .init(x: rect.right.x, y: rect.top.y), p2: rect.bottomRight)
-   }
-   public static func bottomSide(rect: CGRect) -> CGLine {
-      return .init(p1: rect.bottomRight, p2: .init(x: rect.left.x, y: rect.bottom.y))
-   }
-   public static func leftSide(rect: CGRect) -> CGLine {
-      return .init(p1: .init(rect.left.x, rect.bottom.y), p2: rect.topLeft)
-   }
-}
-/**
- * Path
- */
-extension CGRectParser { public class Path {} }
-extension CGRectParser.Path {
-   /**
-    * Returns A CGPath that is shaped like a Rounded Rectangle
-    * ## Examples:
-    * let cgPath = CGRectParser.roundRect(rect:.init(origin: .zero, size: .init(width:100,height:100)), radius: 20)
-    * let shapeLayer:CAShapeLayer = .init()
-    * CGPathModifier.fill(shape: shapeLayer, cgPath: cgPath, fillColor: .green)
-    * self.view.layer.addSublayer(shapeLayer)
-    */
-   public static func roundRect(rect: CGRect, radius: CGFloat) -> CGMutablePath {
-      let path: CGMutablePath = .init()
-      path.move(to: .init(rect.midX, rect.minY)) // was -> CGPathMoveToPoint
-      path.addArc(tangent1End: .init(rect.maxX, rect.minY), tangent2End: .init(rect.maxX, rect.maxY), radius: radius) // Swift 3 upgrade, was-> CGPathAddArcToPoint(path, nil, CGRectGetMaxX(rect), CGRectGetMaxY(rect), CGRectGetMinX(rect), CGRectGetMaxY(rect), radius)
-      path.addArc(tangent1End: .init(rect.maxX, rect.maxY), tangent2End: .init(rect.minX, rect.maxY), radius: radius)
-      path.addArc(tangent1End: .init(rect.minX, rect.maxY), tangent2End: .init(rect.minX, rect.minY), radius: radius)
-      path.addArc(tangent1End: .init(rect.minX, rect.minY), tangent2End: .init(rect.maxX, rect.minY), radius: radius)
-      path.closeSubpath()
-      return path
-   }
-   /**
-    * Create a path using the coordinates of the rect passed in
-    */
-   public static func path(rect: CGRect) -> CGMutablePath {
-      let path: CGMutablePath = .init()
-      path.move(to: rect.origin) // was-> CGPathMoveToPoint
-      path.addLine(to: .init(rect.origin.x + rect.size.width, rect.origin.y))// ***** Segment 1 *****
-      path.addLine(to: .init(rect.origin.x + rect.size.width, rect.origin.y + rect.size.height))// ***** Segment 2 *****
-      path.addLine(to: .init(rect.origin.x, rect.origin.y + rect.size.height))// ***** Segment 3 *****
-      path.closeSubpath() // ***** Segment 4 created by closing the path *****
-      return path
-   }
-}
-
-/**
  * - Fixme: ⚠️️ ⚠️️ create a similar method for localToGlobal
  * - Note:  This method used to be a modifying method but was remade as a parser, as its easier to use this way (make a duplocate method if mutating is need in the future)
  * ## Examples: var localRectangle: CGRect = CGRectParaser.globalToLocal(rectangle1.clone(), view)

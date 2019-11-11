@@ -15,15 +15,15 @@ public class CGPointTrig {
     */
    public static func safePolar(len: CGFloat, angle: CGFloat) -> CGPoint {
       if angle == 0 {
-         return .init(len, 0)
+         return .init(x: len, y: 0)
       } else if angle == π || angle == -π {
-         return .init(-len, 0)
+         return .init(x: -len, y: 0)
       } else if angle == -π / 2 {
-         return .init(0, -len)
+         return .init(x: 0, y: -len)
       } else if angle == π / 2 {
-         return .init(0, len)
+         return .init(x: 0, y: len)
       } else {
-         return .init(cos(angle) * len, sin(angle) * len)
+         return .init(x: cos(angle) * len, y: sin(angle) * len)
       }
    }
    /**

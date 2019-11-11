@@ -13,7 +13,7 @@ public class CGPointParser {
     * - Fixme: ⚠️️ Using Math.abs could be more optimized? this optimization needs research. check the proto site
     */
    public static func interpolate(a: CGPoint, b: CGPoint, scalar: CGFloat) -> CGPoint {
-      return .init(a.x.interpolate(b.x, scalar), a.y.interpolate(b.y, scalar))
+      return .init(x: a.x.interpolate(b.x, scalar), y: a.y.interpolate(b.y, scalar))
    }
    /**
     * Returns the distance between two points
@@ -50,7 +50,7 @@ public class CGPointParser {
    public static func difference(p1: CGPoint, p2: CGPoint) -> CGPoint {
       let x: CGFloat = p2.x - p1.x
       let y: CGFloat = p2.y - p1.y
-      return .init(x, y)
+      return .init(x: x, y: y)
    }
    /**
     * - Fixme: add doc
@@ -58,7 +58,7 @@ public class CGPointParser {
    public static func relativeDifference(a: CGPoint, b: CGPoint) -> CGPoint {
       let x: CGFloat = CGFloatParser.relativeDifference(a.x, b.x)
       let y: CGFloat = CGFloatParser.relativeDifference(a.y, b.y)
-      return .init(x, y)
+      return .init(x: x, y: y)
    }
    /**
     * Returns the distance between points in both the x and y axis. (unlike Point.distance which returns the diagonal distance between two points)
@@ -66,18 +66,18 @@ public class CGPointParser {
     * - Fixme: ⚠️️potentially make polarAxisDistance which would potentially support any angled axis
     */
    public static func axisDistance(p1: CGPoint, p2: CGPoint) -> CGPoint {
-      return .init(CGFloatParser.distance(p1.x, p2.x), CGFloatParser.distance(p1.y, p2.y))
+      return .init(x: CGFloatParser.distance(p1.x, p2.x), y: CGFloatParser.distance(p1.y, p2.y))
    }
    /**
     * Returns a CGRect that makes derived from - Parameter: points (think bounding box of points)
     * - Fixme: Use reduce or map instead of forEach
     */
    public static func rectangle(pts: [CGPoint]) -> CGRect {
-      var max: CGPoint = !pts.isEmpty ? (pts[0] as CGPoint).copy() : .init()
-      var min: CGPoint = !pts.isEmpty ? (pts[0] as CGPoint).copy() : .init()
+      var max: CGPoint = !pts.isEmpty ? (pts[0] as CGPoint).clone() : .init()
+      var min: CGPoint = !pts.isEmpty ? (pts[0] as CGPoint).clone() : .init()
       pts.forEach { point in
          if point.x > max.x { max.x = point.x }
-         else if point.x < min.x { min = .init(point.x, min.y) }
+         else if point.x < min.x { min = .init(x: point.x, y: min.y) }
          if point.y > max.y { max.y = point.y }
          else if point.y < min.y { min.y = point.y }
       }
@@ -126,7 +126,7 @@ public class CGPointParser {
     * Caution: this only works if p1 is .zero
     */
    public static func midPoint(p1: CGPoint, p2: CGPoint) -> CGPoint {
-      return .init((p1.x + p2.x) / 2, (p1.y + p2.y) / 2)
+      return .init(x: (p1.x + p2.x) / 2, y: (p1.y + p2.y) / 2)
    }
    /**
     * Returns a Point half way between a and b

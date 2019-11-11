@@ -2,7 +2,8 @@ import Foundation
 /**
  * Offset
  */
-extension CGRect {
+fileprivate typealias CGRectangle = CGRect
+extension CGRectangle {
    /**
     * Negative inset equals outset
     */

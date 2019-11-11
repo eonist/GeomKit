@@ -13,7 +13,7 @@ extension CGSize {
    public init(_ width: Int, _ height: Int) { self.init(width: CGFloat(width), height: CGFloat(height)) }
    public var w: CGFloat { set { self.width = newValue } get { return self.width } }
    public var h: CGFloat { set { self.height = newValue } get { return self.height } }
-   public func isNear(p: CGSize, epsilon: CGFloat) -> Bool { return CGPointAsserter.nearEquals(a: .init(self.w, self.h), b: .init(p.w, p.h), epsilon: epsilon) }
+   public func isNear(p: CGSize, epsilon: CGFloat) -> Bool { return CGPointAsserter.nearEquals(a: .init(x: self.w, y: self.h), b: .init(x: p.w, y: p.h), epsilon: epsilon) }
    /**
     * - Fixme: write example and doc
     */

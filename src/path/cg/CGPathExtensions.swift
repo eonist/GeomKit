@@ -9,7 +9,7 @@ extension CGMutablePath {
         return self.mutableCopy()
     }
     public func moveTo(x: CGFloat, y: CGFloat) { // Convenince
-        self.move(to: .init(x, y))
+      self.move(to: .init(x: x, y: y))
     }
     public func moveTo(p: CGPoint) { // Convenince
         self.move(to: p)

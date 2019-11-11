@@ -23,7 +23,7 @@ extension CGRect {
     * Expands the size of the rect from it's pivot
     */
    public func expand(dx: CGFloat, dy: CGFloat) -> CGRect {
-      return CGRect(origin: .init(self.origin.x, self.origin.y), size: .init(self.width + dx, self.height + dy))
+      return CGRect(origin: .init(x: self.origin.x, y: self.origin.y), size: .init(self.width + dx, self.height + dy))
    }
 }
 // var nsRect: NSRect { return NSRectFromCGRect(self) }
