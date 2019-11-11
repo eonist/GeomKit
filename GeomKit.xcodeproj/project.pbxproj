@@ -39,12 +39,54 @@
 		F193DF622379CA3F004D4334 /* CubicCurveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF442379CA3F004D4334 /* CubicCurveUtils.swift */; };
 		F193DF632379CA3F004D4334 /* CGPathModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF452379CA3F004D4334 /* CGPathModifier.swift */; };
 		F193DF642379CA3F004D4334 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF462379CA3F004D4334 /* CGPathParser.swift */; };
+		F193DF73237A0B24004D4334 /* GeomKitMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF6A237A0B23004D4334 /* GeomKitMacOS.framework */; };
+		F193DF78237A0B24004D4334 /* GeomKitMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF77237A0B24004D4334 /* GeomKitMacOSTests.swift */; };
+		F193DF7A237A0B24004D4334 /* GeomKitMacOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F193DF6C237A0B23004D4334 /* GeomKitMacOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F193DF81237A0B60004D4334 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF1C2379CA3F004D4334 /* CGSize+Extension.swift */; };
+		F193DF82237A0B60004D4334 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF1F2379CA3F004D4334 /* CGPoint+Extension.swift */; };
+		F193DF83237A0B60004D4334 /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF202379CA3F004D4334 /* CGPoint+Operator.swift */; };
+		F193DF84237A0B60004D4334 /* CGPointTrig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF222379CA3F004D4334 /* CGPointTrig.swift */; };
+		F193DF85237A0B60004D4334 /* CGPointTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF232379CA3F004D4334 /* CGPointTransformation.swift */; };
+		F193DF86237A0B60004D4334 /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF242379CA3F004D4334 /* CGPointParser.swift */; };
+		F193DF87237A0B60004D4334 /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF252379CA3F004D4334 /* CGPointAsserter.swift */; };
+		F193DF88237A0B60004D4334 /* CGPointModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF262379CA3F004D4334 /* CGPointModifier.swift */; };
+		F193DF89237A0B60004D4334 /* CGAffineTransformExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF282379CA3F004D4334 /* CGAffineTransformExtensions.swift */; };
+		F193DF8A237A0B60004D4334 /* CGAffineTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF292379CA3F004D4334 /* CGAffineTransformModifier.swift */; };
+		F193DF8B237A0B60004D4334 /* CGAffineTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2A2379CA3F004D4334 /* CGAffineTransformParser.swift */; };
+		F193DF8C237A0B60004D4334 /* CALayerShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2C2379CA3F004D4334 /* CALayerShapeUtil.swift */; };
+		F193DF8D237A0B60004D4334 /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2F2379CA3F004D4334 /* LineAsserter.swift */; };
+		F193DF8E237A0B60004D4334 /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF302379CA3F004D4334 /* LineParser.swift */; };
+		F193DF8F237A0B60004D4334 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF312379CA3F004D4334 /* Line.swift */; };
+		F193DF90237A0B60004D4334 /* CGRect+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF342379CA3F004D4334 /* CGRect+Offset.swift */; };
+		F193DF91237A0B60004D4334 /* CGRect+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF352379CA3F004D4334 /* CGRect+Operator.swift */; };
+		F193DF92237A0B60004D4334 /* CGRect+Alignement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF362379CA3F004D4334 /* CGRect+Alignement.swift */; };
+		F193DF93237A0B60004D4334 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF372379CA3F004D4334 /* CGRect+Extension.swift */; };
+		F193DF94237A0B60004D4334 /* CGRectParser.Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF382379CA3F004D4334 /* CGRectParser.Side.swift */; };
+		F193DF95237A0B60004D4334 /* CGRectModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF392379CA3F004D4334 /* CGRectModifier.swift */; };
+		F193DF96237A0B60004D4334 /* CGRectParser.Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF3A2379CA3F004D4334 /* CGRectParser.Path.swift */; };
+		F193DF97237A0B60004D4334 /* CGRectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF3B2379CA3F004D4334 /* CGRectParser.swift */; };
+		F193DF98237A0B60004D4334 /* CGRectAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF3C2379CA3F004D4334 /* CGRectAsserter.swift */; };
+		F193DF99237A0B60004D4334 /* CircleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF3E2379CA3F004D4334 /* CircleParser.swift */; };
+		F193DF9A237A0B60004D4334 /* NSBezierPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF412379CA3F004D4334 /* NSBezierPathParser.swift */; };
+		F193DF9B237A0B60004D4334 /* CGPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF422379CA3F004D4334 /* CGPathExtensions.swift */; };
+		F193DF9C237A0B60004D4334 /* CubicCurveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF442379CA3F004D4334 /* CubicCurveUtils.swift */; };
+		F193DF9D237A0B60004D4334 /* CGPathModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF452379CA3F004D4334 /* CGPathModifier.swift */; };
+		F193DF9E237A0B60004D4334 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF462379CA3F004D4334 /* CGPathParser.swift */; };
+		F193DFA0237A0B7D004D4334 /* NumberSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; };
+		F193DFA1237A0B7D004D4334 /* NumberSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1D7F9DC2379C7EC00E80BCF /* GeomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D7F9D22379C7EC00E80BCF /* GeomKit.framework */; };
 		F1D7F9E12379C7EC00E80BCF /* GeomKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F9E02379C7EC00E80BCF /* GeomKitTests.swift */; };
 		F1D7F9E32379C7EC00E80BCF /* GeomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D7F9D52379C7EC00E80BCF /* GeomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F193DF74237A0B24004D4334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F1D7F9C92379C7EC00E80BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F193DF69237A0B23004D4334;
+			remoteInfo = GeomKitMacOS;
+		};
 		F1D7F9DD2379C7EC00E80BCF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F1D7F9C92379C7EC00E80BCF /* Project object */;
@@ -62,6 +104,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F193DF182379CA32004D4334 /* NumberSugariOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F193DFA2237A0B7E004D4334 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F193DFA1237A0B7D004D4334 /* NumberSugarMacOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,6 +153,13 @@
 		F193DF442379CA3F004D4334 /* CubicCurveUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CubicCurveUtils.swift; sourceTree = "<group>"; };
 		F193DF452379CA3F004D4334 /* CGPathModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPathModifier.swift; sourceTree = "<group>"; };
 		F193DF462379CA3F004D4334 /* CGPathParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPathParser.swift; sourceTree = "<group>"; };
+		F193DF6A237A0B23004D4334 /* GeomKitMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeomKitMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F193DF6C237A0B23004D4334 /* GeomKitMacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeomKitMacOS.h; sourceTree = "<group>"; };
+		F193DF6D237A0B23004D4334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F193DF72237A0B24004D4334 /* GeomKitMacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeomKitMacOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F193DF77237A0B24004D4334 /* GeomKitMacOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeomKitMacOSTests.swift; sourceTree = "<group>"; };
+		F193DF79237A0B24004D4334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NumberSugarMacOS.framework; path = Carthage/Build/Mac/NumberSugarMacOS.framework; sourceTree = "<group>"; };
 		F1D7F9D22379C7EC00E80BCF /* GeomKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GeomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D7F9D52379C7EC00E80BCF /* GeomKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeomKit.h; sourceTree = "<group>"; };
 		F1D7F9D62379C7EC00E80BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +169,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F193DF67237A0B23004D4334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F193DFA0237A0B7D004D4334 /* NumberSugarMacOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F193DF6F237A0B24004D4334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F193DF73237A0B24004D4334 /* GeomKitMacOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D7F9CF2379C7EC00E80BCF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,12 +353,32 @@
 			path = cubic;
 			sourceTree = "<group>";
 		};
+		F193DF6B237A0B23004D4334 /* GeomKitMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				F193DF6C237A0B23004D4334 /* GeomKitMacOS.h */,
+				F193DF6D237A0B23004D4334 /* Info.plist */,
+			);
+			path = GeomKitMacOS;
+			sourceTree = "<group>";
+		};
+		F193DF76237A0B24004D4334 /* GeomKitMacOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F193DF77237A0B24004D4334 /* GeomKitMacOSTests.swift */,
+				F193DF79237A0B24004D4334 /* Info.plist */,
+			);
+			path = GeomKitMacOSTests;
+			sourceTree = "<group>";
+		};
 		F1D7F9C82379C7EC00E80BCF = {
 			isa = PBXGroup;
 			children = (
 				F193DF1A2379CA3F004D4334 /* src */,
 				F1D7F9D42379C7EC00E80BCF /* GeomKit */,
 				F1D7F9DF2379C7EC00E80BCF /* GeomKitTests */,
+				F193DF6B237A0B23004D4334 /* GeomKitMacOS */,
+				F193DF76237A0B24004D4334 /* GeomKitMacOSTests */,
 				F1D7F9D32379C7EC00E80BCF /* Products */,
 				F1D7FA372379C82000E80BCF /* Frameworks */,
 			);
@@ -293,6 +389,8 @@
 			children = (
 				F1D7F9D22379C7EC00E80BCF /* GeomKit.framework */,
 				F1D7F9DB2379C7EC00E80BCF /* GeomKitTests.xctest */,
+				F193DF6A237A0B23004D4334 /* GeomKitMacOS.framework */,
+				F193DF72237A0B24004D4334 /* GeomKitMacOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -318,6 +416,7 @@
 		F1D7FA372379C82000E80BCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */,
 				F193DF162379CA32004D4334 /* NumberSugariOS.framework */,
 			);
 			name = Frameworks;
@@ -326,6 +425,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		F193DF65237A0B23004D4334 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F193DF7A237A0B24004D4334 /* GeomKitMacOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D7F9CD2379C7EC00E80BCF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +444,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		F193DF69237A0B23004D4334 /* GeomKitMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F193DF7B237A0B24004D4334 /* Build configuration list for PBXNativeTarget "GeomKitMacOS" */;
+			buildPhases = (
+				F193DF65237A0B23004D4334 /* Headers */,
+				F193DF66237A0B23004D4334 /* Sources */,
+				F193DF67237A0B23004D4334 /* Frameworks */,
+				F193DF68237A0B23004D4334 /* Resources */,
+				F193DFA2237A0B7E004D4334 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeomKitMacOS;
+			productName = GeomKitMacOS;
+			productReference = F193DF6A237A0B23004D4334 /* GeomKitMacOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F193DF71237A0B24004D4334 /* GeomKitMacOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F193DF7E237A0B24004D4334 /* Build configuration list for PBXNativeTarget "GeomKitMacOSTests" */;
+			buildPhases = (
+				F193DF6E237A0B24004D4334 /* Sources */,
+				F193DF6F237A0B24004D4334 /* Frameworks */,
+				F193DF70237A0B24004D4334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F193DF75237A0B24004D4334 /* PBXTargetDependency */,
+			);
+			name = GeomKitMacOSTests;
+			productName = GeomKitMacOSTests;
+			productReference = F193DF72237A0B24004D4334 /* GeomKitMacOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		F1D7F9D12379C7EC00E80BCF /* GeomKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1D7F9E62379C7EC00E80BCF /* Build configuration list for PBXNativeTarget "GeomKit" */;
@@ -384,6 +528,12 @@
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = FutureLab;
 				TargetAttributes = {
+					F193DF69237A0B23004D4334 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+					F193DF71237A0B24004D4334 = {
+						CreatedOnToolsVersion = 11.2;
+					};
 					F1D7F9D12379C7EC00E80BCF = {
 						CreatedOnToolsVersion = 11.2;
 					};
@@ -407,11 +557,27 @@
 			targets = (
 				F1D7F9D12379C7EC00E80BCF /* GeomKit */,
 				F1D7F9DA2379C7EC00E80BCF /* GeomKitTests */,
+				F193DF69237A0B23004D4334 /* GeomKitMacOS */,
+				F193DF71237A0B24004D4334 /* GeomKitMacOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F193DF68237A0B23004D4334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F193DF70237A0B24004D4334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D7F9D02379C7EC00E80BCF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +595,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F193DF66237A0B23004D4334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F193DF98237A0B60004D4334 /* CGRectAsserter.swift in Sources */,
+				F193DF83237A0B60004D4334 /* CGPoint+Operator.swift in Sources */,
+				F193DF92237A0B60004D4334 /* CGRect+Alignement.swift in Sources */,
+				F193DF91237A0B60004D4334 /* CGRect+Operator.swift in Sources */,
+				F193DF95237A0B60004D4334 /* CGRectModifier.swift in Sources */,
+				F193DF87237A0B60004D4334 /* CGPointAsserter.swift in Sources */,
+				F193DF82237A0B60004D4334 /* CGPoint+Extension.swift in Sources */,
+				F193DF9E237A0B60004D4334 /* CGPathParser.swift in Sources */,
+				F193DF88237A0B60004D4334 /* CGPointModifier.swift in Sources */,
+				F193DF8E237A0B60004D4334 /* LineParser.swift in Sources */,
+				F193DF96237A0B60004D4334 /* CGRectParser.Path.swift in Sources */,
+				F193DF8D237A0B60004D4334 /* LineAsserter.swift in Sources */,
+				F193DF97237A0B60004D4334 /* CGRectParser.swift in Sources */,
+				F193DF93237A0B60004D4334 /* CGRect+Extension.swift in Sources */,
+				F193DF8B237A0B60004D4334 /* CGAffineTransformParser.swift in Sources */,
+				F193DF8C237A0B60004D4334 /* CALayerShapeUtil.swift in Sources */,
+				F193DF9D237A0B60004D4334 /* CGPathModifier.swift in Sources */,
+				F193DF90237A0B60004D4334 /* CGRect+Offset.swift in Sources */,
+				F193DF89237A0B60004D4334 /* CGAffineTransformExtensions.swift in Sources */,
+				F193DF8F237A0B60004D4334 /* Line.swift in Sources */,
+				F193DF85237A0B60004D4334 /* CGPointTransformation.swift in Sources */,
+				F193DF8A237A0B60004D4334 /* CGAffineTransformModifier.swift in Sources */,
+				F193DF99237A0B60004D4334 /* CircleParser.swift in Sources */,
+				F193DF9A237A0B60004D4334 /* NSBezierPathParser.swift in Sources */,
+				F193DF86237A0B60004D4334 /* CGPointParser.swift in Sources */,
+				F193DF9B237A0B60004D4334 /* CGPathExtensions.swift in Sources */,
+				F193DF9C237A0B60004D4334 /* CubicCurveUtils.swift in Sources */,
+				F193DF84237A0B60004D4334 /* CGPointTrig.swift in Sources */,
+				F193DF94237A0B60004D4334 /* CGRectParser.Side.swift in Sources */,
+				F193DF81237A0B60004D4334 /* CGSize+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F193DF6E237A0B24004D4334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F193DF78237A0B24004D4334 /* GeomKitMacOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D7F9CE2379C7EC00E80BCF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -477,6 +688,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F193DF75237A0B24004D4334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F193DF69237A0B23004D4334 /* GeomKitMacOS */;
+			targetProxy = F193DF74237A0B24004D4334 /* PBXContainerItemProxy */;
+		};
 		F1D7F9DE2379C7EC00E80BCF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F1D7F9D12379C7EC00E80BCF /* GeomKit */;
@@ -485,6 +701,104 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F193DF7C237A0B24004D4334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = GeomKitMacOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomKitMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F193DF7D237A0B24004D4334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = GeomKitMacOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomKitMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		F193DF7F237A0B24004D4334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GeomKitMacOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomKitMacOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F193DF80237A0B24004D4334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GeomKitMacOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomKitMacOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F1D7F9E42379C7EC00E80BCF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -702,6 +1016,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F193DF7B237A0B24004D4334 /* Build configuration list for PBXNativeTarget "GeomKitMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F193DF7C237A0B24004D4334 /* Debug */,
+				F193DF7D237A0B24004D4334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F193DF7E237A0B24004D4334 /* Build configuration list for PBXNativeTarget "GeomKitMacOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F193DF7F237A0B24004D4334 /* Debug */,
+				F193DF80237A0B24004D4334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F1D7F9CC2379C7EC00E80BCF /* Build configuration list for PBXProject "GeomKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -22,12 +22,12 @@ public class CGShapeUtil {
    /**
     * Draw line
     * - Note: remember to: shapeLayer.addSublayer(lineLayer)
-    * It's also possible to do this with UIBezierPath
+    * It's also possible to do this with UIBezierPath:
     * let path: UIBezierPath = {
-    *    let aPath = UIBezierPath.init()//cgPath: linePath
+    *    let aPath = UIBezierPath.init() // cgPath: linePath
     *    aPath.move(to: p1)
     *    aPath.addLine(to: p2)
-    *    aPath.close()//Keep using the method addLineToPoint until you get to the one where about to close the path
+    *    aPath.close() // Keep using the method addLineToPoint until you get to the one where about to close the path
     *    return aPath
     * }()
     */
