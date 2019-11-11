@@ -13,10 +13,10 @@ extension CGRectangle {
    /**
     * - Note:  Same as insetBy, but this method is simpler to call, similar to Outset (Convenience)
     */
-   public func inset(dx: CGFloat, _ dy: CGFloat) -> CGRect {
+   public func inset(dx: CGFloat, dy: CGFloat) -> CGRect {
       return insetBy(dx: dx, dy: dy)
    }
-   public func offset(dx: CGFloat, _ dy: CGFloat) -> CGRect { // Convenience
+   public func offset(dx: CGFloat, dy: CGFloat) -> CGRect { // Convenience
       return self.offsetBy(dx: dx, dy: dy)
    }
    public func offset(point: CGPoint) -> CGRect { // Convenience

@@ -242,26 +242,19 @@
 		F1C57FA7231C2F82000E15A4 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				F1D7F97B2379917700E80BCF /* circle */,
-				F1C57FA8231C2F82000E15A4 /* rect */,
-				F1C57FAF231C2F82000E15A4 /* point */,
-				F1C57FB4231C2F82000E15A4 /* path */,
-				F1C57FC5231C2F82000E15A4 /* line */,
-				F1C57FC9231C2F82000E15A4 /* size */,
-				F1C57FD1231C2F82000E15A4 /* transform */,
+				F1D7F9862379AFC300E80BCF /* CGPath */,
+				F1D7F9852379AFB800E80BCF /* CGLayer */,
+				F1C57FA8231C2F82000E15A4 /* CGRect */,
+				F1C57FAF231C2F82000E15A4 /* CGPoint */,
+				F1C57FC9231C2F82000E15A4 /* CGSize */,
+				F1C57FD1231C2F82000E15A4 /* CGTransform */,
+				F1D7F97B2379917700E80BCF /* Circle */,
+				F1C57FC5231C2F82000E15A4 /* Line */,
 			);
 			path = src;
 			sourceTree = "<group>";
 		};
-		F1C57FA8231C2F82000E15A4 /* rect */ = {
-			isa = PBXGroup;
-			children = (
-				F1C57FA9231C2F82000E15A4 /* cg */,
-			);
-			path = rect;
-			sourceTree = "<group>";
-		};
-		F1C57FA9231C2F82000E15A4 /* cg */ = {
+		F1C57FA8231C2F82000E15A4 /* CGRect */ = {
 			isa = PBXGroup;
 			children = (
 				F1C57FAB231C2F82000E15A4 /* CGRectParser.swift */,
@@ -271,10 +264,10 @@
 				F1C57FAC231C2F82000E15A4 /* CGRectAsserter.swift */,
 				F1D7F97423798D4500E80BCF /* extension */,
 			);
-			path = cg;
+			path = CGRect;
 			sourceTree = "<group>";
 		};
-		F1C57FAF231C2F82000E15A4 /* point */ = {
+		F1C57FAF231C2F82000E15A4 /* CGPoint */ = {
 			isa = PBXGroup;
 			children = (
 				F1C57FB0231C2F82000E15A4 /* CGPointParser.swift */,
@@ -283,44 +276,15 @@
 				F1D7F97323798D2C00E80BCF /* extension */,
 				F1D7F97223798D1C00E80BCF /* util */,
 			);
-			path = point;
+			path = CGPoint;
 			sourceTree = "<group>";
 		};
-		F1C57FB4231C2F82000E15A4 /* path */ = {
-			isa = PBXGroup;
-			children = (
-				F1C57FB5231C2F82000E15A4 /* ns */,
-				F1C57FB7231C2F82000E15A4 /* cg */,
-			);
-			path = path;
-			sourceTree = "<group>";
-		};
-		F1C57FB5231C2F82000E15A4 /* ns */ = {
+		F1C57FB5231C2F82000E15A4 /* NSBezier */ = {
 			isa = PBXGroup;
 			children = (
 				F1C57FB6231C2F82000E15A4 /* NSBezierPathParser.swift */,
 			);
-			path = ns;
-			sourceTree = "<group>";
-		};
-		F1C57FB7231C2F82000E15A4 /* cg */ = {
-			isa = PBXGroup;
-			children = (
-				F1C57FB9231C2F82000E15A4 /* shape */,
-				F1C57FBB231C2F82000E15A4 /* CGPathExtensions.swift */,
-				F1C57FBC231C2F82000E15A4 /* cubic */,
-				F1C57FBE231C2F82000E15A4 /* CGPathModifier.swift */,
-				F1C57FBF231C2F82000E15A4 /* CGPathParser.swift */,
-			);
-			path = cg;
-			sourceTree = "<group>";
-		};
-		F1C57FB9231C2F82000E15A4 /* shape */ = {
-			isa = PBXGroup;
-			children = (
-				F1C57FBA231C2F82000E15A4 /* CALayerShapeUtil.swift */,
-			);
-			path = shape;
+			path = NSBezier;
 			sourceTree = "<group>";
 		};
 		F1C57FBC231C2F82000E15A4 /* cubic */ = {
@@ -331,13 +295,13 @@
 			path = cubic;
 			sourceTree = "<group>";
 		};
-		F1C57FC5231C2F82000E15A4 /* line */ = {
+		F1C57FC5231C2F82000E15A4 /* Line */ = {
 			isa = PBXGroup;
 			children = (
 				F1C57FC6231C2F82000E15A4 /* utils */,
 				F1C57FC8231C2F82000E15A4 /* Line.swift */,
 			);
-			path = line;
+			path = Line;
 			sourceTree = "<group>";
 		};
 		F1C57FC6231C2F82000E15A4 /* utils */ = {
@@ -349,22 +313,22 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		F1C57FC9231C2F82000E15A4 /* size */ = {
+		F1C57FC9231C2F82000E15A4 /* CGSize */ = {
 			isa = PBXGroup;
 			children = (
 				F1C57FCA231C2F82000E15A4 /* CGSize+Extension.swift */,
 			);
-			path = size;
+			path = CGSize;
 			sourceTree = "<group>";
 		};
-		F1C57FD1231C2F82000E15A4 /* transform */ = {
+		F1C57FD1231C2F82000E15A4 /* CGTransform */ = {
 			isa = PBXGroup;
 			children = (
 				F1C57FD2231C2F82000E15A4 /* CGAffineTransformExtensions.swift */,
 				F1C57FD3231C2F82000E15A4 /* CGAffineTransformModifier.swift */,
 				F1C57FD4231C2F82000E15A4 /* CGAffineTransformParser.swift */,
 			);
-			path = transform;
+			path = CGTransform;
 			sourceTree = "<group>";
 		};
 		F1D7F97223798D1C00E80BCF /* util */ = {
@@ -396,12 +360,32 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
-		F1D7F97B2379917700E80BCF /* circle */ = {
+		F1D7F97B2379917700E80BCF /* Circle */ = {
 			isa = PBXGroup;
 			children = (
 				F1D7F97C2379918800E80BCF /* CircleParser.swift */,
 			);
-			path = circle;
+			path = Circle;
+			sourceTree = "<group>";
+		};
+		F1D7F9852379AFB800E80BCF /* CGLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F1C57FBA231C2F82000E15A4 /* CALayerShapeUtil.swift */,
+			);
+			path = CGLayer;
+			sourceTree = "<group>";
+		};
+		F1D7F9862379AFC300E80BCF /* CGPath */ = {
+			isa = PBXGroup;
+			children = (
+				F1C57FBE231C2F82000E15A4 /* CGPathModifier.swift */,
+				F1C57FBF231C2F82000E15A4 /* CGPathParser.swift */,
+				F1C57FBC231C2F82000E15A4 /* cubic */,
+				F1C57FBB231C2F82000E15A4 /* CGPathExtensions.swift */,
+				F1C57FB5231C2F82000E15A4 /* NSBezier */,
+			);
+			path = CGPath;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

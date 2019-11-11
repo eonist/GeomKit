@@ -7,7 +7,7 @@ public class NSBezierPathParser {
    /**
     * untested
     */
-   public static func cgPath(_ nsBezierPath: NSBezierPath) -> CGPath? {
+   public static func cgPath(nsBezierPath: NSBezierPath) -> CGPath? {
       if nsBezierPath.elementCount == 0 { return nil }
       let path = CGMutablePath()
       var didClosePath = false

@@ -9,7 +9,7 @@ public class CGPointTransformation {
     */
    public static func rotatePoint(point: CGPoint, pivot: CGPoint, rotation: CGFloat) -> CGPoint {
       var transform: CGAffineTransform = .identity
-      transform.rotateAroundPoint(rotation, pivot)
+      transform.rotateAroundPoint(rotation: rotation, pivot: pivot)
       return point.applying(transform)
    }
    /**
@@ -17,8 +17,8 @@ public class CGPointTransformation {
     */
    public static func matrixRot(point: CGPoint, rotation: CGFloat) -> CGPoint {
       var transform: CGAffineTransform = .identity
-      transform.rotate(rotation) // matrix.rotate(rotation);
-      return point.applying(transform) // matrix.transformPoint(point);//swift 3 update
+      transform.rotate(rotation: rotation)
+      return point.applying(transform)
    }
    /**
     * Returns points rotated around a pivot point
@@ -29,7 +29,7 @@ public class CGPointTransformation {
    public static func rotatePoints(points: [CGPoint], pivot: CGPoint, rotation: CGFloat) -> [CGPoint] {
       var rotatedPoints: [CGPoint] = []
       var transform: CGAffineTransform = .identity
-      transform.rotateAroundPoint(rotation, pivot) // was MatrixModifier.rotateAroundExternalPoint(matrix, pivot, rotation)
+      transform.rotateAroundPoint(rotation: rotation, pivot: pivot)
       for point: CGPoint in points { rotatedPoints.append(point.applying(transform)) }
       return rotatedPoints
    }

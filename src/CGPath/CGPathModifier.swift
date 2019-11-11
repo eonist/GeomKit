@@ -63,11 +63,11 @@ public class CGPathModifier {
     * - Caution: When using this method remeber to use the CGPathCreateMutableCopy(somePath) if you dont want to edit the original path (THe return statment is jsut for convenince)
     */
    public static func skew(_ path:inout CGPath, _ alpha: Double, _ beta: Double) -> CGPath {
-      var transformation = CGAffineTransform.identity
+      var transformation: CGAffineTransform = .identity
       // Create an affine transform that skews the coordinate system, by skewing the x axis by alpha radians and the y axis by beta radians.
       let alp = CGFloat(tan(alpha))
       let bet = CGFloat(tan(beta))
-      transformation = CGAffineTransform(1, alp, bet, 1, 0, 0)
+      transformation = .init(a: 1, b: alp, c: bet, d: 1, tx: 0, ty: 0)
       // - Fixme: ⚠️️ get rid of forced unwrap here
       path = path.mutableCopy(using: &transformation)! // Apply that transform to the path
       return path

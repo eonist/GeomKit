@@ -6,25 +6,40 @@ let π = CGFloat(Double.pi) // Global variable
  */
 extension CGPoint {
    public func clone() -> CGPoint { return CGPoint(x: self.x, y: self.y) }
-   public func add(_ p: CGPoint) -> CGPoint { return CGPointModifier.add(a: self, b: p) }
-   public func subtract(_ p: CGPoint) -> CGPoint { return CGPointModifier.substract(a: self, b: p) }
-   public func multiply(_ p: CGPoint) -> CGPoint { return CGPointModifier.multiply(a: self, b: p) }
-   public func divide(_ p: CGPoint) -> CGPoint { return CGPointModifier.divide(a: self, b: p) }
+   public func add(p: CGPoint) -> CGPoint { return CGPointModifier.add(a: self, b: p) }
+   public func subtract(p: CGPoint) -> CGPoint { return CGPointModifier.substract(a: self, b: p) }
+   public func multiply(p: CGPoint) -> CGPoint { return CGPointModifier.multiply(a: self, b: p) }
+   public func divide(p: CGPoint) -> CGPoint { return CGPointModifier.divide(a: self, b: p) }
 }
 /**
  * Trigonometri
  */
 extension CGPoint {
-   public func distance(_ p: CGPoint) -> CGFloat { return CGPoint.distance(a: self, b: p) } // Distance from self to p
-   public func interpolate(_ to: CGPoint, _ scalar: CGFloat) -> CGPoint { return CGPoint.interpolate(self, to, scalar) } // interpolate from self to b by scalar
-   public func polarPoint(_ radius: CGFloat, _ angle: CGFloat) -> CGPoint { return self + CGPoint.polarPoint(radius: radius, angle: angle) } // polarPoint from self
+   /**
+    * Distance from self to p
+    */
+   public func distance(p: CGPoint) -> CGFloat {
+      return CGPoint.distance(a: self, b: p)
+   }
+   /**
+    * interpolate from self to b by scalar
+    */
+   public func interpolate(to: CGPoint, scalar: CGFloat) -> CGPoint {
+      return CGPoint.interpolate(a: self, b: to, scalar: scalar)
+   }
+   /**
+    * polarPoint from self
+    */
+   public func polarPoint(radius: CGFloat, angle: CGFloat) -> CGPoint {
+      return self + CGPoint.polarPoint(radius: radius, angle: angle)
+   }
    static func polarPoint(radius: CGFloat, angle: CGFloat) -> CGPoint {
       return CGPointTrig.polar(radius: radius, angle: angle)
    }
    static func distance(a: CGPoint, b: CGPoint) -> CGFloat {
       return CGPointParser.distance(a: a, b: b)
    }
-   static func interpolate(_ a: CGPoint, _ b: CGPoint, _ scalar: CGFloat) -> CGPoint {
+   static func interpolate(a: CGPoint, b: CGPoint, scalar: CGFloat) -> CGPoint {
       return CGPointParser.interpolate(a: a, b: b, scalar: scalar)
    }
 }

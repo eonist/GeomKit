@@ -116,7 +116,7 @@ public class CGPointParser {
     * var center: CGPoint = CGPoint(minX + ((maxX - minX) / 2), (minY + ((maxY - minY) / 2)))
     */
    public static func center(p1: CGPoint, p2: CGPoint) -> CGPoint {
-      return .interpolate(p1, p2, 0.5)
+      return .interpolate(a: p1, b: p2, scalar: 0.5)
    }
    /**
     * Returns a Point half way between - Parameter: p1 and - Parameter: p2

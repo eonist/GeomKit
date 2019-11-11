@@ -11,7 +11,7 @@ public class CGRectParser {
    /**
     * Returns a Rectangle instance from any two points (does not have to be topLeft and bottomRight)
     */
-   public static func rectangleByPoints(_ p1: CGPoint, p2: CGPoint) -> CGRect {
+   public static func rectangleByPoints(p1: CGPoint, p2: CGPoint) -> CGRect {
       let top: CGFloat = min(p1.y, p2.y)
       let left: CGFloat = min(p1.x, p2.x)
       let bottom: CGFloat = max(p1.y, p2.y)
@@ -23,8 +23,8 @@ public class CGRectParser {
    /**
     * - Note:  you can also use: someCGRect.center
     */
-   public static func center(_ rectangle: CGRect) -> CGPoint {
-      return .interpolate(rectangle.topLeft, rectangle.bottomRight, 0.5)
+   public static func center(rect: CGRect) -> CGPoint {
+      return .interpolate(a: rect.topLeft, b: rect.bottomRight, scalar: 0.5)
    }
    /**
     * Returns the midPoint of each side in - Parameter: rect
@@ -41,18 +41,18 @@ public class CGRectParser {
    /**
     * - Fixme: ⚠️️ maybe get the local rect with the pivot as center?? how does it work, hmmm
     */
-   public static func localRectangle(topLeft: CGPoint, bottomRight: CGPoint, rotation: CGFloat) -> CGRect {
-      let points: [CGPoint] = [topLeft, bottomRight]
-      let rotatedPoints: [CGPoint] = CGPointTransformation.rotatePoints(points: points, pivot: .init(), rotation: -rotation)
-      return rectangle(topLeft: rotatedPoints[0], bottomRight: rotatedPoints[1])
+   public static func localRectangle(tl: CGPoint, br: CGPoint, rot: CGFloat) -> CGRect {
+      let points: [CGPoint] = [tl, br]
+      let rotatedPoints: [CGPoint] = CGPointTransformation.rotatePoints(points: points, pivot: .init(), rotation: -rot)
+      return rectangle(tl: rotatedPoints[0], br: rotatedPoints[1])
    }
    /**
     * - Fixme: Write doc
     */
-   public static func rectangle(topLeft: CGPoint, bottomRight: CGPoint) -> CGRect {
-      let width: CGFloat = CGFloatParser.difference(topLeft.x, bottomRight.x)
-      let height: CGFloat = CGFloatParser.difference(topLeft.y, bottomRight.y)
-      return .init(origin: topLeft, size: .init(width, height))
+   public static func rectangle(tl: CGPoint, br: CGPoint) -> CGRect {
+      let width: CGFloat = CGFloatParser.difference(tl.x, br.x)
+      let height: CGFloat = CGFloatParser.difference(tl.y, br.y)
+      return .init(origin: tl, size: .init(width, height))
    }
 }
 /**
