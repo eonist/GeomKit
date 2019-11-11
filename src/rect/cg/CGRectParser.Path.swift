@@ -15,10 +15,13 @@ extension CGRectParser.Path {
    public static func roundRect(rect: CGRect, radius: CGFloat) -> CGMutablePath {
       let path: CGMutablePath = .init()
       path.move(to: .init(x: rect.midX, y: rect.minY)) // was -> CGPathMoveToPoint
-      path.addArc(tangent1End: .init(x: rect.maxX, y: rect.minY), tangent2End: .init(x: rect.maxX, y: rect.maxY), radius: radius) // Swift 3 upgrade, was-> CGPathAddArcToPoint(path, nil, CGRectGetMaxX(rect), CGRectGetMaxY(rect), CGRectGetMinX(rect), CGRectGetMaxY(rect), radius)
-      path.addArc(tangent1End: .init(x: rect.maxX, y: rect.maxY), tangent2End: .init(x: rect.minX, y: rect.maxY), radius: radius)
-      path.addArc(tangent1End: .init(x: rect.minX, y: rect.maxY), tangent2End: .init(x: rect.minX, y: rect.minY), radius: radius)
-      path.addArc(tangent1End: .init(x: rect.minX, y: rect.minY), tangent2End: .init(x: rect.maxX, y: rect.minY), radius: radius)
+      let closure = { (tangent1End: CGPoint, tangent2End: CGPoint) in
+         path.addArc(tangent1End: tangent1End, tangent2End: tangent2End, radius: radius)
+      }
+      closure(.init(x: rect.maxX, y: rect.minY), .init(x: rect.maxX, y: rect.maxY))
+      closure(.init(x: rect.maxX, y: rect.maxY), .init(x: rect.minX, y: rect.maxY))
+      closure(.init(x: rect.minX, y: rect.maxY), .init(x: rect.minX, y: rect.minY))
+      closure(.init(x: rect.minX, y: rect.minY), .init(x: rect.maxX, y: rect.minY))
       path.closeSubpath()
       return path
    }
