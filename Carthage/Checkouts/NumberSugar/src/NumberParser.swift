@@ -16,7 +16,7 @@ public class NumberParser {
     * ## Examples: NumberParser.decimals(4.433)//Output: 3
     */
    public static func decimals<T: Comparable>(_ number: T) -> Int {//could also be named decimalPLaces
-      var matches: [String] = String(describing: number).split(separator: ".").map { String($0) }
+      let matches: [String] = String(describing: number).split(separator: ".").map { String($0) }
       if matches.count > 1 { return matches[1].count }
       else { return 0 }
    }
