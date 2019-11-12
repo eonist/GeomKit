@@ -21,7 +21,6 @@ public class CGAffineTransformParser {
       transform.translate(x: -pivot.x, y: -pivot.y) // Then you reset the offset to the original position
       return transform
    }
-   
    /**
     * - Note: You can chain scaleFromPoint and rotatAroundPoint and eventually skewFromPoint. This is a great way to get different transform results quickly
     * - Important: ⚠️️ You scale a view from the center. So if you want to scale from TopLeft, you have to calcualte the pivot from the centers POV. So: CGPoint(x:-width/2,y:-height/2)
