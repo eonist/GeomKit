@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F14896D4237B0ABB0007CCA0 /* NumberSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; };
-		F14896D5237B0ABB0007CCA0 /* NumberSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F14896D5237B0ABB0007CCA0 /* NumberSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F193DF172379CA32004D4334 /* NumberSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF162379CA32004D4334 /* NumberSugariOS.framework */; };
 		F193DF182379CA32004D4334 /* NumberSugariOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF162379CA32004D4334 /* NumberSugariOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F193DF472379CA3F004D4334 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF1C2379CA3F004D4334 /* CGSize+Extension.swift */; };
