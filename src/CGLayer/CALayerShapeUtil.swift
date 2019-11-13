@@ -7,10 +7,11 @@ public typealias Color = NSColor
 #endif
 /**
  * Typealias
+ * - Fixme: ⚠️️ Maybe make structs of the typealiases
  */
 extension CGShapeUtil {
    public typealias Line = (p1: CGPoint, p2: CGPoint)
-   public typealias LineStyle = (stroke: Color, strokeWidth: CGFloat)
+   public typealias LineStyle = (stroke: Color, thickness: CGFloat)
    public typealias Style = (fillColor: Color?, strokeColor: Color?, thickness: CGFloat?)
 }
 /**
@@ -30,23 +31,27 @@ public class CGShapeUtil {
     *    aPath.close() // Keep using the method addLineToPoint until you get to the one where about to close the path
     *    return aPath
     * }()
+    * ## Examples:
+    * CGShapeUtil.drawLine(shapeLayer: nil, line: (.zero, .zero), (.green, 1))
     */
-   public static func drawLine(lineLayer: CAShapeLayer, line: Line, style: LineStyle) -> CAShapeLayer {
-      let lineLayer: CAShapeLayer = .init()
+   public static func drawLine(shapeLayer: CAShapeLayer?, line: Line, style: LineStyle) -> CAShapeLayer {
+      let lineLayer: CAShapeLayer = shapeLayer ?? .init()
       let path: CGMutablePath = .init()
       path.move(to: line.p1)
       path.addLine(to: line.p2)
       lineLayer.path = path // Setup the CAShapeLayer with the path, colors, and line width
       lineLayer.strokeColor = style.stroke.cgColor
-      lineLayer.lineWidth = style.strokeWidth
+      lineLayer.lineWidth = style.thickness
       lineLayer.lineCap = .round
       return lineLayer
    }
    /**
-    * polyline
+    * Draws a polyline to a CGShapeLayer
+    * ## Example:
+    * CALayerShapeUtil.drawPolyLine(shapeLayer: nil, points: [.zero, .zero, .zero], style: (nil, .black, 1), true) // Draws a triangle with black stroke of 1.0 of thickness
     */
-   public static func drawPolyLine(points: [CGPoint], style: Style?, close: Bool = false) -> CAShapeLayer {
-      let shapeLayer: CAShapeLayer = .init()
+   public static func drawPolyLine(shapeLayer: CAShapeLayer?, points: [CGPoint], style: Style?, close: Bool = false) -> CAShapeLayer {
+      let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
       let path: CGMutablePath = CGPathParser.polyLine(points: points, close: close)
       shapeLayer.path = path // Setup the CAShapeLayer with the path, colors, and line width
       shapeLayer.strokeColor = style?.strokeColor?.cgColor
@@ -55,12 +60,13 @@ public class CGShapeUtil {
       return shapeLayer
    }
    /**
-    * Draws a rectange in shapeLayer
+    * Draws a rectangle in shapeLayer
     * ## Examples:
-    * let rectShape = CGShapeUtil.drawRect(shapeLayer: .init(),.init(x: 0, y: 0, width: 100, height: 100), style(nil, .black, 14))
+    * let rectShape = CGShapeUtil.drawRect(shapeLayer: .init(), .init(x: 0, y: 0, width: 100, height: 100), style(nil, .black, 14))
     * view.layer.addSublayer(rectShape)
     */
-   public static func drawRect(shapeLayer: CAShapeLayer, rect: CGRect, style: Style?) -> CAShapeLayer {
+   public static func drawRect(shapeLayer: CAShapeLayer?, rect: CGRect, style: Style?) -> CAShapeLayer {
+      let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
       let path: CGMutablePath = .init()
       path.addRect(rect)
       shapeLayer.path = path
@@ -70,51 +76,61 @@ public class CGShapeUtil {
       return shapeLayer
    }
    /**
+    * Draws rounded rect
+    */
+   public static func drawRoundedRect(shapeLayer: CAShapeLayer?, rect: CGRect, radius: CGPathParser.NSRectCorner, style: Style?) -> CAShapeLayer {
+      let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
+      let path = CGPathParser.roundedRect(rect: rect, radius: radius)
+      shapeLayer.path = path // Setup the CAShapeLayer with the path, colors, and line width
+      shapeLayer.fillColor = style?.fillColor?.cgColor
+      shapeLayer.strokeColor = style?.strokeColor?.cgColor
+      shapeLayer.lineWidth = style?.thickness ?? shapeLayer.lineWidth
+      shapeLayer.lineCap = .round
+      return shapeLayer
+   }
+   /**
     * Draws circle
     * - Parameter: progress: 0-1
     * ## Examples:
-    * let circlePath: BezierPath = .init(ovalIn: rect )// (arcCenter: CGPoint(x: circle.center.x, y: circle.center.y), radius:circle.radius, startAngle: CGFloat(Double.pi * -0.5), endAngle: CGFloat(Double.pi * 1.5), clockwise: true)/*The path should be the entire circle, for the strokeEnd and strokeStart to work*/
+    * let circlePath: BezierPath = .init(ovalIn: rect ) // (arcCenter: CGPoint(x: circle.center.x, y: circle.center.y), radius:circle.radius, startAngle: CGFloat(Double.pi * -0.5), endAngle: CGFloat(Double.pi * 1.5), clockwise: true)/*The path should be the entire circle, for the strokeEnd and strokeStart to work*/
+    * let circle: CAShapeLayer = CALayerUtil.drawCircle(with: nil, circle: (.zero, 40), style: (nil, .black, 1), progress: 1)
+    * - Parameters:
+    *   - shapeLayer: The shapeLayer to draw a circle in
+    *   - circle: Radisu and pivot
+    *   - style: fill, stroke, thickness
+    *   - progress: 0-1
     */
-   public static func drawCircle(with circleLayer: CAShapeLayer, circle: (center: CGPoint, radius: CGFloat), style: Style, progress: CGFloat) -> CAShapeLayer {
+   public static func drawCircle(with shapeLayer: CAShapeLayer?, circle: (center: CGPoint, radius: CGFloat), style: Style, progress: CGFloat = 1) -> CAShapeLayer {
+      let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
       let pt: CGPoint = .init(x: circle.center.x - circle.radius, y: circle.center.y - circle.radius)
       let size: CGSize = .init(width: circle.radius * 2, height: circle.radius * 2)
       let rect: CGRect = .init(origin: pt, size: size )
-      return drawCircle(with: circleLayer, rect: rect, style: style, progress: progress)
+      return drawCircle(with: shapeLayer, rect: rect, style: style, progress: progress)
    }
    /**
     * Draws circle
-    * - Parameter: progress: 0-1
+    * - Parameter progress: 0-1
     */
-   public static func drawCircle(with circleLayer: CAShapeLayer, rect: CGRect, style: Style?, progress: CGFloat) -> CAShapeLayer {
-      circleLayer.path = .init(ellipseIn: rect, transform: nil) // Setup the CAShapeLayer with the path, colors, and line width
-      circleLayer.fillColor = style?.fillColor?.cgColor
-      circleLayer.strokeColor = style?.strokeColor?.cgColor
-      circleLayer.lineWidth = style?.thickness ?? circleLayer.lineWidth
-      circleLayer.lineCap = .round
-      circleLayer.strokeEnd = progress // Sets progress of the stroke between predefined start and predefined end
-      return circleLayer
+   public static func drawCircle(with shapeLayer: CAShapeLayer?, rect: CGRect, style: Style?, progress: CGFloat = 1) -> CAShapeLayer {
+      let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
+      shapeLayer.path = .init(ellipseIn: rect, transform: nil) // Setup the CAShapeLayer with the path, colors, and line width
+      shapeLayer.fillColor = style?.fillColor?.cgColor
+      shapeLayer.strokeColor = style?.strokeColor?.cgColor
+      shapeLayer.lineWidth = style?.thickness ?? shapeLayer.lineWidth
+      shapeLayer.lineCap = .round
+      shapeLayer.strokeEnd = progress // Sets progress of the stroke between predefined start and predefined end
+      return shapeLayer
    }
    /**
     * Add color to shape
-    * - parameter shape: the shape for the fill to be applied to
-    * - parameter cgPath: the cgPath to fill inside
-    * - parameter fillColor: the color to apply to the shape
+    * - Parameters:
+    *   - shape: the shape for the fill to be applied to
+    *   - cgPath: the cgPath to fill inside
+    *   - fillColor: the color to apply to the shape
     */
    public static func fill(shape: CAShapeLayer, cgPath: CGPath, fillColor: Color) {
       shape.path = cgPath // Setup the CAShapeLayer with the path, colors, and line width
       shape.fillColor = fillColor.cgColor
-   }
-   /**
-    * Draws rounded rect
-    */
-   public static func drawRoundedRect(layer: CAShapeLayer, rect: CGRect, radius: CGPathParser.NSRectCorner, style: Style?) -> CAShapeLayer {
-      let path = CGPathParser.roundedRect(rect: rect, radius: radius)
-      layer.path = path // Setup the CAShapeLayer with the path, colors, and line width
-      layer.fillColor = style?.fillColor?.cgColor
-      layer.strokeColor = style?.strokeColor?.cgColor
-      layer.lineWidth = style?.thickness ?? layer.lineWidth
-      layer.lineCap = .round
-      return layer
    }
 }
 /**
