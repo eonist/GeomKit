@@ -47,6 +47,7 @@ public class CGShapeUtil {
    }
    /**
     * Draws a polyline to a CGShapeLayer
+    * - Abstract: A polyline is a continouse line from point to point
     * ## Example:
     * CALayerShapeUtil.drawPolyLine(shapeLayer: nil, points: [.zero, .zero, .zero], style: (nil, .black, 1), true) // Draws a triangle with black stroke of 1.0 of thickness
     */

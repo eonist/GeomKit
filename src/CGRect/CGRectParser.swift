@@ -33,10 +33,17 @@ public class CGRectParser {
       return [rect.left, rect.right, rect.top, rect.bottom]
    }
    /**
-    * Returns all the corners in - Parameter: rect
+    * Returns all the corners for rect
     */
    public static func corners(rect: CGRect) -> [CGPoint] {
       return [rect.topLeft, rect.topRight, rect.bottomLeft, rect.bottomRight]
+   }
+   public typealias Corners = (tl: CGPoint, tr: CGPoint, bl: CGPoint, br: CGPoint)
+   /**
+    * Returns all the corners for rect
+    */
+   public static func corners(rect: CGRect) -> Corners {
+      return (rect.topLeft, rect.topRight, rect.bottomLeft, rect.bottomRight)
    }
    /**
     * - Fixme: ⚠️️ maybe get the local rect with the pivot as center?? how does it work, hmmm
