@@ -22,7 +22,7 @@
 		F193DF4F2379CA3F004D4334 /* CGTransform+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF282379CA3F004D4334 /* CGTransform+Extension.swift */; };
 		F193DF502379CA3F004D4334 /* CGTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF292379CA3F004D4334 /* CGTransformModifier.swift */; };
 		F193DF512379CA3F004D4334 /* CGTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2A2379CA3F004D4334 /* CGTransformParser.swift */; };
-		F193DF522379CA3F004D4334 /* CALayerShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2C2379CA3F004D4334 /* CALayerShapeUtil.swift */; };
+		F193DF522379CA3F004D4334 /* CAShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2C2379CA3F004D4334 /* CAShapeUtil.swift */; };
 		F193DF532379CA3F004D4334 /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2F2379CA3F004D4334 /* LineAsserter.swift */; };
 		F193DF542379CA3F004D4334 /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF302379CA3F004D4334 /* LineParser.swift */; };
 		F193DF552379CA3F004D4334 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF312379CA3F004D4334 /* Line.swift */; };
@@ -55,7 +55,7 @@
 		F193DF89237A0B60004D4334 /* CGTransform+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF282379CA3F004D4334 /* CGTransform+Extension.swift */; };
 		F193DF8A237A0B60004D4334 /* CGTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF292379CA3F004D4334 /* CGTransformModifier.swift */; };
 		F193DF8B237A0B60004D4334 /* CGTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2A2379CA3F004D4334 /* CGTransformParser.swift */; };
-		F193DF8C237A0B60004D4334 /* CALayerShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2C2379CA3F004D4334 /* CALayerShapeUtil.swift */; };
+		F193DF8C237A0B60004D4334 /* CAShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2C2379CA3F004D4334 /* CAShapeUtil.swift */; };
 		F193DF8D237A0B60004D4334 /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2F2379CA3F004D4334 /* LineAsserter.swift */; };
 		F193DF8E237A0B60004D4334 /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF302379CA3F004D4334 /* LineParser.swift */; };
 		F193DF8F237A0B60004D4334 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF312379CA3F004D4334 /* Line.swift */; };
@@ -134,7 +134,7 @@
 		F193DF282379CA3F004D4334 /* CGTransform+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGTransform+Extension.swift"; sourceTree = "<group>"; };
 		F193DF292379CA3F004D4334 /* CGTransformModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGTransformModifier.swift; sourceTree = "<group>"; };
 		F193DF2A2379CA3F004D4334 /* CGTransformParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGTransformParser.swift; sourceTree = "<group>"; };
-		F193DF2C2379CA3F004D4334 /* CALayerShapeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerShapeUtil.swift; sourceTree = "<group>"; };
+		F193DF2C2379CA3F004D4334 /* CAShapeUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CAShapeUtil.swift; sourceTree = "<group>"; };
 		F193DF2F2379CA3F004D4334 /* LineAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineAsserter.swift; sourceTree = "<group>"; };
 		F193DF302379CA3F004D4334 /* LineParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineParser.swift; sourceTree = "<group>"; };
 		F193DF312379CA3F004D4334 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -270,7 +270,7 @@
 		F193DF2B2379CA3F004D4334 /* CGLayer */ = {
 			isa = PBXGroup;
 			children = (
-				F193DF2C2379CA3F004D4334 /* CALayerShapeUtil.swift */,
+				F193DF2C2379CA3F004D4334 /* CAShapeUtil.swift */,
 			);
 			path = CGLayer;
 			sourceTree = "<group>";
@@ -689,7 +689,7 @@
 				F193DF97237A0B60004D4334 /* CGRectParser.swift in Sources */,
 				F193DF93237A0B60004D4334 /* CGRect+Extension.swift in Sources */,
 				F193DF8B237A0B60004D4334 /* CGTransformParser.swift in Sources */,
-				F193DF8C237A0B60004D4334 /* CALayerShapeUtil.swift in Sources */,
+				F193DF8C237A0B60004D4334 /* CAShapeUtil.swift in Sources */,
 				F193DF9D237A0B60004D4334 /* CGPathModifier.swift in Sources */,
 				F193DF90237A0B60004D4334 /* CGRect+Offset.swift in Sources */,
 				F193DF89237A0B60004D4334 /* CGTransform+Extension.swift in Sources */,
@@ -734,7 +734,7 @@
 				F193DF5D2379CA3F004D4334 /* CGRectParser.swift in Sources */,
 				F193DF592379CA3F004D4334 /* CGRect+Extension.swift in Sources */,
 				F193DF512379CA3F004D4334 /* CGTransformParser.swift in Sources */,
-				F193DF522379CA3F004D4334 /* CALayerShapeUtil.swift in Sources */,
+				F193DF522379CA3F004D4334 /* CAShapeUtil.swift in Sources */,
 				F193DF632379CA3F004D4334 /* CGPathModifier.swift in Sources */,
 				F193DF562379CA3F004D4334 /* CGRect+Offset.swift in Sources */,
 				F193DF4F2379CA3F004D4334 /* CGTransform+Extension.swift in Sources */,
