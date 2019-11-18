@@ -34,6 +34,7 @@ public class CGShapeUtil {
     * ## Examples:
     * CGShapeUtil.drawLine(shapeLayer: nil, line: (.zero, .zero), (.green, 1))
     */
+   @discardableResult
    public static func drawLine(shapeLayer: CAShapeLayer?, line: Line, style: LineStyle) -> CAShapeLayer {
       let lineLayer: CAShapeLayer = shapeLayer ?? .init()
       let path: CGMutablePath = .init()
@@ -51,6 +52,7 @@ public class CGShapeUtil {
     * ## Example:
     * CALayerShapeUtil.drawPolyLine(shapeLayer: nil, points: [.zero, .zero, .zero], style: (nil, .black, 1), true) // Draws a triangle with black stroke of 1.0 of thickness
     */
+   @discardableResult
    public static func drawPolyLine(shapeLayer: CAShapeLayer?, points: [CGPoint], style: Style?, close: Bool = false) -> CAShapeLayer {
       let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
       let path: CGMutablePath = CGPathParser.polyLine(points: points, close: close)
@@ -66,6 +68,7 @@ public class CGShapeUtil {
     * let rectShape = CGShapeUtil.drawRect(shapeLayer: .init(), .init(x: 0, y: 0, width: 100, height: 100), style(nil, .black, 14))
     * view.layer.addSublayer(rectShape)
     */
+   @discardableResult
    public static func drawRect(shapeLayer: CAShapeLayer?, rect: CGRect, style: Style?) -> CAShapeLayer {
       let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
       let path: CGMutablePath = .init()
@@ -79,6 +82,7 @@ public class CGShapeUtil {
    /**
     * Draws rounded rect
     */
+   @discardableResult
    public static func drawRoundedRect(shapeLayer: CAShapeLayer?, rect: CGRect, radius: CGPathParser.NSRectCorner, style: Style?) -> CAShapeLayer {
       let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
       let path = CGPathParser.roundedRect(rect: rect, radius: radius)
@@ -101,6 +105,7 @@ public class CGShapeUtil {
     *   - style: fill, stroke, thickness
     *   - progress: 0-1
     */
+   @discardableResult
    public static func drawCircle(with shapeLayer: CAShapeLayer?, circle: (center: CGPoint, radius: CGFloat), style: Style, progress: CGFloat = 1) -> CAShapeLayer {
       let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
       let pt: CGPoint = .init(x: circle.center.x - circle.radius, y: circle.center.y - circle.radius)
@@ -112,6 +117,7 @@ public class CGShapeUtil {
     * Draws circle
     * - Parameter progress: 0-1
     */
+   @discardableResult
    public static func drawCircle(with shapeLayer: CAShapeLayer?, rect: CGRect, style: Style?, progress: CGFloat = 1) -> CAShapeLayer {
       let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
       shapeLayer.path = .init(ellipseIn: rect, transform: nil) // Setup the CAShapeLayer with the path, colors, and line width
