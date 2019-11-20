@@ -1,4 +1,5 @@
 import CoreGraphics
+import QuartzCore
 
 extension CALayer {
    /**
