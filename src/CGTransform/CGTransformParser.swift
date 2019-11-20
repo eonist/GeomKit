@@ -1,5 +1,6 @@
 import CoreGraphics
-typealias CGTransformParser = CGAffineTransformParser
+typealias CGTransformParser = CGAffineTransformParser // Simplifies the name
+
 public class CGAffineTransformParser {
    /**
     * Convenience, See MatrixModifier.transformWithPivot for more detail

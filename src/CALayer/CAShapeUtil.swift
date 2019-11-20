@@ -6,15 +6,6 @@ import Cocoa
 public typealias Color = NSColor
 #endif
 /**
- * Typealias
- * - Fixme: ⚠️️ Maybe make structs of the typealiases
- */
-extension CGShapeUtil {
-   public typealias Line = (p1: CGPoint, p2: CGPoint)
-   public typealias LineStyle = (stroke: Color, thickness: CGFloat)
-   public typealias Style = (fillColor: Color?, strokeColor: Color?, thickness: CGFloat?)
-}
-/**
  * CGShapeUtil
  */
 public class CGShapeUtil {
@@ -36,21 +27,21 @@ public class CGShapeUtil {
     */
    @discardableResult
    public static func drawLine(shapeLayer: CAShapeLayer?, line: Line, style: LineStyle) -> CAShapeLayer {
-      let lineLayer: CAShapeLayer = shapeLayer ?? .init()
+      let shapeLayer: CAShapeLayer = shapeLayer ?? .init()
       let path: CGMutablePath = .init()
       path.move(to: line.p1)
       path.addLine(to: line.p2)
-      lineLayer.path = path // Setup the CAShapeLayer with the path, colors, and line width
-      lineLayer.strokeColor = style.stroke.cgColor
-      lineLayer.lineWidth = style.thickness
-      lineLayer.lineCap = .round
-      return lineLayer
+      shapeLayer.path = path // Setup the CAShapeLayer with the path, colors, and line width
+      shapeLayer.strokeColor = style.stroke.cgColor
+      shapeLayer.lineWidth = style.thickness
+      shapeLayer.lineCap = .round
+      return shapeLayer
    }
    /**
     * Draws a polyline to a CGShapeLayer
     * - Abstract: A polyline is a continouse line from point to point
     * ## Example:
-    * CALayerShapeUtil.drawPolyLine(shapeLayer: nil, points: [.zero, .zero, .zero], style: (nil, .black, 1), true) // Draws a triangle with black stroke of 1.0 of thickness
+    * CGShapeUtil.drawPolyLine(shapeLayer: nil, points: [.zero, .zero, .zero], style: (nil, .black, 1), close: true) // Draws a triangle with black stroke of 1.0 of thickness
     */
    @discardableResult
    public static func drawPolyLine(shapeLayer: CAShapeLayer?, points: [CGPoint], style: Style?, close: Bool = false) -> CAShapeLayer {

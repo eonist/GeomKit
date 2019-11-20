@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F13A222D2383291400DE39B3 /* CAShapeUtil+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A222C2383291400DE39B3 /* CAShapeUtil+TypeAlias.swift */; };
+		F13A222E2383292B00DE39B3 /* CAShapeUtil+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A222C2383291400DE39B3 /* CAShapeUtil+TypeAlias.swift */; };
 		F14896D4237B0ABB0007CCA0 /* NumberSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; };
 		F14896D5237B0ABB0007CCA0 /* NumberSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F17640382383FF38003FCFA6 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17640372383FF38003FCFA6 /* CALayer+Extension.swift */; };
 		F193DF172379CA32004D4334 /* NumberSugariOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF162379CA32004D4334 /* NumberSugariOS.framework */; };
 		F193DF182379CA32004D4334 /* NumberSugariOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF162379CA32004D4334 /* NumberSugariOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F193DF472379CA3F004D4334 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF1C2379CA3F004D4334 /* CGSize+Extension.swift */; };
@@ -122,6 +125,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F13A222C2383291400DE39B3 /* CAShapeUtil+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeUtil+TypeAlias.swift"; sourceTree = "<group>"; };
+		F17640372383FF38003FCFA6 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		F193DF162379CA32004D4334 /* NumberSugariOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NumberSugariOS.framework; path = Carthage/Build/iOS/NumberSugariOS.framework; sourceTree = "<group>"; };
 		F193DF1C2379CA3F004D4334 /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 		F193DF1F2379CA3F004D4334 /* CGPoint+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
@@ -204,13 +209,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F176403923840003003FCFA6 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		F176403A2384000E003FCFA6 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		F193DF1A2379CA3F004D4334 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				F193DF1B2379CA3F004D4334 /* CGSize */,
 				F193DF1D2379CA3F004D4334 /* CGPoint */,
 				F193DF272379CA3F004D4334 /* CGTransform */,
-				F193DF2B2379CA3F004D4334 /* CGLayer */,
+				F193DF2B2379CA3F004D4334 /* CALayer */,
 				F193DF2D2379CA3F004D4334 /* Line */,
 				F193DF322379CA3F004D4334 /* CGRect */,
 				F193DF3D2379CA3F004D4334 /* Circle */,
@@ -267,12 +286,16 @@
 			path = CGTransform;
 			sourceTree = "<group>";
 		};
-		F193DF2B2379CA3F004D4334 /* CGLayer */ = {
+		F193DF2B2379CA3F004D4334 /* CALayer */ = {
 			isa = PBXGroup;
 			children = (
 				F193DF2C2379CA3F004D4334 /* CAShapeUtil.swift */,
+				F176403A2384000E003FCFA6 /* New Group1 */,
+				F176403923840003003FCFA6 /* New Group */,
+				F17640372383FF38003FCFA6 /* CALayer+Extension.swift */,
+				F13A222C2383291400DE39B3 /* CAShapeUtil+TypeAlias.swift */,
 			);
-			path = CGLayer;
+			path = CALayer;
 			sourceTree = "<group>";
 		};
 		F193DF2D2379CA3F004D4334 /* Line */ = {
@@ -685,6 +708,7 @@
 				F193DF88237A0B60004D4334 /* CGPointModifier.swift in Sources */,
 				F193DF8E237A0B60004D4334 /* LineParser.swift in Sources */,
 				F193DF96237A0B60004D4334 /* CGRectParser.Path.swift in Sources */,
+				F13A222E2383292B00DE39B3 /* CAShapeUtil+TypeAlias.swift in Sources */,
 				F193DF8D237A0B60004D4334 /* LineAsserter.swift in Sources */,
 				F193DF97237A0B60004D4334 /* CGRectParser.swift in Sources */,
 				F193DF93237A0B60004D4334 /* CGRect+Extension.swift in Sources */,
@@ -730,6 +754,7 @@
 				F193DF4E2379CA3F004D4334 /* CGPointModifier.swift in Sources */,
 				F193DF542379CA3F004D4334 /* LineParser.swift in Sources */,
 				F193DF5C2379CA3F004D4334 /* CGRectParser.Path.swift in Sources */,
+				F13A222D2383291400DE39B3 /* CAShapeUtil+TypeAlias.swift in Sources */,
 				F193DF532379CA3F004D4334 /* LineAsserter.swift in Sources */,
 				F193DF5D2379CA3F004D4334 /* CGRectParser.swift in Sources */,
 				F193DF592379CA3F004D4334 /* CGRect+Extension.swift in Sources */,
@@ -745,6 +770,7 @@
 				F193DF602379CA3F004D4334 /* NSBezierPathParser.swift in Sources */,
 				F193DF4C2379CA3F004D4334 /* CGPointParser.swift in Sources */,
 				F193DF612379CA3F004D4334 /* CGPathExtensions.swift in Sources */,
+				F17640382383FF38003FCFA6 /* CALayer+Extension.swift in Sources */,
 				F193DF622379CA3F004D4334 /* CubicCurveUtils.swift in Sources */,
 				F193DF4A2379CA3F004D4334 /* CGPointTrig.swift in Sources */,
 				F193DF5A2379CA3F004D4334 /* CGRectParser.Side.swift in Sources */,

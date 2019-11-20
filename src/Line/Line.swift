@@ -5,9 +5,9 @@ import CoreGraphics
  * - Fixme: rename to GeomLine? CG implies native class
  */
 public struct Line {
-    var p1: CGPoint
-    var p2: CGPoint
-    init(p1: CGPoint, p2: CGPoint) {
+    public var p1: CGPoint
+    public var p2: CGPoint
+    public init(p1: CGPoint, p2: CGPoint) {
         self.p1 = p1
         self.p2 = p2
     }
