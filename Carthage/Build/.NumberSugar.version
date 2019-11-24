@@ -2,7 +2,7 @@
   "Mac" : [
     {
       "name" : "NumberSugarMacOS",
-      "hash" : "c37035e66012fb79c512574aa4b622311270405b0a8af07bf38a4bf24cbcdfea",
+      "hash" : "411ec034588fd3bfda44a40339363531670a9685a306e0a26c99d945171fb3da",
       "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ],
@@ -12,11 +12,11 @@
   "tvOS" : [
 
   ],
-  "commitish" : "2665b215c8bf0cf65592bf3e6247c1746a5b7a28",
+  "commitish" : "8e1331b4c327050aa6b793c148d62e105163d9f9",
   "iOS" : [
     {
       "name" : "NumberSugariOS",
-      "hash" : "c1c3822ec608ae172413614c3866a0ce422091f4bdd30b6c24633413b687b3d4",
+      "hash" : "aa0c3a41bf38c82fc8d191ddbc6a728c091bc254c600c307354f2c7cc2440413",
       "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ]
