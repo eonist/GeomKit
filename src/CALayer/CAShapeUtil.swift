@@ -9,8 +9,6 @@ public typealias Color = NSColor
  * CGShapeUtil
  */
 public class CGShapeUtil {
-   // typealias Corners = (topLeft: CGFloat,  topRight: CGFloat,  bottomLeft: CGFloat,  bottomRight: CGFloat)
-   // public typealias Style = (fill: Color, stroke: Color, strokeWidth: CGFloat)
    /**
     * Draw line
     * - Note: remember to: shapeLayer.addSublayer(lineLayer)
@@ -144,3 +142,6 @@ public class CGShapeUtil {
 //      circleLayer.lineCap = .round
 //      circleLayer.strokeEnd = progress/*Sets progress of the stroke between predefined start and predefined end*/
 //   }
+
+// typealias Corners = (topLeft: CGFloat,  topRight: CGFloat,  bottomLeft: CGFloat,  bottomRight: CGFloat)
+// public typealias Style = (fill: Color, stroke: Color, strokeWidth: CGFloat)
