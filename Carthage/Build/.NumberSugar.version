@@ -1,9 +1,9 @@
 {
-  "commitish" : "c3823114092aa5538af654c8912a36fbb3cf71bd",
+  "commitish" : "b25bc8330cd130f77a77c8013b5a940e46bb7472",
   "Mac" : [
     {
       "name" : "NumberSugarMacOS",
-      "hash" : "379607ee5bafce38fed232d3a70d5f71e81e19e09cb9b1758b90a26c3431d533",
+      "hash" : "854c505cdf24fdd96d1ea60869d1c8c98fee3cc635180e824156687c26f67c2b",
       "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
     }
   ]

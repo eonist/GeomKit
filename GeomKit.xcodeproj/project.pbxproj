@@ -81,7 +81,7 @@
 		F1BBEA2D238BEB6E00354285 /* GeomKitMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF6A237A0B23004D4334 /* GeomKitMacOS.framework */; };
 		F1BBEA2E238BEB6E00354285 /* GeomKitMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF6A237A0B23004D4334 /* GeomKitMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F1BBEA3C238BF0E800354285 /* NumberSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; };
-		F1BBEA3D238BF0E800354285 /* NumberSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F1BBEA3D238BF0E800354285 /* NumberSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F1D7F9DC2379C7EC00E80BCF /* GeomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D7F9D22379C7EC00E80BCF /* GeomKit.framework */; };
 		F1D7F9E12379C7EC00E80BCF /* GeomKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F9E02379C7EC00E80BCF /* GeomKitTests.swift */; };
 		F1D7F9E32379C7EC00E80BCF /* GeomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D7F9D52379C7EC00E80BCF /* GeomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -916,7 +916,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B5CC9TD7P7;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -947,7 +947,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B5CC9TD7P7;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
