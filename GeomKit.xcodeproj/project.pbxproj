@@ -10,6 +10,38 @@
 		F111A587238E832100C68245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F111A586238E832100C68245 /* AppDelegate.swift */; };
 		F111A589238E832300C68245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F111A588238E832300C68245 /* Assets.xcassets */; };
 		F111A58C238E832300C68245 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F111A58A238E832300C68245 /* MainMenu.xib */; };
+		F111A592238E83A400C68245 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF1C2379CA3F004D4334 /* CGSize+Extension.swift */; };
+		F111A593238E83A400C68245 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF1F2379CA3F004D4334 /* CGPoint+Extension.swift */; };
+		F111A594238E83A400C68245 /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF202379CA3F004D4334 /* CGPoint+Operator.swift */; };
+		F111A595238E83A400C68245 /* CGPointTrig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF222379CA3F004D4334 /* CGPointTrig.swift */; };
+		F111A596238E83A400C68245 /* CGPointTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF232379CA3F004D4334 /* CGPointTransformation.swift */; };
+		F111A597238E83A400C68245 /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF242379CA3F004D4334 /* CGPointParser.swift */; };
+		F111A598238E83A400C68245 /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF252379CA3F004D4334 /* CGPointAsserter.swift */; };
+		F111A599238E83A400C68245 /* CGPointModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF262379CA3F004D4334 /* CGPointModifier.swift */; };
+		F111A59A238E83A400C68245 /* CGTransform+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF282379CA3F004D4334 /* CGTransform+Extension.swift */; };
+		F111A59B238E83A400C68245 /* CGTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF292379CA3F004D4334 /* CGTransformModifier.swift */; };
+		F111A59C238E83A400C68245 /* CGTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2A2379CA3F004D4334 /* CGTransformParser.swift */; };
+		F111A59D238E83A400C68245 /* CAShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2C2379CA3F004D4334 /* CAShapeUtil.swift */; };
+		F111A59E238E83A400C68245 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17640372383FF38003FCFA6 /* CALayer+Extension.swift */; };
+		F111A59F238E83A400C68245 /* CAShapeUtil+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13A222C2383291400DE39B3 /* CAShapeUtil+TypeAlias.swift */; };
+		F111A5A0238E83A400C68245 /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF2F2379CA3F004D4334 /* LineAsserter.swift */; };
+		F111A5A1238E83A400C68245 /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF302379CA3F004D4334 /* LineParser.swift */; };
+		F111A5A2238E83A400C68245 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF312379CA3F004D4334 /* Line.swift */; };
+		F111A5A3238E83A400C68245 /* CGRect+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF342379CA3F004D4334 /* CGRect+Offset.swift */; };
+		F111A5A4238E83A400C68245 /* CGRect+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF352379CA3F004D4334 /* CGRect+Operator.swift */; };
+		F111A5A5238E83A400C68245 /* CGRect+Alignement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF362379CA3F004D4334 /* CGRect+Alignement.swift */; };
+		F111A5A6238E83A400C68245 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF372379CA3F004D4334 /* CGRect+Extension.swift */; };
+		F111A5A7238E83A400C68245 /* CGRectParser.Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF382379CA3F004D4334 /* CGRectParser.Side.swift */; };
+		F111A5A8238E83A400C68245 /* CGRectModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF392379CA3F004D4334 /* CGRectModifier.swift */; };
+		F111A5A9238E83A400C68245 /* CGRectParser.Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF3A2379CA3F004D4334 /* CGRectParser.Path.swift */; };
+		F111A5AA238E83A400C68245 /* CGRectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF3B2379CA3F004D4334 /* CGRectParser.swift */; };
+		F111A5AB238E83A400C68245 /* CGRectAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF3C2379CA3F004D4334 /* CGRectAsserter.swift */; };
+		F111A5AC238E83A400C68245 /* CircleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF3E2379CA3F004D4334 /* CircleParser.swift */; };
+		F111A5AD238E83A400C68245 /* NSBezierPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF412379CA3F004D4334 /* NSBezierPathParser.swift */; };
+		F111A5AE238E83A400C68245 /* CGPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF422379CA3F004D4334 /* CGPathExtensions.swift */; };
+		F111A5AF238E83A400C68245 /* CubicCurveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF442379CA3F004D4334 /* CubicCurveUtils.swift */; };
+		F111A5B0238E83A400C68245 /* CGPathModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF452379CA3F004D4334 /* CGPathModifier.swift */; };
+		F111A5B1238E83A400C68245 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F193DF462379CA3F004D4334 /* CGPathParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -346,7 +378,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F111A595238E83A400C68245 /* CGPointTrig.swift in Sources */,
+				F111A5AF238E83A400C68245 /* CubicCurveUtils.swift in Sources */,
+				F111A5A5238E83A400C68245 /* CGRect+Alignement.swift in Sources */,
+				F111A59B238E83A400C68245 /* CGTransformModifier.swift in Sources */,
+				F111A594238E83A400C68245 /* CGPoint+Operator.swift in Sources */,
+				F111A592238E83A400C68245 /* CGSize+Extension.swift in Sources */,
+				F111A5A6238E83A400C68245 /* CGRect+Extension.swift in Sources */,
+				F111A5AD238E83A400C68245 /* NSBezierPathParser.swift in Sources */,
+				F111A5A8238E83A400C68245 /* CGRectModifier.swift in Sources */,
 				F111A587238E832100C68245 /* AppDelegate.swift in Sources */,
+				F111A59D238E83A400C68245 /* CAShapeUtil.swift in Sources */,
+				F111A5A1238E83A400C68245 /* LineParser.swift in Sources */,
+				F111A593238E83A400C68245 /* CGPoint+Extension.swift in Sources */,
+				F111A5A3238E83A400C68245 /* CGRect+Offset.swift in Sources */,
+				F111A5AA238E83A400C68245 /* CGRectParser.swift in Sources */,
+				F111A5AE238E83A400C68245 /* CGPathExtensions.swift in Sources */,
+				F111A598238E83A400C68245 /* CGPointAsserter.swift in Sources */,
+				F111A596238E83A400C68245 /* CGPointTransformation.swift in Sources */,
+				F111A5A7238E83A400C68245 /* CGRectParser.Side.swift in Sources */,
+				F111A5B1238E83A400C68245 /* CGPathParser.swift in Sources */,
+				F111A5A4238E83A400C68245 /* CGRect+Operator.swift in Sources */,
+				F111A59E238E83A400C68245 /* CALayer+Extension.swift in Sources */,
+				F111A5B0238E83A400C68245 /* CGPathModifier.swift in Sources */,
+				F111A59F238E83A400C68245 /* CAShapeUtil+TypeAlias.swift in Sources */,
+				F111A597238E83A400C68245 /* CGPointParser.swift in Sources */,
+				F111A59C238E83A400C68245 /* CGTransformParser.swift in Sources */,
+				F111A5AB238E83A400C68245 /* CGRectAsserter.swift in Sources */,
+				F111A5A9238E83A400C68245 /* CGRectParser.Path.swift in Sources */,
+				F111A59A238E83A400C68245 /* CGTransform+Extension.swift in Sources */,
+				F111A5AC238E83A400C68245 /* CircleParser.swift in Sources */,
+				F111A5A2238E83A400C68245 /* Line.swift in Sources */,
+				F111A5A0238E83A400C68245 /* LineAsserter.swift in Sources */,
+				F111A599238E83A400C68245 /* CGPointModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
