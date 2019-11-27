@@ -1,4 +1,5 @@
 import CoreGraphics
+
 public typealias CGTransformModifier = CGAffineTransformModifier // Convenience
 public class CGAffineTransformModifier {
    /**

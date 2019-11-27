@@ -1,9 +1,5 @@
 import CoreGraphics
-#if os(iOS)
-import NumberSugariOS
-#elseif os(macOS)
-import NumberSugarMacOS
-#endif
+import NumberSugar
 /**
  * - Note:  CGRectExtension also has alot of methods for parsing the CGRect
  */

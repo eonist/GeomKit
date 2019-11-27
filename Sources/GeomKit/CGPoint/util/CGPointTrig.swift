@@ -1,9 +1,5 @@
 import Foundation
-#if os(iOS)
-import NumberSugariOS
-#elseif os(macOS)
-import NumberSugarMacOS
-#endif
+import NumberSugar
 
 public class CGPointTrig {
    /**

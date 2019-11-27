@@ -1,4 +1,5 @@
 import CoreGraphics
+
 typealias CGTransformParser = CGAffineTransformParser // Simplifies the name
 
 public class CGAffineTransformParser {

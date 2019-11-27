@@ -1,9 +1,5 @@
 import Foundation
-#if os(iOS)
-import NumberSugariOS
-#elseif os(macOS)
-import NumberSugarMacOS
-#endif
+import NumberSugar
 /**
  * Convenient extensions
  */
@@ -14,7 +10,7 @@ extension CGSize {
    public func isNear(p: CGSize, epsilon: CGFloat) -> Bool { return CGPointAsserter.nearEquals(a: .init(x: self.width, y: self.height), b: .init(x: p.width, y: p.height), epsilon: epsilon) }
    /**
     * clip
-    * - Fixme: write example and doc
+    * - Fixme: ⚠️️ write example and doc
     */
    public func clip(_ min: CGSize, _ max: CGSize) -> CGSize {
       let w: CGFloat = self.width.clip(min.width, max.width)
