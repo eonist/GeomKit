@@ -3,7 +3,7 @@
 [![codebeat badge](https://codebeat.co/badges/bdda373a-6022-49be-949b-dece00d40a10)](https://codebeat.co/projects/github-com-eonist-geomsugar-master)
 ![platform](https://img.shields.io/badge/Platform-macOS/iOS-blue.svg)
 ![Lang](https://img.shields.io/badge/Language-Swift%205.1-orange.svg)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![SwiftLint Sindre](https://img.shields.io/badge/SwiftLint-Sindre-hotpink.svg)](https://github.com/sindresorhus/swiftlint-sindre)
 
 <img width="100" alt="img" src="https://rawgit.com/stylekit/img/master/GraphicsLib.svg">
@@ -12,9 +12,8 @@
 Geometry classes
 
 ### How do I get it
-- Carthage `github "eonist/GeomKit" "master"`
+- Swift package manager ` "https://github.com/eonist/GeomKit"` target `"master"`
 - Manual Open `GeomKit.xcodeproj`
-- CocoaPod (Coming soon)
 
 ### Example:
 

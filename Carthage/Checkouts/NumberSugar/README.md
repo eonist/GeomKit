@@ -1,2 +1,0 @@
-# NumberSugar
-Sugar for numbers

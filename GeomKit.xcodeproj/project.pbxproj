@@ -80,8 +80,6 @@
 		F1BBEA22238BEB5F00354285 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1BBEA20238BEB5F00354285 /* MainMenu.xib */; };
 		F1BBEA2D238BEB6E00354285 /* GeomKitMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF6A237A0B23004D4334 /* GeomKitMacOS.framework */; };
 		F1BBEA2E238BEB6E00354285 /* GeomKitMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF6A237A0B23004D4334 /* GeomKitMacOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F1BBEA3C238BF0E800354285 /* NumberSugarMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; };
-		F1BBEA3D238BF0E800354285 /* NumberSugarMacOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F193DF9F237A0B7D004D4334 /* NumberSugarMacOS.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F1D7F9DC2379C7EC00E80BCF /* GeomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D7F9D22379C7EC00E80BCF /* GeomKit.framework */; };
 		F1D7F9E12379C7EC00E80BCF /* GeomKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D7F9E02379C7EC00E80BCF /* GeomKitTests.swift */; };
 		F1D7F9E32379C7EC00E80BCF /* GeomKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D7F9D52379C7EC00E80BCF /* GeomKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -130,17 +128,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F1BBEA2E238BEB6E00354285 /* GeomKitMacOS.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F1BBEA3E238BF0E800354285 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F1BBEA3D238BF0E800354285 /* NumberSugarMacOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +194,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BBEA3C238BF0E800354285 /* NumberSugarMacOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +513,6 @@
 				F193DF67237A0B23004D4334 /* Frameworks */,
 				F193DF68237A0B23004D4334 /* Resources */,
 				F193DFB7237AF866004D4334 /* ShellScript */,
-				F1BBEA3E238BF0E800354285 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
