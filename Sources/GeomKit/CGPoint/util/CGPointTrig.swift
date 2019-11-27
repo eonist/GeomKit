@@ -1,4 +1,4 @@
-import Foundation
+import QuartzCore
 import NumberSugar
 
 public class CGPointTrig {

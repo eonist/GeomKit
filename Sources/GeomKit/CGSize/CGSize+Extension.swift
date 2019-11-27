@@ -1,4 +1,4 @@
-import Foundation
+import CoreGraphics
 import NumberSugar
 /**
  * Convenient extensions

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "NumberSugar",
+        "repositoryURL": "https://github.com/eonist/NumberSugar.git",
+        "state": {
+          "branch": "master",
+          "revision": "40ccd59b71ef5339af0c4662c1457629b52c22a7",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
