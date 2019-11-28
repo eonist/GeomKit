@@ -3,77 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		OBJ_100 /* CubicCurveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* CubicCurveUtils.swift */; };
-		OBJ_101 /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* CGPointAsserter.swift */; };
-		OBJ_102 /* CGPointModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* CGPointModifier.swift */; };
-		OBJ_103 /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* CGPointParser.swift */; };
-		OBJ_104 /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* CGPoint+Extension.swift */; };
-		OBJ_105 /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* CGPoint+Operator.swift */; };
-		OBJ_106 /* CGPointTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* CGPointTransformation.swift */; };
-		OBJ_107 /* CGPointTrig.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* CGPointTrig.swift */; };
-		OBJ_108 /* CGRectAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* CGRectAsserter.swift */; };
-		OBJ_109 /* CGRectModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* CGRectModifier.swift */; };
-		OBJ_110 /* CGRectParser.Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* CGRectParser.Path.swift */; };
-		OBJ_111 /* CGRectParser.Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* CGRectParser.Side.swift */; };
-		OBJ_112 /* CGRectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* CGRectParser.swift */; };
-		OBJ_113 /* CGRect+Alignement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* CGRect+Alignement.swift */; };
-		OBJ_114 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* CGRect+Extension.swift */; };
-		OBJ_115 /* CGRect+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* CGRect+Offset.swift */; };
-		OBJ_116 /* CGRect+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* CGRect+Operator.swift */; };
-		OBJ_117 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* CGSize+Extension.swift */; };
-		OBJ_118 /* CGTransform+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* CGTransform+Extension.swift */; };
-		OBJ_119 /* CGTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* CGTransformModifier.swift */; };
-		OBJ_120 /* CGTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* CGTransformParser.swift */; };
-		OBJ_121 /* CircleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* CircleParser.swift */; };
-		OBJ_122 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Line.swift */; };
-		OBJ_123 /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* LineAsserter.swift */; };
-		OBJ_124 /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* LineParser.swift */; };
-		OBJ_126 /* NumberSugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "NumberSugar::NumberSugar::Product" /* NumberSugar.framework */; };
-		OBJ_134 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_139 /* NumberAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* NumberAsserter.swift */; };
-		OBJ_140 /* NumberParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* NumberParser.swift */; };
-		OBJ_141 /* CGFloatAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* CGFloatAsserter.swift */; };
-		OBJ_142 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* CGFloatExtension.swift */; };
-		OBJ_143 /* CGFloatModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* CGFloatModifier.swift */; };
-		OBJ_144 /* CGFloatParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* CGFloatParser.swift */; };
-		OBJ_145 /* CGFloatRangeAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_67 /* CGFloatRangeAsserter.swift */; };
-		OBJ_146 /* CGFloatRangeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* CGFloatRangeParser.swift */; };
-		OBJ_147 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* DoubleExtension.swift */; };
-		OBJ_148 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* FloatExtensions.swift */; };
-		OBJ_149 /* ArithmeticKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* ArithmeticKind.swift */; };
-		OBJ_150 /* Numeric+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Numeric+Extension.swift */; };
-		OBJ_151 /* IntAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* IntAsserter.swift */; };
-		OBJ_152 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* IntExtension.swift */; };
-		OBJ_153 /* IntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* IntParser.swift */; };
-		OBJ_154 /* UIntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* UIntExtension.swift */; };
-		OBJ_155 /* UIntParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* UIntParser.swift */; };
-		OBJ_162 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* Package.swift */; };
-		OBJ_93 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CALayer+Extension.swift */; };
-		OBJ_94 /* CAShapeUtil+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CAShapeUtil+TypeAlias.swift */; };
-		OBJ_95 /* CAShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CAShapeUtil.swift */; };
-		OBJ_96 /* CGPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CGPathExtensions.swift */; };
-		OBJ_97 /* CGPathModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* CGPathModifier.swift */; };
-		OBJ_98 /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* CGPathParser.swift */; };
-		OBJ_99 /* NSBezierPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* NSBezierPathParser.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F1419E24238E8A13001DEE06 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "NumberSugar::NumberSugar";
-			remoteInfo = NumberSugar;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		"GeomKit::GeomKit::Product" /* GeomKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeomKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		"NumberSugar::NumberSugar::Product" /* NumberSugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NumberSugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		OBJ_11 /* CAShapeUtil+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeUtil+TypeAlias.swift"; sourceTree = "<group>"; };
 		OBJ_12 /* CAShapeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeUtil.swift; sourceTree = "<group>"; };
@@ -106,45 +39,9 @@
 		OBJ_51 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		OBJ_53 /* LineAsserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineAsserter.swift; sourceTree = "<group>"; };
 		OBJ_54 /* LineParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineParser.swift; sourceTree = "<group>"; };
-		OBJ_59 /* NumberAsserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberAsserter.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* NumberParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberParser.swift; sourceTree = "<group>"; };
-		OBJ_62 /* CGFloatAsserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatAsserter.swift; sourceTree = "<group>"; };
-		OBJ_63 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
-		OBJ_64 /* CGFloatModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatModifier.swift; sourceTree = "<group>"; };
-		OBJ_65 /* CGFloatParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatParser.swift; sourceTree = "<group>"; };
-		OBJ_67 /* CGFloatRangeAsserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatRangeAsserter.swift; sourceTree = "<group>"; };
-		OBJ_68 /* CGFloatRangeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatRangeParser.swift; sourceTree = "<group>"; };
-		OBJ_70 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
-		OBJ_72 /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
-		OBJ_74 /* ArithmeticKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticKind.swift; sourceTree = "<group>"; };
-		OBJ_75 /* Numeric+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extension.swift"; sourceTree = "<group>"; };
-		OBJ_77 /* IntAsserter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntAsserter.swift; sourceTree = "<group>"; };
-		OBJ_78 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
-		OBJ_79 /* IntParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntParser.swift; sourceTree = "<group>"; };
-		OBJ_81 /* UIntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIntExtension.swift; sourceTree = "<group>"; };
-		OBJ_82 /* UIntParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIntParser.swift; sourceTree = "<group>"; };
-		OBJ_83 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/eon/Documents/dev/_modules/GeomKit/.build/checkouts/NumberSugar/Package.swift; sourceTree = "<group>"; };
 		OBJ_87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		OBJ_125 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_126 /* NumberSugar.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_156 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		OBJ_13 /* CGPath */ = {
@@ -255,17 +152,14 @@
 			path = Circle;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_55 /* Tests */,
-				OBJ_56 /* Dependencies */,
 				OBJ_84 /* Products */,
 				OBJ_87 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_50 /* Line */ = {
@@ -286,75 +180,6 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
-		OBJ_55 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tests;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_56 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_57 /* NumberSugar */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		OBJ_57 /* NumberSugar */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_58 /* NumberSugar */,
-				OBJ_83 /* Package.swift */,
-			);
-			name = NumberSugar;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_58 /* NumberSugar */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_59 /* NumberAsserter.swift */,
-				OBJ_60 /* NumberParser.swift */,
-				OBJ_61 /* cgfloat */,
-				OBJ_69 /* double */,
-				OBJ_71 /* float */,
-				OBJ_73 /* generic */,
-				OBJ_76 /* int */,
-				OBJ_80 /* uint */,
-			);
-			name = NumberSugar;
-			path = .build/checkouts/NumberSugar/Sources/NumberSugar;
-			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_61 /* cgfloat */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_62 /* CGFloatAsserter.swift */,
-				OBJ_63 /* CGFloatExtension.swift */,
-				OBJ_64 /* CGFloatModifier.swift */,
-				OBJ_65 /* CGFloatParser.swift */,
-				OBJ_66 /* range */,
-			);
-			path = cgfloat;
-			sourceTree = "<group>";
-		};
-		OBJ_66 /* range */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_67 /* CGFloatRangeAsserter.swift */,
-				OBJ_68 /* CGFloatRangeParser.swift */,
-			);
-			path = range;
-			sourceTree = "<group>";
-		};
-		OBJ_69 /* double */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_70 /* DoubleExtension.swift */,
-			);
-			path = double;
-			sourceTree = "<group>";
-		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,33 +187,6 @@
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_71 /* float */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_72 /* FloatExtensions.swift */,
-			);
-			path = float;
-			sourceTree = "<group>";
-		};
-		OBJ_73 /* generic */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_74 /* ArithmeticKind.swift */,
-				OBJ_75 /* Numeric+Extension.swift */,
-			);
-			path = generic;
-			sourceTree = "<group>";
-		};
-		OBJ_76 /* int */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_77 /* IntAsserter.swift */,
-				OBJ_78 /* IntExtension.swift */,
-				OBJ_79 /* IntParser.swift */,
-			);
-			path = int;
-			sourceTree = "<group>";
 		};
 		OBJ_8 /* GeomKit */ = {
 			isa = PBXGroup;
@@ -406,20 +204,9 @@
 			path = Sources/GeomKit;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_80 /* uint */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_81 /* UIntExtension.swift */,
-				OBJ_82 /* UIntParser.swift */,
-			);
-			path = uint;
-			sourceTree = "<group>";
-		};
 		OBJ_84 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"GeomKit::GeomKit::Product" /* GeomKit.framework */,
-				"NumberSugar::NumberSugar::Product" /* NumberSugar.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -436,70 +223,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXNativeTarget section */
-		"GeomKit::GeomKit" /* GeomKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_89 /* Build configuration list for PBXNativeTarget "GeomKit" */;
-			buildPhases = (
-				OBJ_92 /* Sources */,
-				OBJ_125 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				OBJ_127 /* PBXTargetDependency */,
-			);
-			name = GeomKit;
-			productName = GeomKit;
-			productReference = "GeomKit::GeomKit::Product" /* GeomKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"GeomKit::SwiftPMPackageDescription" /* GeomKitPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_130 /* Build configuration list for PBXNativeTarget "GeomKitPackageDescription" */;
-			buildPhases = (
-				OBJ_133 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GeomKitPackageDescription;
-			productName = GeomKitPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-		"NumberSugar::NumberSugar" /* NumberSugar */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_135 /* Build configuration list for PBXNativeTarget "NumberSugar" */;
-			buildPhases = (
-				OBJ_138 /* Sources */,
-				OBJ_156 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NumberSugar;
-			productName = NumberSugar;
-			productReference = "NumberSugar::NumberSugar::Product" /* NumberSugar.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		"NumberSugar::SwiftPMPackageDescription" /* NumberSugarPackageDescription */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_158 /* Build configuration list for PBXNativeTarget "NumberSugarPackageDescription" */;
-			buildPhases = (
-				OBJ_161 /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NumberSugarPackageDescription;
-			productName = NumberSugarPackageDescription;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
 /* Begin PBXProject section */
 		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
@@ -515,202 +238,19 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
+			packageReferences = (
+				F1A1697E23900D33006EACC4 /* XCRemoteSwiftPackageReference "NumberSugar" */,
+			);
 			productRefGroup = OBJ_84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"GeomKit::GeomKit" /* GeomKit */,
-				"GeomKit::SwiftPMPackageDescription" /* GeomKitPackageDescription */,
-				"NumberSugar::NumberSugar" /* NumberSugar */,
-				"NumberSugar::SwiftPMPackageDescription" /* NumberSugarPackageDescription */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		OBJ_133 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_134 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_138 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_139 /* NumberAsserter.swift in Sources */,
-				OBJ_140 /* NumberParser.swift in Sources */,
-				OBJ_141 /* CGFloatAsserter.swift in Sources */,
-				OBJ_142 /* CGFloatExtension.swift in Sources */,
-				OBJ_143 /* CGFloatModifier.swift in Sources */,
-				OBJ_144 /* CGFloatParser.swift in Sources */,
-				OBJ_145 /* CGFloatRangeAsserter.swift in Sources */,
-				OBJ_146 /* CGFloatRangeParser.swift in Sources */,
-				OBJ_147 /* DoubleExtension.swift in Sources */,
-				OBJ_148 /* FloatExtensions.swift in Sources */,
-				OBJ_149 /* ArithmeticKind.swift in Sources */,
-				OBJ_150 /* Numeric+Extension.swift in Sources */,
-				OBJ_151 /* IntAsserter.swift in Sources */,
-				OBJ_152 /* IntExtension.swift in Sources */,
-				OBJ_153 /* IntParser.swift in Sources */,
-				OBJ_154 /* UIntExtension.swift in Sources */,
-				OBJ_155 /* UIntParser.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_161 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_162 /* Package.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		OBJ_92 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 0;
-			files = (
-				OBJ_93 /* CALayer+Extension.swift in Sources */,
-				OBJ_94 /* CAShapeUtil+TypeAlias.swift in Sources */,
-				OBJ_95 /* CAShapeUtil.swift in Sources */,
-				OBJ_96 /* CGPathExtensions.swift in Sources */,
-				OBJ_97 /* CGPathModifier.swift in Sources */,
-				OBJ_98 /* CGPathParser.swift in Sources */,
-				OBJ_99 /* NSBezierPathParser.swift in Sources */,
-				OBJ_100 /* CubicCurveUtils.swift in Sources */,
-				OBJ_101 /* CGPointAsserter.swift in Sources */,
-				OBJ_102 /* CGPointModifier.swift in Sources */,
-				OBJ_103 /* CGPointParser.swift in Sources */,
-				OBJ_104 /* CGPoint+Extension.swift in Sources */,
-				OBJ_105 /* CGPoint+Operator.swift in Sources */,
-				OBJ_106 /* CGPointTransformation.swift in Sources */,
-				OBJ_107 /* CGPointTrig.swift in Sources */,
-				OBJ_108 /* CGRectAsserter.swift in Sources */,
-				OBJ_109 /* CGRectModifier.swift in Sources */,
-				OBJ_110 /* CGRectParser.Path.swift in Sources */,
-				OBJ_111 /* CGRectParser.Side.swift in Sources */,
-				OBJ_112 /* CGRectParser.swift in Sources */,
-				OBJ_113 /* CGRect+Alignement.swift in Sources */,
-				OBJ_114 /* CGRect+Extension.swift in Sources */,
-				OBJ_115 /* CGRect+Offset.swift in Sources */,
-				OBJ_116 /* CGRect+Operator.swift in Sources */,
-				OBJ_117 /* CGSize+Extension.swift in Sources */,
-				OBJ_118 /* CGTransform+Extension.swift in Sources */,
-				OBJ_119 /* CGTransformModifier.swift in Sources */,
-				OBJ_120 /* CGTransformParser.swift in Sources */,
-				OBJ_121 /* CircleParser.swift in Sources */,
-				OBJ_122 /* Line.swift in Sources */,
-				OBJ_123 /* LineAsserter.swift in Sources */,
-				OBJ_124 /* LineParser.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		OBJ_127 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "NumberSugar::NumberSugar" /* NumberSugar */;
-			targetProxy = F1419E24238E8A13001DEE06 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		OBJ_131 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_132 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_136 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = GeomKit.xcodeproj/NumberSugar_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = NumberSugar;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = NumberSugar;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_137 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = GeomKit.xcodeproj/NumberSugar_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = NumberSugar;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = NumberSugar;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		OBJ_159 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_160 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -757,97 +297,15 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USE_HEADERMAP = NO;
-			};
-			name = Release;
-		};
-		OBJ_90 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = GeomKit.xcodeproj/GeomKit_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = GeomKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = GeomKit;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		OBJ_91 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = GeomKit.xcodeproj/GeomKit_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = GeomKit;
-				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = GeomKit;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_130 /* Build configuration list for PBXNativeTarget "GeomKitPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_131 /* Debug */,
-				OBJ_132 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_135 /* Build configuration list for PBXNativeTarget "NumberSugar" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_136 /* Debug */,
-				OBJ_137 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_158 /* Build configuration list for PBXNativeTarget "NumberSugarPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_159 /* Debug */,
-				OBJ_160 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		OBJ_2 /* Build configuration list for PBXProject "GeomKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -857,16 +315,18 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_89 /* Build configuration list for PBXNativeTarget "GeomKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_90 /* Debug */,
-				OBJ_91 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1A1697E23900D33006EACC4 /* XCRemoteSwiftPackageReference "NumberSugar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eonist/NumberSugar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }
