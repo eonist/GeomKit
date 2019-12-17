@@ -58,7 +58,7 @@ public class CGPointParser {
    /**
     * Returns the distance between points in both the x and y axis. (unlike Point.distance which returns the diagonal distance between two points)
     * - Note: think of this method as a way of finding the horizontal and vertical distance between two points
-    * - Fixme: ⚠️️potentially make polarAxisDistance which would potentially support any angled axis
+    * - Fixme: ⚠️️ potentially make polarAxisDistance which would potentially support any angled axis
     */
    public static func axisDistance(p1: CGPoint, p2: CGPoint) -> CGPoint {
       return .init(x: CGFloatParser.distance(p1.x, p2.x), y: CGFloatParser.distance(p1.y, p2.y))

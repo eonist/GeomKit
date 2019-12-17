@@ -2,6 +2,7 @@ import QuartzCore
 import NumberSugar
 /**
  * CGPoint assertion
+ * - Fixme: ⚠️️ ⚠️️ When needed add these:, oppositeDirectional, isContraDirectional, isNearContraDir, parallel, coDirectional, isCoDirectional, isNearCoDir, perpendicular, intersects, within, absoluteWithin, absolutleyWithin, nearAbsolutleyWithin, collinear, nearEquals
  */
 public class CGPointAsserter {
    /**
@@ -66,21 +67,4 @@ public class CGPointAsserter {
       return CGFloatAsserter.isNear(a.x, b.x, epsilon) && CGFloatAsserter.isNear(a.y, b.y, epsilon)
    }
 }
-/**
- * - Fixme: ⚠️️ ⚠️️ When needed add these:
- * oppositeDirectional
- * isContraDirectional
- * isNearContraDir
- * parallel
- * coDirectional
- * isCoDirectional
- * isNearCoDir
- * perpendicular
- * intersects
- * within
- * absoluteWithin
- * absolutleyWithin
- * nearAbsolutleyWithin
- * collinear
- * nearEquals
- */
+

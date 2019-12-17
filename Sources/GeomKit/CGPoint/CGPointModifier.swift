@@ -21,7 +21,8 @@ public class CGPointModifier {
    }
    /**
     * Returns the multiplication of two points
-    * ## Examples:  PointParser.multiply(CGPoint(20,20), CGPoint(2,2))//Output: (40,40)
+    * ## Examples:
+    * PointParser.multiply(CGPoint(20,20), CGPoint(2,2))//Output: (40,40)
     */
    public static func multiply(a: CGPoint, b: CGPoint) -> CGPoint {
       return .init(x: a.x * b.x, y: a.y * b.y)
