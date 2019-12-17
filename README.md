@@ -4,7 +4,7 @@
 ![Lang](https://img.shields.io/badge/Language-Swift%205.1-orange.svg)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
 [![SwiftLint Sindre](https://img.shields.io/badge/SwiftLint-Sindre-hotpink.svg)](https://github.com/sindresorhus/swiftlint-sindre)
-[![Github actions badge](https://badgen.net/github/checks/eonist/GeomKit?icon=github&label=Build%20Status)](https://github.com/eonist/GeomKit/actions)
+[![Github actions badge](https://badgen.net/github/checks/eonist/GeomKit?icon=github&label=Tests)](https://github.com/eonist/GeomKit/actions)
 
 <img width="100" alt="img" src="https://rawgit.com/stylekit/img/master/GraphicsLib.svg">
 
