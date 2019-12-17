@@ -36,4 +36,3 @@ extension CGPathParser {
       return path
    }
 }
-

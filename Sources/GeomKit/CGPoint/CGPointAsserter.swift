@@ -67,4 +67,3 @@ public class CGPointAsserter {
       return CGFloatAsserter.isNear(a.x, b.x, epsilon) && CGFloatAsserter.isNear(a.y, b.y, epsilon)
    }
 }
-

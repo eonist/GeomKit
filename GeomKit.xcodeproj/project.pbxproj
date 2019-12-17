@@ -7,10 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1354EBC23A92306002BBF3C /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CALayer+Extension.swift */; };
+		F1354EBD23A92306002BBF3C /* CAShapeUtil+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CAShapeUtil+TypeAlias.swift */; };
+		F1354EBE23A92306002BBF3C /* CAShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CAShapeUtil.swift */; };
+		F1354EBF23A92306002BBF3C /* CGPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CGPathExtensions.swift */; };
+		F1354EC023A92306002BBF3C /* CGPathModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* CGPathModifier.swift */; };
+		F1354EC123A92306002BBF3C /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* CGPathParser.swift */; };
+		F1354EC223A92306002BBF3C /* CGPathParser+Circular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5FC3423A900B5000F461A /* CGPathParser+Circular.swift */; };
+		F1354EC323A92306002BBF3C /* NSBezierPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* NSBezierPathParser.swift */; };
+		F1354EC423A92306002BBF3C /* CubicCurveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* CubicCurveUtils.swift */; };
+		F1354EC523A92306002BBF3C /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* CGPointAsserter.swift */; };
+		F1354EC623A92306002BBF3C /* CGPointModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* CGPointModifier.swift */; };
+		F1354EC723A92306002BBF3C /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* CGPointParser.swift */; };
+		F1354EC823A92306002BBF3C /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* CGPoint+Extension.swift */; };
+		F1354EC923A92306002BBF3C /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* CGPoint+Operator.swift */; };
+		F1354ECA23A92306002BBF3C /* CGPointTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* CGPointTransformation.swift */; };
+		F1354ECB23A92306002BBF3C /* CGPointTrig.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* CGPointTrig.swift */; };
+		F1354ECC23A92306002BBF3C /* CGRectAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* CGRectAsserter.swift */; };
+		F1354ECD23A92306002BBF3C /* CGRectModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* CGRectModifier.swift */; };
+		F1354ECE23A92306002BBF3C /* CGRectParser.Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* CGRectParser.Path.swift */; };
+		F1354ECF23A92306002BBF3C /* CGRectParser.Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* CGRectParser.Side.swift */; };
+		F1354ED023A92306002BBF3C /* CGRectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* CGRectParser.swift */; };
+		F1354ED123A92306002BBF3C /* CGRect+Alignement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* CGRect+Alignement.swift */; };
+		F1354ED223A92306002BBF3C /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* CGRect+Extension.swift */; };
+		F1354ED323A92306002BBF3C /* CGRect+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* CGRect+Offset.swift */; };
+		F1354ED423A92306002BBF3C /* CGRect+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* CGRect+Operator.swift */; };
+		F1354ED523A92306002BBF3C /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* CGSize+Extension.swift */; };
+		F1354ED623A92306002BBF3C /* CGTransform+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* CGTransform+Extension.swift */; };
+		F1354ED723A92306002BBF3C /* CGTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* CGTransformModifier.swift */; };
+		F1354ED823A92306002BBF3C /* CGTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* CGTransformParser.swift */; };
+		F1354ED923A92306002BBF3C /* CircleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* CircleParser.swift */; };
+		F1354EDA23A92306002BBF3C /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Line.swift */; };
+		F1354EDB23A92306002BBF3C /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* LineAsserter.swift */; };
+		F1354EDC23A92306002BBF3C /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* LineParser.swift */; };
+		F1354EDE23A92320002BBF3C /* NumberSugar in Frameworks */ = {isa = PBXBuildFile; productRef = F1354EDD23A92320002BBF3C /* NumberSugar */; };
 		F1F5FC1423A8FADE000F461A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5FC1323A8FADE000F461A /* AppDelegate.swift */; };
 		F1F5FC1D23A8FAE3000F461A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F5FC1C23A8FAE3000F461A /* Assets.xcassets */; };
 		F1F5FC2023A8FAE3000F461A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F5FC1E23A8FAE3000F461A /* LaunchScreen.storyboard */; };
-		F1F5FC2C23A8FB7A000F461A /* IOSTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5FC2B23A8FB7A000F461A /* IOSTest.swift */; };
+		F1F5FC2C23A8FB7A000F461A /* GeomKitIOSTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5FC2B23A8FB7A000F461A /* GeomKitIOSTest.swift */; };
 		F1F5FC3523A900B5000F461A /* CGPathParser+Circular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5FC3423A900B5000F461A /* CGPathParser+Circular.swift */; };
 		F1F5FC3723A9174E000F461A /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Line.swift */; };
 		F1F5FC3823A91763000F461A /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CALayer+Extension.swift */; };
@@ -45,6 +79,9 @@
 		F1F5FC5523A91763000F461A /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* LineAsserter.swift */; };
 		F1F5FC5623A91763000F461A /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* LineParser.swift */; };
 		F1F5FC5923A917AA000F461A /* NumberSugar in Frameworks */ = {isa = PBXBuildFile; productRef = F1F5FC5823A917AA000F461A /* NumberSugar */; };
+		F1F5FC6223A92010000F461A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5FC6123A92010000F461A /* AppDelegate.swift */; };
+		F1F5FC6423A92016000F461A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F5FC6323A92016000F461A /* Assets.xcassets */; };
+		F1F5FC6723A92016000F461A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1F5FC6523A92016000F461A /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +100,16 @@
 		F1F5FC1C23A8FAE3000F461A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1F5FC1F23A8FAE3000F461A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1F5FC2123A8FAE3000F461A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1F5FC2923A8FB7A000F461A /* IOSTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1F5FC2B23A8FB7A000F461A /* IOSTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTest.swift; sourceTree = "<group>"; };
+		F1F5FC2923A8FB7A000F461A /* GeomKitIOSTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeomKitIOSTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F5FC2B23A8FB7A000F461A /* GeomKitIOSTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeomKitIOSTest.swift; sourceTree = "<group>"; };
 		F1F5FC2D23A8FB7A000F461A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1F5FC3423A900B5000F461A /* CGPathParser+Circular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPathParser+Circular.swift"; sourceTree = "<group>"; };
+		F1F5FC5F23A92010000F461A /* GeomKitMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeomKitMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1F5FC6123A92010000F461A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F1F5FC6323A92016000F461A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1F5FC6623A92016000F461A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F1F5FC6823A92016000F461A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1F5FC6923A92016000F461A /* GeomKitMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GeomKitMacOS.entitlements; sourceTree = "<group>"; };
 		OBJ_10 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		OBJ_11 /* CAShapeUtil+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeUtil+TypeAlias.swift"; sourceTree = "<group>"; };
 		OBJ_12 /* CAShapeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeUtil.swift; sourceTree = "<group>"; };
@@ -119,24 +162,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1F5FC5C23A92010000F461A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1354EDE23A92320002BBF3C /* NumberSugar in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		F1F5FC0B23A8FA82000F461A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F1F5FC0C23A8FA82000F461A /* IOSTest */,
+				F1F5FC0C23A8FA82000F461A /* GeomKitIOSTest */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		F1F5FC0C23A8FA82000F461A /* IOSTest */ = {
+		F1F5FC0C23A8FA82000F461A /* GeomKitIOSTest */ = {
 			isa = PBXGroup;
 			children = (
-				F1F5FC2B23A8FB7A000F461A /* IOSTest.swift */,
+				F1F5FC2B23A8FB7A000F461A /* GeomKitIOSTest.swift */,
 				F1F5FC2D23A8FB7A000F461A /* Info.plist */,
 			);
-			path = IOSTest;
+			path = GeomKitIOSTest;
 			sourceTree = "<group>";
 		};
 		F1F5FC1223A8FADE000F461A /* GeomKit */ = {
@@ -174,6 +225,18 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1F5FC6023A92010000F461A /* GeomKitMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				F1F5FC6123A92010000F461A /* AppDelegate.swift */,
+				F1F5FC6323A92016000F461A /* Assets.xcassets */,
+				F1F5FC6523A92016000F461A /* MainMenu.xib */,
+				F1F5FC6823A92016000F461A /* Info.plist */,
+				F1F5FC6923A92016000F461A /* GeomKitMacOS.entitlements */,
+			);
+			path = GeomKitMacOS;
 			sourceTree = "<group>";
 		};
 		OBJ_13 /* CGPath */ = {
@@ -289,6 +352,7 @@
 				F1F5FC0B23A8FA82000F461A /* Tests */,
 				OBJ_7 /* Sources */,
 				F1F5FC1223A8FADE000F461A /* GeomKit */,
+				F1F5FC6023A92010000F461A /* GeomKitMacOS */,
 				OBJ_84 /* Products */,
 				OBJ_87 /* README.md */,
 				F1F5FC5723A917AA000F461A /* Frameworks */,
@@ -341,7 +405,8 @@
 			isa = PBXGroup;
 			children = (
 				F1F5FC1123A8FADE000F461A /* GeomKit.app */,
-				F1F5FC2923A8FB7A000F461A /* IOSTest.xctest */,
+				F1F5FC2923A8FB7A000F461A /* GeomKitIOSTest.xctest */,
+				F1F5FC5F23A92010000F461A /* GeomKitMacOS.app */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -366,6 +431,7 @@
 				F1F5FC0D23A8FADE000F461A /* Sources */,
 				F1F5FC0E23A8FADE000F461A /* Frameworks */,
 				F1F5FC0F23A8FADE000F461A /* Resources */,
+				F1F5FC5A23A91856000F461A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -379,9 +445,9 @@
 			productReference = F1F5FC1123A8FADE000F461A /* GeomKit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F1F5FC2823A8FB7A000F461A /* IOSTest */ = {
+		F1F5FC2823A8FB7A000F461A /* GeomKitIOSTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1F5FC3023A8FB7A000F461A /* Build configuration list for PBXNativeTarget "IOSTest" */;
+			buildConfigurationList = F1F5FC3023A8FB7A000F461A /* Build configuration list for PBXNativeTarget "GeomKitIOSTest" */;
 			buildPhases = (
 				F1F5FC2523A8FB7A000F461A /* Sources */,
 				F1F5FC2623A8FB7A000F461A /* Frameworks */,
@@ -392,10 +458,30 @@
 			dependencies = (
 				F1F5FC2F23A8FB7A000F461A /* PBXTargetDependency */,
 			);
-			name = IOSTest;
+			name = GeomKitIOSTest;
 			productName = IOSTest;
-			productReference = F1F5FC2923A8FB7A000F461A /* IOSTest.xctest */;
+			productReference = F1F5FC2923A8FB7A000F461A /* GeomKitIOSTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F1F5FC5E23A92010000F461A /* GeomKitMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1F5FC6A23A92016000F461A /* Build configuration list for PBXNativeTarget "GeomKitMacOS" */;
+			buildPhases = (
+				F1F5FC5B23A92010000F461A /* Sources */,
+				F1F5FC5C23A92010000F461A /* Frameworks */,
+				F1F5FC5D23A92010000F461A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeomKitMacOS;
+			packageProductDependencies = (
+				F1354EDD23A92320002BBF3C /* NumberSugar */,
+			);
+			productName = GeomKitMacOS;
+			productReference = F1F5FC5F23A92010000F461A /* GeomKitMacOS.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -413,6 +499,9 @@
 					F1F5FC2823A8FB7A000F461A = {
 						CreatedOnToolsVersion = 11.2;
 						TestTargetID = F1F5FC1023A8FADE000F461A;
+					};
+					F1F5FC5E23A92010000F461A = {
+						CreatedOnToolsVersion = 11.2;
 					};
 				};
 			};
@@ -433,7 +522,8 @@
 			projectRoot = "";
 			targets = (
 				F1F5FC1023A8FADE000F461A /* GeomKit */,
-				F1F5FC2823A8FB7A000F461A /* IOSTest */,
+				F1F5FC2823A8FB7A000F461A /* GeomKitIOSTest */,
+				F1F5FC5E23A92010000F461A /* GeomKitMacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -455,7 +545,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1F5FC5D23A92010000F461A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F5FC6423A92016000F461A /* Assets.xcassets in Resources */,
+				F1F5FC6723A92016000F461A /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F1F5FC5A23A91856000F461A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F1F5FC0D23A8FADE000F461A /* Sources */ = {
@@ -503,7 +622,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1F5FC2C23A8FB7A000F461A /* IOSTest.swift in Sources */,
+				F1F5FC2C23A8FB7A000F461A /* GeomKitIOSTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1F5FC5B23A92010000F461A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1354EBC23A92306002BBF3C /* CALayer+Extension.swift in Sources */,
+				F1354EBD23A92306002BBF3C /* CAShapeUtil+TypeAlias.swift in Sources */,
+				F1354EBE23A92306002BBF3C /* CAShapeUtil.swift in Sources */,
+				F1354EBF23A92306002BBF3C /* CGPathExtensions.swift in Sources */,
+				F1354EC023A92306002BBF3C /* CGPathModifier.swift in Sources */,
+				F1354EC123A92306002BBF3C /* CGPathParser.swift in Sources */,
+				F1354EC223A92306002BBF3C /* CGPathParser+Circular.swift in Sources */,
+				F1354EC323A92306002BBF3C /* NSBezierPathParser.swift in Sources */,
+				F1354EC423A92306002BBF3C /* CubicCurveUtils.swift in Sources */,
+				F1354EC523A92306002BBF3C /* CGPointAsserter.swift in Sources */,
+				F1354EC623A92306002BBF3C /* CGPointModifier.swift in Sources */,
+				F1354EC723A92306002BBF3C /* CGPointParser.swift in Sources */,
+				F1354EC823A92306002BBF3C /* CGPoint+Extension.swift in Sources */,
+				F1354EC923A92306002BBF3C /* CGPoint+Operator.swift in Sources */,
+				F1354ECA23A92306002BBF3C /* CGPointTransformation.swift in Sources */,
+				F1354ECB23A92306002BBF3C /* CGPointTrig.swift in Sources */,
+				F1354ECC23A92306002BBF3C /* CGRectAsserter.swift in Sources */,
+				F1354ECD23A92306002BBF3C /* CGRectModifier.swift in Sources */,
+				F1354ECE23A92306002BBF3C /* CGRectParser.Path.swift in Sources */,
+				F1354ECF23A92306002BBF3C /* CGRectParser.Side.swift in Sources */,
+				F1354ED023A92306002BBF3C /* CGRectParser.swift in Sources */,
+				F1354ED123A92306002BBF3C /* CGRect+Alignement.swift in Sources */,
+				F1354ED223A92306002BBF3C /* CGRect+Extension.swift in Sources */,
+				F1354ED323A92306002BBF3C /* CGRect+Offset.swift in Sources */,
+				F1354ED423A92306002BBF3C /* CGRect+Operator.swift in Sources */,
+				F1354ED523A92306002BBF3C /* CGSize+Extension.swift in Sources */,
+				F1354ED623A92306002BBF3C /* CGTransform+Extension.swift in Sources */,
+				F1354ED723A92306002BBF3C /* CGTransformModifier.swift in Sources */,
+				F1354ED823A92306002BBF3C /* CGTransformParser.swift in Sources */,
+				F1354ED923A92306002BBF3C /* CircleParser.swift in Sources */,
+				F1354EDA23A92306002BBF3C /* Line.swift in Sources */,
+				F1354EDB23A92306002BBF3C /* LineAsserter.swift in Sources */,
+				F1354EDC23A92306002BBF3C /* LineParser.swift in Sources */,
+				F1F5FC6223A92010000F461A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +684,14 @@
 				F1F5FC1F23A8FAE3000F461A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F1F5FC6523A92016000F461A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F1F5FC6623A92016000F461A /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -630,6 +798,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -703,7 +872,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/IOSTest/Info.plist;
+				INFOPLIST_FILE = Tests/GeomKitIOSTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -766,7 +935,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/IOSTest/Info.plist;
+				INFOPLIST_FILE = Tests/GeomKitIOSTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -782,6 +951,131 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeomKit.app/GeomKit";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1F5FC6B23A92016000F461A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = GeomKitMacOS/GeomKitMacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GeomKitMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomKitMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F1F5FC6C23A92016000F461A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = GeomKitMacOS/GeomKitMacOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = GeomKitMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.GeomKitMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -849,11 +1143,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1F5FC3023A8FB7A000F461A /* Build configuration list for PBXNativeTarget "IOSTest" */ = {
+		F1F5FC3023A8FB7A000F461A /* Build configuration list for PBXNativeTarget "GeomKitIOSTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1F5FC3123A8FB7A000F461A /* Debug */,
 				F1F5FC3223A8FB7A000F461A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1F5FC6A23A92016000F461A /* Build configuration list for PBXNativeTarget "GeomKitMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1F5FC6B23A92016000F461A /* Debug */,
+				F1F5FC6C23A92016000F461A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -881,6 +1184,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F1354EDD23A92320002BBF3C /* NumberSugar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1A1697E23900D33006EACC4 /* XCRemoteSwiftPackageReference "NumberSugar" */;
+			productName = NumberSugar;
+		};
 		F1F5FC5823A917AA000F461A /* NumberSugar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F1A1697E23900D33006EACC4 /* XCRemoteSwiftPackageReference "NumberSugar" */;

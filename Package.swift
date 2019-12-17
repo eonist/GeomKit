@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "GeomKit",
+    platforms: [.iOS(.v12), .macOS(.v10_13)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
@@ -22,7 +23,7 @@ let package = Package(
             name: "GeomKit",
             dependencies: ["NumberSugar"]),
         .testTarget(
-            name: "IOSTest",
-            dependencies: ["NumberSugar"])
+            name: "GeomKitIOSTest",
+            dependencies: ["GeomKit", "NumberSugar"])
     ]
 )

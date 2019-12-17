@@ -34,8 +34,8 @@ public class CGPointParser {
     * Returns the difference between two points
     * - Note: Great when finding polar points when the pivot isnt at point 0,0
     * ## Examples:
-    * print(CGPoint(x: 20, y: 20), CGPoint(x: -40, y: -40))//Output: (-60,-60)
-    * print(CGPoint(x: 20, y: 20), CGPoint(x: 40, y: -40))//Output: (20,-60)
+    * print(CGPointParser.difference(CGPoint(x: 20, y: 20), CGPoint(x: -40, y: -40))//Output: (-60,-60)
+    * print(CGPointParser.difference(CGPoint(x: 20, y: 20), CGPoint(x: 40, y: -40))//Output: (20,-60)
     * print(CGPointParser.difference(p1: CGPoint(x: 2, y: 2), p2: CGPoint(x: 4, y: 4)))//Outputs: (2,2)
     * print(CGPointParser.difference(p1: CGPoint(x: 2, y: 2), p2: CGPoint(x: -4, y: -4)))//Outputs: (-6,-6)
     * print(CGPointParser.difference(p1: CGPoint(x: -2, y: -2), p2: CGPoint(x: -4, y: -4)))//Outputs: (-2,-2)
