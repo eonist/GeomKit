@@ -2,7 +2,7 @@
 import Cocoa
 /**
  * - Note: This class only works in mac
- * - Fixme: ⚠️️mark this only for macos
+ * - Fixme: ⚠️️ mark this only for macos
  */
 public class NSBezierPathParser {
    /**

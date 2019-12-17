@@ -22,7 +22,7 @@ public class CGPointModifier {
    /**
     * Returns the multiplication of two points
     * ## Examples:
-    * PointParser.multiply(CGPoint(20,20), CGPoint(2,2))//Output: (40,40)
+    * CGPointParser.multiply(a: .init(x: 20, y: 20), .init(x: 2, y: 2)) // Output: (40, 40)
     */
    public static func multiply(a: CGPoint, b: CGPoint) -> CGPoint {
       return .init(x: a.x * b.x, y: a.y * b.y)
@@ -35,9 +35,10 @@ public class CGPointModifier {
    }
    /**
     * Rotates a point around a given pivot point
-    * - Parameter: point The point to rotate.
-    * - Parameter: pivot the pivot point that - Parameter: point is roatated around.
-    * - Parameter: rot the amount in which to rotate (radians)
+    * - Parameters:
+    *   - point: The point to rotate.
+    *   - pivot: the pivot point that - Parameter: point is roatated around.
+    *   - rot: the amount in which to rotate (radians)
     * - Note: this function does not alter the original point
     * - Note: this function is keept around to illustrate how to rotate a point around a pivot in regular trig math (Also may be faster than the equvilant function that uses matrix math)
     * - Fixme: ⚠️️ rename to trigRot?!?

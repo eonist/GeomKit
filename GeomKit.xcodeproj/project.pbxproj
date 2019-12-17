@@ -11,6 +11,40 @@
 		F1F5FC1D23A8FAE3000F461A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1F5FC1C23A8FAE3000F461A /* Assets.xcassets */; };
 		F1F5FC2023A8FAE3000F461A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1F5FC1E23A8FAE3000F461A /* LaunchScreen.storyboard */; };
 		F1F5FC2C23A8FB7A000F461A /* IOSTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5FC2B23A8FB7A000F461A /* IOSTest.swift */; };
+		F1F5FC3523A900B5000F461A /* CGPathParser+Circular.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F5FC3423A900B5000F461A /* CGPathParser+Circular.swift */; };
+		F1F5FC3723A9174E000F461A /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Line.swift */; };
+		F1F5FC3823A91763000F461A /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CALayer+Extension.swift */; };
+		F1F5FC3923A91763000F461A /* CAShapeUtil+TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CAShapeUtil+TypeAlias.swift */; };
+		F1F5FC3A23A91763000F461A /* CAShapeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CAShapeUtil.swift */; };
+		F1F5FC3B23A91763000F461A /* CGPathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* CGPathExtensions.swift */; };
+		F1F5FC3C23A91763000F461A /* CGPathModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* CGPathModifier.swift */; };
+		F1F5FC3D23A91763000F461A /* CGPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* CGPathParser.swift */; };
+		F1F5FC3E23A91763000F461A /* NSBezierPathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* NSBezierPathParser.swift */; };
+		F1F5FC3F23A91763000F461A /* CubicCurveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* CubicCurveUtils.swift */; };
+		F1F5FC4023A91763000F461A /* CGPointAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* CGPointAsserter.swift */; };
+		F1F5FC4123A91763000F461A /* CGPointModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* CGPointModifier.swift */; };
+		F1F5FC4223A91763000F461A /* CGPointParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* CGPointParser.swift */; };
+		F1F5FC4323A91763000F461A /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* CGPoint+Extension.swift */; };
+		F1F5FC4423A91763000F461A /* CGPoint+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* CGPoint+Operator.swift */; };
+		F1F5FC4523A91763000F461A /* CGPointTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* CGPointTransformation.swift */; };
+		F1F5FC4623A91763000F461A /* CGPointTrig.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* CGPointTrig.swift */; };
+		F1F5FC4723A91763000F461A /* CGRectAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* CGRectAsserter.swift */; };
+		F1F5FC4823A91763000F461A /* CGRectModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* CGRectModifier.swift */; };
+		F1F5FC4923A91763000F461A /* CGRectParser.Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* CGRectParser.Path.swift */; };
+		F1F5FC4A23A91763000F461A /* CGRectParser.Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* CGRectParser.Side.swift */; };
+		F1F5FC4B23A91763000F461A /* CGRectParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* CGRectParser.swift */; };
+		F1F5FC4C23A91763000F461A /* CGRect+Alignement.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* CGRect+Alignement.swift */; };
+		F1F5FC4D23A91763000F461A /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* CGRect+Extension.swift */; };
+		F1F5FC4E23A91763000F461A /* CGRect+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* CGRect+Offset.swift */; };
+		F1F5FC4F23A91763000F461A /* CGRect+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* CGRect+Operator.swift */; };
+		F1F5FC5023A91763000F461A /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* CGSize+Extension.swift */; };
+		F1F5FC5123A91763000F461A /* CGTransform+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* CGTransform+Extension.swift */; };
+		F1F5FC5223A91763000F461A /* CGTransformModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* CGTransformModifier.swift */; };
+		F1F5FC5323A91763000F461A /* CGTransformParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* CGTransformParser.swift */; };
+		F1F5FC5423A91763000F461A /* CircleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* CircleParser.swift */; };
+		F1F5FC5523A91763000F461A /* LineAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* LineAsserter.swift */; };
+		F1F5FC5623A91763000F461A /* LineParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* LineParser.swift */; };
+		F1F5FC5923A917AA000F461A /* NumberSugar in Frameworks */ = {isa = PBXBuildFile; productRef = F1F5FC5823A917AA000F461A /* NumberSugar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +66,7 @@
 		F1F5FC2923A8FB7A000F461A /* IOSTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1F5FC2B23A8FB7A000F461A /* IOSTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTest.swift; sourceTree = "<group>"; };
 		F1F5FC2D23A8FB7A000F461A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1F5FC3423A900B5000F461A /* CGPathParser+Circular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPathParser+Circular.swift"; sourceTree = "<group>"; };
 		OBJ_10 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		OBJ_11 /* CAShapeUtil+TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeUtil+TypeAlias.swift"; sourceTree = "<group>"; };
 		OBJ_12 /* CAShapeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeUtil.swift; sourceTree = "<group>"; };
@@ -73,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F5FC5923A917AA000F461A /* NumberSugar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,12 +150,38 @@
 			path = GeomKit;
 			sourceTree = "<group>";
 		};
+		F1F5FC3323A900A3000F461A /* CGPathParser */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* CGPathParser.swift */,
+				F1F5FC3423A900B5000F461A /* CGPathParser+Circular.swift */,
+			);
+			path = CGPathParser;
+			sourceTree = "<group>";
+		};
+		F1F5FC3623A91311000F461A /* CGRectParser */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_34 /* CGRectParser.Path.swift */,
+				OBJ_35 /* CGRectParser.Side.swift */,
+				OBJ_36 /* CGRectParser.swift */,
+			);
+			path = CGRectParser;
+			sourceTree = "<group>";
+		};
+		F1F5FC5723A917AA000F461A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		OBJ_13 /* CGPath */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* CGPathExtensions.swift */,
 				OBJ_15 /* CGPathModifier.swift */,
-				OBJ_16 /* CGPathParser.swift */,
+				F1F5FC3323A900A3000F461A /* CGPathParser */,
 				OBJ_17 /* NSBezier */,
 				OBJ_19 /* cubic */,
 			);
@@ -177,9 +239,7 @@
 			children = (
 				OBJ_32 /* CGRectAsserter.swift */,
 				OBJ_33 /* CGRectModifier.swift */,
-				OBJ_34 /* CGRectParser.Path.swift */,
-				OBJ_35 /* CGRectParser.Side.swift */,
-				OBJ_36 /* CGRectParser.swift */,
+				F1F5FC3623A91311000F461A /* CGRectParser */,
 				OBJ_37 /* extension */,
 			);
 			path = CGRect;
@@ -231,6 +291,7 @@
 				F1F5FC1223A8FADE000F461A /* GeomKit */,
 				OBJ_84 /* Products */,
 				OBJ_87 /* README.md */,
+				F1F5FC5723A917AA000F461A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -311,6 +372,9 @@
 			dependencies = (
 			);
 			name = GeomKit;
+			packageProductDependencies = (
+				F1F5FC5823A917AA000F461A /* NumberSugar */,
+			);
 			productName = GeomKit;
 			productReference = F1F5FC1123A8FADE000F461A /* GeomKit.app */;
 			productType = "com.apple.product-type.application";
@@ -398,6 +462,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F5FC3823A91763000F461A /* CALayer+Extension.swift in Sources */,
+				F1F5FC3923A91763000F461A /* CAShapeUtil+TypeAlias.swift in Sources */,
+				F1F5FC3A23A91763000F461A /* CAShapeUtil.swift in Sources */,
+				F1F5FC3B23A91763000F461A /* CGPathExtensions.swift in Sources */,
+				F1F5FC3C23A91763000F461A /* CGPathModifier.swift in Sources */,
+				F1F5FC3D23A91763000F461A /* CGPathParser.swift in Sources */,
+				F1F5FC3E23A91763000F461A /* NSBezierPathParser.swift in Sources */,
+				F1F5FC3F23A91763000F461A /* CubicCurveUtils.swift in Sources */,
+				F1F5FC4023A91763000F461A /* CGPointAsserter.swift in Sources */,
+				F1F5FC4123A91763000F461A /* CGPointModifier.swift in Sources */,
+				F1F5FC4223A91763000F461A /* CGPointParser.swift in Sources */,
+				F1F5FC4323A91763000F461A /* CGPoint+Extension.swift in Sources */,
+				F1F5FC4423A91763000F461A /* CGPoint+Operator.swift in Sources */,
+				F1F5FC4523A91763000F461A /* CGPointTransformation.swift in Sources */,
+				F1F5FC4623A91763000F461A /* CGPointTrig.swift in Sources */,
+				F1F5FC4723A91763000F461A /* CGRectAsserter.swift in Sources */,
+				F1F5FC4823A91763000F461A /* CGRectModifier.swift in Sources */,
+				F1F5FC4923A91763000F461A /* CGRectParser.Path.swift in Sources */,
+				F1F5FC4A23A91763000F461A /* CGRectParser.Side.swift in Sources */,
+				F1F5FC4B23A91763000F461A /* CGRectParser.swift in Sources */,
+				F1F5FC4C23A91763000F461A /* CGRect+Alignement.swift in Sources */,
+				F1F5FC4D23A91763000F461A /* CGRect+Extension.swift in Sources */,
+				F1F5FC4E23A91763000F461A /* CGRect+Offset.swift in Sources */,
+				F1F5FC4F23A91763000F461A /* CGRect+Operator.swift in Sources */,
+				F1F5FC5023A91763000F461A /* CGSize+Extension.swift in Sources */,
+				F1F5FC5123A91763000F461A /* CGTransform+Extension.swift in Sources */,
+				F1F5FC5223A91763000F461A /* CGTransformModifier.swift in Sources */,
+				F1F5FC5323A91763000F461A /* CGTransformParser.swift in Sources */,
+				F1F5FC5423A91763000F461A /* CircleParser.swift in Sources */,
+				F1F5FC5523A91763000F461A /* LineAsserter.swift in Sources */,
+				F1F5FC5623A91763000F461A /* LineParser.swift in Sources */,
+				F1F5FC3723A9174E000F461A /* Line.swift in Sources */,
+				F1F5FC3523A900B5000F461A /* CGPathParser+Circular.swift in Sources */,
 				F1F5FC1423A8FADE000F461A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,6 +879,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1F5FC5823A917AA000F461A /* NumberSugar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1A1697E23900D33006EACC4 /* XCRemoteSwiftPackageReference "NumberSugar" */;
+			productName = NumberSugar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }

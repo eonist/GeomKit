@@ -7,14 +7,16 @@ import CoreGraphics
 extension CGRect {
    /**
     * Clones CGRect
-    * ## Examples:  CGRect.zero.clone()
+    * ## Examples:
+    * CGRect.zero.clone()
     */
    public func clone() -> CGRect { // remove this, use copy instead
       return .init(origin: self.origin, size: self.size)
    }
    /**
     * Create a path using the coordinates of the rect passed in
-    * ## Examples: CGRect.zero.path
+    * ## Examples:
+    * CGRect.zero.path
     */
    public var path: CGMutablePath {
       return CGRectParser.Path.path(rect: self)

@@ -18,11 +18,8 @@ public class CubicCurveUtils {
     *   - p1: end point
     */
    public static func point(p0: CGPoint, c0: CGPoint, c1: CGPoint, p1: CGPoint, x: CGFloat) -> CGPoint {
-      let a: CGFloat = p0.x
-      let b: CGFloat = c0.x
-      let c: CGFloat = c1.x
-      let d: CGFloat = p1.x
-      //
+      let (a, b, c, d): (CGFloat, CGFloat, CGFloat, CGFloat) = (p0.x, c0.x, c1.x, p1.x)
+      // Calculations
       let A: CGFloat = d - 3 * c + 3 * b - a
       let B: CGFloat = 3 * c - 6 * b + 3 * a
       let C: CGFloat = 3 * b - 3 * a

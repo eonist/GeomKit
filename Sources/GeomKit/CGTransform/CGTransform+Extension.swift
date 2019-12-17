@@ -3,6 +3,7 @@ import CoreGraphics
  * - Fixme: Make an alias named Transform?
  */
 public typealias CGTransform = CGAffineTransform
+
 extension CGAffineTransform {
    /**
     * Rotate

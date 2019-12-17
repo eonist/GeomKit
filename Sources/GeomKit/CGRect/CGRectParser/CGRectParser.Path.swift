@@ -31,11 +31,11 @@ extension CGRectParser.Path {
     */
    public static func path(rect: CGRect) -> CGMutablePath {
       let path: CGMutablePath = .init()
-      path.move(to: rect.origin) // was-> CGPathMoveToPoint
-      path.addLine(to: .init(x: rect.origin.x + rect.size.width, y: rect.origin.y))// ***** Segment 1 *****
-      path.addLine(to: .init(x: rect.origin.x + rect.size.width, y: rect.origin.y + rect.size.height))// ***** Segment 2 *****
-      path.addLine(to: .init(x: rect.origin.x, y: rect.origin.y + rect.size.height))// ***** Segment 3 *****
-      path.closeSubpath() // ***** Segment 4 created by closing the path *****
+      path.move(to: rect.origin)
+      path.addLine(to: .init(x: rect.origin.x + rect.size.width, y: rect.origin.y))// Segment 1
+      path.addLine(to: .init(x: rect.origin.x + rect.size.width, y: rect.origin.y + rect.size.height))// Segment 2
+      path.addLine(to: .init(x: rect.origin.x, y: rect.origin.y + rect.size.height))//Segment 3
+      path.closeSubpath() // Segment 4 created by closing the path
       return path
    }
 }

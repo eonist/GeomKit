@@ -17,7 +17,7 @@ public class CGRectParser {
       return .init(x: left, y: top, width: width, height: height)
    }
    /**
-    * - Note:  you can also use: someCGRect.center
+    * - Note: You can also use: someCGRect.center
     */
    public static func center(rect: CGRect) -> CGPoint {
       return .interpolate(a: rect.topLeft, b: rect.bottomRight, scalar: 0.5)
@@ -25,7 +25,7 @@ public class CGRectParser {
    /**
     * Returns the midPoint of each side in - Parameter: rect
     */
-   public static func sides(rect: CGRect) -> [CGPoint] { // <--Was previously named sidePoints
+   public static func sides(rect: CGRect) -> [CGPoint] {
       return [rect.left, rect.right, rect.top, rect.bottom]
    }
    /**

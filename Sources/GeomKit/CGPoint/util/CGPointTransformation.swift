@@ -3,7 +3,7 @@ import CoreGraphics
 public class CGPointTransformation {
    /**
     * - Caution: ⚠️️ UNTESTED, but should work
-    * Returns a point rotated around a pivot point
+    * - Returns a point rotated around a pivot point
     * - Note: does not modifify the - Parameter: point
     * - Fixme: ⚠️️ rename to matrixRot?
     */
@@ -23,7 +23,7 @@ public class CGPointTransformation {
    /**
     * Returns points rotated around a pivot point
     * - Note: does not modifiy the original points
-    * - Parameter: rotation: in radians (suppers radian values from -∞ to +∞)
+    * - Parameter rotation: in radians (suppers radian values from -∞ to +∞)
     * - Fixme: ⚠️️ Make a similar method that takes initPoints and points, this way you avoid recrating a new array everytime
     */
    public static func rotatePoints(points: [CGPoint], pivot: CGPoint, rotation: CGFloat) -> [CGPoint] {
@@ -36,8 +36,8 @@ public class CGPointTransformation {
    /**
     * Scales - Parameter: p at - Parameter: pivot with - Parameter: scale
     * ## Examples:
-    * PointModifier.scale(CGPoint(0, 0), CGPoint(40,40), CGPoint(2, 2)) // Output: (-40.0, -40.0)
-    * - Parameter: scale: 0 - 1
+    * CGPointTransformation.scale(p: CGPoint(x: 0, y: 0), pivot: CGPoint(x: 40, y: 40), scale: CGPoint(x: 2, y: 2)) // Output: (-40.0, -40.0)
+    * - Parameter scale: 0 - 1
     */
    public static func scale(p: CGPoint, pivot: CGPoint, scale: CGPoint) -> CGPoint {
       var transform: CGAffineTransform = .identity
@@ -52,10 +52,7 @@ public class CGPointTransformation {
     *   - pivot: represents the origin point where the - Parameter: points are scaled from
     *   - scale: represents the x and y axis scale ratio
     * ## Examples:
-    * circle.setPosition(100,100)
-    * var pivotPoint:Point = new Point(50,50)
-    * var scaledPoints:Array = PointModifier.scalePoints([new Point(circle.x,circle.y)], pivotPoint,1, 1.5)
-    * circle.setPosition(scaledPoints[0]);//Output: the circle is now at 100,125
+    * print(CGPointTransformation.scalePoints(points: [CGPoint(x: 100, y: 100)], pivot: CGPoint(x: 50,y: 50), scale: .init(x: 1, y: 1.5)).first) // CGPoint(x: 100, y: 125)
     */
    public static func scalePoints(points: [CGPoint], pivot: CGPoint, scale: CGPoint) -> [CGPoint] {
       return points.map { CGPointTransformation.scale(p: $0, pivot: pivot, scale: scale) }

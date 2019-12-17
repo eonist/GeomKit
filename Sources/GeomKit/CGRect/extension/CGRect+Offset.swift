@@ -24,7 +24,7 @@ extension CGRectangle {
    }
    /**
     * - Note:  Alters the original CGRect instance
-    * Swift 3 update, as of swift 3 CGRect no longer has the offsetInPlace method. This method replaces that functionality.
+    * - Note: Swift 3 update, as of swift 3 CGRect no longer has the offsetInPlace method. This method replaces that functionality.
     * - Fixme: ⚠️️ ⚠️️ could probably be simplified by just copying the origin.x and origin y onto self
     */
    public mutating func offsetInPlace(point: CGPoint) -> CGRect { // Convenience

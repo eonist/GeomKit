@@ -13,8 +13,8 @@ public class CGRectModifier {
    }
    /**
     * Positions a rectangle (center pivot)
-    * - Parameter: position this value is the new center-position
-    * - Fixme: ⚠️️ ⚠️️ the difference could be calculated before-hand
+    * - Parameter position: this value is the new center-position
+    * - Fixme: ⚠️️ The difference could be calculated before-hand
     * - Note: the rectangle is returned because it may be convenient when you chain methods together
     */
    public static func centerPosition(rect:inout CGRect, position: CGPoint) -> CGRect {

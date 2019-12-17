@@ -101,13 +101,13 @@ public class CGPointParser {
    }
    /**
     * Returns a Point half way between - Parameter: p1 and p2
-    * - Note: Can also use Point.interpolate(p1, p2, 0.5)
+    * - Note: Can also use CGPoint.interpolate(p1, p2, 0.5)
     * - Fixme: ⚠️️ Can you write an example just with substraction, this might be usefull and more optimized
-    * ## Examples:  (How to do it with substraction and addition)
-    * var minX:Number = Math.min(p1.x, p2.x)
-    * var minY:Number = Math.min(p1.y, p2.y)
-    * var maxX:Number = Math.max(p1.x, p2.x)
-    * var maxY:Number = Math.max(p1.y, p2.y)
+    * ## Examples: (How to do it with substraction and addition)
+    * var minX: Number = Math.min(p1.x, p2.x)
+    * var minY: Number = Math.min(p1.y, p2.y)
+    * var maxX: Number = Math.max(p1.x, p2.x)
+    * var maxY: Number = Math.max(p1.y, p2.y)
     * var center: CGPoint = CGPoint(minX + ((maxX - minX) / 2), (minY + ((maxY - minY) / 2)))
     */
    public static func center(p1: CGPoint, p2: CGPoint) -> CGPoint {
@@ -117,14 +117,17 @@ public class CGPointParser {
     * Returns a Point half way between - Parameter: p1 and - Parameter: p2
     * - Note: formula: "(x1+x2)/2 , (y1,y2)/2"
     * - Note: probably faster than using interpolation
-    * ## Examples:  midPoint(CGPoint(0,0),CGPoint(100,100))//CGPoint(50,50)
-    * Caution: this only works if p1 is .zero
+    * ## Examples:
+    * CGPointParser.midPoint(CGPoint(x: 0,y: 0), CGPoint(x: 100, y: 100))// CGPoint(x: 50, y: 50)
+    * Caution: ⚠️️ this only works if p1 is .zero
     */
    public static func midPoint(p1: CGPoint, p2: CGPoint) -> CGPoint {
       return .init(x: (p1.x + p2.x) / 2, y: (p1.y + p2.y) / 2)
    }
    /**
     * Returns a Point half way between a and b
+    * ## Examples:
+    * CGPointParser.midPt(CGPoint(x: 50,y: 50), CGPoint(x: 100, y: 100))// CGPoint(x: 75, y: 75)
     */
    public static func midPt(a: CGPoint, b: CGPoint) -> CGPoint {
       let minX: CGFloat = min(a.x, b.x)

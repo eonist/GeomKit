@@ -23,8 +23,9 @@ public class CGPathModifier {
     * ## Examples:
     * CGPathModifier.rotate(path:path,angle: CGFloat.pi/4.0)//45deg
     * - Caution: ⚠️️ When using this method remeber to use the CGPathCreateMutableCopy(somePath) if you dont want to edit the original path (THe return statment is jsut for convenince)
-    * - parameter path: the path to be rotated
-    * - parameter angle: the angle the path should be rotated by
+    * - Parameters:
+    *   - path: the path to be rotated
+    *   - angle: the angle the path should be rotated by
     */
    @discardableResult
    public static func rotate(path:inout CGMutablePath, angle: CGFloat) -> CGPath {
@@ -35,7 +36,8 @@ public class CGPathModifier {
    }
    /**
     * Rotates a path around it's center axis
-    * ## Examples: -CGFloat.pi/2.0
+    * ## Examples:
+    * centerRotate(path: path, angle: -CGFloat.pi / 2.0
     */
    @discardableResult
    public static func centerRotate(path:inout CGMutablePath, angle: CGFloat) -> CGPath {
@@ -49,8 +51,9 @@ public class CGPathModifier {
    }
    /**
     * Scales - Parameter: path
-    * ## Examples: scale(path,2,2)//doubles the size of the path
-    * - Caution: When using this method remeber to use the CGPathCreateMutableCopy(somePath) if you dont want to edit the original path (THe return statment is jsut for convenince)
+    * ## Examples:
+    * scale(path, 2, 2) // doubles the size of the path
+    * - Caution: ⚠️️ When using this method remeber to use the CGPathCreateMutableCopy(somePath) if you dont want to edit the original path (THe return statment is jsut for convenince)
     */
    public static func scale(_ path:inout CGPath, _ x: CGFloat = 1, _ y: CGFloat = 1) -> CGPath {
       var transformation: CGAffineTransform  = .init(scaleX: x, y: y) // swift 3 upgrade

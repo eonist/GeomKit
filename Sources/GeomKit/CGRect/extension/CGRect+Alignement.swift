@@ -4,6 +4,7 @@ import CoreGraphics
  * - Fixme: Possibly make this CGRectAlignment.topLeft(rect)
  */
 fileprivate typealias CGRectangle = CGRect
+
 extension CGRectangle {
    public var topLeft: CGPoint { return self.origin }
    public var bottomLeft: CGPoint { return .init(x: self.minX, y: self.maxY) }
