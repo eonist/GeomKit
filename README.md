@@ -24,9 +24,3 @@ let shapeLayer: CAShapeLayer = .init()
 CGPathModifier.fill(shape: shapeLayer, cgPath: cgPath, fillColor: .green)
 self.view.layer.addSublayer(shapeLayer)
 ```
-
-### Todo:
-- Add HoundCI ✅
-- Add SPM to GeomKit 👈
-- Write example ✅
-- Write UnitTests ✅
