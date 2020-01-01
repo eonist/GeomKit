@@ -6,17 +6,14 @@
 [![codebeat badge](https://codebeat.co/badges/bdda373a-6022-49be-949b-dece00d40a10)](https://codebeat.co/projects/github-com-eonist-geomsugar-master)
 [![Github actions badge](https://badgen.net/github/checks/eonist/GeomKit?icon=github&label=Tests)](https://github.com/eonist/GeomKit/actions)
 
-<img width="100" alt="img" src="https://rawgit.com/stylekit/img/master/GraphicsLib.svg">
+### Features:
+- Common geometry methods
 
-### What is it
-Geometry classes
-
-### How do I get it
+### Installation:
 - Swift package manager ` "https://github.com/eonist/GeomKit"` target `"master"`
 - Manual Open `GeomKit.xcodeproj`
 
 ### Example:
-
 ```swift
 let rect: CGRect = .init(origin: .zero, size: .init(width: 100, height: 100))
 let cgPath = CGRectParser.roundRect(rect: rect, radius: 20)
