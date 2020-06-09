@@ -71,7 +71,7 @@ public class CGPointTrig {
     * CGPointTrig.x(CGPoint(x: 100, y: 100), slope: 1);//Output: 200
     */
    public static func x(p1: CGPoint, y2: CGFloat, slope: CGFloat) -> CGFloat {
-      return ((y2 - p1.y) / slope) + p1.x
+      ((y2 - p1.y) / slope) + p1.x
    }
    /**
     * Returns the y position when a line passes through - Parameter: p1 and - Parameter: y2 and that line has a slope-value of - Parameter: slope
@@ -86,6 +86,6 @@ public class CGPointTrig {
     * CGPointTrig.y(CGPoint(x: 100,y: 100), 1);//Output: 200
     */
    public static func y(p1: CGPoint, x2: CGFloat, slope: CGFloat) -> CGFloat {
-      return (slope * (x2 - p1.x)) + p1.y
+      (slope * (x2 - p1.x)) + p1.y
    }
 }

@@ -8,19 +8,19 @@ extension CGRectangle {
     * Negative inset equals outset
     */
    public func outset(dx: CGFloat, dy: CGFloat) -> CGRect {
-      return insetBy(dx: -dx, dy: -dy)
+      insetBy(dx: -dx, dy: -dy)
    }
    /**
     * - Note:  Same as insetBy, but this method is simpler to call, similar to Outset (Convenience)
     */
    public func inset(dx: CGFloat, dy: CGFloat) -> CGRect {
-      return insetBy(dx: dx, dy: dy)
+      insetBy(dx: dx, dy: dy)
    }
    public func offset(dx: CGFloat, dy: CGFloat) -> CGRect { // Convenience
-      return self.offsetBy(dx: dx, dy: dy)
+      self.offsetBy(dx: dx, dy: dy)
    }
    public func offset(point: CGPoint) -> CGRect { // Convenience
-      return self.offsetBy(dx: point.x, dy: point.y)
+      self.offsetBy(dx: point.x, dy: point.y)
    }
    /**
     * - Note:  Alters the original CGRect instance

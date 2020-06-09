@@ -7,7 +7,7 @@ extension CGPathParser {
     * Convenince method
     */
    public static func ellipse( rect: CGRect) -> CGMutablePath {
-      return ellipse(center: rect.origin, size: rect.size)
+      ellipse(center: rect.origin, size: rect.size)
    }
    /**
     * Draws an ellipse from the center

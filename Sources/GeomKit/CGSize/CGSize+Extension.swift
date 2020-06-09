@@ -7,7 +7,7 @@ extension CGSize {
    /**
     * isNear
     */
-   public func isNear(p: CGSize, epsilon: CGFloat) -> Bool { return CGPointAsserter.nearEquals(a: .init(x: self.width, y: self.height), b: .init(x: p.width, y: p.height), epsilon: epsilon) }
+   public func isNear(p: CGSize, epsilon: CGFloat) -> Bool { CGPointAsserter.nearEquals(a: .init(x: self.width, y: self.height), b: .init(x: p.width, y: p.height), epsilon: epsilon) }
    /**
     * clip
     * - Fixme: ⚠️️ write example and doc
@@ -21,16 +21,16 @@ extension CGSize {
     * interpolate
     */
    public func interpolate(_ to: CGSize, _ scalar: CGFloat) -> CGSize {
-      return .init(width: self.width.interpolate(to.width, scalar), height: self.height.interpolate(to.height, scalar))
+      .init(width: self.width.interpolate(to.width, scalar), height: self.height.interpolate(to.height, scalar))
    }
 }
 /**
  * Extensions
  */
 extension CGSize {
-   public static func + (a: CGSize, b: CGSize) -> CGSize { return .init(width: a.width + b.width, height: a.height + b.height) }
-   public static func - (a: CGSize, b: CGSize) -> CGSize { return .init(width: a.width - b.width, height: a.height - b.height) }
-   public static func * (a: CGSize, b: CGSize) -> CGSize { return .init(width: a.width * b.width, height: a.height * b.height) }
+   public static func + (a: CGSize, b: CGSize) -> CGSize { .init(width: a.width + b.width, height: a.height + b.height) }
+   public static func - (a: CGSize, b: CGSize) -> CGSize { .init(width: a.width - b.width, height: a.height - b.height) }
+   public static func * (a: CGSize, b: CGSize) -> CGSize { .init(width: a.width * b.width, height: a.height * b.height) }
    /**
     * Modifies a by adding b
     */
@@ -39,7 +39,7 @@ extension CGSize {
     * Modifies a by subtracting b
     */
    public static func -= ( a: inout CGSize, b: CGSize) { a.width -= b.width; a.height -= b.height }
-   public static func * (a: CGSize, b: CGFloat) -> CGSize { return .init(width: a.width * b, height: a.height * b) }
+   public static func * (a: CGSize, b: CGFloat) -> CGSize { .init(width: a.width * b, height: a.height * b) }
 }
 
 /**

@@ -5,19 +5,19 @@ public class CGPointModifier {
     * Returns a new point comprised of the addition of two points
     */
    public static func add(a: CGPoint, b: CGPoint) -> CGPoint {
-      return .init(x: a.x + b.x, y: a.y + b.y)
+      .init(x: a.x + b.x, y: a.y + b.y)
    }
    /**
     * Returns a new point comprised of the subtraction of two points
     */
    public static func substract(a: CGPoint, b: CGPoint) -> CGPoint {
-      return .init(x: a.x - b.x, y: a.y - b.y)
+      .init(x: a.x - b.x, y: a.y - b.y)
    }
    /**
     * Returns a new point comprised of the division of two points
     */
    public static func divide(a: CGPoint, b: CGPoint) -> CGPoint {
-      return .init(x: a.x / b.x, y: a.y / b.y)
+      .init(x: a.x / b.x, y: a.y / b.y)
    }
    /**
     * Returns the multiplication of two points
@@ -25,13 +25,13 @@ public class CGPointModifier {
     * CGPointParser.multiply(a: .init(x: 20, y: 20), .init(x: 2, y: 2)) // Output: (40, 40)
     */
    public static func multiply(a: CGPoint, b: CGPoint) -> CGPoint {
-      return .init(x: a.x * b.x, y: a.y * b.y)
+      .init(x: a.x * b.x, y: a.y * b.y)
    }
    /**
     * Multiplies x and y in - Parameter: point with - Parameter: multiplier
     */
    public static func multiply(point: CGPoint, multiplier: CGFloat) -> CGPoint {
-      return .init(x: point.x * multiplier, y: point.y * multiplier)
+      .init(x: point.x * multiplier, y: point.y * multiplier)
    }
    /**
     * Rotates a point around a given pivot point

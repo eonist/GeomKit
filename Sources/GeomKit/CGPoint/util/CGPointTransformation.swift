@@ -55,6 +55,6 @@ public class CGPointTransformation {
     * print(CGPointTransformation.scalePoints(points: [CGPoint(x: 100, y: 100)], pivot: CGPoint(x: 50,y: 50), scale: .init(x: 1, y: 1.5)).first) // CGPoint(x: 100, y: 125)
     */
    public static func scalePoints(points: [CGPoint], pivot: CGPoint, scale: CGPoint) -> [CGPoint] {
-      return points.map { CGPointTransformation.scale(p: $0, pivot: pivot, scale: scale) }
+      points.map { CGPointTransformation.scale(p: $0, pivot: pivot, scale: scale) }
    }
 }

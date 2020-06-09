@@ -40,6 +40,7 @@ public class CGShapeUtil {
     * - Abstract: A polyline is a continouse line from point to point
     * ## Example:
     * CGShapeUtil.drawPolyLine(shapeLayer: nil, points: [.zero, .zero, .zero], style: (nil, .black, 1), close: true) // Draws a triangle with black stroke of 1.0 of thickness
+    * - Parameter shapeLayer: the layer to draw into, this layer is also returned (if param is nil, then a shapeLayer is created)
     */
    @discardableResult
    public static func drawPolyLine(shapeLayer: CAShapeLayer?, points: [CGPoint], style: Style?, close: Bool = false) -> CAShapeLayer {
@@ -54,8 +55,9 @@ public class CGShapeUtil {
    /**
     * Draws a rectangle in shapeLayer
     * ## Examples:
-    * let rectShape = CGShapeUtil.drawRect(shapeLayer: .init(), .init(x: 0, y: 0, width: 100, height: 100), style(nil, .black, 14))
+    * let rectShape = CGShapeUtil.drawRect(shapeLayer: .init(), .init(x: 0, y: 0, width: 100, height: 100), style(fillColor: nil, strokeColor: .black, thickness: 14))
     * view.layer.addSublayer(rectShape)
+    * - Note: If you try to draw many rects on the same layer, it just gets overwritten, rather add sub layers
     */
    @discardableResult
    public static func drawRect(shapeLayer: CAShapeLayer?, rect: CGRect, style: Style?) -> CAShapeLayer {

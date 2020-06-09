@@ -19,6 +19,6 @@ public class CGAffineTransformModifier {
     * Applys a AffineTransformation on a point (This method is mostly for convenience)
     */
    public static func transformPoint(point: CGPoint, transform: CGTransform) -> CGPoint {
-      return point.applying(transform)
+      point.applying(transform)
    }
 }

@@ -6,7 +6,7 @@ extension CGMutablePath {
      * - Note: this was previously copy, but swift 3 uses this method
      */
     public func clone() -> CGMutablePath? {
-        return self.mutableCopy()
+      self.mutableCopy()
     }
     public func moveTo(x: CGFloat, y: CGFloat) { // Convenince
       self.move(to: .init(x: x, y: y))

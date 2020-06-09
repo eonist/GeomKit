@@ -8,7 +8,7 @@ public class CGPointParser {
     * - Fixme: ⚠️️ Using Math.abs could be more optimized? this optimization needs research. check the proto site
     */
    public static func interpolate(a: CGPoint, b: CGPoint, scalar: CGFloat) -> CGPoint {
-      return .init(x: a.x.interpolate(b.x, scalar), y: a.y.interpolate(b.y, scalar))
+      .init(x: a.x.interpolate(b.x, scalar), y: a.y.interpolate(b.y, scalar))
    }
    /**
     * Returns the distance between two points
@@ -61,7 +61,7 @@ public class CGPointParser {
     * - Fixme: ⚠️️ potentially make polarAxisDistance which would potentially support any angled axis
     */
    public static func axisDistance(p1: CGPoint, p2: CGPoint) -> CGPoint {
-      return .init(x: CGFloatParser.distance(p1.x, p2.x), y: CGFloatParser.distance(p1.y, p2.y))
+      .init(x: CGFloatParser.distance(p1.x, p2.x), y: CGFloatParser.distance(p1.y, p2.y))
    }
    /**
     * Returns a CGRect that makes derived from - Parameter: points (think bounding box of points)
@@ -111,7 +111,7 @@ public class CGPointParser {
     * var center: CGPoint = CGPoint(minX + ((maxX - minX) / 2), (minY + ((maxY - minY) / 2)))
     */
    public static func center(p1: CGPoint, p2: CGPoint) -> CGPoint {
-      return .interpolate(a: p1, b: p2, scalar: 0.5)
+      .interpolate(a: p1, b: p2, scalar: 0.5)
    }
    /**
     * Returns a Point half way between - Parameter: p1 and - Parameter: p2
@@ -122,7 +122,7 @@ public class CGPointParser {
     * Caution: ⚠️️ this only works if p1 is .zero
     */
    public static func midPoint(p1: CGPoint, p2: CGPoint) -> CGPoint {
-      return .init(x: (p1.x + p2.x) / 2, y: (p1.y + p2.y) / 2)
+      .init(x: (p1.x + p2.x) / 2, y: (p1.y + p2.y) / 2)
    }
    /**
     * Returns a Point half way between a and b

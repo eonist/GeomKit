@@ -63,12 +63,12 @@ public class CGAffineTransformParser {
     * Rename to clone?
     */
    public static func copy(transform: CGTransform) -> CGTransform {
-      return .init(a: transform.a, b: transform.b, c: transform.c, d: transform.d, tx: transform.tx, ty: transform.ty)//radialGradient.gradientTransform
+      .init(a: transform.a, b: transform.b, c: transform.c, d: transform.d, tx: transform.tx, ty: transform.ty)//radialGradient.gradientTransform
    }
    /**
     * Updated in swift 4.2
     */
    public static func concat(a: CGTransform, b: CGTransform) -> CGTransform {
-      return a.concatenating(b)
+      a.concatenating(b)
    }
 }

@@ -5,11 +5,11 @@ public let π = CGFloat(Double.pi) // Global variable
  * Aritmetic
  */
 extension CGPoint {
-   public func clone() -> CGPoint { return CGPoint(x: self.x, y: self.y) }
-   public func add(p: CGPoint) -> CGPoint { return CGPointModifier.add(a: self, b: p) }
-   public func subtract(p: CGPoint) -> CGPoint { return CGPointModifier.substract(a: self, b: p) }
-   public func multiply(p: CGPoint) -> CGPoint { return CGPointModifier.multiply(a: self, b: p) }
-   public func divide(p: CGPoint) -> CGPoint { return CGPointModifier.divide(a: self, b: p) }
+   public func clone() -> CGPoint { CGPoint(x: self.x, y: self.y) }
+   public func add(p: CGPoint) -> CGPoint { CGPointModifier.add(a: self, b: p) }
+   public func subtract(p: CGPoint) -> CGPoint { CGPointModifier.substract(a: self, b: p) }
+   public func multiply(p: CGPoint) -> CGPoint { CGPointModifier.multiply(a: self, b: p) }
+   public func divide(p: CGPoint) -> CGPoint { CGPointModifier.divide(a: self, b: p) }
 }
 /**
  * Trigonometri
@@ -19,36 +19,42 @@ extension CGPoint {
     * Distance from self to p
     */
    public func distance(p: CGPoint) -> CGFloat {
-      return CGPoint.distance(a: self, b: p)
+      CGPoint.distance(a: self, b: p)
    }
    /**
     * interpolate from self to b by scalar
     */
    public func interpolate(to: CGPoint, scalar: CGFloat) -> CGPoint {
-      return CGPoint.interpolate(a: self, b: to, scalar: scalar)
+      CGPoint.interpolate(a: self, b: to, scalar: scalar)
    }
    /**
     * polarPoint from self
+    * ## Examples:
+    * CGPoint(x: 100, y: 100).polarPoint(radius: 50, angle: CGFloat.PI / 2) // 140, 140 ish
     */
    public func polarPoint(radius: CGFloat, angle: CGFloat) -> CGPoint {
-      return self + CGPoint.polarPoint(radius: radius, angle: angle)
+      self + CGPoint.polarPoint(radius: radius, angle: angle)
    }
+   /**
+    * ## Examples:
+    * CGPoint.polarPoint(radius: 50, angle: CGFloat.PI / 2) // 40, 40 ish
+    */
    public static func polarPoint(radius: CGFloat, angle: CGFloat) -> CGPoint {
-      return CGPointTrig.polar(radius: radius, angle: angle)
+      CGPointTrig.polar(radius: radius, angle: angle)
    }
    public static func distance(a: CGPoint, b: CGPoint) -> CGFloat {
-      return CGPointParser.distance(a: a, b: b)
+      CGPointParser.distance(a: a, b: b)
    }
    public static func interpolate(a: CGPoint, b: CGPoint, scalar: CGFloat) -> CGPoint {
-      return CGPointParser.interpolate(a: a, b: b, scalar: scalar)
+      CGPointParser.interpolate(a: a, b: b, scalar: scalar)
    }
 }
 /**
  * Asserters
  */
 extension CGPoint {
-   public func equals(_ p: CGPoint) -> Bool { return CGPointAsserter.equals(p1: self, p) }
-   public func isNear(_ p: CGPoint, _ epsilon: CGFloat) -> Bool { return CGPointAsserter.nearEquals(a: self, b: p, epsilon: epsilon) }
+   public func equals(_ p: CGPoint) -> Bool { CGPointAsserter.equals(p1: self, p) }
+   public func isNear(_ p: CGPoint, _ epsilon: CGFloat) -> Bool { CGPointAsserter.nearEquals(a: self, b: p, epsilon: epsilon) }
 }
 /**
  * ## Examples: CGPoint(x: 20, y: 30)[.hor] // 20

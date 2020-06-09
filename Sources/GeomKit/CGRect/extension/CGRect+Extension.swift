@@ -19,19 +19,19 @@ extension CGRect {
     * CGRect.zero.path
     */
    public var path: CGMutablePath {
-      return CGRectParser.Path.path(rect: self)
+      CGRectParser.Path.path(rect: self)
    }
    public var corners: [CGPoint] {
-      return CGRectParser.corners(rect: self)
+      CGRectParser.corners(rect: self)
    }
    public var sides: [CGPoint] {
-      return CGRectParser.sides(rect: self)
+      CGRectParser.sides(rect: self)
    }
    /**
     * Expands the size of the rect from it's pivot
     */
    public func expand(dx: CGFloat, dy: CGFloat) -> CGRect {
-      return .init(origin: self.origin, size: .init(width: self.width + dx, height: self.height + dy))
+      .init(origin: self.origin, size: .init(width: self.width + dx, height: self.height + dy))
    }
 }
 // var nsRect: NSRect { return NSRectFromCGRect(self) }

@@ -5,13 +5,13 @@ public class CGRectAsserter {
     * Add doc
     */
    public static func containsOrIntersectsLine(rect: CGRect, line: Line) -> Bool {
-      return containsLine(rect: rect, line: line) || intersectsLine(rect: rect, line: line)
+      containsLine(rect: rect, line: line) || intersectsLine(rect: rect, line: line)
    }
    /**
     * Asserts if - Parameter: rectangle contains the line - Parameter: p1 to - Parameter: p2
     */
    public static func containsLine(rect: CGRect, line: Line) -> Bool {
-      return rect.contains(line.p1) && rect.contains(line.p2)
+      rect.contains(line.p1) && rect.contains(line.p2)
    }
    /**
     * Asserts if - Parameter: rectangle intersects the line - Parameter: p1 to - Parameter: p2
@@ -21,6 +21,6 @@ public class CGRectAsserter {
     * CGRectAsserter.intersectsLine(rect: .init(x: 200, y: 200, width: 500, height: 500), (p1: CGPoint(x: 0, y: 0), p2: CGPoint(x: 60, y: 60))) // false
     */
    public static func intersectsLine(rect: CGRect, line: Line) -> Bool {
-      return CGRectParser.Side.sides(rect: rect).firstIndex { LineAsserter.intersects(a: $0, b: line) } != nil
+      CGRectParser.Side.sides(rect: rect).contains { LineAsserter.intersects(a: $0, b: line) }
    }
 }

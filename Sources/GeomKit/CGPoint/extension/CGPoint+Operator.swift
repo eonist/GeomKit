@@ -6,11 +6,11 @@ extension CGPoint {
    /**
     * Adds the coordinates of point p to the coordinates of this point to create a new point
     */
-   public static func + (a: CGPoint, b: CGPoint) -> CGPoint { return CGPointModifier.add(a: a, b: b) }
+   public static func + (a: CGPoint, b: CGPoint) -> CGPoint { CGPointModifier.add(a: a, b: b) }
    /**
     * Subtracts the coordinates of point p from the coordinates of this point to create a new point.
     */
-   public static func - (a: CGPoint, b: CGPoint) -> CGPoint { return CGPointModifier.substract(a: a, b: b) }
+   public static func - (a: CGPoint, b: CGPoint) -> CGPoint { CGPointModifier.substract(a: a, b: b) }
    /**
     * Modifies a by adding b
     */
@@ -22,7 +22,7 @@ extension CGPoint {
    /**
     * Multiplies two CGPoint values and returns the result as a new CGPoint.
     */
-   public static func * (left: CGPoint, right: CGPoint) -> CGPoint { return CGPointModifier.multiply(a: left, b: right) }
+   public static func * (left: CGPoint, right: CGPoint) -> CGPoint { CGPointModifier.multiply(a: left, b: right) }
    /**
     * Multiplies a CGPoint with another.
     */
@@ -30,7 +30,7 @@ extension CGPoint {
    /**
     * Multiplies the x and y fields of a CGPoint with the same scalar value and (returns the result as a new CGPoint.)
     */
-   public static func * (point: CGPoint, scalar: CGFloat) -> CGPoint { return .init(x: point.x * scalar, y: point.y * scalar) }
+   public static func * (point: CGPoint, scalar: CGFloat) -> CGPoint { .init(x: point.x * scalar, y: point.y * scalar) }
    /**
     * Multiplies the x and y fields of a CGPoint with the same scalar value.
     */
@@ -38,7 +38,7 @@ extension CGPoint {
    /**
     * Divides two CGPoint values and returns the result as a new CGPoint.
     */
-   public static func / (left: CGPoint, right: CGPoint) -> CGPoint { return CGPointModifier.divide(a: left, b: right) }
+   public static func / (left: CGPoint, right: CGPoint) -> CGPoint { CGPointModifier.divide(a: left, b: right) }
    /**
     * Divides a CGPoint by another.
     */
@@ -46,7 +46,7 @@ extension CGPoint {
    /**
     * Divides the x and y fields of a CGPoint by the same scalar value and returns (the result as a new CGPoint.)
     */
-   public static func / (point: CGPoint, scalar: CGFloat) -> CGPoint { return .init(x: point.x / scalar, y: point.y / scalar) }
+   public static func / (point: CGPoint, scalar: CGFloat) -> CGPoint { .init(x: point.x / scalar, y: point.y / scalar) }
    /**
     * Divides the x and y fields of a CGPoint by the same scalar value.
     */
